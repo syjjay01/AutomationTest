@@ -1,0 +1,32 @@
+package com.test.PageAction.SystemOperationLog;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.test.PageAction.LoginLogout.BasePage;
+
+
+public class OaSubmitLog_Page extends BasePage{
+
+	public OaSubmitLog_Page(WebDriver driver) throws Exception{		
+		super(driver);
+	}
+	
+	//选择菜单
+	public void oaSubmitLog() throws Exception{
+		implicitlyWait(1000);
+		findElement("logObject").click();
+		findElement("oaSubmitLogObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);		
+	}
+	
+	//验证查询功能：创建时间
+	public void oaSubmitLog_Search() throws Exception{
+		sendKeystoReadOnlyField(findElement("createTimeObject"), "创建时间_oaSubmitLog");
+		findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("createTimeTextObject").getText(), "创建时间_oaSubmitLog");
+	}
+	
+}

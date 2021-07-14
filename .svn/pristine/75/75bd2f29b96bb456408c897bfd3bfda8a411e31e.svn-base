@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	//功能模块菜单
+	<!--选择筹建进度统计菜单-->
+	<Locator type="linktext" timeOut="3" value="筹建管理">prebuildObject</Locator>
+	<Locator type="partialLinkText" timeOut="3" value="筹建进度统计">processStatsObject</Locator>
+	<Locator type="name" timeOut="3" value="in">iframeObject</Locator>
+	
+	//查询条件
+	<!--选择品牌-->
+	<Locator type="id" timeOut="3" value="process_brand">brandObject</Locator>
+	
+	//列表
+	<!--达到签约标准门店数-->
+	<Locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div/table/tbody/tr[1]/td[2]">dbqyNumObject</Locator>
+	<!--工程首次检查门店数-->
+	<Locator type="xpath" timeOut="3" value="html/body/div/div/div[2]/div/table/tbody/tr[2]/td[2]">gcjcNumObject</Locator>
+	<!--工程进度60%门店数-->
+	<Locator type="xpath" timeOut="3" value="html/body/div/div/div[2]/div/table/tbody/tr[3]/td[2]">gcjdNumObject</Locator>
+	<!--竣工验收门店数-->
+	<Locator type="xpath" timeOut="3" value="html/body/div/div/div[2]/div/table/tbody/tr[4]/td[2]">jgysNumObject</Locator>
+	<!--开业审核门店数-->
+	<Locator type="xpath" timeOut="3" value="html/body/div/div/div[2]/div/table/tbody/tr[5]/td[2]">kyshNumObject</Locator>
+	<!--合计门店数-->
+	<Locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div/table/tbody/tr[6]/td[2]">storenumObject</Locator>
+	
+	
+</map>

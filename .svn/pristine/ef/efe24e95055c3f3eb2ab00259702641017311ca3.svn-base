@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        <locator type="linktext" timeOut="3" value="资源管理">zyglObject</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[3]/nav/div[2]/div/ul/li[4]/ul/li[3]/a">zyyjObject</locator>
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>
+        
+        <locator type="id" timeOut="3" value="departmentId">departmentObject</locator>
+        <locator type="id" timeOut="3" value="invCategory">categoryObject</locator>
+        <locator type="id" timeOut="3" value="cityName">cityNameObject</locator>
+        
+        //查询 按钮
+        <locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>
+        //重置 按钮
+        <locator type="id" timeOut="3" value="resetBtn">resetBtnObject</locator>
+        
+        <locator type="id" timeOut="3" value="invName">nameObject</locator>
+        <locator type="id" timeOut="3" value="phone">phoneObject</locator>
+        
+        <!--联系人-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr[1]/td[1]">nameTextObject</locator>
+        <!--客户性质-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr[1]/td[3]">categoryTextObject</locator>
+        <!--开发部-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr[1]/td[4]">departmentTextObject</locator>
+        <!--省-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr[1]/td[5]">provinceTextObject</locator>
+        <!--市-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr[1]/td[6]">cityTextObject</locator>
+        <!--热线资源-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr[1]/td[7]">sourceTextObject</locator>
+        <!--原开发员-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr[1]/td[8]">oldDeveloperTextObject</locator>
+        <!--现开发员-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr[1]/td[9]">newDeveloperTextObject</locator>
+        <!--分配人-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr[1]/td[10]">fprTextObject</locator>
+        <!--联系电话-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr[1]/td[2]">phoneTextObject</locator>
+        <!--显示第 1 到第 1 条记录，总共 1 条记录-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span[1]">recordTextObject</locator>
+        
+        
+</map>

@@ -1,0 +1,32 @@
+package com.test.PageAction.SystemOperationLog;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.test.PageAction.LoginLogout.BasePage;
+
+public class OtherOperationLog_Page extends BasePage{
+
+	public OtherOperationLog_Page(WebDriver driver) throws Exception{		
+		super(driver);
+	}
+	
+	//选择菜单，分店同步日志
+	public void otherOperationLog() throws Exception{
+		implicitlyWait(1000);
+		findElement("logObject").click();
+		findElement("otherOperationObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);		
+	}
+	
+	//验证查询功能：分店ID
+	public void otherOperationLog_Search() throws Exception{
+		Thread.sleep(2000);
+		findElement("userNameObject").sendKeys(getTestData("操作人_otherOperationLog"));
+		findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("userNameTextObject").getText(),"操作人_otherOperationLog");
+	}
+	
+}

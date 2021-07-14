@@ -1,0 +1,99 @@
+package com.test.PageAction.SetupProject;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.test.PageAction.Login.BasePage;
+
+public class City_Page extends BasePage{
+	public  City_Page(WebDriver driver) throws Exception{
+		super(driver);
+	}
+	
+	//选择菜单
+	public void city() throws Exception{
+		Thread.sleep(2000);
+		findElement("setupprojObject").click();
+		findElement("cityObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+	}
+	//添加国家/省/市
+	/*public void city_add() throws Exception{
+		Thread.sleep(1000);
+		findElement("addObject").click();
+		Thread.sleep(1000);
+		selectByVisibleText(findElement("levelObject"), "市");
+		Thread.sleep(1000);
+		selectByVisibleText(findElement("selregionObject"), "测试国家");
+		Thread.sleep(1000);
+		selectByVisibleText(findElement("selprovinceObject"), "测试省");
+		findElement("inputcitynameObject").sendKeys(getTestData("名称_csgl"));
+		findElement("firstnameObject").sendKeys(getTestData("首字母_csgl"));
+		findElement("pinyinObject").sendKeys(getTestData("拼音_csgl"));
+		findElement("zonenumObject").sendKeys(getTestData("区号_csgl"));
+		findElement("submitObject").click();
+		Thread.sleep(3000);
+		if (findElement("addObject").isDisplayed()){
+			System.out.print("添加成功");
+		}
+	}*/
+	//查询城市
+	public void city_search() throws Exception{
+		//选择省份
+		Thread.sleep(1000);
+		selectByVisibleText(findElement("provinceidObject"), "测试省");
+		//点击查询
+		Thread.sleep(500);	
+		findElement("serchBtnObject").click();
+		Thread.sleep(1000);
+		AssertEqualsFromExcel(findElement("citynameObject").getText(), "市_city");
+	}
+	//查看详情
+	public void city_detail() throws Exception{
+		Thread.sleep(500);	
+		findElement("detailsObject").click();
+		
+		Thread.sleep(1000);
+		Assert.assertTrue(findElement("headObject").getText().equals("城市信息详情"));
+		//返回列表
+		Thread.sleep(500);	
+		findElement("listObject").click();
+	}
+	//修改城市
+	public void city_edit() throws Exception{	
+		Thread.sleep(500);
+		findElement("editObject").click();
+		Thread.sleep(500);
+		//修改市
+		Thread.sleep(500);
+		findElement("renamecityObject").sendKeys(getTestData("修改市_city"));
+		//提交修改
+		findElement("editsubmitObject").click();
+		Thread.sleep(3000);
+		//查询修改市名称，验证是否修改成功
+		findElement("inputcityObject").sendKeys(getTestData("修改市_city"));
+		findElement("serchBtnObject").click();
+		Thread.sleep(1000);
+		Assert.assertEquals(findElement("citynameObject").getText(), "测试市自动化测试修改");
+		//还原修改数据
+		Thread.sleep(500);
+		findElement("editObject").click();
+		Thread.sleep(500);
+		findElement("renamecityObject").clear();
+		Thread.sleep(500);
+		findElement("renamecityObject").sendKeys(getTestData("市_city"));
+		findElement("editsubmitObject").click();
+	}
+	//重置
+	public void city_reset() throws Exception{
+		Thread.sleep(1000);
+		findElement("resetObject").click();
+		
+		Thread.sleep(2000);
+	 	Assert.assertFalse(findElement("provinceidObject").getText().equals("测试省"));
+	 	Assert.assertTrue(findElement("pagecontainsObject").getText().contains("显示第 1 到第 10 条记录"));
+	}
+
+}

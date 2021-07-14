@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+
+	<!--选择菜单,系统管理-执政区域 -->
+	<locator type="linktext" timeOut="3" value="系统管理">systemObject</locator>
+	<locator type="xpath" timeOut="3" value=".//*[@id='side-menu']/li[14]/ul/li[5]/a">regionConfigObject</locator>
+	<locator type="name" timeOut="3" value="in">iframeObject</locator>
+	
+	<!--查询结果 -->
+	<locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[1]/h1">regionTextObject</locator>
+
+</map>

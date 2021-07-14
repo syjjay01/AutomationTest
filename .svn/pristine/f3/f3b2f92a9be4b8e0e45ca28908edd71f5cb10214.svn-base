@@ -1,0 +1,60 @@
+package com.test.PageAction.ChangeBrand;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.test.PageAction.LoginLogout.BasePage;
+
+public class ChangeBrand_Page extends BasePage{
+	
+	
+	public ChangeBrand_Page(WebDriver driver)throws Exception{
+		super(driver);
+	}
+	
+	
+	public void changeBrand() throws Exception{
+		Thread.sleep(1000);
+		findElement("changebrandObject").click();
+		Thread.sleep(1000);
+		findElement("changebrandmenuObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+	}
+	
+	//查询功能：验证能正确查出指定数据
+	public void changeBrand_Search() throws Exception{
+		Thread.sleep(5000);
+		findElement("projectIdObject").sendKeys(getTestData("原项目编码_changeBrand"));
+		findElement("searchbtnObject").click();
+
+		Thread.sleep(5000);
+		Assert.assertTrue(findElement("oldProjectObject").getText().contains(getTestData("原项目编码_changeBrand")));
+		Assert.assertTrue(findElement("oldProjectBrandObject").getText().contains("7天酒店"));
+	}
+	
+	
+	//重置
+	public void changeBrand_Reset() throws Exception{
+		Thread.sleep(1000);
+		findElement("resetBtnObject").click();
+		Thread.sleep(8000);
+		Assert.assertFalse(findElement("oldProjectObject").getText().contains(getTestData("原项目编码_changeBrand")));
+		}
+	
+	
+	//查看详情
+	public void changeBrand_detail() throws Exception{
+		changeBrand_Search();
+		findElement("detailObject").click();
+		
+		Thread.sleep(1000);
+		String oldProjectId = findElement("oldProjectIdViewPageObject").getText();
+		Assert.assertTrue(oldProjectId.contains(getTestData("原项目编码_changeBrand")));
+		//返回列表
+		findElement("returnlistObject").click();
+	}
+	
+	
+}

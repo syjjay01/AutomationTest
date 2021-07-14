@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        //功能模块菜单
+        <locator type="linktext" timeOut="3" value="统计报表">statsReportObject</locator>
+        //开店通使用统计
+        <locator type="partialLinkText" timeOut="3" value="开店通使用统计">usageStatsObect</locator>
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>
+        
+        //按钮
+        <!--查询 按钮-->
+        <locator type="xpath" timeOut="3" value="//*[@id='toolbar']/div/form/div[5]/button[1]">searchBtnObject</locator>        
+        <!--重置 按钮-->
+        <locator type="xpath" timeOut="3" value="//*[@id='toolbar']/div/form/div[5]/a[1]">resetBtnObject</locator>
+        
+        //查询条件       
+        <!--开发人 搜索框-->
+        <locator type="id" timeOut="3" value="managerName">developerObject</locator>
+        <!--开始日期-->
+        <locator type="id" timeOut="3" value="startTime">startTimeObject</locator>        
+        <!--结束日期-->
+        <locator type="id" timeOut="3" value="endTime">endTimeObject</locator>        
+      
+        //列表
+        <!--总次数 (第一行日期) -->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[2]/td[2]">totalTimesObject1</locator>
+        <!--总次数 （第二行日期）-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[3]/td[2]">totalTimesObject2</locator>        
+       
+         
+</map>

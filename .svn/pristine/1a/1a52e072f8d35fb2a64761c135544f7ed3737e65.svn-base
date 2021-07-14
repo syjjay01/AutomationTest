@@ -1,0 +1,91 @@
+package com.test.PageAction.DevelopmentMgmt;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.test.PageAction.LoginLogout.BasePage;
+
+public class Property_Page extends BasePage{
+
+
+	public Property_Page(WebDriver driver) throws Exception{
+		super(driver);
+	}
+	
+	public void property() throws Exception{
+		Thread.sleep(2000);
+		findElement("devMgmtObject").click();
+		Thread.sleep(1000);
+		findElement("propertyObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);		
+	}
+	
+	
+	public void property_Search() throws Exception{
+		Thread.sleep(1000);
+		findElement("devStoreNameObject").sendKeys(getTestData("物业名称_wy"));
+		sendKeystoReadOnlyField(findElement("startTimeObject"), "开始时间_wy");
+		findElement("searchBtnObject").click();
+		Thread.sleep(1000);
+		AssertEqualsFromExcel(findElement("wymcTextObject").getText(), "物业名称_wy");
+	}
+	
+	
+	public void property_Reset() throws Exception{
+		property_Search();
+		findElement("resetBtnObject").click();
+		Thread.sleep(1000);
+		Assert.assertTrue(findElement("recordTextObject").getText().contains("显示第 1 到第 10 条记录，总共"));		
+	}
+	
+	
+	public void property_ViewDetail() throws Exception{
+		property_Search();
+		findElement("viewBtnObject").click();
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("wymcTextObject_viewPage").getText(), "物业名称_wy");
+		findElement("wylbBtnObject").click();
+		Thread.sleep(1000);
+		Assert.assertTrue(findElement("searchBtnObject").isDisplayed());
+	}
+	 
+	
+	public void property_Update() throws Exception{
+		property_Search();
+        findElement("updateBtnObject").click();
+		Thread.sleep(1000);
+		
+		WebElement roomCountElement = findElement("roomCountInputObject");
+		roomCountElement.clear();
+		roomCountElement.sendKeys(getTestData("修改预估房间数_wy"));
+		
+		findElement("submitBtnObject").click();
+		Thread.sleep(2000);
+		
+		property_Search();
+		AssertEqualsFromExcel(findElement("roomNumTextObject").getText(), "修改预估房间数_wy");
+		
+		//修改回原始值
+     	findElement("updateBtnObject").click();
+		Thread.sleep(2000);
+		WebElement roomCountElement2 = findElement("roomCountInputObject");
+		
+		roomCountElement2.clear();
+		roomCountElement2.sendKeys(getTestData("预估房间数_wy"));		
+		Thread.sleep(1000);
+		findElement("submitBtnObject").click();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

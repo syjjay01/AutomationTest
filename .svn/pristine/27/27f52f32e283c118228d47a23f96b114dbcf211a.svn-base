@@ -1,0 +1,158 @@
+package com.test.PageAction.StoreMgmt;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import com.test.PageAction.Login.BasePage;
+import org.testng.Assert;
+
+public class RoomNumber_Page extends BasePage{
+	
+	String xzroomnumber = getRandomString(5);//新增时自动生成房号
+	String xgroomnumber= getRandomString(6);//修改时自动生成房号
+	
+	public RoomNumber_Page(WebDriver driver) throws Exception {
+		super(driver);
+	}
+	
+	public void roomNumber() throws Exception{
+		// 进入页面
+		implicitlyWait(1000);
+		Thread.sleep(1000);
+		findElement("mdglObject").click();
+		findElement("fhObject").click();
+		WebElement iframeElement =findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+		//选择门店
+		findElement("xmbmTextObject").sendKeys(getTestData("项目编号_fh"));
+		findElement("serchBtnObject").click();
+		Thread.sleep(1000);
+		findElement("storeObject").click();
+		Thread.sleep(2000);
+	}
+
+	public void roomNumber_Search() throws Exception{
+		//查询功能
+		findElement("lcRioObject").click();//按楼层查询
+		//验证查询功能
+		AssertEqualsFromExcel(findElement("fhTextObject").getText(),"按楼栋楼层_fh");
+		findElement("fxRioObject").click();//按房型查询
+		//验证查询功能
+		AssertEqualsFromExcel(findElement("fhTextObject").getText(),"按房型_fh");	
+	}
+
+	public void roomNumHistory_Verifi(String contrast,String changeTpye) throws Exception{
+		findElement("fhbglsBtnObject").click();
+		Thread.sleep(1000);	
+		//验证变更历史界面是否存在操作的记录
+	    Assert.assertEquals(findElement("bgnrObject").getText(),contrast);
+	    Assert.assertEquals(findElement("bglxObject").getText(),changeTpye);
+	}
+	
+	public void roomNumber_Add() throws Exception{
+		//添加房号
+		findElement("fhbgsqBtnObject").click();
+		findElement("tjfhTabObject").click();
+		//添加tab页
+		selectByVisibleText(findElement("tjfhldObject"), "B栋");
+		selectByVisibleText(findElement("tjfhlcObject"), "2层");
+		selectByVisibleText(findElement("tjjcfxObject"), "双床房");
+		findElement("tjfhObject").sendKeys(xzroomnumber);
+		findElement("tjsqyyObject").sendKeys("申请新增房号原因");
+		Thread.sleep(1000);
+		findElement("tjqdBtnObject").click();
+		Thread.sleep(2000);	
+		findElement("submitBtnObject").click();
+		Thread.sleep(3000);	
+		roomNumHistory_Verifi(xzroomnumber,"添加房号（1间）");//验证变更历史存在记录
+	}
+	
+	public void roomNumber_Modify() throws Exception{
+		//修改房号
+		findElement("fhbgsqBtnObject").click();
+		findElement("xgfhTabObject").click();
+		//修改tab页面（选中具体需要修改的房号）
+		findElement("selectfhBtnObject").click();		
+		findElement("xgfhTextObject").click();
+		String xgfh=findElement("qhxgfhObject").getText();	
+		findElement("fhqdBtnObject").click();
+		Thread.sleep(1000);
+		//填写修改后的房号和原因以及提交
+		findElement("xgfhObject").sendKeys(xgroomnumber);
+		findElement("xgsqyyObject").sendKeys("申请修改房号原因");
+	    findElement("xgqdBtnObject").click();
+		Thread.sleep(2000);	
+		findElement("submitBtnObject").click();
+		Thread.sleep(3000);	
+		roomNumHistory_Verifi(xgfh,"修改房号（1间）");//验证变更历史存在记录
+	}
+	
+	public void roomNumber_Delete() throws Exception{
+		//删除房号
+		findElement("fhbgsqBtnObject").click();
+		findElement("scfhTabObject").click();
+		//删除tab页面
+		findElement("scfhObject").click();
+		String scfh=findElement("hqscfhObject").getText();	
+		findElement("scsqyyObject").sendKeys("申请删除房号的原因");
+	    findElement("scBtnObject").click();
+		Thread.sleep(2000);	
+		findElement("submitBtnObject").click();
+		Thread.sleep(3000);	
+		roomNumHistory_Verifi(scfh,"删除房号（1间）");//验证变更历史存在记录
+	}
+	
+	public void roomNumber_recover() throws Exception{
+		//恢复房号
+		findElement("fhbgsqBtnObject").click();
+		findElement("hffhTabObject").click();
+		//回复房号tab页面
+		findElement("hffhObject").click();
+		String fhfh=findElement("hqhffhObject").getText();	
+	    findElement("hfBtnObject").click();
+		Thread.sleep(2000);	
+		findElement("submitBtnObject").click();
+		Thread.sleep(3000);	
+		roomNumHistory_Verifi(fhfh,"恢复房号（1间）");//验证变更历史存在记录
+	}
+		
+	
+	public void roomNumHistory_Revoke() throws Exception{
+		//变更历史撤销功能
+		//进入变更历史界面
+		findElement("fhbglsBtnObject").click();
+		Thread.sleep(1000);	
+	    //撤销记录
+		if (findElement("cxBtnObject").isDisplayed()){
+			findElement("cxBtnObject").click();
+			Thread.sleep(2000);	
+			findElement("cxqdBtnObject").click();
+			Thread.sleep(1000);	
+			findElement("successTextObject").click();
+			Thread.sleep(1000);	
+			findElement("closeObject").click();
+			Thread.sleep(2000);	
+			//验证是否撤销成功
+			Assert.assertEquals(findElement("bgsqsjObject").getAttribute("class"),"gray");		
+		}else{
+			System.out.println("不可撤销操作");
+		}   
+}
+	
+	public void roomNumHistory_Check() throws Exception{
+		//变更历史查看功能
+		//进入变更历史界面
+		findElement("fhbglsBtnObject").click();
+		Thread.sleep(1000);	
+	    //查看记录	
+		String ckbglx=findElement("bglxObject").getText();
+		String cksqrsj=findElement("bgsqsjObject").getText();
+		String ckspzt=findElement("spztObject").getText();
+		findElement("ckBtnObject").click();
+		Thread.sleep(2000);			
+		//验证查看
+		Assert.assertTrue(findElement("cksqrObject").getText().contains(cksqrsj));
+		Assert.assertEquals(findElement("ckbglxObject").getText(),ckbglx);
+		Assert.assertEquals(findElement("ckspztObject").getText(),ckspzt);	
+}
+	
+}

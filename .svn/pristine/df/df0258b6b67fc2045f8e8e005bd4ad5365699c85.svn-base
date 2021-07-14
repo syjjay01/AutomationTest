@@ -1,0 +1,49 @@
+package com.test.TestCase.PreBuildMgmt;
+
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import com.libarary.Utils.ScreenShotListener;
+import com.test.PageAction.Login.LoginPage;
+import com.test.PageAction.Login.LogoutAction;
+import com.test.PageAction.PreBuildMgmt.PreBuildStore_Page;
+import com.test.TestCase.Login.BaseTestCase;
+
+@Listeners({ScreenShotListener.class})
+public class TC_PreBuildStore extends BaseTestCase {
+	@BeforeClass
+	public void start() throws Exception{
+		super.init();
+		//登录
+		LoginPage loginpage = new LoginPage(driver);
+		loginpage.Login();
+	}
+	@Test
+	public void preBuildStore() throws Exception{
+		
+		PreBuildStore_Page constrstorepage = new PreBuildStore_Page(driver);
+		//选择筹建门店菜单
+		constrstorepage.preBuildStore();
+		//搜索筹建门店
+		constrstorepage.preBuildStore_search();
+		//查看筹建门店详情
+		constrstorepage.preBuildStore_details();
+		//提交冻结申请
+		constrstorepage.preBuildStore_freezen();
+		//查看冻结日志
+		constrstorepage.preBuildStore_freezenlog();
+		//重置功能
+		constrstorepage.preBuildStore_search();
+		constrstorepage.preBuildStore_reset();
+		
+	}
+	@AfterClass
+	public void end() throws Exception{
+		//退出登录
+		LogoutAction logoutAction = new LogoutAction(driver);
+		logoutAction.Logout();
+	}
+
+}

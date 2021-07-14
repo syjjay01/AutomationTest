@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+
+	<!--Locator Lists-->
+	//功能模块菜单
+	<!--立项管理模块-->
+	<Locator type="linktext" timeOut="3" Value="立项管理">setupprojObject</Locator>
+	<!--立项管理页面-->
+	<Locator type="linktext" timeOut="3" value="  立项管理">setupprojmenuObject</Locator>
+	<Locator type="name" timeOut="3" value="in">iframeObject</Locator>
+	
+	//按钮
+	<!--搜索按钮-->
+	<Locator type="id" timeOut="3" value="searchBtn">searchbtnObject</Locator>
+	<!--列表页的详情按钮-->
+	<Locator type="linktext" timeOut="3" value="详情">viewDetailBtnObject</Locator>
+	<!--返回列表按钮-->
+	<Locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[1]/div/a">projectlistObject</Locator>
+	<!--确认审核按钮-->
+	<Locator type="id" timeOut="3" value="projectChecked">projcheckObject</Locator>
+	<!--重置按钮-->
+	<Locator type="id" timeOut="3" value="resetBtn">resetBtnObject</Locator>
+	<!--详情页确认审核按钮-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[11]/a[2]">verifyObject</Locator>
+	
+	
+	//查询条件
+	<!--搜索项目编码输入框-->
+	<Locator type="id" timeOut="3" value="project_id">projectidObject</Locator>
+	<!--搜索项目名称输入框-->
+	<Locator type="id" timeOut="3" value="storeName">projectNameObject</Locator>
+	
+	//列表	
+	<!--项目编码-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[1]">projectTextObject</Locator>
+	<!--项目名称-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[2]">projectNameTextObject</Locator>
+	<!--隶属公司-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[3]">companyObject</Locator>
+	<!--品牌-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[4]">brandObject</Locator>
+	<!--性质-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[5]">brandTypeObject</Locator>
+	<!--立项房间数-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[6]">roomNumObject</Locator>
+	<!--立项时间-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[7]">setupTimeObject</Locator>
+	<!--签约时间-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[8]">signTimeObject</Locator>
+	<!--合同类型-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[9]">contractTypeObject</Locator>
+	<!--合同状态-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[10]">contractStatusObject</Locator>
+		
+	//详情页面
+	<!--审核提示-->
+	<Locator type="id" timeOut="3" value="alertInfo">alert</Locator>
+	<!--合同栏，“通过”单选项-->
+	<Locator type="xpath" timeOut="3" value="html/body/div[1]/div/table[1]/tbody/tr[2]/td[3]/div/input[1]">passCheckBoxObject</Locator>
+	<!--证照栏，“通过”单选项-->
+	<Locator type="xpath" timeOut="3" value="html/body/div[1]/div/table[2]/tbody/tr[2]/td[2]/div/input[1]">passCheckBoxObject2</Locator>
+	<!--法定名称-->
+	<Locator type="xpath" timeOut="3" value="html/body/div[1]/div/table[3]/tbody/tr[3]/td[2]/input">lawnameObject</Locator>	
+	<!--重置验证列表刷新数据-->
+	<Locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span[1]">pagecontainsObject</Locator>
+	
+	//页码
+	<!--页面底部显示一条记录字眼-->
+	<Locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span[1]">searchpageObject</Locator>
+	
+	
+</map>

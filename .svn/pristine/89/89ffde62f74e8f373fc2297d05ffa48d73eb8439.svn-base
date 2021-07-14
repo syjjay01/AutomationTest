@@ -1,0 +1,49 @@
+package com.test.TestCase.MoneyMgmt;
+
+import org.testng.annotations.Test;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
+
+
+import com.libarary.Utils.ScreenShotListener;
+import com.test.PageAction.LoginLogout.LoginPage;
+import com.test.PageAction.LoginLogout.LogoutAction;
+import com.test.PageAction.MoneyMgmt.BankAccount_Page;
+import com.test.TestCase.LoginLogout.BaseTestCase;
+
+@Listeners({ScreenShotListener.class})
+public class TC_BankAccount extends BaseTestCase{
+	
+	@BeforeClass
+	public void start() throws Exception{
+		super.init();
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.Login(getUsersData("adminUser"));
+	}
+	
+	
+	@Test
+	public void bankAccount() throws Exception{
+		
+		BankAccount_Page bankAccountPage =new BankAccount_Page(driver);
+		//选择菜单栏
+		bankAccountPage.bankAccount();
+		
+		//查询功能
+		bankAccountPage.bankAccount_Search();
+		
+		//重置功能
+		bankAccountPage.bankAccount_Reset();
+		
+		//修改功能
+		bankAccountPage.bankAccount_Modify();	
+		
+	}
+ @AfterClass
+	 public void end() throws Exception{
+		LogoutAction logoutAction = new LogoutAction(driver);
+		logoutAction.Logout();
+ }
+}
+

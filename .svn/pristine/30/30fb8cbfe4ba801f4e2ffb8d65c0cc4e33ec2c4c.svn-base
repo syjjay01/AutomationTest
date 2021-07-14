@@ -1,0 +1,45 @@
+package com.test.TestCase.ChangeBrand;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import com.libarary.Utils.ScreenShotListener;
+import com.test.PageAction.ChangeBrand.ChangeBrand_Page;
+import com.test.PageAction.LoginLogout.LoginPage;
+import com.test.PageAction.LoginLogout.LogoutAction;
+import com.test.TestCase.LoginLogout.BaseTestCase;
+
+@Listeners({ScreenShotListener.class})
+public class TC_ChangeBrand extends BaseTestCase{
+	
+	@BeforeClass
+	public void start() throws Exception{
+		super.init();
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.Login(getUsersData("adminUser"));
+	}
+	
+	@Test
+	public void changeBrand() throws Exception{
+		
+		ChangeBrand_Page changeBrand=new ChangeBrand_Page(driver);
+        //菜单栏
+		changeBrand.changeBrand();
+        //查询
+		changeBrand.changeBrand_Search();
+		//重置
+		changeBrand.changeBrand_Reset();
+		//查看详情
+		changeBrand.changeBrand_detail();
+	}
+	
+	
+	@AfterClass
+	 public void end() throws Exception{
+		LogoutAction logout=new LogoutAction(driver);
+		logout.Logout();
+	 }
+
+}

@@ -1,0 +1,45 @@
+package com.test.TestCase.StatisticsReport;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import com.libarary.Utils.ScreenShotListener;
+
+import com.test.PageAction.LoginLogout.LoginPage;
+import com.test.PageAction.LoginLogout.LogoutAction;
+
+import com.test.PageAction.StatisticsReport.MontlyFee_Page;
+import com.test.TestCase.LoginLogout.BaseTestCase;
+
+@Listeners({ ScreenShotListener.class })
+public class TC_MonthlyFee extends BaseTestCase {
+
+	@BeforeClass
+	public void start() throws Exception {
+		super.init();
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.Login(getUsersData("adminUser"));
+	}
+
+	@Test
+	public void monthlyFee() throws Exception {
+
+		MontlyFee_Page mfp = new MontlyFee_Page(driver);
+		// 选择菜单栏
+		mfp.monthlyFee();
+		// 查询
+		mfp.monthlyFee_Search();
+		// 重置
+		mfp.monthlyFee_Reset();
+
+	}
+
+	@AfterClass
+	public void end() throws Exception {
+		LogoutAction logoutAction = new LogoutAction(driver);
+		logoutAction.Logout();
+	}
+
+}

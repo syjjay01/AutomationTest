@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="PreBuildMgmt"> //筹建管理
+    <classes>  
+      <class name="com.test.TestCase.PreBuildMgmt.TC_ProcessStats"/>   
+    </classes>
+  </test>
+
+  <test name="LicenseMgmt"> //证照管理
+    <classes>  
+      <class name="com.test.TestCase.LicenseMgmt.TC_LicenseSummary"/>  
+    </classes>
+  </test>   
+ 
+  
+  <test name="BonusMgmt"> //奖金管理
+    <classes>
+      <class name="com.test.TestCase.BonusMgmt.TC_ProjectPanorama"/>      
+    </classes>
+  </test>   
+
+  
+</suite>

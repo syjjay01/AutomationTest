@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        <locator type="linktext" timeOut="3" value="系统管理">SysMgmtObject</locator>
+        <locator type="partialLinkText" timeOut="3" value="系统程序">SysProgramObject</locator>
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>
+        
+        //资源名称搜索框
+        <locator type="xpath" timeOut="3" value="//*[@id='toolbar']/div/div[1]/input">resourceNameObject</locator>
+        //类别搜索框
+        <locator type="id" timeOut="3" value="pid">categoryObject</locator>
+        //查询按钮
+        <locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>
+                
+        //资源名称文本
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr[1]/td[1]">resourceNameTextObject</locator>
+
+		//修改按钮
+		<locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr[1]/td[6]/a">modifyBtnObject</locator>
+		
+		//修改页面
+		//资源名称
+		<locator type="id" timeOut="3" value="per_name">resourceNameTextObject2</locator>
+		
+		//提交按钮
+		<locator type="xpath" timeOut="3" value="//*[@id='addBrandForm']/div[9]/div/button">submitBtnObject</locator>
+		
+		//提交后的列表中资源名称文本
+		<locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr[1]/td[1]">resourceNameTextObject3</locator>
+		
+        
+</map>

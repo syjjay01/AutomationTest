@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        <locator type="linktext" timeOut="3" value="统计报表">statsReportObject</locator>
+        //门店数统计
+        <locator type="partialLinkText" timeOut="3" value="门店数统计">numberOfStoresObect</locator>
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>
+        
+        <!--解除店 tab-->
+        <locator type="xpath" timeOut="3" value="//*[@id='toolbar']/ul/li[2]/a">jydObject</locator>
+        <!--有效店 tab-->
+        <locator type="xpath" timeOut="3" value="//*[@id='toolbar']/ul/li[1]/a">yxdObject</locator>
+        
+        //列表
+        <!--品牌合计-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[21]/td[2]">brandTotalObject</locator>
+        <!--国内-筹建和筹建中解约-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[21]/td[3]">preparations</locator>
+        <!--国内-开业-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[21]/td[5]">opened</locator>
+        <!--国内-下线整改-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[21]/td[6]">offlineRectification</locator>   
+        <!--集团合计 -->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[31]/td[1]">jthjTextObject</locator>
+        <!--集团合计  品牌合计-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[31]/td[2]">pphjTextObject</locator>
+       
+         
+</map>

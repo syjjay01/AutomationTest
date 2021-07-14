@@ -1,0 +1,53 @@
+package com.test.PageAction.MoneyMgmt;
+
+import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.test.PageAction.Login.BasePage;
+
+public class BankAccount_Page extends BasePage{
+	
+	public BankAccount_Page(WebDriver driver) throws Exception{
+		super(driver);
+	}
+	
+	public void bankAccount() throws Exception{
+		implicitlyWait(2000);
+		findElement("MoneyMgmtObject").click();
+		
+		Thread.sleep(3000);
+		findElement("bankAccountObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+	}
+	
+	public void bankAccount_Search() throws Exception{
+		//验证查询功能
+		implicitlyWait(3000);
+		selectByVisibleText(findElement("brandObject"),"全新7天");
+		findElement("bankNameObject").sendKeys(getTestData("银行账户名称_bankAccount"));
+		findElement("searchBtnObject").click();
+		
+		Thread.sleep(2000);
+		Assert.assertEquals(findElement("brandTextObject").getText(),"全新7天");
+		AssertEqualsFromExcel(findElement("bankNameTextObject").getText(),"银行账户名称_bankAccount");
+		
+	}
+	
+	public void bankAccount_Modify() throws Exception{
+		//验证修改功能
+		findElement("modifyBtnObject").click();
+		Thread.sleep(1000);
+		findElement("subBtnObject").click();	
+		
+		selectByVisibleText(findElement("brandObject"),"全新7天");
+		findElement("bankNameObject").sendKeys(getTestData("银行账户名称_bankAccount"));
+		findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		Assert.assertEquals(findElement("brandTextObject").getText(),"全新7天");
+		AssertEqualsFromExcel(findElement("bankNameTextObject").getText(),"银行账户名称_bankAccount");
+	
+	}
+
+}

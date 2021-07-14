@@ -1,0 +1,44 @@
+package com.test.PageAction.SystemConfig;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.test.PageAction.Login.BasePage;
+
+public class DevelopConfig_Page  extends BasePage{
+		
+	public DevelopConfig_Page(WebDriver driver) throws Exception{
+		super(driver);		
+	}
+	
+	//选择菜单，系统管理-开发部
+	public void developConfig() throws Exception{
+		implicitlyWait(1000);
+		findElement("systemObject").click();
+		findElement("DevelopConfigObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);			
+	}
+
+	//修改功能
+	public void developConfig_update() throws Exception{
+		findElement("DevelopNameObject").click();
+		findElement("updateStopflagObject").click();
+		findElement("updatebtnObject").click();
+		Thread.sleep(2000);
+		//还原操作
+		findElement("DevelopNameObject").click();
+		findElement("updateOpenflagObject").click();
+		findElement("updatebtnObject").click();
+	}
+	
+	//添加功能
+	public void developConfig_add() throws Exception{
+		findElement("DevelopAddbtnObject").click();
+		findElement("nameObject").sendKeys(getTestData("名称_developConfig"));
+		findElement("sortObject").sendKeys(getTestData("排序_developConfig"));
+		findElement("addStopflagObject").click();
+		findElement("addbtnObject").click();
+	}
+		
+}

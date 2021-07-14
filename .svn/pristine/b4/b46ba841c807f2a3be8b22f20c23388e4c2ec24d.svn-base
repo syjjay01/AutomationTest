@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        <locator type="linktext" timeOut="3" value="统计报表">statsReportObject</locator>
+        //未归档统计
+        <locator type="xpath" timeOut="3" value="//*[@id='side-menu']/li[3]/ul/li[9]/a">unfiledStatsObject</locator>
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>
+        //未归档统计文本 
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[1]/h1">unfiledStatsTextObect</locator>
+        //列表
+        //喆啡
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table/tbody/tr[2]/td[1]">jfTextObject</locator>
+        //Zmax
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table/tbody/tr[3]/td[1]">ZmaxTextObject</locator>
+        //都漫 
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table/tbody/tr[11]/td[1]">dmTextObject</locator>
+        //合计
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table/tbody/tr[20]/td[1]">totalTextObject</locator>
+       //合计 总店数
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table/tbody/tr[20]/td[2]">totalStoresTextObject</locator>
+        
+        
+</map>

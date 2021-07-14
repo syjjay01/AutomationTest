@@ -1,0 +1,52 @@
+package com.test.PageAction.ResourceMgmt;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.test.PageAction.Login.BasePage;
+
+public class ResourceTransfer_Page extends BasePage{
+
+	protected String name = "自动化测试";
+	
+	public ResourceTransfer_Page(WebDriver driver) throws Exception{
+		super(driver);
+	}
+	
+	
+	public void resourceTransfer() throws Exception{
+		implicitlyWait(1000);
+		findElement("zyglObject").click();
+		Thread.sleep(2000);
+		findElement("zyyjObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+	}
+	
+	
+	public void resourceTransfer_Search() throws Exception{
+		findElement("nameObject").sendKeys(name);
+		findElement("searchBtnObject").click();
+		
+		Thread.sleep(2000);
+		Assert.assertEquals(findElement("nameTextObject").getText(), name);
+		AssertEqualsFromExcel(findElement("categoryTextObject").getText(), "客户性质_zyyj");
+		AssertEqualsFromExcel(findElement("departmentTextObject").getText(), "开发部_zyyj");
+		AssertEqualsFromExcel(findElement("provinceTextObject").getText(), "省_zyyj");
+		AssertEqualsFromExcel(findElement("cityTextObject").getText(), "市_zyyj");
+		AssertEqualsFromExcel(findElement("sourceTextObject").getText(), "热线资源_zyyj");
+		AssertEqualsFromExcel(findElement("oldDeveloperTextObject").getText(), "原开发员_zyyj");
+		AssertEqualsFromExcel(findElement("newDeveloperTextObject").getText(), "现开发员_zyyj");	
+	}
+	
+	public void resourceTransfer_Reset() throws Exception{
+		findElement("resetBtnObject").click();
+		Thread.sleep(2000);
+		String inputValue = findElement("nameObject").getAttribute("value");
+		Assert.assertTrue(inputValue.isEmpty());
+		Assert.assertNotEquals(findElement("nameTextObject").getText(), name);
+	}
+	
+	
+}

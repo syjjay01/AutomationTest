@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	//功能模块菜单
+	<!--选择转品牌菜单-->
+	<Locator type="linktext" timeOut="3" value="转品牌">changebrandObject</Locator>
+	<Locator type="linktext" timeOut="3" value="  转品牌">changebrandmenuObject</Locator>
+	<Locator type="name" timeOut="3" value="in">iframeObject</Locator>
+	
+	//按钮
+	<!--查询按钮-->
+	<Locator type="id" timeOut="3" value="searchBtn">searchbtnObject</Locator>
+	<!--重置按钮-->
+	<Locator type="id" timeOut="3" value="resetBtn">resetBtnObject</Locator>
+	<!--查看按钮-->
+	<Locator type="linktext" timeOut="3" value="查看">detailObject</Locator>
+	<!--返回列表按钮-->
+	<Locator type="linktext" timeOut="3" value="返回列表">returnlistObject</Locator>
+	
+	//查询条件	
+	<!--原项目选择品牌查询-->
+	<Locator type="id" timeOut="3" value="brandId">selectbrandObject</Locator>=	
+	<!--查询结果-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[1]/span">OriginalresultObject</Locator>
+	<!--转品牌项目选择品牌查询-->
+	<Locator type="id" timeOut="3" value="tBrandId">selecttbrandObject</Locator>
+	<!--转品牌项目查询结果-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[2]/span">newbrandObject</Locator>
+	<!--选择OA状态-->
+	<Locator type="id" timeOut="3" value="oaCheckedFlag">oaflagObject</Locator>
+	<!--OA审核状态列-->
+	<Locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr[1]/td[7]">falgresultObject</Locator>
+	<!--选择合同状态-->
+	<Locator type="id" timeOut="3" value="ContractCheckedFlag">contractflagObject</Locator>
+	<!--合同状态列-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[7]">cflagresultObject</Locator>
+	<!--原项目项目 项目编码 搜索框-->
+	<Locator type="id" timeOut="3" value="projectId">projectIdObject</Locator>
+	
+	//列表
+	<!--页面下方显示多少行文字-->
+	<Locator type="xpath" timeOut="3" value="html/body/div[1]/div[2]/div[2]/div[4]/div[1]/span[1]">containObject</Locator>
+	<!--原项目项目 列表字段内容-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[1]">oldProjectObject</Locator>
+	<Locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[1]/span">oldProjectBrandObject</Locator>
+	
+	//详情
+	//查看详情页 原项目编码
+	<Locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[2]/td[1]/div/div[1]">oldProjectIdViewPageObject</Locator>
+
+	
+</map>

@@ -1,0 +1,82 @@
+package com.test.PageAction.DevelopmentMgmt;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+import com.test.PageAction.Login.BasePage;
+
+public class License_Page extends BasePage{
+	
+	public License_Page(WebDriver driver) throws Exception{
+		super(driver);
+	}
+	
+	
+	public void license() throws Exception{
+		implicitlyWait(1000);
+		findElement("kfglObject").click();
+		Thread.sleep(1000);
+		findElement("zzObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);	
+	}
+	
+	public void license_Search() throws Exception{
+		//待审核
+		findElement("projectIdObject").sendKeys(getTestData("项目编码_zz"));
+		selectByVisibleText(findElement("auditStatusObject"), "待审核");
+		findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("projectIdTextObject").getText(), "项目编码_zz");
+		AssertEqualsFromExcel(findElement("devStoreNameTextObject").getText(), "物业名称_zz");
+		Assert.assertEquals(findElement("auditStatusTextObject").getText(), "待审核");
+	}
+	
+	public void license_Reset() throws Exception{	
+		findElement("resetBtnObject").click();
+		Thread.sleep(1000);
+		Assert.assertTrue(findElement("recordTextObject").getText().contains("显示第 1 到第 10 条记录"));
+		
+	}
+	
+	
+	//查看【待审核】的证照
+	public void license_ViewDetail() throws Exception{
+		findElement("viewBtnObject").click();
+		Thread.sleep(1000);
+		AssertEqualsFromExcel(findElement("projectIdObject_viewPage").getText(), "项目编码_zz");
+		AssertEqualsFromExcel(findElement("devStoreNameObject_viewPage").getText(), "物业名称_zz");
+		Assert.assertEquals(findElement("auditStatusObject_viewPage").getText(), "待审核");
+		findElement("zzlbBtnObject").click();
+		Thread.sleep(1000);
+		Assert.assertTrue(findElement("viewBtnObject").isDisplayed());
+	}
+	
+	
+	//待审核页面，修改证照
+	public void license_Update() throws Exception{
+		license_Search();
+		AssertEqualsFromExcel(findElement("licenseNameTextObject").getText(), "证照名称_zz");
+		findElement("updateBtnObject").click();
+		Thread.sleep(2000);
+		
+		selectByVisibleTextFromExcel(findElement("certCategoryObject"), "更改证照名称_zz");
+		findElement("submitBtnObject").click();
+		Thread.sleep(2000);
+		license_Search();
+		AssertEqualsFromExcel(findElement("licenseNameTextObject").getText(), "更改证照名称_zz");
+		
+		//修改回原始值
+		findElement("updateBtnObject").click();
+		Thread.sleep(2000);
+		
+		selectByVisibleTextFromExcel(findElement("certCategoryObject"), "证照名称_zz");
+		findElement("submitBtnObject").click();
+		Thread.sleep(2000);
+	}
+	
+	
+	
+	
+
+}

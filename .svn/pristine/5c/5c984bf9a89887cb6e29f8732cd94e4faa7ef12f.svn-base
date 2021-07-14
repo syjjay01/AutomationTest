@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        //功能模块菜单
+        <locator type="linktext" timeOut="3" value="开发管理">devMgmtObject</locator>
+        //收款
+        <locator type="partialLinkText" timeOut="3" value="收款">receiptsObject</locator>
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>
+        
+        //按钮
+        <!--查询 按钮-->
+        <locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>
+        <!--重置 按钮-->
+        <locator type="id" timeOut="3" value="resetBtn">resetBtnObject</locator>
+                
+        //搜索条件
+        <!--项目编码-->
+        <locator type="id" timeOut="3" value="projectId">projectIdObject</locator>
+        <!--项目名称-->
+        <locator type="id" timeOut="3" value="projectName">projectNameObject</locator>       
+        <!--开始时间-->
+        <locator type="id" timeOut="3" value="timeStart">startTimeObject</locator>
+        <!--打款日期 单选框-->
+        <locator type="id" timeOut="3" value="isSendFeeTime">isSendFeeTimeObject</locator>
+       
+        //列表
+        <!--项目编码-->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[1]">projectIdTextObject</locator>
+        <!--项目名称文本 -->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[2]">projectNameTextObject</locator>
+        <!--物业名称-->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[3]">devStoreTextObject</locator>
+        <!--打款总额-->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[10]">dkzeTextObject</locator>
+        
+        //页码
+        <!--记录数文本-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span[1]">recordObject</locator>      
+        <!--已审核 tab-->
+        <locator type="id" timeOut="3" value="checkedFlag">reviewCheckBoxObject</locator>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       
+        
+        
+</map>

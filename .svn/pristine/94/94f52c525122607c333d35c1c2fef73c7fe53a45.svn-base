@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        <locator type="linktext" timeOut="3" value="统计报表">statsReportObject</locator>
+        //开发部签约统计
+        <locator type="partialLinkText" timeOut="3" value="开发部签约统计">devSignedObject</locator>
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>
+        
+                //按钮
+        <!--查询 按钮-->
+        <locator type="xpath" timeOut="3" value="//*[@id='toolbar']/div/form/button[1]">searchButtonObject</locator>
+        <!--重置 按钮-->
+        <locator type="id" timeOut="3" value="resetBtn">resetBtnObject</locator>
+        <!--重置 按钮-->
+        <locator type="id" timeOut="3" value="contract_type">contractTypeObject</locator>
+        
+        //查询条件
+        <!--开始日期-->     
+        <locator type="id" timeOut="3" value="startTime">startTimeObject</locator>
+        <!--结束日期-->
+        <locator type="id" timeOut="3" value="endTime">endTimeObject</locator>
+        <!--按日-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div/form/label[1]/input">dailyCheckboxObject</locator> 
+        <!--按周-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div/form/label[2]/input">weeklyCheckboxObject</locator>
+        <!--按月-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div/form/label[3]/input">monthlyCheckboxObject</locator>          
+        
+        //列表
+        <!--按日搜索 集团合计  签约数／立项房数-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[13]/td[3]/p[1]">qysObject_daily</locator>
+        <!--按日搜索 集团合计  签约达标数／立项房数-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[13]/td[3]/p[2]">qydbsObject_daily</locator>
+        <!--按日搜索 集团合计  加盟费收款-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[13]/td[3]/p[3]">jmfskObject_daily</locator>
+        <!--按日搜索 集团合计  加盟费退费-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[13]/td[3]/p[4]">jmftfObject_daily</locator>
+        
+        <!--按周搜索 集团合计  签约数／立项房数-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[8]/td[3]/p[1]">qysObject_weekly</locator>
+        <!--按周搜索 集团合计  签约达标数／立项房数-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[8]/td[3]/p[2]">qydbsObject_weekly</locator>
+        <!--按周搜索 集团合计  加盟费收款-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[8]/td[3]/p[3]">jmfskObject_weekly</locator>     
+        <!--按周搜索 集团合计  加盟费退款-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[8]/td[3]/p[4]">jmftfObject_weekly</locator>     
+        
+        <!--按月搜索 集团合计  签约数／立项房数-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[5]/td[3]/p[1]">qysObject_monthly</locator>
+        <!--按月搜索 集团合计  签约达标数／立项房数-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[5]/td[3]/p[2]">qydbsObject_monthly</locator>
+        <!--按月搜索 集团合计  加盟费收款-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[5]/td[3]/p[3]">jmfskObject_monthly</locator> 
+        <!--按月搜索 集团合计  加盟费退款-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[5]/td[3]/p[4]">jmftkObject_monthly</locator>         
+     
+         
+</map>

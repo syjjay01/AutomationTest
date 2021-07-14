@@ -1,0 +1,51 @@
+package com.test.PageAction.SystemConfig;
+
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.test.PageAction.Login.BasePage;
+
+public class UserConfig_Page extends BasePage{
+
+	public UserConfig_Page(WebDriver driver) throws Exception{
+		super(driver);		
+	}
+	
+	//选择菜单，系统管理-用户管理
+	public void userConfig() throws Exception{
+		implicitlyWait(1000);
+		findElement("systemObject").click();
+		findElement("userConfigObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);			
+	}	
+
+	//查询功能
+	public void userConfig_Search() throws Exception{
+		findElement("nameObject").sendKeys(getTestData("姓名_userConfig"));
+		findElement("searchBtnObject").click();		
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("nameTextObject").getText(), "姓名_userConfig");		
+	}
+	
+	//修改功能
+	public void userConfig_upata() throws Exception{
+		findElement("editBtnObject").click();
+		findElement("editRoleObject").click();
+		findElement("editUserBtnObject").click();
+		//验证修改是否成功
+		findElement("nameObject").sendKeys(getTestData("姓名_userConfig"));
+		findElement("searchBtnObject").click();		
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("roleNameTextObject").getText(), "角色名称_userConfig");			
+		//还原操作
+		findElement("nameObject").clear();
+		findElement("nameObject").sendKeys(getTestData("姓名_userConfig"));
+		findElement("searchBtnObject").click();		
+		Thread.sleep(2000);
+		findElement("editBtnObject").click();
+		findElement("editRoleBackObject").click();
+		findElement("editUserBtnObject").click();
+	}
+}

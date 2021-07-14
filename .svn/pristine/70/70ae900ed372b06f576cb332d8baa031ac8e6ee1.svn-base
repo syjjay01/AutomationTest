@@ -1,0 +1,42 @@
+package com.test.PageAction.PreBuildMgmt;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.test.PageAction.Login.BasePage;
+
+public class ProcessStayStats_Page extends BasePage {
+	String allstorenum;  //所有品牌达到签约标准节点总店数
+	String storenum;     //单个品牌达到签约标准节点总店数
+	
+	public ProcessStayStats_Page(WebDriver driver) throws Exception{
+		super(driver);
+	}
+	//进入节点停留统计页面
+	public void processStayStatsPage() throws Exception{
+		Thread.sleep(2000);
+		findElement("prebuildObject").click();
+		Thread.sleep(1000);
+		findElement("stayObject").click();
+		WebElement iframeElement=findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+		allstorenum=findElement("storenumObject").getText();
+		System.out.println("所有品牌达到签约标准节点总店数:"+allstorenum);
+		System.out.println("节点停留统计页面正常");
+	}
+	//查询单个品牌节点停留统计
+	public void processStayStatsPage_search() throws Exception{
+		Thread.sleep(2000);
+		selectByVisibleText(findElement("seltbrandObject"), "喆啡");
+		
+		Thread.sleep(1000);
+		storenum=findElement("storenumObject").getText();
+		System.out.println("喆啡达到签约标准节点总店数:"+storenum);
+		//验证如果查询结果达到签约标准节点的门店数与默认不相等，则查询成功
+		Assert.assertFalse(storenum.equals(allstorenum));
+		System.out.println("节点停留统计页面查询成功");
+	
+	}
+	
+}

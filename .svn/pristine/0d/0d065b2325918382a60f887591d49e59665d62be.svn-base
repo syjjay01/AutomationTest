@@ -1,0 +1,201 @@
+package com.test.PageAction.DevelopmentMgmt;
+
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.test.PageAction.LoginLogout.BasePage;
+
+public class Contract_Page extends BasePage{
+	  
+	String projectName= getWriteData("合同_ContractProcess");
+	
+	public Contract_Page(WebDriver driver) throws Exception{
+		super(driver);
+	}
+	
+	
+	public void contract() throws Exception{
+		implicitlyWait(1000);
+		findElement("devMgmtObject").click();
+		Thread.sleep(1000);
+		findElement("contractObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);	
+	}
+	
+	
+	public void contract_Search() throws Exception{
+		findElement("projectNameObject").sendKeys(getTestData("项目名称_ht"));
+		findElement("searchBtnObject").click();
+		Thread.sleep(1000);
+		Assert.assertEquals(findElement("projectIdTextObject").getText(), "-");
+		AssertEqualsFromExcel(findElement("projectNameTextObject").getText(), "项目名称_ht");
+	}
+	
+	
+	public void contract_Reset() throws Exception{
+		findElement("resetBtnObject").click();
+		Thread.sleep(1000);
+		Assert.assertTrue(findElement("recordTextObject").getText().contains("显示第 1 到第 10 条记录"));
+	}
+	
+	
+	public void contract_View() throws Exception{
+		contract_Search();
+		findElement("viewBtnObject").click();
+		Thread.sleep(1000);
+		Assert.assertEquals(findElement("projectIdObject_viewPage").getText(), "待立项");
+		AssertEqualsFromExcel(findElement("projectNameObject_viewPage").getText(), "项目名称_ht");
+		findElement("htlbBtnObject").click();
+		Thread.sleep(1000);
+		Assert.assertTrue(findElement("searchBtnObject").isDisplayed());
+	}
+	
+	//进入合同详情，查看合同，修改合同
+	public void contract_Update() throws Exception{
+		contract_Search();
+		//修改未审核的合同
+		findElement("viewBtnObject").click();
+		findElement("UpdateBtnObject").click();
+		Thread.sleep(1000);
+		selectByVisibleTextFromExcel(findElement("shipFlagObject"), "更改类别_ht");
+	    findElement("submitBtnObject").click();
+	    Thread.sleep(2000);
+
+	    //修改回原来的值
+	    contract_Search();
+		findElement("viewBtnObject").click();
+	    findElement("UpdateBtnObject").click();
+		Thread.sleep(1000);
+		selectByVisibleTextFromExcel(findElement("shipFlagObject"), "原类别_ht");
+	    findElement("submitBtnObject").click();
+	}
+
+	
+	//审核通过合同
+	public void contract_Approve() throws Exception{
+		driver.switchTo().defaultContent();
+	    contract();
+	    Thread.sleep(1000);
+	    findElement("projectNameObject").sendKeys(projectName);
+		findElement("searchBtnObject").click();
+		Thread.sleep(1000);
+		
+	    if(findElement("jmfbzTextObject").getText().equals("-")){
+	    	findElement("checkBtnObject").click();
+			Thread.sleep(1000);
+			findElement("modifyButtonObject").click();
+			Thread.sleep(1000);
+			selectByVisibleTextFromExcel(findElement("initialFeeTextObject"), "加盟费标准重填_ht");
+			Thread.sleep(1000);
+			selectByVisibleTextFromExcel(findElement("managementFeeSelectObject"), "管理费重填_ht");
+			Thread.sleep(1000);
+			findElement("confirmSubmitBtnObject").click();
+			Thread.sleep(2000);
+			
+			findElement("projectNameObject").sendKeys(projectName);
+			findElement("searchBtnObject").click();
+			Thread.sleep(1000);
+			
+			findElement("checkBtnObject").click();
+			Thread.sleep(1000);
+			//超管角色，代表开发专员和开发领导审核，所以审核两次
+			findElement("passBtnObject").click();
+			findElement("confirmCheckBtnObject").click();
+			Thread.sleep(1000);
+			findElement("confirmBtnObject").click();
+			Thread.sleep(1000);
+			
+			findElement("passBtnObject").click();
+			findElement("confirmCheckBtnObject").click();
+			Thread.sleep(1000);
+			findElement("confirmBtnObject").click();
+			Thread.sleep(1000);
+			System.out.println("合同审核状态：" + findElement("checkStatusObject").getText());
+	    }
+	    else{
+	    	
+			findElement("checkBtnObject").click();
+			Thread.sleep(1000);
+			//超管角色，代表开发专员和开发领导审核，所以审核两次
+			findElement("passBtnObject").click();
+			findElement("confirmCheckBtnObject").click();
+			Thread.sleep(1000);
+			findElement("confirmBtnObject").click();
+			Thread.sleep(1000);
+			
+			findElement("passBtnObject").click();
+			findElement("confirmCheckBtnObject").click();
+			Thread.sleep(1000);
+			findElement("confirmBtnObject").click();
+			Thread.sleep(1000);
+			System.out.println("合同审核状态：" + findElement("checkStatusObject").getText());
+	    }
+		
+	
+	}
+	
+	//转品牌
+	public void contract_ChangeBrand() throws Exception{
+		driver.switchTo().defaultContent();
+	    contract();
+	    Thread.sleep(1000);
+	    findElement("projectNameObject").sendKeys(projectName);
+		findElement("searchBtnObject").click();
+		Thread.sleep(1000);
+		findElement("viewBtnObject").click();
+		Thread.sleep(1000);
+		
+		//点击转品牌按钮
+		findElement("changeBrandBtnObject").click();
+		Thread.sleep(1000);
+		//依次输入项目/分店名称、品牌、性质、标签、立项房间数、加盟费标准、签约日期、生效日期、截止日期、加盟费、筹建指导费、管理费和运营支持费
+		findElement("projectNameObject").sendKeys(getTestData("项目/分店名称_ht")+getDateTime());
+		selectByVisibleTextFromExcel(findElement("brandObject"), "品牌_ht");
+		selectByVisibleTextFromExcel(findElement("brandTypeIdObject"), "性质_ht");
+		selectByVisibleTextFromExcel(findElement("brandStandardIdObject"), "品牌标准_ht");		
+		selectByVisibleTextFromExcel(findElement("tableObject"), "标签_ht");
+		
+		/*findElement("roomCountsObject").clear();
+		Thread.sleep(1000);
+		findElement("roomCountsObject").sendKeys(getTestData("立项房间数_ht"));
+		*/
+		findElement("payRateObject").sendKeys(getTestData("加盟费标准_ht"));
+
+		sendKeystoReadOnlyField(findElement("signingTimeObject"), "签约日期_ht");
+		sendKeystoReadOnlyField(findElement("contractStartTimeObject"), "生效日期_ht");
+		sendKeystoReadOnlyField(findElement("contractEndTimeObject"), "截止日期_ht");
+		Thread.sleep(1000);
+		
+	/*	findElement("joinFeeObjct").clear();
+		Thread.sleep(1000);
+		findElement("joinFeeObjct").sendKeys(getTestData("加盟费_ht"));
+		
+		findElement("contract_feeObject").clear();
+		Thread.sleep(1000);
+		findElement("contract_feeObject").sendKeys(getTestData("筹建指导费_ht"));
+		*/
+		selectByVisibleTextFromExcel(findElement("managementFeeObject"), "管理费_ht");
+		Thread.sleep(1000);
+
+		
+		//点击提交申请
+		findElement("submissionBtnObject").click();
+		Thread.sleep(2000);
+		
+		findElement("confirmationButtonObject").click();
+		Thread.sleep(8000);
+		
+    	//验证是否转品牌成功
+		try{
+			Assert.assertTrue(findElement("verificationProjectName").getText().contains(projectName));
+		}catch(AssertionError ex){
+			Thread.sleep(5000);
+			Assert.assertTrue(findElement("verificationProjectName").getText().contains(projectName));
+		}	
+		
+	}
+
+}

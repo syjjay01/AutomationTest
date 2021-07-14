@@ -1,0 +1,46 @@
+package com.test.PageAction.SystemConfig;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.test.PageAction.LoginLogout.BasePage;
+
+public class SysProgram_Page extends BasePage{
+	
+	public SysProgram_Page(WebDriver driver) throws Exception {
+		super(driver);
+	}
+	
+	public void SysProgram() throws Exception{
+		
+		implicitlyWait(1000);
+		findElement("SysMgmtObject").click();
+		Thread.sleep(1000);
+		findElement("SysProgramObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+	}
+	
+	public void SysProgram_Search() throws Exception{
+		//资源列表查询
+		findElement("resourceNameObject").sendKeys(getTestData("资源名称_sysProgram"));
+		selectByVisibleText(findElement("categoryObject"),"系统管理");
+		findElement("searchBtnObject").click();
+		
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("resourceNameTextObject").getText(),"资源名称_sysProgram");
+	}
+	
+	public void SysProgram_modify() throws Exception{
+		//修改资源
+
+		findElement("modifyBtnObject").click();
+		Thread.sleep(2000);
+		//AssertEqualsFromExcel(findElement("resourceNameTextObject2").getText(), "资源名称_sysProgram");
+		findElement("submitBtnObject").click();
+		Thread.sleep(6000);
+		//Assert.assertTrue(findElement("submitBtnObject").isDisplayed());
+		AssertEqualsFromExcel(findElement("resourceNameTextObject3").getText(), "资源名称3_sysProgram");
+	}
+
+}

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+    <!--Locator lists -->
+	<Locator type="linktext" timeOut="3" value="立项管理">setupprojObject</Locator>
+	<Locator type="partialLinkText" timeOut="3" value="城市管理">cityObject</Locator>
+	<Locator type="name" timeOut="3" value="in">iframeObject</Locator>
+	
+	//查询条件
+	<!--选择省份下拉框-->
+	<Locator type="id" timeOut="3" value="provinceId">provinceidObject</Locator>
+	<!--输入市文本框-->
+	<Locator type="id" timeOut="3" value="city">cityTextObject</Locator>
+	<!--选择城市级别-->
+	<Locator type="id" timeOut="3" value="tId">tIdObject</Locator>
+	
+	//按钮
+	<!--查询按钮-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='searchBtn']">serchBtnObject</Locator>
+	<!--查看按钮-->
+	<Locator type="linktext" timeOut="3" value="查看">detailsObject</Locator>	
+	<!--返回列表按钮-->
+	<Locator type="xpath" timeOut="3" value="html/body/div[1]/div/div/div/a">listObject</Locator>
+	<!--添加国家/省/市按钮-->
+	<Locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[1]/div/a">addObject</Locator>
+	<!--提交按钮-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='addAreaFrm']/div[11]/div/button">submitObject</Locator>
+	<!--修改按钮-->
+	<Locator type="linktext" timeOut="3" value="修改">editObject</Locator>
+	<!--修改提交按钮-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='addAreaFrm']/div[11]/div/button">editsubmitObject</Locator>			
+	<!--重置按钮-->
+	<Locator type="id" timeOut="3" value="resetBtn">resetObject</Locator>
+	<!--地区批量修改按钮-->
+	<Locator type="linktext" timeOut="3" value="业务数据地区信息批量修改">regionEditBtnObject</Locator>	
+	<!--地区批量修改，确认按钮-->
+	<Locator type="xpath" timeOut="3" value="//*[@id='editAreaFrm']/div[4]/div/button">regionConfirmObject</Locator>
+	<!--地区批量修改，提交按钮-->
+	<Locator type="id" timeOut="3" value="subbut">regionSubmitObject</Locator>
+	
+			
+	//查询结果页字段
+	<!--国家-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[1]">contrynameObject</Locator>
+	<!--省-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[2]">provincenameObject</Locator>
+	<!--市-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[3]">citynameObject</Locator>
+	<!--行政区-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[8]">districtObject</Locator>	
+	<!--店数-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[4]">storenumObject</Locator>
+	<!--首字母-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[5]">firstletterObject</Locator>
+	<!--拼音-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[6]">pinyin1Object</Locator>
+	<!--区号-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[7]">zonenumnameObject</Locator>
+	<!--城市级别-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[9]">cityLevelObject</Locator>	
+
+
+	//查看详情页字段
+	<!--详情页面标题-->
+	<Locator type="xpath" timeOut="3" value="html/body/div[1]/div/div/h1">headObject</Locator>
+	
+	
+	//修改页字段
+	<!--输入市-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='toolbar']/div/div[3]/input">inputcityObject</Locator>
+	<!--修改市-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='addAreaFrm']/div[3]/div/input">renamecityObject</Locator>
+	<!--地区批量修改－原地区 -->
+	<Locator type="id" timeOut="3" value="old-selector">oldRegionObject</Locator>
+	<!--地区批量修改－地区修改为 -->
+	<Locator type="id" timeOut="3" value="new-selector">newRegionObject</Locator>
+	<!--地区批量修改－省--> 
+    <locator type="linkText" timeOut="3" value="上海">provinceObject</locator>
+    <!--地区批量修改－旧区-->
+    <locator type="linkText" timeOut="3" value="金山区">oldcityObject</locator>
+    <!--地区批量修改－新区-->
+    <locator type="linkText" timeOut="3" value="宝山区">newcityObject</locator>		
+		
+	//添加页字段
+	<!--选择类型下拉框-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='level']">levelObject</Locator>
+	<!--选择国家拉框-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='region']">selregionObject</Locator>
+	<!--选择省拉框-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='province']">selprovinceObject</Locator>
+	<!--填写名称-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='addAreaFrm']/div[4]/div/input">inputcitynameObject</Locator>
+	<!--填写首字母-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='addAreaFrm']/div[5]/div/input">firstnameObject</Locator>
+	<!--填写拼音-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='addAreaFrm']/div[6]/div/input">pinyinObject</Locator>
+	<!--填写区号-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='addAreaFrm']/div[7]/div/input">zonenumObject</Locator>
+
+
+	//页面包含元素
+	<Locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span[1]">pagecontainsObject</Locator>
+	<!--地区批量修改成功-->
+	<Locator type="xpath" timeOut="3" value="/html/body/div[2]/div/div[4]">regionEditTextOject</Locator>
+	
+	
+</map>

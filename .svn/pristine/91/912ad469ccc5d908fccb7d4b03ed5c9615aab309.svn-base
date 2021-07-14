@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+       //功能选项卡定位元素 
+        <locator type="linktext" timeOut="3" value="门店管理">mdglObject</locator> //一级菜单       
+        <locator type="partialLinkText" timeOut="3" value="房型">fxObject</locator>//二级菜单        
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>//页面iframe
+        
+        //查询区域元素
+        <locator type="id" timeOut="3" value="TypeName">TypeNameObject</locator>//房型名称
+        <locator type="id" timeOut="3" value="RoomTypeCode">RoomTypeCodeObject</locator>//房型编码
+        <locator type="id" timeOut="3" value="RoomType">RoomTypeObject</locator>//房型类型    
+        <locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>//查询按钮
+        <locator type="id" timeOut="3" value="resetBtn">resetBtnObject</locator>//重置按钮 
+        <locator type="xpath" timeOut="3" value="/html/body/div/div/div[1]/div/span[2]/a[1]">roomTypeListBtnObject</locator> //房型列表按钮    
+        
+        //列表第一行元素     
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[1]">roomNameTextObject</locator>//房型名称
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[2]">roomCodeTextObject</locator>//房型编码       
+            
+       //页码区域元素 
+        <locator type="xpath" timeOut="3" value="/html/body/div[1]/div/div[4]/div[2]/div[4]/div[1]/span[1]">recordObject</locator>//总记录文本（显示第x到第x条记录，总共x条记录）
+       
+        //房型变更历史界面第一行元素 
+        <locator type="xpath" timeOut="3" value="/html/body/div/div/div[1]/div/span[2]/a[3]">roomTypeHisBtnObject</locator>//房型变更历史按钮  
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[2]/span">chageTypeTextObject</locator>//变更类型 
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[4]">chageContentTextObject</locator>//变更内容 
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[5]/span">timeTextObject</locator>//申请时间       
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[9]/a[2]">revokeBtnObject</locator>//撤销按钮      
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[9]/a">checkBtnObject</locator>//查看按钮      
+        <locator type="xpath" timeOut="3" value="/html/body/div[2]/div/div/div[2]/button[2]">revokeOkBtnObject</locator>//撤销确定按钮 
+        <locator type="xpath" timeOut="3" value="/html/body/div[2]/div/h4">successTextObject</locator>//撤销成功提示 
+        <locator type="xpath" timeOut="3" value="/html/body/div[2]/div/div[1]/span">closeObject</locator>//关闭提示框 
+        
+        //房型变更历史查看界面 元素
+        <locator type="xpath" timeOut="3" value="/html/body/div[1]/div/div[5]/table/tbody/tr[3]/td[2]">chageTypeCheckObject</locator>//变更类型  
+        <locator type="xpath" timeOut="3" value="/html/body/div[1]/div/div[5]/table/tbody/tr[3]/td[3]">roomTypeNameCheckObject</locator>//房型名称 
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[1]/h1">roomTypeTitleObject</locator>//房型变更申请 标题
+       
+           
+        //房型变更申请界面tab元素
+        <locator type="xpath" timeOut="3" value="html/body/div/div/div[1]/div/span[2]/a[2]">roomTypeApplyBtnObject</locator>//房型变更申请按钮 
+        <locator type="xpath" timeOut="3" value=".//*[@id='myTab']/li[1]/a">addRoomTypeTabObject</locator> //添加房型按钮
+        <locator type="xpath" timeOut="3" value=".//*[@id='myTab']/li[2]/a">changeRoomTypeTabObject</locator>//变更房型名称
+        <locator type="xpath" timeOut="3" value=".//*[@id='myTab']/li[3]/a">deleteRoomTypeTabObject</locator>//删除房型按钮
+        <locator type="xpath" timeOut="3" value=".//*[@id='myTab']/li[4]/a">shieldRoomTypeTabObject</locator>//屏蔽房型按钮
+        <locator type="xpath" timeOut="3" value=".//*[@id='myTab']/li[5]/a">recoverRoomTypeTabObject</locator>//恢复房型按钮
+        
+        //添加房型tab页元素
+        <locator type="xpath" timeOut="3" value=".//*[@id='addFrm']/table[1]/tbody/tr[2]/td[1]/input">addRoomTypeNameObject</locator>//房型名称
+        <locator type="xpath" timeOut="3" value=".//*[@id='addFrm']/table[1]/tbody/tr[2]/td[2]/input">addRoomTypeCodeObject</locator>//房型编号
+        <locator type="xpath" timeOut="3" value=".//*[@id='addFrm']/table[1]/tbody/tr[2]/td[3]/select">addRoomTypeObject</locator>//房型类别
+        <locator type="xpath" timeOut="3" value=".//*[@id='addFrm']/table[2]/tbody/tr/td/textarea">addReasonObject</locator>//添加申请原因
+        <locator type="id" timeOut="3" value="myButton">addBtnObject</locator>//确定按钮
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[4]/p/button">submitBtnObject</locator>//提交审批按钮
+        <locator type="xpath" timeOut="3" value="html/body/div[2]/div/div/div/button">closeBtnObject</locator>//提交审批后关闭弹框按钮
+     
+        //变更房型名称tab页元素
+        <locator type="xpath" timeOut="3" value=".//*[@id='editTypeNameFrm']/table/tbody/tr[3]/td[1]/input">changeBoxObject</locator>//选中变更记录
+        <locator type="xpath" timeOut="3" value=".//*[@id='editTypeNameFrm']/div/button">nextBtnObject</locator>//下一步按钮
+        <locator type="xpath" timeOut="3" value=".//*[@id='editFrm']/table/tbody/tr[2]/td[2]/input[1]">changeRoomTypeObject</locator>//变更后房型名称
+        <locator type="xpath" timeOut="3" value=".//*[@id='editFrm']/table/tbody/tr[3]/td/textarea">changeReasonObject</locator>//变更申请原因
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[4]/p/button">changeBtnObject</locator>//确定按钮     
+        
+        //删除房型tab页元素
+        <locator type="xpath" timeOut="3" value=".//*[@id='deleteFrm']/table[1]/tbody/tr[3]/td[3]/div[1]/input">deleteBoxObject</locator> //选中删除记录
+        <locator type="xpath" timeOut="3" value=".//*[@id='deleteFrm']/table[1]/tbody/tr[3]/td[4]/div[1]/div/label">deleteRoomTypeObject</locator> //获取选中删除记录的房型名称       
+        <locator type="xpath" timeOut="3" value=".//*[@id='deleteFrm']/table[2]/tbody/tr/td/textarea">deleteReasonObject</locator> //删除申请原因
+        <locator type="xpath" timeOut="3" value=".//*[@id='deleteFrm']/div/button">deleteBtnObject</locator> //确定按钮
+        
+        //屏蔽房型tab页元素
+        <locator type="xpath" timeOut="3" value=".//*[@id='shieldFrm']/table[1]/tbody/tr[3]/td[1]/input">shieldBoxObject</locator> //选中屏蔽记录
+        <locator type="xpath" timeOut="3" value=".//*[@id='shieldFrm']/table[1]/tbody/tr[3]/td[2]">shieldRoomTypeObject</locator> //获取选中屏蔽房型记录的房型名称 
+        <locator type="xpath" timeOut="3" value=".//*[@id='shieldFrm']/table[2]/tbody/tr/td/textarea">shieldReasonObject</locator> //屏蔽申请原因
+        <locator type="xpath" timeOut="3" value=".//*[@id='shieldFrm']/div/button">shieldBtnObject</locator> //屏蔽按钮
+        
+        //恢复房型tab页元素
+        <locator type="xpath" timeOut="3" value=".//*[@id='recoverdelFrm']/ul/li[1]/a">deleteRecObject</locator>//已删除的房型记录tab
+        <locator type="xpath" timeOut="3" value=".//*[@id='recoverdelFrm']/ul/li[2]/a">shieldRecObject</locator>//已屏蔽的房型记录tab
+        <locator type="xpath" timeOut="3" value=".//*[@id='recoverdelFrm']/table/tbody/tr[2]/td[1]/input">recoverDelBoxObject</locator>//选中恢复删除记录
+        <locator type="xpath" timeOut="3" value=".//*[@id='recoverdelFrm']/table/tbody/tr[2]/td[3]">roomTypeDelObject</locator>//获取选中恢复删除记录的房型名称 
+        <locator type="xpath" timeOut="3" value=".//*[@id='recoverdelFrm']/div/button">recoverDelBtnObject</locator>//恢复删除房型按钮      
+        <locator type="xpath" timeOut="3" value=".//*[@id='recovershieldFrm']/table/tbody/tr[2]/td[1]/input">recoverShieBoxObject</locator> //选中恢复屏蔽记录
+        <locator type="xpath" timeOut="3" value=".//*[@id='recovershieldFrm']/table/tbody/tr[2]/td[3]">roomTypeShieObject</locator>//获取选中恢复屏蔽记录的房型名称 
+        <locator type="xpath" timeOut="3" value=".//*[@id='recovershieldFrm']/div/button">recoverShieBtnObject</locator>//恢复屏蔽房型按钮
+                
+</map>

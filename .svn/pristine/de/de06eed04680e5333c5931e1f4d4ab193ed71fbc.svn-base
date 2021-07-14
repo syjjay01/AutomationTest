@@ -1,0 +1,47 @@
+package com.test.PageAction.PreBuildMgmt;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.test.PageAction.LoginLogout.BasePage;
+
+public class ProcessStayStats_Page extends BasePage {
+	String sum;     //单个品牌节点店数合计	
+	int totalNum1,totalNum2,totalNum3,totalNum4;   //单个品牌节点店数
+
+	
+	public ProcessStayStats_Page(WebDriver driver) throws Exception{
+		super(driver);
+	}
+	
+	
+	//进入节点停留统计页面
+	public void processStayStatsPage() throws Exception{
+		Thread.sleep(2000);
+		findElement("prebuildObject").click();
+		Thread.sleep(1000);
+		findElement("stayObject").click();
+		WebElement iframeElement=findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+	}
+	
+	
+	//单个品牌节点店数合计相加，与总合计比较，再与data表数据比较；来判断合计算法是否正确
+	public void processStayStatsPage_search() throws Exception{
+		Thread.sleep(2000);
+		selectByVisibleText(findElement("seltbrandObject"), "城品酒店");
+		
+		Thread.sleep(1000);
+		totalNum1 = Integer.parseInt(findElement("totalNum1Object").getText());
+		totalNum2 = Integer.parseInt(findElement("totalNum2Object").getText());
+		totalNum3 = Integer.parseInt(findElement("totalNum3Object").getText());
+		totalNum4 = Integer.parseInt(findElement("totalNum4Object").getText());		
+		sum = Integer.toString(totalNum1+totalNum2+totalNum3+totalNum4);
+		
+		Assert.assertEquals(findElement("storenumObject").getText(), sum);			
+		AssertEqualsFromExcel(findElement("storenumObject").getText(), "合计_prebulidstore");	
+		
+	}
+	
+}

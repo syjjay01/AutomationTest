@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Browser setting lists -->
+        <config value="chrome">Browser_Name</config>
+        <config value="D:\\program files\\mozilla firefox\\firefox.exe">Firefox_Path</config>                
+        <config value="E:\\workspace\\utopaxrUIAutomation\\driver server\\chromedriver.exe">Chrome_Path</config>        
+        <config value="E:\\workspace\\utopaxrUIAutomation\\driver server\\IEDriverServer.exe">IE_Path</config>   
+        
+        <!--test data excel path setting lists -->
+        <config value="utopaxr_TestData.xlsx">testDataFileName</config>
+
+         
+</map>

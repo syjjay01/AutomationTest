@@ -1,0 +1,107 @@
+package com.test.PageAction.DevelopmentMgmt;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.test.PageAction.LoginLogout.BasePage;
+
+public class License_Page extends BasePage{
+	
+	String projectName= getWriteData("合同_ContractProcess");
+	
+	public License_Page(WebDriver driver) throws Exception{
+		super(driver);
+	}
+	
+	
+	public void license() throws Exception{
+		implicitlyWait(1000);
+		findElement("devMgmtObject").click();
+		Thread.sleep(1000);
+		findElement("licenseObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);	
+	}
+	
+	public void license_Search() throws Exception{
+		//查询待审核的证照
+		findElement("projectIdObject").sendKeys(getTestData("项目编码_zz"));
+		findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("projectIdTextObject").getText(), "项目编码_zz");
+		Assert.assertEquals(findElement("auditStatusTextObject").getText(), "待审核");
+	}
+	
+	public void license_Reset() throws Exception{	
+		license_Search();
+		findElement("resetBtnObject").click();
+		Thread.sleep(1000);
+		Assert.assertTrue(findElement("recordTextObject").getText().contains("显示第 1 到第 10 条记录"));
+	}
+	
+	
+	//查看【待审核】的证照
+	public void license_ViewDetail() throws Exception{
+		license_Search();
+		findElement("viewBtnObject").click();
+		Thread.sleep(1000);
+		AssertEqualsFromExcel(findElement("projectIdObject_viewPage").getText(), "项目编码_zz");
+		Assert.assertEquals(findElement("auditStatusObject_viewPage").getText(), "待审核");
+		findElement("zzlbBtnObject").click();
+		Thread.sleep(1000);
+		Assert.assertTrue(findElement("searchBtnObject").isDisplayed());
+	}
+	
+	
+	//修改待审核的证照
+	public void license_Update() throws Exception{
+		license_Search();
+		AssertEqualsFromExcel(findElement("licenseNameTextObject").getText(), "证照名称_zz");
+		findElement("updateBtnObject").click();
+		Thread.sleep(2000);
+		selectByVisibleTextFromExcel(findElement("licenseNameObject"), "更改证照名称_zz");
+		findElement("submitBtnObject").click();
+		Thread.sleep(2000);
+		license_Search();
+		AssertEqualsFromExcel(findElement("licenseNameTextObject").getText(), "更改证照名称_zz");
+		
+		//修改回原始值
+		findElement("updateBtnObject").click();
+		Thread.sleep(2000);
+		selectByVisibleTextFromExcel(findElement("licenseNameObject"), "证照名称_zz");
+		findElement("submitBtnObject").click();
+	}
+	
+	
+	//添加证照
+	public void license_Add() throws Exception{
+		driver.switchTo().defaultContent();	    
+		findElement("licenseObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);	
+		
+		findElement("addLicenseObject").click();
+		driver.findElement(By.linkText(projectName)).click();
+		Thread.sleep(1000);
+		selectByVisibleTextFromExcel(findElement("licenseNameObject"), "证照名称_zz");
+		Thread.sleep(1000);
+		findElement("submitBtnObject").click();
+		Thread.sleep(1000);
+		
+		//添加图片
+	/*	findElement("addPhotoBtnObject").click();
+        String photoPath = System.getProperty("user.dir") + "\\src\\com\\test\\TestData\\" + "测试上传图片.jpg";
+        findElement("browseBtnObject").sendKeys(photoPath);
+		Thread.sleep(1000);
+		findElement("uploadFileNameBtnObject").click();
+		Thread.sleep(5000);
+		findElement("submitBtnObject").click();
+		Thread.sleep(5000);*/
+	}
+	
+	
+	
+
+}

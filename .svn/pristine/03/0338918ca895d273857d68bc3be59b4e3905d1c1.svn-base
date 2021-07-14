@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+
+	<!--选择菜单,系统管理-币种-->
+	<locator type="linktext" timeOut="3" value="系统管理">systemObject</locator>
+	<locator type="xpath" timeOut="3" value=".//*[@id='side-menu']/li[14]/ul/li[1]/a">currencyObject</locator>
+	<locator type="name" timeOut="3" value="in">iframeObject</locator>
+	
+	<!--查询，输入币种名称-->
+	<locator type="xpath" timeOut="3" value=".//*[@id='toolbar']/div/div/input">currencyNameObject</locator>	
+	<!--查询结果 -->
+	<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[2]">currencyTextObject</locator>
+	
+	
+	<!--修改，点击修改 -->
+	<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[6]/a">editBtnObject</locator>	
+	<!--选择状态 -->
+	<locator type="xpath" timeOut="3" value=".//*[@id='addBrandForm']/div[5]/div/label[1]/input">flagOpenObject</locator>
+	<locator type="xpath" timeOut="3" value=".//*[@id='addBrandForm']/div[5]/div/label[2]/input">flagStopObject</locator>
+	<!--点提交-->
+	<locator type="id" timeOut="3" value="editFrm">editFrmBtnObject</locator>
+	<!--修改结果-->
+	<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[5]/span">flagTextObject</locator>
+	
+	
+	<!--添加，点击"添加币种"-->
+	<locator type="xpath" timeOut="3" value="/html/body/div[1]/div/div[1]/div/a">AddBtnObject</locator>
+	<!--输入币种ID-->
+	<locator type="id" timeOut="3" value="crnId">crnIdObject</locator>
+	<!--输入币种名称-->
+	<locator type="id" timeOut="3" value="crnName">crnNameObject</locator>
+	<!--输入币种单位-->
+	<locator type="id" timeOut="3" value="crnUnit">crnUnitObject</locator>
+	<!--输入汇率-->
+	<locator type="id" timeOut="3" value="crnRate">crnRateObject</locator>
+	<!--选择状态-->
+	<locator type="xpath" timeOut="3" value=".//*[@id='addBrandForm']/div[5]/div/label[2]/input">addflagStopObject</locator>
+	<!--点提交-->
+	<locator type="id" timeOut="3" value="addFrm">addFrmBtnObject</locator>
+	
+</map>

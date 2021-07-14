@@ -1,0 +1,55 @@
+package com.test.PageAction.Login;
+
+
+import org.openqa.selenium.WebElement;
+//import org.testng.Assert;
+
+import com.libarary.Utils.ExcelUtil;
+
+import java.util.LinkedHashMap;
+import java.util.Set;
+
+import org.openqa.selenium.WebDriver;
+
+public class LoginPage extends BasePage {
+	
+	public LoginPage(WebDriver driver) throws Exception {
+		super(driver);
+		driver.manage().window().maximize();
+		driver.get(getTestData("url"));
+		pageLoadTimeout(3);
+	}
+	
+	public void Login() throws Exception{	
+		LinkedHashMap<String, String> userDataMap = ExcelUtil.readLoginUsers();
+		Set<String> userNameKey = userDataMap.keySet();
+		String userName =  userNameKey.iterator().next();
+		String password = getUsersData(userName);
+        
+		WebElement userNameElement = findElement("userNameObject");
+        if(userNameElement.isDisplayed()){
+        	userNameElement.sendKeys(userName);
+        }else{
+    		WebElement linkElement = findElement("linkObject");
+    		linkElement.click();
+    		implicitlyWait(3);
+    		WebElement userNameElement2 = findElement("userNameObject");
+    		userNameElement2.sendKeys(userName);
+        }
+
+        WebElement passwordElement = findElement("passwordObject");
+        passwordElement.sendKeys(password);
+		
+		WebElement loginElement = findElement("loginObject");
+		loginElement.click();
+
+		pageLoadTimeout(2000);
+//		WebElement mainPageElement = findElement("mainPageObject");
+//		Assert.assertTrue(mainPageElement.isDisplayed());
+
+		
+	}
+}
+
+
+

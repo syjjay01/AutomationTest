@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        <locator type="linktext" timeOut="3" value="资源管理">resourceMgmtObject</locator>
+        <locator type="partialLinkText" timeOut="3" value="分配统计">destributionStatsObject</locator>
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>
+        
+        <locator type="id" timeOut="3" value="userName">userNameObject</locator>
+        <locator type="id" timeOut="3" value="cardNumber">cardNumObject</locator>
+        <locator type="id" timeOut="3" value="departmentId">departmentObject</locator>
+        <locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>
+        <locator type="linktext" timeOut="3" value="重置">resetBtnObject</locator>
+        
+        <!--开始时间 -->
+        <locator type="id" timeOut="3" value="startTime">startTimeObject</locator>
+        <!--结束时间 -->
+        <locator type="id" timeOut="3" value="endTime">endTimeObject</locator>
+        
+        <!--开发人员 -->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr[1]/td[1]">kfryTextObject</locator>
+        <!--开发人员工号 -->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr[1]/td[2]">kfryghTextObject</locator>
+        <!--热线分配数 -->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr[1]/td[3]">rxfpsTextObject</locator>
+        <!--自有客户数 -->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr[1]/td[4]">zykhsTextObject</locator>
+        <!--显示记录数-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span[1]">recordTextObject</locator>
+        
+        
+</map>

@@ -1,0 +1,44 @@
+package com.test.PageAction.PreBuildMgmt;
+
+import com.test.PageAction.Login.BasePage;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+public class ProcessStats_Page extends BasePage{
+	String allstorenum;        //所有品牌达到签约标准门店数
+	String storenum;           //喆啡品牌达到签约标准门店数
+	public ProcessStats_Page(WebDriver driver) throws Exception{
+		super(driver);
+		
+	}
+	//进入筹建进度统计页面
+	public void processStatsPage() throws Exception{
+		Thread.sleep(1000);
+		findElement("prebuildObject").click();
+		Thread.sleep(1000);
+		findElement("processStatsObject").click();
+		WebElement iframeElement=findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+		//将达到签约标准全部门店数赋值给参数allstorenum
+		allstorenum=findElement("storenumObject").getText();
+		System.out.println("所有品牌达到签约标准门店数："+allstorenum);
+		System.out.println("正常打开筹建进度统计页面");
+		
+	}
+	//查询
+	public void processStatsPage_search() throws Exception{
+		Thread.sleep(500);
+		selectByVisibleText(findElement("brandObject"), "喆啡");
+		
+		Thread.sleep(1000);
+		storenum=findElement("storenumObject").getText();
+		System.out.println("喆啡达到签约标准门店数："+storenum);
+		//如果查询结果达到签约标准门店数与默认不相等，则查询成功
+		Assert.assertFalse(storenum.equals(allstorenum));
+		System.out.println("筹建进度统计查询成功");
+		
+	}
+	
+
+}

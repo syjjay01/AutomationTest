@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        <locator type="linktext" timeOut="3" value="开发管理">developmentMgmtObject</locator>
+        <locator type="xpath" timeOut="3" value="//*[@id='side-menu']/li[5]/ul/li[8]/a">receivablesObject</locator>
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>
+        
+        //项目编码 搜索框
+        <locator type="id" timeOut="3" value="projectId">projectIdObject</locator>
+        //查询 按钮
+        <locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>
+     
+        //重置 按钮
+        <locator type="id" timeOut="3" value="resetBtn">resetBtnObject</locator>
+        
+        //项目编码 文本 
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[1]">projectIdTextObject</locator>
+        //项目名称
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[2]">projectNameObject</locator>
+        
+        //"显示第 1 到第 10 条记录" 文本
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span[1]">recordTextObject</locator>
+   
+      
+
+        
+</map>

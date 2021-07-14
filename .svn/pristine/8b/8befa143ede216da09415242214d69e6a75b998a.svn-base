@@ -1,0 +1,44 @@
+package com.test.PageAction.StatisticsReport;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.test.PageAction.Login.BasePage;
+
+public class DevProjects_Page extends BasePage{
+     
+	public DevProjects_Page(WebDriver driver) throws Exception{
+		 super(driver);
+	}
+	
+	public void devProjects() throws Exception{
+		implicitlyWait(1000);
+		findElement("statsReportObject").click();
+		findElement("devProjectsObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+	}
+	
+	public void devProjects_Search() throws Exception{
+		selectByVisibleTextFromExcel(findElement("departmentObject"), "开发部_devProjects");
+		sendKeystoReadOnlyField(findElement("startTimeObject"), "开始日期_devProjects");
+		sendKeystoReadOnlyField(findElement("endTimeObject"), "结束日期_devProjects");
+	    findElement("searchBtnObject").click();
+	    Thread.sleep(2000);
+	    
+	    AssertEqualsFromExcel(findElement("firstDepartmentObject").getText(),"一级部门_devProjects");
+	    AssertEqualsFromExcel(findElement("secondDepartmentObject").getText(),"二级部门_devProjects");
+	    AssertEqualsFromExcel(findElement("thirdDepartmentObject").getText(),"三级部门_devProjects");
+	    AssertEqualsFromExcel(findElement("signedCountObject").getText(),"总签约数_devProjects");
+	    AssertEqualsFromExcel(findElement("roomCountObject").getText(),"总房量_devProjects");
+	    AssertEqualsFromExcel(findElement("avgRoomsObject").getText(),"平均房量_devProjects");
+	    AssertEqualsFromExcel(findElement("receivablesObject").getText(),"应收总款_devProjects");
+	    AssertEqualsFromExcel(findElement("receiptsObject").getText(),"已收总款_devProjects");
+	    AssertEqualsFromExcel(findElement("franchiseReceivablesObject").getText(),"应收加盟费_devProjects");
+	    AssertEqualsFromExcel(findElement("franchiseReceiptsObject").getText(),"已收加盟费_devProjects");
+	    AssertEqualsFromExcel(findElement("buildingReceivablesObject").getText(),"应收筹建_devProjects");
+	    AssertEqualsFromExcel(findElement("buildingReceiptsObject").getText(),"已收筹建_devProjects");
+		
+	}
+	
+}

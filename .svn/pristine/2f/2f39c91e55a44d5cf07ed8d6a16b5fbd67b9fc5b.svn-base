@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Browser setting lists -->
+        <config value="chrome">Browser_Name</config>
+        <config value="D:\\java\\geckodriver\\geckodriver-v0.14.0-win64\\geckodriver.exe">Firefox_Path</config>                
+        <config value="C:\\Users\\tchange\\.jenkins\\workspace\\driver server\\chromedriver.exe">Chrome_Path</config>        
+        <config value="C:\\Users\\tchange\\.jenkins\\workspace\\driver server\\IEDriverServer.exe">IE_Path</config>   
+        
+        <!--test data excel path setting lists -->
+        <config value="qqmd_TestData.xlsx">testDataFileName</config>
+
+         
+</map>

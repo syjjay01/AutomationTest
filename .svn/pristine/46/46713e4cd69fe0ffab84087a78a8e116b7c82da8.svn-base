@@ -1,0 +1,42 @@
+package com.test.TestCase.PreBuildMgmt;
+
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import com.libarary.Utils.ScreenShotListener;
+import com.test.PageAction.LoginLogout.LoginPage;
+import com.test.PageAction.LoginLogout.LogoutAction;
+import com.test.PageAction.PreBuildMgmt.ProcessStats_Page;
+import com.test.TestCase.LoginLogout.BaseTestCase;
+
+@Listeners({ScreenShotListener.class})
+public class TC_ProcessStats extends BaseTestCase{
+
+	@BeforeClass
+	public void start() throws Exception{
+		super.init();
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.Login(getUsersData("adminUser"));
+	}
+	
+	@Test
+	public void processStats() throws Exception{
+		
+		//进入筹建进度统计页面
+		ProcessStats_Page processstatspage=new ProcessStats_Page(driver);
+		processstatspage.processStatsPage();
+		//查询单个品牌的统计
+		processstatspage.processStatsPage_search();
+		
+	}
+	
+	@AfterClass
+	public void end() throws Exception{
+		//退出登录
+		LogoutAction logoutaction=new LogoutAction(driver);
+		logoutaction.Logout();
+	}
+	
+}

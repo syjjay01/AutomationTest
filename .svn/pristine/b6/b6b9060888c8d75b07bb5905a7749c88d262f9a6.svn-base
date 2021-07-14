@@ -1,0 +1,63 @@
+package com.test.PageAction.StatisticsReport;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.test.PageAction.LoginLogout.BasePage;
+
+//增减应收加盟费
+public class ReceivableJoinFee_Page extends BasePage{
+	
+	public ReceivableJoinFee_Page (WebDriver driver) throws Exception{
+		super(driver);
+	}
+
+	
+	public void ReceivableJoinFee() throws Exception{
+		implicitlyWait(1000);
+		findElement("statsReportObject").click();
+		Thread.sleep(1000);
+		findElement("receivableJoinFee").click(); 
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+	}
+	
+	public void ReceivableJoinFee_Search() throws Exception {
+		findElement("projectId").sendKeys(getTestData("项目编码_receivableJoinFee"));
+		sendKeystoReadOnlyField(findElement("startTimeObject"), "开始日期_receivableJoinFee");
+		findElement("searchBtn").click(); 
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("projectCodeObject").getText(), "项目编码_receivableJoinFee");
+	}
+	
+	public void ReceivableJoinFee_Reset() throws Exception {
+		//ReceivableJoinFee_Search();
+		findElement("resetBtn").click();
+		Thread.sleep(2000);
+		AssertNotSameFromExcel(findElement("projectCodeObject").getText(),"项目编码_receivableJoinFee");
+		// Assert.assertTrue(findElement("projectId").getAttribute("value").isEmpty());
+
+	}
+	
+/*	//验证列表字段
+	public void ReceivableJoinFee_Verify() throws Exception{
+		ReceivableJoinFee_Search();
+		AssertEqualsFromExcel(findElement("projectIdObject").getText(), "主合同ID_receivableJoinFee");
+		AssertEqualsFromExcel(findElement("storeIdObject").getText(), "门店ID_receivableJoinFee");
+		
+		AssertEqualsFromExcel(findElement("storeNameObject").getText(), "门店名称_receivableJoinFee");
+		AssertEqualsFromExcel(findElement("brandObject").getText(), "品牌_receivableJoinFee");
+		
+		AssertEqualsFromExcel(findElement("natureObject").getText(), "性质_receivableJoinFee");
+		AssertEqualsFromExcel(findElement("areaObject").getText(), "地区_receivableJoinFee");
+		AssertEqualsFromExcel(findElement("developmentDepartmentObject").getText(), "开发部_receivableJoinFee");
+		AssertEqualsFromExcel(findElement("governingRegionObject").getText(), "执行区域_receivableJoinFee");
+		AssertEqualsFromExcel(findElement("endTimeObject").getText(), "签约达标日期_receivableJoinFee");
+		
+		AssertEqualsFromExcel(findElement("roomNumberObject").getText(), "增减房间数_receivableJoinFee");
+		AssertEqualsFromExcel(findElement("feeObject").getText(), "增减应收加盟费_receivableJoinFee");
+		AssertEqualsFromExcel(findElement("auditTimeObject").getText(), "补充协议审核时间_receivableJoinFee");
+		
+	}*/
+	
+}

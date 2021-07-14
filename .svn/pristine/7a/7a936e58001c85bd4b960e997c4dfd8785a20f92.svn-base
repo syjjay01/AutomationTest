@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        <locator type="id" timeOut="3" value="username">userNameObject</locator>
+        <locator type="id" timeOut="3" value="password">passwordObject</locator>
+        <locator type="id" timeOut="3" value="login-submit">loginObject</locator>
+        <locator type="linktext" timeOut="3" value="使用其他账户登录">linkObject</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[3]/nav/div[2]/div/ul/li[2]/a">mainPageObject</locator> 
+         
+         
+</map>

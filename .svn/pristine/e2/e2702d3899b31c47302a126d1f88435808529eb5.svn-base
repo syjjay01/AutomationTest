@@ -1,0 +1,265 @@
+package com.test.PageAction.ResourceMgmt;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.test.PageAction.LoginLogout.BasePage;
+
+public class HotlineResource_Page extends BasePage{
+
+	protected String phone = getTelPhone();
+	protected String tel_section = getSpecifyNum(100,3000);
+	protected String tel = getSpecifyNum(100000,10000000);
+	protected String tel_ext = getSpecifyNum(10,300);
+	protected String name = "自动化投资人" + getDateTime();
+	
+    public HotlineResource_Page(WebDriver driver) throws Exception{
+    	 super(driver);
+    }
+    
+        
+    public void hotlineResource() throws Exception{
+    	implicitlyWait(1000);
+		findElement("resourceMgmtObject").click();
+		findElement("hotlineResourceObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+    }
+    
+	//添加一个投资人资源
+    public void addResource() throws Exception{
+    	findElement("tjzyBtnObject").click();
+    	Thread.sleep(1000);
+
+    	findElement("nameObject").sendKeys(name);
+        findElement("phoneObject").sendKeys(phone);
+        findElement("phoneSectionObject").sendKeys(tel_section);
+        findElement("phoneCodeObject").sendKeys(tel);
+        findElement("phoneExtObject").sendKeys(tel_ext);
+        findElement("emailObject").sendKeys(getTestData("电子邮箱_rxzy"));
+        
+        selectByVisibleTextFromExcel(findElement("categoryObject"),"客户性质_rxzy");
+        selectByVisibleTextFromExcel(findElement("departmentObject"),"开发部_rxzy");
+        Thread.sleep(500);
+        selectByVisibleTextFromExcel(findElement("customerLevelObject"),"客户级别_rxzy");
+        selectByVisibleTextFromExcel(findElement("sexObject"),"性别_rxzy");
+        selectByVisibleTextFromExcel(findElement("sourceObject"),"信息来源_rxzy");
+        
+        findElement("regionObject").click();
+        findElement("provinceObject").click();
+        findElement("cityObject").click();
+        findElement("areaObject").click();
+
+        findElement("addressObject").sendKeys(getTestData("详细地址_rxzy"));
+        findElement("remarkObject").sendKeys(getTestData("备注_rxzy"));   
+        
+/*        //添加图片
+        findElement("addImgBtnObject").click();
+        String photoPath = System.getProperty("user.dir") + "\\src\\com\\test\\TestData\\" + "测试上传图片.jpg";
+        findElement("browseBtnObject").sendKeys(photoPath);
+        findElement("uploadFileNameBtnObject").click();
+*/
+        Thread.sleep(1000);
+        findElement("submitBtnObject").click();
+        
+        //验证资源添加成功
+        Thread.sleep(2000);
+        Assert.assertEquals(findElement("nameTextObject").getText(), name);
+        Assert.assertTrue(findElement("phoneTextObject").getText().contains(phone));
+        Assert.assertTrue(findElement("phoneTextObject").getText().contains(tel));
+       
+        //把投资人名称写入excel
+        writeExcel(name,3);
+    }
+    
+    public void pendingDestribute_ViewDetail() throws Exception{
+    	//验证查看功能
+        findElement("viewBtnObject").click();
+        Thread.sleep(2000);
+        Assert.assertEquals(findElement("nameTextObject2").getText(), name);
+        findElement("zylbBtnObject").click();
+        Thread.sleep(2000);
+        Assert.assertEquals(findElement("nameTextObject").getText(), name);
+    }
+    
+    
+    public void pendingDestribute_Update() throws Exception{
+    	 //验证修改功能
+        findElement("updateBtnObject").click();
+        Thread.sleep(2000);
+        selectByVisibleTextFromExcel(findElement("categoryObject"),"更改客户性质_rxzy");
+        findElement("submitBtnObject").click();
+        Thread.sleep(1000);
+        Assert.assertEquals(findElement("nameTextObject").getText(), name);
+        AssertEqualsFromExcel(findElement("customerLevelTextObject").getText(),"更改客户性质_rxzy");
+        
+        //修改回原始值
+        findElement("updateBtnObject").click();
+        Thread.sleep(1000);
+        selectByVisibleTextFromExcel(findElement("categoryObject"),"客户性质_rxzy");
+        findElement("submitBtnObject").click();
+        Thread.sleep(1000);
+        AssertEqualsFromExcel(findElement("customerLevelTextObject").getText(),"客户性质_rxzy");
+    }
+    
+    public void pendingDistribute_Distribute() throws Exception{
+    	//分配开发员
+    	Thread.sleep(2000); 
+    	findElement("distributionBtnObject").click();
+    	Thread.sleep(2000);
+    	findElement("developerBtnObject_lwj").click();
+    	Thread.sleep(2000);
+
+    	//分配开发员后，验证资源信息在“已分配”页面显示
+    	findElement("distributedBtnObject").click();
+        Thread.sleep(2000);
+        Assert.assertEquals(findElement("nameTextObject").getText(), name);
+    }
+    
+ 
+    //已分配页面的查看、修改、移交功能
+    public void distributed_ViewDetail() throws Exception{
+    	//查看详情
+    	findElement("distributedBtnObject").click();
+    	Thread.sleep(2000);
+    	findElement("viewBtnObject").click();
+    	pageLoadTimeout(2000);
+    	Assert.assertEquals(findElement("nameTextObject2").getText(), name);
+    	findElement("zylbBtnObject").click();
+    	Thread.sleep(1000);
+    	Assert.assertEquals(findElement("rxzyTextObject").getText(), "热线资源");
+    }
+    
+    public void distributed_Update() throws Exception{	
+    	//修改备注
+        findElement("distributedBtnObject").click();
+        Thread.sleep(2000);
+        findElement("updateBtnObject").click();
+        pageLoadTimeout(2000);
+        
+        WebElement remarkElement = findElement("remarkObject");
+        remarkElement.clear();
+        remarkElement.sendKeys(getTestData("更改备注_rxzy"));  
+        
+        findElement("submitBtnObject").click();
+        Thread.sleep(1000);
+        findElement("distributedBtnObject").click();
+        Thread.sleep(2000);
+        AssertEqualsFromExcel(findElement("remarkTextObject").getText(), "更改备注_rxzy");
+        
+        //修改回原来的值
+        findElement("distributedBtnObject").click();
+        Thread.sleep(2000);
+        findElement("updateBtnObject").click();
+        Thread.sleep(2000);
+        findElement("remarkObject").clear();
+        findElement("remarkObject").sendKeys(getTestData("备注_rxzy"));
+        findElement("submitBtnObject").click();
+        Thread.sleep(2000);
+        findElement("distributedBtnObject").click();
+        Thread.sleep(2000);
+        AssertEqualsFromExcel(findElement("remarkTextObject").getText(), "备注_rxzy");
+        
+    }
+    
+    public void distributed_Transfer() throws Exception{
+    	//移交
+    	findElement("distributedBtnObject").click();
+        Thread.sleep(3000);
+    	AssertEqualsFromExcel(findElement("developerTextObject").getText(), "开发人员_rxzy");
+        findElement("transferBtnObject").click();
+        Thread.sleep(5000);
+        findElement("developerBtnObject_ll").click();
+        Thread.sleep(1000);
+        findElement("distributedBtnObject").click();
+        Thread.sleep(1000);
+        Assert.assertEquals(findElement("nameTextObject").getText(), name);
+        AssertEqualsFromExcel(findElement("developerTextObject").getText(), "开发人员2_rxzy");
+    }
+    
+    public void hotlineResource_Search() throws Exception{
+    	findElement("contactPersonObject").sendKeys(name);
+    	selectByVisibleText(findElement("distributionStatusObject"), "已分配");
+    	findElement("searchBtnObject").click();
+    	Thread.sleep(2000);
+    	Assert.assertEquals(findElement("nameTextObject").getText(), name);
+    }
+     
+    public void hotlineResource_Reset() throws Exception{
+    	findElement("resetBtnObject").click();
+    	Thread.sleep(2000);
+    	Assert.assertTrue(findElement("contactPersonObject").getAttribute("value").isEmpty());
+    }
+    
+    //批量导入
+    public void bulkImport() throws Exception{
+        findElement("exportBtnObject").click();
+        Thread.sleep(1000);
+        String exportPath = System.getProperty("user.dir") + "\\src\\com\\test\\TestData\\" + "热线资源-批量导入.xls";
+        findElement("browseBtnInBulkImportObject").sendKeys(exportPath);
+        Thread.sleep(2000);
+        findElement("submitBtnInBulkImportObject").click();
+        findElement("closeBtnInBulkImportObject").click();
+//        Thread.sleep(1000);
+//        findElement("confirmObject").click();
+/*        Thread.sleep(1000);
+        findElement("closeBtnInBulkImportObject").click();*/
+        Thread.sleep(2000);
+        findElement("searchBtnObject").click();
+        Thread.sleep(2000);
+        AssertEqualsFromExcel(findElement("nameTextObject").getText(), "联系人_rxzy");
+        
+        //修改电话号码，免得重复号码
+        findElement("updateBtnObject").click();
+        Thread.sleep(2000);
+        WebElement phoneElement = findElement("phoneObject");
+        phoneElement.clear();
+        phoneElement.sendKeys(getTelPhone());
+        findElement("submitBtnObject").click();
+        Thread.sleep(2000);
+        
+        findElement("updateBtnObject2").click();
+        Thread.sleep(2000);
+        WebElement phoneElement2 = findElement("phoneObject");
+        phoneElement2.clear();
+        phoneElement2.sendKeys(getTelPhone());
+        WebElement telElement2 = findElement("phoneCodeObject");
+        telElement2.clear();
+        telElement2.sendKeys(tel);
+        findElement("submitBtnObject").click();       
+   }
+    
+    //批量分配
+    public void bulkDistribute() throws Exception{
+    	Thread.sleep(1000);
+    	findElement("selectCheckBoxObject").click();
+    	findElement("selectCheckBoxObject2").click();
+    	findElement("bulkDistributBtnObject").click();
+    	Thread.sleep(1000);
+    	
+    	//分配开发员
+    	findElement("developerBtnObject_lwj").click();
+    	Thread.sleep(2000);
+    	findElement("distributedBtnObject").click();
+    	Thread.sleep(2000);
+    	AssertEqualsFromExcel(findElement("developerTextObject").getText(), "开发人员_rxzy");
+    }
+    
+    
+    //批量移交
+    public void bulkTransfer() throws Exception{
+    	findElement("distributedBtnObject").click();
+        Thread.sleep(2000);
+    	findElement("selectCheckBoxObject").click();
+    	findElement("selectCheckBoxObject2").click();
+    	findElement("bulkTransferBtnObject").click();
+    	Thread.sleep(2000);
+    	
+    	findElement("developerBtnObject_ll").click();
+    	Thread.sleep(2000);
+        AssertEqualsFromExcel(findElement("developerTextObject").getText(), "开发人员2_rxzy");
+    }
+    
+    
+}

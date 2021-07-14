@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        <locator type="linktext" timeOut="3" value="奖金管理">BonusMgmtObject</locator>
+        <locator type="xpath" timeOut="3" value="//*[@id='side-menu']/li[13]/ul/li/a">ProjectPanoramaObject</locator>
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>
+        
+        //项目编码搜索框
+        <locator type="id" timeOut="3" value="project_id">projectIdObject</locator>
+        //品牌搜索框
+        //<locator type="id" timeOut="3" value="brand_id">brandObject</locator>
+        //签约达标日期 
+        //<locator type="id" timeOut="3" value="isStandardime">signingDateObject</locator>
+        //查询按钮
+        <locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>
+                
+        //项目编码文本
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[8]">projectIdTextObject</locator>
+        //品牌文本
+        //<locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[3]">brandTextObject</locator>
+		
+        
+</map>

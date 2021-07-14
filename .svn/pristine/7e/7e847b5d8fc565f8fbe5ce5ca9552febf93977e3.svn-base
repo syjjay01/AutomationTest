@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+	
+	<!--选择菜单,系统管理-合同模版-->
+	<locator type="linktext" timeOut="3" value="系统管理">systemObject</locator>
+	<locator type="xpath" timeOut="3" value=".//*[@id='side-menu']/li[14]/ul/li[6]/a">contractConfigObject</locator>
+	<locator type="name" timeOut="3" value="in">iframeObject</locator>
+	
+	<!--选择品牌-->
+	<locator type="id" timeOut="3" value="brandId">brandIdObject</locator>	
+	<!--点查询-->
+	<locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>
+	<!--查询结果 -->
+	<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[2]">brandIdTextObject</locator>
+	
+	<!--点修改-->
+	<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[10]/a[2]">editBtnObject</locator>
+	<!--选择合同收费项目-->
+	<locator type="xpath" timeOut="3" value=".//*[@id='contract_items']/li[2]/label/input">contractItemsObject</locator>
+	<!--点保存-->
+	<locator type="id" timeOut="3" value="addTemplate">editSubmitBtnObject</locator>
+	
+	<!--点停用-->
+	<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[10]/a[1]">stopBtnObject</locator>
+	<!--停用结果-->
+	<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[9]/span">stopTextObject</locator>
+
+</map>

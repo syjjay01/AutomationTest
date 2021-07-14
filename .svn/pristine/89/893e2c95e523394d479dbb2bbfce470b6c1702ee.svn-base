@@ -1,0 +1,74 @@
+package com.test.PageAction.SystemConfig;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.test.PageAction.LoginLogout.BasePage;
+
+public class RoleConfig_Page extends BasePage{
+	
+	//新增时，随机生成角色名称
+	String randomString = "自动化测试_"+getRandomString(3);
+	
+	public RoleConfig_Page(WebDriver driver) throws Exception{
+		super(driver);		
+	}
+	
+	//选择菜单，系统管理-角色管理
+	public void roleConfig() throws Exception{
+		implicitlyWait(1000);
+		findElement("systemObject").click();
+		Thread.sleep(1000);
+		findElement("RoleConfigObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);			
+	}
+
+	//查询功能
+	public void roleConfig_Search() throws Exception{
+		findElement("roleNameObject").sendKeys(getTestData("角色名称_roleConfig"));
+		findElement("searchBtnObject").click();
+		Thread.sleep(1000);
+		AssertEqualsFromExcel(findElement("roleNameTextObject").getText(), "角色名称_roleConfig");		
+	}
+	
+	//修改功能
+	public void roleConfig_upate() throws Exception{
+		findElement("editBtnObject").click();
+		findElement("remarkObject").clear();
+		findElement("remarkObject").sendKeys(getTestData("备注_roleConfig"));
+		findElement("submitBtnObject").click();
+		Thread.sleep(1000);
+		//还原操作
+		findElement("roleNameObject").sendKeys(getTestData("角色名称_roleConfig"));
+		findElement("searchBtnObject").click();
+		Thread.sleep(1000);
+		findElement("editBtnObject").click();
+		findElement("remarkObject").clear();
+		findElement("remarkObject").sendKeys(getTestData("备注2_roleConfig"));
+		findElement("submitBtnObject").click();
+	}
+	
+	//添加功能
+	public void roleConfig_add() throws Exception{
+		findElement("addBtnObject").click();
+		findElement("addRoleNameObject").sendKeys(randomString);
+		findElement("addFlagObject").click();
+		findElement("addSubmitBtnObject").click();	
+		Thread.sleep(1000);
+		//验证添加是否成功
+		findElement("roleNameObject").sendKeys(randomString);
+		findElement("searchBtnObject").click();
+		Thread.sleep(1000);
+		Assert.assertEquals(findElement("roleNameTextObject").getText(), randomString);	
+	}
+	
+	//设置权限
+	public void roleConfig_setRole() throws Exception{
+		findElement("setRoleBtnObject").click();
+		findElement("permissionsObject").click();
+		findElement("setsubmitObject").click();
+	}
+	
+}

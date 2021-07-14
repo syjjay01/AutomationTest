@@ -1,0 +1,43 @@
+package com.test.TestCase.SystemConfig;
+
+import org.testng.annotations.Test;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
+
+import com.libarary.Utils.ScreenShotListener;
+import com.test.PageAction.Login.LoginPage;
+import com.test.PageAction.Login.LogoutAction;
+import com.test.PageAction.SystemConfig.Feedback_Page;
+import com.test.TestCase.Login.BaseTestCase;
+
+@Listeners({ScreenShotListener.class})
+public class TC_Feedback extends BaseTestCase{
+
+	@BeforeClass
+	public void start() throws Exception{
+		super.init();
+		LoginPage loginpage = new LoginPage(driver);
+		loginpage.Login();
+	}
+	
+	@Test
+	public void Feedback() throws Exception{
+		
+		Feedback_Page feedbackPage = new Feedback_Page(driver);
+		//选择菜单栏
+		feedbackPage.Feedback();
+		//组合查询功能
+		feedbackPage.Feedback_Search();
+		//修改功能
+		feedbackPage.Feedback_Reply();
+		
+	}
+	@AfterClass
+	 public void end() throws Exception{
+		LogoutAction logoutAction = new LogoutAction(driver);
+		logoutAction.Logout();
+	 }
+
+	
+}

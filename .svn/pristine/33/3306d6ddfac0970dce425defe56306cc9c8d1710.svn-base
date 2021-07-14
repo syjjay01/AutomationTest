@@ -1,0 +1,53 @@
+package com.test.PageAction.MoneyMgmt;
+
+import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.test.PageAction.Login.BasePage;
+
+public class Fund_Page extends BasePage{
+	
+	public Fund_Page(WebDriver driver) throws Exception{
+		super(driver);
+	}
+	
+	public void fund() throws Exception{
+		implicitlyWait(2000);
+		findElement("MoneyMgmtObject").click();
+		
+		Thread.sleep(2000);
+		findElement("fundObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+	}
+	
+	public void fund_Search() throws Exception{
+		//验证查询功能
+		Thread.sleep(2000);
+		findElement("projectIdObject").sendKeys(getTestData("项目编码_fund"));
+		findElement("projectNameObject").sendKeys(getTestData("项目名称_fund"));
+		Thread.sleep(2000);
+		findElement("payDateObject").click();
+		Thread.sleep(2000);
+		findElement("searchBtnObject").click();
+		
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("itemcodingTextObject").getText(),"项目编码_fund");
+		AssertEqualsFromExcel(findElement("itmeTextObject").getText(),"项目名称_fund");
+		
+	}
+	
+	public void fund_ViewDetail() throws Exception{
+		//验证查看功能
+		findElement("viewBtnObject").click();
+		Thread.sleep(1000);
+		AssertEqualsFromExcel(findElement("itemcodingTextObject2").getText(),"项目编码_fund");
+		findElement("fundlbBtnObject").click();
+		Thread.sleep(2000);
+		Assert.assertTrue(findElement("viewBtnObject").isDisplayed());
+	
+	
+	}
+
+}

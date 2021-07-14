@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+    <!--选择筹建管理菜单-->
+	<Locator type="linktext" timeOut="3" value="筹建管理">prebuildObject</Locator>
+	<Locator type="partialLinkText" timeOut="3" value="筹建门店">constructstoreObject</Locator>
+	<Locator type="name" timeOut="3" value="in">iframeObject</Locator>
+	<!--项目编码-->
+    <Locator type="id" timeOut="3" value="project_id">projectidObject</Locator>
+    <!--列表所有字段-->
+    <Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[1]">storeIDObject</Locator>
+    <Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[2]">projectObject</Locator>
+    <Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[3]">storeNameObject</Locator>
+    <Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[4]">brandObject</Locator>
+    <Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[5]">brandTypeObject</Locator>
+    <Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[6]">lawAddrObject</Locator>
+    <Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[7]">roomNumObject</Locator>
+    <Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[8]">storeStateObject</Locator>
+    <Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[9]">progressObject</Locator>
+    <Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[10]">signTimeObject</Locator>
+    <Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[11]">standarTimeObject</Locator>
+	<!--查询按钮-->
+	<Locator type="id" timeOut="3" value="searchBtn">searchBtnObject</Locator>
+	<!--查询结果只有一条记录-->
+	<Locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span[1]">searchpageObject</Locator>
+	<!--查看按钮-->
+	<Locator type="linktext" timeOut="3" value="详情">detailsObject</Locator>
+	<!--查看页面正常打开元素-->
+    <Locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/h4[1]">detailscontentObject</Locator>
+    <!--详情页跟踪按钮-->	
+    <Locator type="linktext" timeOut="3" value="跟踪">freezenlogBtnObject</Locator>
+    <!--验证跟踪日志-->
+    <Locator type="xpath" timeOut="3" value=".//*[@id='freezenLog']/div/div/div[1]/h4">logdetailObject</Locator>
+    <!--关闭日志窗口-->
+    <Locator type="xpath" timeOut="3" value=".//*[@id='freezenLog']/div/div/div[1]/button">freelogbtnObject</Locator>
+    <!--返回筹建门店列表按钮-->
+    <Locator type="linktext" timeOut="3" value="筹建门店列表">storelistObject</Locator>
+    <!--申请冻结按钮-->
+    <Locator type="linktext" timeOut="3" value="申请冻结">freezenbtnObject</Locator>
+    <!--填写冻结原因-->
+    <Locator type="id" timeOut="3" value="freezeRemark">remarkObject</Locator>
+    <!--确定按钮-->
+    <Locator type="xpath" timeOut="3" value=".//*[@id='freezeBuild']/div/div/div[3]/button[2]">submitbtnObject</Locator>
+    <!--重置按钮-->
+	<Locator type="id" timeOut="3" value="resetBtn">resetBtnObject</Locator>
+	<!--重置验证列表刷新数据-->
+	<Locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span[1]">listcontainsObject</Locator>
+</map>

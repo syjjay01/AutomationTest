@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+
+	<!--选择菜单，日志管理-PMS提交日志-->
+	<locator type="linktext" timeOut="3" value="日志管理">logObject</locator>
+	<locator type="partialLinkText" timeOut="3" value="PMS提交日志">pmsSubmitLogObject</locator>
+	<locator type="name" timeOut="3" value="in">iframeObject</locator>
+	
+	<!--查询功能-->
+	<locator type="id" timeOut="3" value="ChainID">ChainIDObject</locator>
+	<locator type="id" timeOut="3" value="request_type">requestTypeObject</locator>
+	<locator type="id" timeOut="3" value="request_flag">requestFlagObject</locator>
+	<locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>
+	
+	
+	<!--查询结果 -->
+	<locator type="xpath" timeOut="3" value=".//*[@id='[object Object]']/td[2]">ChainIDTextObject</locator>	
+	<locator type="xpath" timeOut="3" value=".//*[@id='[object Object]']/td[4]">requestTypeTextObject</locator>
+	<locator type="xpath" timeOut="3" value=".//*[@id='[object Object]']/td[5]">requestFlagTextObject</locator>
+
+</map>

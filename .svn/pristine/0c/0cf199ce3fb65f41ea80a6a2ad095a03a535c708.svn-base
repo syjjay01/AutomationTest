@@ -1,0 +1,33 @@
+package com.test.PageAction.BusinessProcess;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+
+import com.test.PageAction.LoginLogout.BasePage;
+
+public class ContractProcess extends BasePage{
+	
+	public ContractProcess(WebDriver driver) throws Exception{
+		super(driver);
+	}
+	
+	//切换新窗口，进入链接，自动生成物业、合同、收款的
+	public void addNewContract() throws Exception{
+		Thread.sleep(2000);
+		JavascriptExecutor javaScriptExecutor = (JavascriptExecutor)driver;  
+		javaScriptExecutor.executeScript("window.open();");  
+		switchToWindow(1);
+		driver.get(getTestData("autoAddContractUrl"));
+		
+		//获取“项目名称”
+		String projectName = findElement("projectNameObject").getText();
+		//把项目名称写入excel
+		writeExcel(projectName,4);
+		
+		//关闭新窗口
+		javaScriptExecutor.executeScript("window.close();");
+	//	driver.close();
+		switchToWindow(0);
+		
+	}
+}

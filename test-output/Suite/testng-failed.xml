@@ -1,0 +1,3290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="BusinessProcess(failed)">
+    <classes>
+      <class name="com.test.TestCase.StatisticsReport.TC_BrandProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_BrandProjects -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevBrandProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevBrandProjects -->
+      <class name="com.test.TestCase.StoreMgmt.TC_Store">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_Store -->
+      <class name="com.test.TestCase.StatisticsReport.TC_VisitTimes">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_VisitTimes -->
+      <class name="com.test.TestCase.StoreMgmt.TC_Renew">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_Renew -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_DestributionStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_DestributionStats -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_ProcessStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_ProcessStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_AppUsageStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_AppUsageStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_NumberOfStores">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_NumberOfStores -->
+      <class name="com.test.TestCase.BusinessProcess.TC_ContractProcess">
+        <methods>
+          <include name="start"/>
+          <include name="contractProcess"/>
+        </methods>
+      </class> <!-- com.test.TestCase.BusinessProcess.TC_ContractProcess -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_HotlineResource">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_HotlineResource -->
+      <class name="com.test.TestCase.AccidentReport.TC_AccidentReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_AccidentReport -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_ResourceTransfer">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_ResourceTransfer -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevRevenue">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevRevenue -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_ProcessStayStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_ProcessStayStats -->
+      <class name="com.test.TestCase.SetupProject.TC_SetupProject">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.SetupProject.TC_SetupProject -->
+      <class name="com.test.TestCase.StatisticsReport.TC_UnfiledStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_UnfiledStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevSigned">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevSigned -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Receipts">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Receipts -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Investors">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Investors -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Property">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Property -->
+      <class name="com.test.TestCase.StoreMgmt.TC_RoomType">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_RoomType -->
+      <class name="com.test.TestCase.AccidentReport.TC_RecycleBin">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_RecycleBin -->
+      <class name="com.test.TestCase.LicenseMgmt.TC_LicenseSummary">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LicenseMgmt.TC_LicenseSummary -->
+      <class name="com.test.TestCase.AccidentReport.TC_AccidentStatsReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_AccidentStatsReport -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_WorkReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_WorkReport -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_HotlineFeedback">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_HotlineFeedback -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_ProjectSummary">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_ProjectSummary -->
+      <class name="com.test.TestCase.StatisticsReport.TC_MonthlyFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_MonthlyFee -->
+      <class name="com.test.TestCase.BonusMgmt.TC_ProjectPanorama">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.BonusMgmt.TC_ProjectPanorama -->
+      <class name="com.test.TestCase.StatisticsReport.TC_StoreStatus">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_StoreStatus -->
+      <class name="com.test.TestCase.LicenseMgmt.TC_OperationLicense">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LicenseMgmt.TC_OperationLicense -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildAllRpt">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildAllRpt -->
+      <class name="com.test.TestCase.LoginLogout.TC_CloseBrowser">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LoginLogout.TC_CloseBrowser -->
+      <class name="com.test.TestCase.StoreMgmt.TC_RoomNumber">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_RoomNumber -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildFreeze">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildFreeze -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildStore">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildStore -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_License">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_License -->
+      <class name="com.test.TestCase.SetupProject.TC_City">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.SetupProject.TC_City -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Receivables">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Receivables -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevProjects -->
+      <class name="com.test.TestCase.MoneyMgmt.TC_BankAccount">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.MoneyMgmt.TC_BankAccount -->
+      <class name="com.test.TestCase.StatisticsReport.TC_ReceivableJoinFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_ReceivableJoinFee -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Visit">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Visit -->
+      <class name="com.test.TestCase.MoneyMgmt.TC_Fund">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.MoneyMgmt.TC_Fund -->
+      <class name="com.test.TestCase.StatisticsReport.TC_RevenueJoinFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_RevenueJoinFee -->
+      <class name="com.test.TestCase.ChangeBrand.TC_ChangeBrand">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ChangeBrand.TC_ChangeBrand -->
+      <class name="com.test.TestCase.StatisticsReport.TC_ReceivablesProgress">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_ReceivablesProgress -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Contract">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Contract -->
+    </classes>
+  </test> <!-- BusinessProcess(failed) -->
+  <test name="StatisticsReport(failed)">
+    <classes>
+      <class name="com.test.TestCase.StatisticsReport.TC_BrandProjects">
+        <methods>
+          <include name="drandProjects"/>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_BrandProjects -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevBrandProjects">
+        <methods>
+          <include name="start"/>
+          <include name="devBrandProjects"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevBrandProjects -->
+      <class name="com.test.TestCase.StoreMgmt.TC_Store">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_Store -->
+      <class name="com.test.TestCase.StatisticsReport.TC_VisitTimes">
+        <methods>
+          <include name="start"/>
+          <include name="visitTimes"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_VisitTimes -->
+      <class name="com.test.TestCase.StoreMgmt.TC_Renew">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_Renew -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_DestributionStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_DestributionStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_AppUsageStats">
+        <methods>
+          <include name="appUsageStats"/>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_AppUsageStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_NumberOfStores">
+        <methods>
+          <include name="start"/>
+          <include name="numberOfStores"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_NumberOfStores -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_ProcessStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_ProcessStats -->
+      <class name="com.test.TestCase.BusinessProcess.TC_ContractProcess">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.BusinessProcess.TC_ContractProcess -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_HotlineResource">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_HotlineResource -->
+      <class name="com.test.TestCase.AccidentReport.TC_AccidentReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_AccidentReport -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_ResourceTransfer">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_ResourceTransfer -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevRevenue">
+        <methods>
+          <include name="devRevenue"/>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevRevenue -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_ProcessStayStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_ProcessStayStats -->
+      <class name="com.test.TestCase.SetupProject.TC_SetupProject">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.SetupProject.TC_SetupProject -->
+      <class name="com.test.TestCase.StatisticsReport.TC_UnfiledStats">
+        <methods>
+          <include name="start"/>
+          <include name="unfiledStats"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_UnfiledStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevSigned">
+        <methods>
+          <include name="devSigned"/>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevSigned -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Receipts">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Receipts -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Investors">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Investors -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Property">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Property -->
+      <class name="com.test.TestCase.StoreMgmt.TC_RoomType">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_RoomType -->
+      <class name="com.test.TestCase.AccidentReport.TC_RecycleBin">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_RecycleBin -->
+      <class name="com.test.TestCase.LicenseMgmt.TC_LicenseSummary">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LicenseMgmt.TC_LicenseSummary -->
+      <class name="com.test.TestCase.AccidentReport.TC_AccidentStatsReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_AccidentStatsReport -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_WorkReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_WorkReport -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_HotlineFeedback">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_HotlineFeedback -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_ProjectSummary">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_ProjectSummary -->
+      <class name="com.test.TestCase.StatisticsReport.TC_MonthlyFee">
+        <methods>
+          <include name="start"/>
+          <include name="monthlyFee"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_MonthlyFee -->
+      <class name="com.test.TestCase.BonusMgmt.TC_ProjectPanorama">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.BonusMgmt.TC_ProjectPanorama -->
+      <class name="com.test.TestCase.StatisticsReport.TC_StoreStatus">
+        <methods>
+          <include name="start"/>
+          <include name="storeStatus"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_StoreStatus -->
+      <class name="com.test.TestCase.LicenseMgmt.TC_OperationLicense">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LicenseMgmt.TC_OperationLicense -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildAllRpt">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildAllRpt -->
+      <class name="com.test.TestCase.LoginLogout.TC_CloseBrowser">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LoginLogout.TC_CloseBrowser -->
+      <class name="com.test.TestCase.StoreMgmt.TC_RoomNumber">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_RoomNumber -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildFreeze">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildFreeze -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildStore">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildStore -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_License">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_License -->
+      <class name="com.test.TestCase.SetupProject.TC_City">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.SetupProject.TC_City -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevProjects">
+        <methods>
+          <include name="devProjects"/>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevProjects -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Receivables">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Receivables -->
+      <class name="com.test.TestCase.MoneyMgmt.TC_BankAccount">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.MoneyMgmt.TC_BankAccount -->
+      <class name="com.test.TestCase.StatisticsReport.TC_ReceivableJoinFee">
+        <methods>
+          <include name="start"/>
+          <include name="AccountingReceivable"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_ReceivableJoinFee -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Visit">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Visit -->
+      <class name="com.test.TestCase.MoneyMgmt.TC_Fund">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.MoneyMgmt.TC_Fund -->
+      <class name="com.test.TestCase.StatisticsReport.TC_RevenueJoinFee">
+        <methods>
+          <include name="RevenueJoinFee"/>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_RevenueJoinFee -->
+      <class name="com.test.TestCase.ChangeBrand.TC_ChangeBrand">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ChangeBrand.TC_ChangeBrand -->
+      <class name="com.test.TestCase.StatisticsReport.TC_ReceivablesProgress">
+        <methods>
+          <include name="receivablesProgress"/>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_ReceivablesProgress -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Contract">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Contract -->
+    </classes>
+  </test> <!-- StatisticsReport(failed) -->
+  <test name="ResourceMgmt(failed)">
+    <classes>
+      <class name="com.test.TestCase.StatisticsReport.TC_BrandProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_BrandProjects -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevBrandProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevBrandProjects -->
+      <class name="com.test.TestCase.StoreMgmt.TC_Store">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_Store -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_DestributionStats">
+        <methods>
+          <include name="destributionStats"/>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_DestributionStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_VisitTimes">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_VisitTimes -->
+      <class name="com.test.TestCase.StoreMgmt.TC_Renew">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_Renew -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_ProcessStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_ProcessStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_AppUsageStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_AppUsageStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_NumberOfStores">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_NumberOfStores -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_HotlineResource">
+        <methods>
+          <include name="start"/>
+          <include name="hotlineResource"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_HotlineResource -->
+      <class name="com.test.TestCase.BusinessProcess.TC_ContractProcess">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.BusinessProcess.TC_ContractProcess -->
+      <class name="com.test.TestCase.AccidentReport.TC_AccidentReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_AccidentReport -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_ResourceTransfer">
+        <methods>
+          <include name="resourceTransfer"/>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_ResourceTransfer -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevRevenue">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevRevenue -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_ProcessStayStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_ProcessStayStats -->
+      <class name="com.test.TestCase.SetupProject.TC_SetupProject">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.SetupProject.TC_SetupProject -->
+      <class name="com.test.TestCase.StatisticsReport.TC_UnfiledStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_UnfiledStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevSigned">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevSigned -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Receipts">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Receipts -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Investors">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Investors -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Property">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Property -->
+      <class name="com.test.TestCase.StoreMgmt.TC_RoomType">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_RoomType -->
+      <class name="com.test.TestCase.AccidentReport.TC_RecycleBin">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_RecycleBin -->
+      <class name="com.test.TestCase.LicenseMgmt.TC_LicenseSummary">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LicenseMgmt.TC_LicenseSummary -->
+      <class name="com.test.TestCase.AccidentReport.TC_AccidentStatsReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_AccidentStatsReport -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_HotlineFeedback">
+        <methods>
+          <include name="start"/>
+          <include name="hotlineFeedback"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_HotlineFeedback -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_WorkReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_WorkReport -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_ProjectSummary">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_ProjectSummary -->
+      <class name="com.test.TestCase.StatisticsReport.TC_MonthlyFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_MonthlyFee -->
+      <class name="com.test.TestCase.BonusMgmt.TC_ProjectPanorama">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.BonusMgmt.TC_ProjectPanorama -->
+      <class name="com.test.TestCase.StatisticsReport.TC_StoreStatus">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_StoreStatus -->
+      <class name="com.test.TestCase.LicenseMgmt.TC_OperationLicense">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LicenseMgmt.TC_OperationLicense -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildAllRpt">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildAllRpt -->
+      <class name="com.test.TestCase.LoginLogout.TC_CloseBrowser">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LoginLogout.TC_CloseBrowser -->
+      <class name="com.test.TestCase.StoreMgmt.TC_RoomNumber">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_RoomNumber -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildFreeze">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildFreeze -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildStore">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildStore -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_License">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_License -->
+      <class name="com.test.TestCase.SetupProject.TC_City">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.SetupProject.TC_City -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Receivables">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Receivables -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevProjects -->
+      <class name="com.test.TestCase.MoneyMgmt.TC_BankAccount">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.MoneyMgmt.TC_BankAccount -->
+      <class name="com.test.TestCase.StatisticsReport.TC_ReceivableJoinFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_ReceivableJoinFee -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Visit">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Visit -->
+      <class name="com.test.TestCase.MoneyMgmt.TC_Fund">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.MoneyMgmt.TC_Fund -->
+      <class name="com.test.TestCase.StatisticsReport.TC_RevenueJoinFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_RevenueJoinFee -->
+      <class name="com.test.TestCase.ChangeBrand.TC_ChangeBrand">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ChangeBrand.TC_ChangeBrand -->
+      <class name="com.test.TestCase.StatisticsReport.TC_ReceivablesProgress">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_ReceivablesProgress -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Contract">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Contract -->
+    </classes>
+  </test> <!-- ResourceMgmt(failed) -->
+  <test name="DevelopmentMgmt(failed)">
+    <classes>
+      <class name="com.test.TestCase.StatisticsReport.TC_BrandProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_BrandProjects -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevBrandProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevBrandProjects -->
+      <class name="com.test.TestCase.StoreMgmt.TC_Store">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_Store -->
+      <class name="com.test.TestCase.StatisticsReport.TC_VisitTimes">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_VisitTimes -->
+      <class name="com.test.TestCase.StoreMgmt.TC_Renew">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_Renew -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_DestributionStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_DestributionStats -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_ProcessStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_ProcessStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_AppUsageStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_AppUsageStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_NumberOfStores">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_NumberOfStores -->
+      <class name="com.test.TestCase.BusinessProcess.TC_ContractProcess">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.BusinessProcess.TC_ContractProcess -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_HotlineResource">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_HotlineResource -->
+      <class name="com.test.TestCase.AccidentReport.TC_AccidentReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_AccidentReport -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_ResourceTransfer">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_ResourceTransfer -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevRevenue">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevRevenue -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_ProcessStayStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_ProcessStayStats -->
+      <class name="com.test.TestCase.SetupProject.TC_SetupProject">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.SetupProject.TC_SetupProject -->
+      <class name="com.test.TestCase.StatisticsReport.TC_UnfiledStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_UnfiledStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevSigned">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevSigned -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Investors">
+        <methods>
+          <include name="start"/>
+          <include name="investors"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Investors -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Receipts">
+        <methods>
+          <include name="receipts"/>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Receipts -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Property">
+        <methods>
+          <include name="property"/>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Property -->
+      <class name="com.test.TestCase.StoreMgmt.TC_RoomType">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_RoomType -->
+      <class name="com.test.TestCase.AccidentReport.TC_RecycleBin">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_RecycleBin -->
+      <class name="com.test.TestCase.LicenseMgmt.TC_LicenseSummary">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LicenseMgmt.TC_LicenseSummary -->
+      <class name="com.test.TestCase.AccidentReport.TC_AccidentStatsReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_AccidentStatsReport -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_WorkReport">
+        <methods>
+          <include name="start"/>
+          <include name="workReport"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_WorkReport -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_HotlineFeedback">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_HotlineFeedback -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_ProjectSummary">
+        <methods>
+          <include name="start"/>
+          <include name="projectSummary"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_ProjectSummary -->
+      <class name="com.test.TestCase.StatisticsReport.TC_MonthlyFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_MonthlyFee -->
+      <class name="com.test.TestCase.BonusMgmt.TC_ProjectPanorama">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.BonusMgmt.TC_ProjectPanorama -->
+      <class name="com.test.TestCase.StatisticsReport.TC_StoreStatus">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_StoreStatus -->
+      <class name="com.test.TestCase.LicenseMgmt.TC_OperationLicense">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LicenseMgmt.TC_OperationLicense -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildAllRpt">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildAllRpt -->
+      <class name="com.test.TestCase.LoginLogout.TC_CloseBrowser">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LoginLogout.TC_CloseBrowser -->
+      <class name="com.test.TestCase.StoreMgmt.TC_RoomNumber">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_RoomNumber -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildFreeze">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildFreeze -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildStore">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildStore -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_License">
+        <methods>
+          <include name="start"/>
+          <include name="license"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_License -->
+      <class name="com.test.TestCase.SetupProject.TC_City">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.SetupProject.TC_City -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Receivables">
+        <methods>
+          <include name="start"/>
+          <include name="receivables"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Receivables -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevProjects -->
+      <class name="com.test.TestCase.MoneyMgmt.TC_BankAccount">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.MoneyMgmt.TC_BankAccount -->
+      <class name="com.test.TestCase.StatisticsReport.TC_ReceivableJoinFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_ReceivableJoinFee -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Visit">
+        <methods>
+          <include name="visit"/>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Visit -->
+      <class name="com.test.TestCase.MoneyMgmt.TC_Fund">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.MoneyMgmt.TC_Fund -->
+      <class name="com.test.TestCase.StatisticsReport.TC_RevenueJoinFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_RevenueJoinFee -->
+      <class name="com.test.TestCase.ChangeBrand.TC_ChangeBrand">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ChangeBrand.TC_ChangeBrand -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Contract">
+        <methods>
+          <include name="contract"/>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Contract -->
+      <class name="com.test.TestCase.StatisticsReport.TC_ReceivablesProgress">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_ReceivablesProgress -->
+    </classes>
+  </test> <!-- DevelopmentMgmt(failed) -->
+  <test name="SetupProject(failed)">
+    <classes>
+      <class name="com.test.TestCase.StatisticsReport.TC_BrandProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_BrandProjects -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevBrandProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevBrandProjects -->
+      <class name="com.test.TestCase.StoreMgmt.TC_Store">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_Store -->
+      <class name="com.test.TestCase.StatisticsReport.TC_VisitTimes">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_VisitTimes -->
+      <class name="com.test.TestCase.StoreMgmt.TC_Renew">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_Renew -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_DestributionStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_DestributionStats -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_ProcessStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_ProcessStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_AppUsageStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_AppUsageStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_NumberOfStores">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_NumberOfStores -->
+      <class name="com.test.TestCase.BusinessProcess.TC_ContractProcess">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.BusinessProcess.TC_ContractProcess -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_HotlineResource">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_HotlineResource -->
+      <class name="com.test.TestCase.AccidentReport.TC_AccidentReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_AccidentReport -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_ResourceTransfer">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_ResourceTransfer -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevRevenue">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevRevenue -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_ProcessStayStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_ProcessStayStats -->
+      <class name="com.test.TestCase.SetupProject.TC_SetupProject">
+        <methods>
+          <include name="start"/>
+          <include name="SetupProject"/>
+        </methods>
+      </class> <!-- com.test.TestCase.SetupProject.TC_SetupProject -->
+      <class name="com.test.TestCase.StatisticsReport.TC_UnfiledStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_UnfiledStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevSigned">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevSigned -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Receipts">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Receipts -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Investors">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Investors -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Property">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Property -->
+      <class name="com.test.TestCase.StoreMgmt.TC_RoomType">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_RoomType -->
+      <class name="com.test.TestCase.AccidentReport.TC_RecycleBin">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_RecycleBin -->
+      <class name="com.test.TestCase.LicenseMgmt.TC_LicenseSummary">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LicenseMgmt.TC_LicenseSummary -->
+      <class name="com.test.TestCase.AccidentReport.TC_AccidentStatsReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_AccidentStatsReport -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_WorkReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_WorkReport -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_HotlineFeedback">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_HotlineFeedback -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_ProjectSummary">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_ProjectSummary -->
+      <class name="com.test.TestCase.StatisticsReport.TC_MonthlyFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_MonthlyFee -->
+      <class name="com.test.TestCase.BonusMgmt.TC_ProjectPanorama">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.BonusMgmt.TC_ProjectPanorama -->
+      <class name="com.test.TestCase.StatisticsReport.TC_StoreStatus">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_StoreStatus -->
+      <class name="com.test.TestCase.LicenseMgmt.TC_OperationLicense">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LicenseMgmt.TC_OperationLicense -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildAllRpt">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildAllRpt -->
+      <class name="com.test.TestCase.LoginLogout.TC_CloseBrowser">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LoginLogout.TC_CloseBrowser -->
+      <class name="com.test.TestCase.StoreMgmt.TC_RoomNumber">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_RoomNumber -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildFreeze">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildFreeze -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildStore">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildStore -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_License">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_License -->
+      <class name="com.test.TestCase.SetupProject.TC_City">
+        <methods>
+          <include name="citygl"/>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.SetupProject.TC_City -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Receivables">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Receivables -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevProjects -->
+      <class name="com.test.TestCase.MoneyMgmt.TC_BankAccount">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.MoneyMgmt.TC_BankAccount -->
+      <class name="com.test.TestCase.StatisticsReport.TC_ReceivableJoinFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_ReceivableJoinFee -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Visit">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Visit -->
+      <class name="com.test.TestCase.MoneyMgmt.TC_Fund">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.MoneyMgmt.TC_Fund -->
+      <class name="com.test.TestCase.StatisticsReport.TC_RevenueJoinFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_RevenueJoinFee -->
+      <class name="com.test.TestCase.ChangeBrand.TC_ChangeBrand">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ChangeBrand.TC_ChangeBrand -->
+      <class name="com.test.TestCase.StatisticsReport.TC_ReceivablesProgress">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_ReceivablesProgress -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Contract">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Contract -->
+    </classes>
+  </test> <!-- SetupProject(failed) -->
+  <test name="ChangeBrand(failed)">
+    <classes>
+      <class name="com.test.TestCase.StatisticsReport.TC_BrandProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_BrandProjects -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevBrandProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevBrandProjects -->
+      <class name="com.test.TestCase.StoreMgmt.TC_Store">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_Store -->
+      <class name="com.test.TestCase.StatisticsReport.TC_VisitTimes">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_VisitTimes -->
+      <class name="com.test.TestCase.StoreMgmt.TC_Renew">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_Renew -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_DestributionStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_DestributionStats -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_ProcessStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_ProcessStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_AppUsageStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_AppUsageStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_NumberOfStores">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_NumberOfStores -->
+      <class name="com.test.TestCase.BusinessProcess.TC_ContractProcess">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.BusinessProcess.TC_ContractProcess -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_HotlineResource">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_HotlineResource -->
+      <class name="com.test.TestCase.AccidentReport.TC_AccidentReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_AccidentReport -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_ResourceTransfer">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_ResourceTransfer -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevRevenue">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevRevenue -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_ProcessStayStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_ProcessStayStats -->
+      <class name="com.test.TestCase.SetupProject.TC_SetupProject">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.SetupProject.TC_SetupProject -->
+      <class name="com.test.TestCase.StatisticsReport.TC_UnfiledStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_UnfiledStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevSigned">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevSigned -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Receipts">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Receipts -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Investors">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Investors -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Property">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Property -->
+      <class name="com.test.TestCase.StoreMgmt.TC_RoomType">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_RoomType -->
+      <class name="com.test.TestCase.AccidentReport.TC_RecycleBin">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_RecycleBin -->
+      <class name="com.test.TestCase.LicenseMgmt.TC_LicenseSummary">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LicenseMgmt.TC_LicenseSummary -->
+      <class name="com.test.TestCase.AccidentReport.TC_AccidentStatsReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_AccidentStatsReport -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_WorkReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_WorkReport -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_HotlineFeedback">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_HotlineFeedback -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_ProjectSummary">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_ProjectSummary -->
+      <class name="com.test.TestCase.StatisticsReport.TC_MonthlyFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_MonthlyFee -->
+      <class name="com.test.TestCase.BonusMgmt.TC_ProjectPanorama">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.BonusMgmt.TC_ProjectPanorama -->
+      <class name="com.test.TestCase.StatisticsReport.TC_StoreStatus">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_StoreStatus -->
+      <class name="com.test.TestCase.LicenseMgmt.TC_OperationLicense">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LicenseMgmt.TC_OperationLicense -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildAllRpt">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildAllRpt -->
+      <class name="com.test.TestCase.LoginLogout.TC_CloseBrowser">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LoginLogout.TC_CloseBrowser -->
+      <class name="com.test.TestCase.StoreMgmt.TC_RoomNumber">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_RoomNumber -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildFreeze">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildFreeze -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildStore">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildStore -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_License">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_License -->
+      <class name="com.test.TestCase.SetupProject.TC_City">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.SetupProject.TC_City -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Receivables">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Receivables -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevProjects -->
+      <class name="com.test.TestCase.MoneyMgmt.TC_BankAccount">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.MoneyMgmt.TC_BankAccount -->
+      <class name="com.test.TestCase.StatisticsReport.TC_ReceivableJoinFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_ReceivableJoinFee -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Visit">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Visit -->
+      <class name="com.test.TestCase.MoneyMgmt.TC_Fund">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.MoneyMgmt.TC_Fund -->
+      <class name="com.test.TestCase.StatisticsReport.TC_RevenueJoinFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_RevenueJoinFee -->
+      <class name="com.test.TestCase.ChangeBrand.TC_ChangeBrand">
+        <methods>
+          <include name="start"/>
+          <include name="changeBrand"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ChangeBrand.TC_ChangeBrand -->
+      <class name="com.test.TestCase.StatisticsReport.TC_ReceivablesProgress">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_ReceivablesProgress -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Contract">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Contract -->
+    </classes>
+  </test> <!-- ChangeBrand(failed) -->
+  <test name="PreBuildMgmt(failed)">
+    <classes>
+      <class name="com.test.TestCase.StatisticsReport.TC_BrandProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_BrandProjects -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevBrandProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevBrandProjects -->
+      <class name="com.test.TestCase.StoreMgmt.TC_Store">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_Store -->
+      <class name="com.test.TestCase.StatisticsReport.TC_VisitTimes">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_VisitTimes -->
+      <class name="com.test.TestCase.StoreMgmt.TC_Renew">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_Renew -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_DestributionStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_DestributionStats -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_ProcessStats">
+        <methods>
+          <include name="processStats"/>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_ProcessStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_AppUsageStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_AppUsageStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_NumberOfStores">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_NumberOfStores -->
+      <class name="com.test.TestCase.BusinessProcess.TC_ContractProcess">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.BusinessProcess.TC_ContractProcess -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_HotlineResource">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_HotlineResource -->
+      <class name="com.test.TestCase.AccidentReport.TC_AccidentReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_AccidentReport -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_ResourceTransfer">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_ResourceTransfer -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevRevenue">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevRevenue -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_ProcessStayStats">
+        <methods>
+          <include name="start"/>
+          <include name="processStayStats"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_ProcessStayStats -->
+      <class name="com.test.TestCase.SetupProject.TC_SetupProject">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.SetupProject.TC_SetupProject -->
+      <class name="com.test.TestCase.StatisticsReport.TC_UnfiledStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_UnfiledStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevSigned">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevSigned -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Receipts">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Receipts -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Investors">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Investors -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Property">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Property -->
+      <class name="com.test.TestCase.StoreMgmt.TC_RoomType">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_RoomType -->
+      <class name="com.test.TestCase.AccidentReport.TC_RecycleBin">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_RecycleBin -->
+      <class name="com.test.TestCase.LicenseMgmt.TC_LicenseSummary">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LicenseMgmt.TC_LicenseSummary -->
+      <class name="com.test.TestCase.AccidentReport.TC_AccidentStatsReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_AccidentStatsReport -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_WorkReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_WorkReport -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_HotlineFeedback">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_HotlineFeedback -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_ProjectSummary">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_ProjectSummary -->
+      <class name="com.test.TestCase.StatisticsReport.TC_MonthlyFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_MonthlyFee -->
+      <class name="com.test.TestCase.BonusMgmt.TC_ProjectPanorama">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.BonusMgmt.TC_ProjectPanorama -->
+      <class name="com.test.TestCase.StatisticsReport.TC_StoreStatus">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_StoreStatus -->
+      <class name="com.test.TestCase.LicenseMgmt.TC_OperationLicense">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LicenseMgmt.TC_OperationLicense -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildAllRpt">
+        <methods>
+          <include name="preBuildAllRpt"/>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildAllRpt -->
+      <class name="com.test.TestCase.LoginLogout.TC_CloseBrowser">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LoginLogout.TC_CloseBrowser -->
+      <class name="com.test.TestCase.StoreMgmt.TC_RoomNumber">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_RoomNumber -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildFreeze">
+        <methods>
+          <include name="preBuildFreeze"/>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildFreeze -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildStore">
+        <methods>
+          <include name="start"/>
+          <include name="preBuildStore"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildStore -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_License">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_License -->
+      <class name="com.test.TestCase.SetupProject.TC_City">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.SetupProject.TC_City -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Receivables">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Receivables -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevProjects -->
+      <class name="com.test.TestCase.MoneyMgmt.TC_BankAccount">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.MoneyMgmt.TC_BankAccount -->
+      <class name="com.test.TestCase.StatisticsReport.TC_ReceivableJoinFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_ReceivableJoinFee -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Visit">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Visit -->
+      <class name="com.test.TestCase.MoneyMgmt.TC_Fund">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.MoneyMgmt.TC_Fund -->
+      <class name="com.test.TestCase.StatisticsReport.TC_RevenueJoinFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_RevenueJoinFee -->
+      <class name="com.test.TestCase.ChangeBrand.TC_ChangeBrand">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ChangeBrand.TC_ChangeBrand -->
+      <class name="com.test.TestCase.StatisticsReport.TC_ReceivablesProgress">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_ReceivablesProgress -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Contract">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Contract -->
+    </classes>
+  </test> <!-- PreBuildMgmt(failed) -->
+  <test name="StoreMgmt(failed)">
+    <classes>
+      <class name="com.test.TestCase.StatisticsReport.TC_BrandProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_BrandProjects -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevBrandProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevBrandProjects -->
+      <class name="com.test.TestCase.StoreMgmt.TC_Store">
+        <methods>
+          <include name="start"/>
+          <include name="store"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_Store -->
+      <class name="com.test.TestCase.StoreMgmt.TC_Renew">
+        <methods>
+          <include name="start"/>
+          <include name="renew"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_Renew -->
+      <class name="com.test.TestCase.StatisticsReport.TC_VisitTimes">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_VisitTimes -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_DestributionStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_DestributionStats -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_ProcessStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_ProcessStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_AppUsageStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_AppUsageStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_NumberOfStores">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_NumberOfStores -->
+      <class name="com.test.TestCase.BusinessProcess.TC_ContractProcess">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.BusinessProcess.TC_ContractProcess -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_HotlineResource">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_HotlineResource -->
+      <class name="com.test.TestCase.AccidentReport.TC_AccidentReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_AccidentReport -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_ResourceTransfer">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_ResourceTransfer -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevRevenue">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevRevenue -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_ProcessStayStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_ProcessStayStats -->
+      <class name="com.test.TestCase.SetupProject.TC_SetupProject">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.SetupProject.TC_SetupProject -->
+      <class name="com.test.TestCase.StatisticsReport.TC_UnfiledStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_UnfiledStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevSigned">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevSigned -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Receipts">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Receipts -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Investors">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Investors -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Property">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Property -->
+      <class name="com.test.TestCase.StoreMgmt.TC_RoomType">
+        <methods>
+          <include name="start"/>
+          <include name="roomType"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_RoomType -->
+      <class name="com.test.TestCase.AccidentReport.TC_RecycleBin">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_RecycleBin -->
+      <class name="com.test.TestCase.LicenseMgmt.TC_LicenseSummary">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LicenseMgmt.TC_LicenseSummary -->
+      <class name="com.test.TestCase.AccidentReport.TC_AccidentStatsReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_AccidentStatsReport -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_WorkReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_WorkReport -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_HotlineFeedback">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_HotlineFeedback -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_ProjectSummary">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_ProjectSummary -->
+      <class name="com.test.TestCase.StatisticsReport.TC_MonthlyFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_MonthlyFee -->
+      <class name="com.test.TestCase.BonusMgmt.TC_ProjectPanorama">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.BonusMgmt.TC_ProjectPanorama -->
+      <class name="com.test.TestCase.StatisticsReport.TC_StoreStatus">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_StoreStatus -->
+      <class name="com.test.TestCase.LicenseMgmt.TC_OperationLicense">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LicenseMgmt.TC_OperationLicense -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildAllRpt">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildAllRpt -->
+      <class name="com.test.TestCase.LoginLogout.TC_CloseBrowser">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LoginLogout.TC_CloseBrowser -->
+      <class name="com.test.TestCase.StoreMgmt.TC_RoomNumber">
+        <methods>
+          <include name="roomNumber"/>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_RoomNumber -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildFreeze">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildFreeze -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildStore">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildStore -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_License">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_License -->
+      <class name="com.test.TestCase.SetupProject.TC_City">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.SetupProject.TC_City -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Receivables">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Receivables -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevProjects -->
+      <class name="com.test.TestCase.MoneyMgmt.TC_BankAccount">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.MoneyMgmt.TC_BankAccount -->
+      <class name="com.test.TestCase.StatisticsReport.TC_ReceivableJoinFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_ReceivableJoinFee -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Visit">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Visit -->
+      <class name="com.test.TestCase.MoneyMgmt.TC_Fund">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.MoneyMgmt.TC_Fund -->
+      <class name="com.test.TestCase.StatisticsReport.TC_RevenueJoinFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_RevenueJoinFee -->
+      <class name="com.test.TestCase.ChangeBrand.TC_ChangeBrand">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ChangeBrand.TC_ChangeBrand -->
+      <class name="com.test.TestCase.StatisticsReport.TC_ReceivablesProgress">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_ReceivablesProgress -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Contract">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Contract -->
+    </classes>
+  </test> <!-- StoreMgmt(failed) -->
+  <test name="LicenseMgmt(failed)">
+    <classes>
+      <class name="com.test.TestCase.StatisticsReport.TC_BrandProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_BrandProjects -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevBrandProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevBrandProjects -->
+      <class name="com.test.TestCase.StoreMgmt.TC_Store">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_Store -->
+      <class name="com.test.TestCase.StatisticsReport.TC_VisitTimes">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_VisitTimes -->
+      <class name="com.test.TestCase.StoreMgmt.TC_Renew">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_Renew -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_DestributionStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_DestributionStats -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_ProcessStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_ProcessStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_AppUsageStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_AppUsageStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_NumberOfStores">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_NumberOfStores -->
+      <class name="com.test.TestCase.BusinessProcess.TC_ContractProcess">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.BusinessProcess.TC_ContractProcess -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_HotlineResource">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_HotlineResource -->
+      <class name="com.test.TestCase.AccidentReport.TC_AccidentReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_AccidentReport -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_ResourceTransfer">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_ResourceTransfer -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevRevenue">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevRevenue -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_ProcessStayStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_ProcessStayStats -->
+      <class name="com.test.TestCase.SetupProject.TC_SetupProject">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.SetupProject.TC_SetupProject -->
+      <class name="com.test.TestCase.StatisticsReport.TC_UnfiledStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_UnfiledStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevSigned">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevSigned -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Receipts">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Receipts -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Investors">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Investors -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Property">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Property -->
+      <class name="com.test.TestCase.StoreMgmt.TC_RoomType">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_RoomType -->
+      <class name="com.test.TestCase.AccidentReport.TC_RecycleBin">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_RecycleBin -->
+      <class name="com.test.TestCase.LicenseMgmt.TC_LicenseSummary">
+        <methods>
+          <include name="start"/>
+          <include name="licenseSummary"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LicenseMgmt.TC_LicenseSummary -->
+      <class name="com.test.TestCase.AccidentReport.TC_AccidentStatsReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_AccidentStatsReport -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_WorkReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_WorkReport -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_HotlineFeedback">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_HotlineFeedback -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_ProjectSummary">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_ProjectSummary -->
+      <class name="com.test.TestCase.StatisticsReport.TC_MonthlyFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_MonthlyFee -->
+      <class name="com.test.TestCase.BonusMgmt.TC_ProjectPanorama">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.BonusMgmt.TC_ProjectPanorama -->
+      <class name="com.test.TestCase.StatisticsReport.TC_StoreStatus">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_StoreStatus -->
+      <class name="com.test.TestCase.LicenseMgmt.TC_OperationLicense">
+        <methods>
+          <include name="start"/>
+          <include name="operationLicense"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LicenseMgmt.TC_OperationLicense -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildAllRpt">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildAllRpt -->
+      <class name="com.test.TestCase.LoginLogout.TC_CloseBrowser">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LoginLogout.TC_CloseBrowser -->
+      <class name="com.test.TestCase.StoreMgmt.TC_RoomNumber">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_RoomNumber -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildFreeze">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildFreeze -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildStore">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildStore -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_License">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_License -->
+      <class name="com.test.TestCase.SetupProject.TC_City">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.SetupProject.TC_City -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Receivables">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Receivables -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevProjects -->
+      <class name="com.test.TestCase.MoneyMgmt.TC_BankAccount">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.MoneyMgmt.TC_BankAccount -->
+      <class name="com.test.TestCase.StatisticsReport.TC_ReceivableJoinFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_ReceivableJoinFee -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Visit">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Visit -->
+      <class name="com.test.TestCase.MoneyMgmt.TC_Fund">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.MoneyMgmt.TC_Fund -->
+      <class name="com.test.TestCase.StatisticsReport.TC_RevenueJoinFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_RevenueJoinFee -->
+      <class name="com.test.TestCase.ChangeBrand.TC_ChangeBrand">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ChangeBrand.TC_ChangeBrand -->
+      <class name="com.test.TestCase.StatisticsReport.TC_ReceivablesProgress">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_ReceivablesProgress -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Contract">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Contract -->
+    </classes>
+  </test> <!-- LicenseMgmt(failed) -->
+  <test name="AccidentReport(failed)">
+    <classes>
+      <class name="com.test.TestCase.StatisticsReport.TC_BrandProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_BrandProjects -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevBrandProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevBrandProjects -->
+      <class name="com.test.TestCase.StoreMgmt.TC_Store">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_Store -->
+      <class name="com.test.TestCase.StatisticsReport.TC_VisitTimes">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_VisitTimes -->
+      <class name="com.test.TestCase.StoreMgmt.TC_Renew">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_Renew -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_DestributionStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_DestributionStats -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_ProcessStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_ProcessStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_AppUsageStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_AppUsageStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_NumberOfStores">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_NumberOfStores -->
+      <class name="com.test.TestCase.BusinessProcess.TC_ContractProcess">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.BusinessProcess.TC_ContractProcess -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_HotlineResource">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_HotlineResource -->
+      <class name="com.test.TestCase.AccidentReport.TC_AccidentReport">
+        <methods>
+          <include name="accidentReport"/>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_AccidentReport -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_ResourceTransfer">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_ResourceTransfer -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevRevenue">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevRevenue -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_ProcessStayStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_ProcessStayStats -->
+      <class name="com.test.TestCase.SetupProject.TC_SetupProject">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.SetupProject.TC_SetupProject -->
+      <class name="com.test.TestCase.StatisticsReport.TC_UnfiledStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_UnfiledStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevSigned">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevSigned -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Receipts">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Receipts -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Investors">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Investors -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Property">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Property -->
+      <class name="com.test.TestCase.AccidentReport.TC_RecycleBin">
+        <methods>
+          <include name="recycleBin"/>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_RecycleBin -->
+      <class name="com.test.TestCase.StoreMgmt.TC_RoomType">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_RoomType -->
+      <class name="com.test.TestCase.LicenseMgmt.TC_LicenseSummary">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LicenseMgmt.TC_LicenseSummary -->
+      <class name="com.test.TestCase.AccidentReport.TC_AccidentStatsReport">
+        <methods>
+          <include name="accidentStatisReport"/>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_AccidentStatsReport -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_WorkReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_WorkReport -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_HotlineFeedback">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_HotlineFeedback -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_ProjectSummary">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_ProjectSummary -->
+      <class name="com.test.TestCase.StatisticsReport.TC_MonthlyFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_MonthlyFee -->
+      <class name="com.test.TestCase.BonusMgmt.TC_ProjectPanorama">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.BonusMgmt.TC_ProjectPanorama -->
+      <class name="com.test.TestCase.StatisticsReport.TC_StoreStatus">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_StoreStatus -->
+      <class name="com.test.TestCase.LicenseMgmt.TC_OperationLicense">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LicenseMgmt.TC_OperationLicense -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildAllRpt">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildAllRpt -->
+      <class name="com.test.TestCase.LoginLogout.TC_CloseBrowser">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LoginLogout.TC_CloseBrowser -->
+      <class name="com.test.TestCase.StoreMgmt.TC_RoomNumber">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_RoomNumber -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildFreeze">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildFreeze -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildStore">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildStore -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_License">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_License -->
+      <class name="com.test.TestCase.SetupProject.TC_City">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.SetupProject.TC_City -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Receivables">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Receivables -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevProjects -->
+      <class name="com.test.TestCase.MoneyMgmt.TC_BankAccount">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.MoneyMgmt.TC_BankAccount -->
+      <class name="com.test.TestCase.StatisticsReport.TC_ReceivableJoinFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_ReceivableJoinFee -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Visit">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Visit -->
+      <class name="com.test.TestCase.MoneyMgmt.TC_Fund">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.MoneyMgmt.TC_Fund -->
+      <class name="com.test.TestCase.StatisticsReport.TC_RevenueJoinFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_RevenueJoinFee -->
+      <class name="com.test.TestCase.ChangeBrand.TC_ChangeBrand">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ChangeBrand.TC_ChangeBrand -->
+      <class name="com.test.TestCase.StatisticsReport.TC_ReceivablesProgress">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_ReceivablesProgress -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Contract">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Contract -->
+    </classes>
+  </test> <!-- AccidentReport(failed) -->
+  <test name="MoneyMgmt(failed)">
+    <classes>
+      <class name="com.test.TestCase.StatisticsReport.TC_BrandProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_BrandProjects -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevBrandProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevBrandProjects -->
+      <class name="com.test.TestCase.StoreMgmt.TC_Store">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_Store -->
+      <class name="com.test.TestCase.StatisticsReport.TC_VisitTimes">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_VisitTimes -->
+      <class name="com.test.TestCase.StoreMgmt.TC_Renew">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_Renew -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_DestributionStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_DestributionStats -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_ProcessStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_ProcessStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_AppUsageStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_AppUsageStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_NumberOfStores">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_NumberOfStores -->
+      <class name="com.test.TestCase.BusinessProcess.TC_ContractProcess">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.BusinessProcess.TC_ContractProcess -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_HotlineResource">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_HotlineResource -->
+      <class name="com.test.TestCase.AccidentReport.TC_AccidentReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_AccidentReport -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_ResourceTransfer">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_ResourceTransfer -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevRevenue">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevRevenue -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_ProcessStayStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_ProcessStayStats -->
+      <class name="com.test.TestCase.SetupProject.TC_SetupProject">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.SetupProject.TC_SetupProject -->
+      <class name="com.test.TestCase.StatisticsReport.TC_UnfiledStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_UnfiledStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevSigned">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevSigned -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Receipts">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Receipts -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Investors">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Investors -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Property">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Property -->
+      <class name="com.test.TestCase.StoreMgmt.TC_RoomType">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_RoomType -->
+      <class name="com.test.TestCase.AccidentReport.TC_RecycleBin">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_RecycleBin -->
+      <class name="com.test.TestCase.LicenseMgmt.TC_LicenseSummary">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LicenseMgmt.TC_LicenseSummary -->
+      <class name="com.test.TestCase.AccidentReport.TC_AccidentStatsReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_AccidentStatsReport -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_WorkReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_WorkReport -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_HotlineFeedback">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_HotlineFeedback -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_ProjectSummary">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_ProjectSummary -->
+      <class name="com.test.TestCase.StatisticsReport.TC_MonthlyFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_MonthlyFee -->
+      <class name="com.test.TestCase.BonusMgmt.TC_ProjectPanorama">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.BonusMgmt.TC_ProjectPanorama -->
+      <class name="com.test.TestCase.StatisticsReport.TC_StoreStatus">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_StoreStatus -->
+      <class name="com.test.TestCase.LicenseMgmt.TC_OperationLicense">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LicenseMgmt.TC_OperationLicense -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildAllRpt">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildAllRpt -->
+      <class name="com.test.TestCase.LoginLogout.TC_CloseBrowser">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LoginLogout.TC_CloseBrowser -->
+      <class name="com.test.TestCase.StoreMgmt.TC_RoomNumber">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_RoomNumber -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildFreeze">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildFreeze -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildStore">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildStore -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_License">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_License -->
+      <class name="com.test.TestCase.SetupProject.TC_City">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.SetupProject.TC_City -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Receivables">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Receivables -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevProjects -->
+      <class name="com.test.TestCase.MoneyMgmt.TC_BankAccount">
+        <methods>
+          <include name="bankAccount"/>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.MoneyMgmt.TC_BankAccount -->
+      <class name="com.test.TestCase.StatisticsReport.TC_ReceivableJoinFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_ReceivableJoinFee -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Visit">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Visit -->
+      <class name="com.test.TestCase.MoneyMgmt.TC_Fund">
+        <methods>
+          <include name="start"/>
+          <include name="fund"/>
+        </methods>
+      </class> <!-- com.test.TestCase.MoneyMgmt.TC_Fund -->
+      <class name="com.test.TestCase.StatisticsReport.TC_RevenueJoinFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_RevenueJoinFee -->
+      <class name="com.test.TestCase.ChangeBrand.TC_ChangeBrand">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ChangeBrand.TC_ChangeBrand -->
+      <class name="com.test.TestCase.StatisticsReport.TC_ReceivablesProgress">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_ReceivablesProgress -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Contract">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Contract -->
+    </classes>
+  </test> <!-- MoneyMgmt(failed) -->
+  <test name="BonusMgmt(failed)">
+    <classes>
+      <class name="com.test.TestCase.StatisticsReport.TC_BrandProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_BrandProjects -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevBrandProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevBrandProjects -->
+      <class name="com.test.TestCase.StoreMgmt.TC_Store">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_Store -->
+      <class name="com.test.TestCase.StatisticsReport.TC_VisitTimes">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_VisitTimes -->
+      <class name="com.test.TestCase.StoreMgmt.TC_Renew">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_Renew -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_DestributionStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_DestributionStats -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_ProcessStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_ProcessStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_AppUsageStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_AppUsageStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_NumberOfStores">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_NumberOfStores -->
+      <class name="com.test.TestCase.BusinessProcess.TC_ContractProcess">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.BusinessProcess.TC_ContractProcess -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_HotlineResource">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_HotlineResource -->
+      <class name="com.test.TestCase.AccidentReport.TC_AccidentReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_AccidentReport -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_ResourceTransfer">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_ResourceTransfer -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevRevenue">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevRevenue -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_ProcessStayStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_ProcessStayStats -->
+      <class name="com.test.TestCase.SetupProject.TC_SetupProject">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.SetupProject.TC_SetupProject -->
+      <class name="com.test.TestCase.StatisticsReport.TC_UnfiledStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_UnfiledStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevSigned">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevSigned -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Receipts">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Receipts -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Investors">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Investors -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Property">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Property -->
+      <class name="com.test.TestCase.StoreMgmt.TC_RoomType">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_RoomType -->
+      <class name="com.test.TestCase.AccidentReport.TC_RecycleBin">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_RecycleBin -->
+      <class name="com.test.TestCase.LicenseMgmt.TC_LicenseSummary">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LicenseMgmt.TC_LicenseSummary -->
+      <class name="com.test.TestCase.AccidentReport.TC_AccidentStatsReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_AccidentStatsReport -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_WorkReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_WorkReport -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_HotlineFeedback">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_HotlineFeedback -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_ProjectSummary">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_ProjectSummary -->
+      <class name="com.test.TestCase.StatisticsReport.TC_MonthlyFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_MonthlyFee -->
+      <class name="com.test.TestCase.BonusMgmt.TC_ProjectPanorama">
+        <methods>
+          <include name="ProjectPanorama"/>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.BonusMgmt.TC_ProjectPanorama -->
+      <class name="com.test.TestCase.StatisticsReport.TC_StoreStatus">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_StoreStatus -->
+      <class name="com.test.TestCase.LicenseMgmt.TC_OperationLicense">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LicenseMgmt.TC_OperationLicense -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildAllRpt">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildAllRpt -->
+      <class name="com.test.TestCase.LoginLogout.TC_CloseBrowser">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LoginLogout.TC_CloseBrowser -->
+      <class name="com.test.TestCase.StoreMgmt.TC_RoomNumber">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_RoomNumber -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildFreeze">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildFreeze -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildStore">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildStore -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_License">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_License -->
+      <class name="com.test.TestCase.SetupProject.TC_City">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.SetupProject.TC_City -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Receivables">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Receivables -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevProjects -->
+      <class name="com.test.TestCase.MoneyMgmt.TC_BankAccount">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.MoneyMgmt.TC_BankAccount -->
+      <class name="com.test.TestCase.StatisticsReport.TC_ReceivableJoinFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_ReceivableJoinFee -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Visit">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Visit -->
+      <class name="com.test.TestCase.MoneyMgmt.TC_Fund">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.MoneyMgmt.TC_Fund -->
+      <class name="com.test.TestCase.StatisticsReport.TC_RevenueJoinFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_RevenueJoinFee -->
+      <class name="com.test.TestCase.ChangeBrand.TC_ChangeBrand">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ChangeBrand.TC_ChangeBrand -->
+      <class name="com.test.TestCase.StatisticsReport.TC_ReceivablesProgress">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_ReceivablesProgress -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Contract">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Contract -->
+    </classes>
+  </test> <!-- BonusMgmt(failed) -->
+  <test name="LoginLogout(failed)">
+    <classes>
+      <class name="com.test.TestCase.StatisticsReport.TC_BrandProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_BrandProjects -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevBrandProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevBrandProjects -->
+      <class name="com.test.TestCase.StoreMgmt.TC_Store">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_Store -->
+      <class name="com.test.TestCase.StatisticsReport.TC_VisitTimes">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_VisitTimes -->
+      <class name="com.test.TestCase.StoreMgmt.TC_Renew">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_Renew -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_DestributionStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_DestributionStats -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_ProcessStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_ProcessStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_AppUsageStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_AppUsageStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_NumberOfStores">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_NumberOfStores -->
+      <class name="com.test.TestCase.BusinessProcess.TC_ContractProcess">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.BusinessProcess.TC_ContractProcess -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_HotlineResource">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_HotlineResource -->
+      <class name="com.test.TestCase.AccidentReport.TC_AccidentReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_AccidentReport -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_ResourceTransfer">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_ResourceTransfer -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevRevenue">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevRevenue -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_ProcessStayStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_ProcessStayStats -->
+      <class name="com.test.TestCase.SetupProject.TC_SetupProject">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.SetupProject.TC_SetupProject -->
+      <class name="com.test.TestCase.StatisticsReport.TC_UnfiledStats">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_UnfiledStats -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevSigned">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevSigned -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Receipts">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Receipts -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Investors">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Investors -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Property">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Property -->
+      <class name="com.test.TestCase.StoreMgmt.TC_RoomType">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_RoomType -->
+      <class name="com.test.TestCase.AccidentReport.TC_RecycleBin">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_RecycleBin -->
+      <class name="com.test.TestCase.LicenseMgmt.TC_LicenseSummary">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LicenseMgmt.TC_LicenseSummary -->
+      <class name="com.test.TestCase.AccidentReport.TC_AccidentStatsReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.AccidentReport.TC_AccidentStatsReport -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_WorkReport">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_WorkReport -->
+      <class name="com.test.TestCase.ResourceMgmt.TC_HotlineFeedback">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ResourceMgmt.TC_HotlineFeedback -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_ProjectSummary">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_ProjectSummary -->
+      <class name="com.test.TestCase.StatisticsReport.TC_MonthlyFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_MonthlyFee -->
+      <class name="com.test.TestCase.BonusMgmt.TC_ProjectPanorama">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.BonusMgmt.TC_ProjectPanorama -->
+      <class name="com.test.TestCase.StatisticsReport.TC_StoreStatus">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_StoreStatus -->
+      <class name="com.test.TestCase.LicenseMgmt.TC_OperationLicense">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LicenseMgmt.TC_OperationLicense -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildAllRpt">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildAllRpt -->
+      <class name="com.test.TestCase.LoginLogout.TC_CloseBrowser">
+        <methods>
+          <include name="start"/>
+          <include name="end"/>
+        </methods>
+      </class> <!-- com.test.TestCase.LoginLogout.TC_CloseBrowser -->
+      <class name="com.test.TestCase.StoreMgmt.TC_RoomNumber">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StoreMgmt.TC_RoomNumber -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildFreeze">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildFreeze -->
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildStore">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.PreBuildMgmt.TC_PreBuildStore -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_License">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_License -->
+      <class name="com.test.TestCase.SetupProject.TC_City">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.SetupProject.TC_City -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Receivables">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Receivables -->
+      <class name="com.test.TestCase.StatisticsReport.TC_DevProjects">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_DevProjects -->
+      <class name="com.test.TestCase.MoneyMgmt.TC_BankAccount">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.MoneyMgmt.TC_BankAccount -->
+      <class name="com.test.TestCase.StatisticsReport.TC_ReceivableJoinFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_ReceivableJoinFee -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Visit">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Visit -->
+      <class name="com.test.TestCase.MoneyMgmt.TC_Fund">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.MoneyMgmt.TC_Fund -->
+      <class name="com.test.TestCase.StatisticsReport.TC_RevenueJoinFee">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_RevenueJoinFee -->
+      <class name="com.test.TestCase.ChangeBrand.TC_ChangeBrand">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.ChangeBrand.TC_ChangeBrand -->
+      <class name="com.test.TestCase.StatisticsReport.TC_ReceivablesProgress">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.StatisticsReport.TC_ReceivablesProgress -->
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Contract">
+        <methods>
+          <include name="start"/>
+        </methods>
+      </class> <!-- com.test.TestCase.DevelopmentMgmt.TC_Contract -->
+    </classes>
+  </test> <!-- LoginLogout(failed) -->
+</suite> <!-- Failed suite [Suite] -->

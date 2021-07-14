@@ -1,0 +1,60 @@
+package com.test.PageAction.StatisticsReport;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.test.PageAction.LoginLogout.BasePage;
+
+//增减实收加盟费
+public class RevenueJoinFee_Page extends BasePage {
+
+	public  RevenueJoinFee_Page(WebDriver driver) throws Exception {
+		super(driver);
+		
+	}
+	
+	public void RevenueJoinFee() throws Exception {
+		implicitlyWait(1000);
+		findElement("statsReportObjct").click();
+		Thread.sleep(2000);
+		findElement("iframeObject").click();
+		WebElement iframeElement = findElement("revenueJoinFee");
+		driver.switchTo().frame(iframeElement);
+		
+	}
+	
+	//查询
+	public void RevenueJoinFee_Search() throws Exception {
+		findElement("projectId").sendKeys(getTestData("项目编码_revenueJoinFee"));
+		sendKeystoReadOnlyField(findElement("startDate"), "开始日期_revenueJoinFee");
+		findElement("searchBtn").click();
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("contractIdObject").getText(), "主合同ID_revenueJoinFee");//验证主合同ID
+	}
+	
+	//重置
+	public void RevenueJoinFee_Reset() throws Exception {
+		findElement("resetBtn").click();
+		Thread.sleep(2000);
+		AssertNotSameFromExcel(findElement("contractIdObject").getText(), "主合同ID_revenueJoinFee");//主合同ID不一致代表已重置
+		
+	}
+	
+	/*//验证列表字段
+	public void RevenJoinFee_Verify() throws Exception {
+		RevenueJoinFee_Search();
+		AssertEqualsFromExcel(findElement("storeIdObject").getText(), "门店ID_revenueJoinFee");
+		AssertEqualsFromExcel(findElement("projectIdObject").getText(), "项目编码_revenueJoinFee");
+		AssertEqualsFromExcel(findElement("storeNameObject").getText(), "门店名称_revenueJoinFee");
+		AssertEqualsFromExcel(findElement("brandObject").getText(), "品牌_revenueJoinFee");
+		AssertEqualsFromExcel(findElement("natureObject").getText(), "性质_revenueJoinFee");
+		AssertEqualsFromExcel(findElement("areaObject").getText(), "地区_revenueJoinFee");
+		AssertEqualsFromExcel(findElement("developmentDepartmentObject").getText(), "开发部_revenueJoinFee");
+		AssertEqualsFromExcel(findElement("executionAreaObject").getText(), "执行区域_revenueJoinFee");
+		AssertEqualsFromExcel(findElement("signingDateObject").getText(), "签约达标日期_revenueJoinFee");
+		AssertEqualsFromExcel(findElement("revenueJoinFeeObject").getText(), "增减实收加盟费_revenueJoinFee");
+		AssertEqualsFromExcel(findElement("auditTimeObject").getText(), "款项审核时间_revenueJoinFee");
+	}
+	*/
+	
+}

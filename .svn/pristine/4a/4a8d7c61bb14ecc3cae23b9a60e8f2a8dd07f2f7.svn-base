@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        <locator type="linktext" timeOut="3" value="统计报表">statsReportObject</locator>
+        //拜访次数统计
+        <locator type="partialLinkText" timeOut="3" value="拜访次数统计">visitTimesObject</locator>
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>
+        
+        //拜访日期 开始日期
+        <locator type="id" timeOut="3" value="startTime">startTimeObject</locator>
+        //拜访日期 结束日期
+        <locator type="id" timeOut="3" value="endTime">endTimeObject</locator>
+        
+        <locator type="xpath" timeOut="3" value="//*[@id='toolbar']/div/form/label[1]/input">dailyCheckboxObject</locator>
+        <locator type="xpath" timeOut="3" value="//*[@id='toolbar']/div/form/label[2]/input">weeklyCheckboxObject</locator>
+        <locator type="xpath" timeOut="3" value="//*[@id='toolbar']/div/form/label[3]/input">monthlyCheckboxObject</locator>
+        
+        //查询按钮
+        <locator type="xpath" timeOut="3" value="//*[@id='toolbar']/div/form/button">searchBtnObject</locator>
+        
+        //按日查询得到结果：
+        //2017.06.15的集团合计
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[19]/td[2]">textObject1_byDaily</locator>
+        //2017.06.08的集团合计
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[26]/td[2]">textObject2_byDaily</locator>
+        //"集团合计"
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[34]/td[2]">textObject3_byDaily</locator>
+        
+        //按周查询得到结果：
+        //2017.06.15～06.21
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[5]/td[2]">textObject1_byWeekly</locator>
+        //2017.06.08～06.14
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[6]/td[2]">textObject2_byWeekly</locator>        
+        //"集团合计"
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[8]/td[2]">textObject3_byWeekly</locator>       
+        
+         //按月查询得到结果：
+        //2017.06.01～06.30
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[4]/td[2]">textObject1_byMonthly</locator>        
+        //"集团合计"
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[5]/td[2]">textObject2_byMonthly</locator>   
+       
+        
+         
+        
+        
+        
+         
+</map>

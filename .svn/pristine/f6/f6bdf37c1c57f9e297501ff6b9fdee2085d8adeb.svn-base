@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        //功能选项卡定位元素
+        <locator type="linktext" timeOut="3" value="门店管理">mdglObject</locator> //一级菜单     
+        <locator type="partialLinkText" timeOut="3" value="收银点">sydObject</locator>//二级菜单       
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>//页面iframe
+        
+        //查询区域元素
+        <locator type="id" timeOut="3" value="store_name">storenameObject</locator>//门店名称
+        <locator type="id" timeOut="3" value="pos_name">posnameObject</locator>//收银点名称
+        <locator type="id" timeOut="3" value="pos_type">postypeObject</locator>//收银点类型
+        <locator type="id" timeOut="3" value="pos_flag">posflagObject</locator>//收银点状态
+        <locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>//查询按钮
+        <locator type="linktext" timeOut="3" value="重置">resetBtnObject</locator>//重置按钮
+             
+        //页码区域元素
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span[1]">recordObject</locator>//总记录文本（显示第x到第x条记录，总共x条记录）
+
+        //列表第一行元素        
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[9]/a[1]">viewBtnObject</locator>//查看按钮   
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[9]/a[2]">updateBtnObject</locator>//修改按钮           
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[2]">posnameTextObject</locator>//收银点名称       
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[3]">postypeTextObject</locator>//收银点类型        
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[7]">storenameTextObject</locator>//门店名称        
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[8]">posflagTextObject</locator>//状态
+        
+        //查看页面元素
+        <locator type="xpath" timeOut="3" value="html/body/div/div/div[2]/table/tbody/tr[3]/td">posnameTextObject3</locator>//收银点名称
+        <locator type="xpath" timeOut="3" value="html/body/div/div/div[1]/div/a">postListBtnObject</locator>//收银点列表按钮
+        
+        //修改页面元素
+        <locator type="xpath" timeOut="3" value="html/body/div/div/form/div[13]/div/select">flagSelObject</locator>//状态下拉框     
+        <locator type="xpath" timeOut="3" value="html/body/div/div/form/div[14]/div/button">submitBtnObject</locator>//提交按钮
+        
+        //添加页面元素
+        <locator type="linktext" timeOut="3" value="添加收银点">addBtnObject</locator>//添加收银点按钮 
+        <locator type="xpath" timeOut="3" value=".//*[@id='storeList']/div/div[2]/div[1]/a">storenameTextObject2</locator> //选择第一个门店添加收银点
+        <locator type="id" timeOut="3" value="name">posnameTextObject2</locator>//收银点名称
+        <locator type="id" timeOut="3" value="category">postypeTextObject2</locator>//收银点类型
+        <locator type="xpath" timeOut="3" value=".//*[@id='addPosFrm']/div[12]/div/button">submitBtnObject2</locator>//提交按钮   
+          
+</map>

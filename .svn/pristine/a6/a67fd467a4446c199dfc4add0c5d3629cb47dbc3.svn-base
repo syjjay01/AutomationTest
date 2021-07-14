@@ -1,0 +1,89 @@
+package com.test.PageAction.DevelopmentMgmt;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.test.PageAction.Login.BasePage;
+
+public class Contract_Page extends BasePage{
+	
+	public Contract_Page(WebDriver driver) throws Exception{
+		super(driver);
+	}
+	
+	
+	public void contract() throws Exception{
+		implicitlyWait(1000);
+		findElement("kfglObject").click();
+		Thread.sleep(1000);
+		findElement("htObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);	
+	}
+	
+	public void contract_Search() throws Exception{
+		findElement("projectNameObject").sendKeys(getTestData("项目名称_ht"));
+		findElement("developerObject").sendKeys(getTestData("开发跟进人_ht"));
+		findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		
+		AssertEqualsFromExcel(findElement("projectNameTextObject").getText(), "项目名称_ht");
+		AssertEqualsFromExcel(findElement("brandTextObject").getText(), "品牌_ht");
+		AssertEqualsFromExcel(findElement("brandTypeTextObject").getText(), "性质_ht");
+		AssertEqualsFromExcel(findElement("roomCountTextObject").getText(), "立项房间数_ht");
+		AssertEqualsFromExcel(findElement("ManagerPercentTextObject").getText(), "管理费率_ht");
+		AssertEqualsFromExcel(findElement("jmfbzTextObject").getText(), "加盟费标准_ht");
+		AssertEqualsFromExcel(findElement("contractTypeTextObject").getText(), "合同类型_ht");
+		AssertEqualsFromExcel(findElement("contractStatusTextObject").getText(), "合同状态_ht");
+		AssertEqualsFromExcel(findElement("departmentTextObject").getText(), "开发部_ht");
+		AssertEqualsFromExcel(findElement("developerTextObject").getText(), "开发跟进人_ht");
+		AssertEqualsFromExcel(findElement("AuditStatusTextObject").getText(), "审核状态_ht");
+	}
+	
+	
+	public void contract_Reset() throws Exception{
+		findElement("resetBtnObject").click();
+		Thread.sleep(2000);
+		Assert.assertTrue(findElement("recordTextObject").getText().contains("显示第 1 到第 10 条记录"));
+		AssertNotSameFromExcel(findElement("projectNameTextObject").getText(), "项目名称_ht");
+	
+	}
+	
+	
+	public void contract_ViewDetail() throws Exception{
+		findElement("viewBtnObject").click();
+		Thread.sleep(1000);
+		
+		AssertEqualsFromExcel(findElement("projectIdObject_viewPage").getText(), "项目编码_ht");
+		AssertEqualsFromExcel(findElement("brandObject_viewPage").getText(), "品牌_ht");
+		AssertEqualsFromExcel(findElement("brandTypeObject_viewPage").getText(), "性质_ht");
+		AssertEqualsFromExcel(findElement("projectNameObject_viewPage").getText(), "项目名称_ht");
+		AssertEqualsFromExcel(findElement("devStoreNameObject_viewPage").getText(), "物业名称_ht");
+		AssertEqualsFromExcel(findElement("regionObject_viewPage").getText(), "地区_ht");
+		AssertEqualsFromExcel(findElement("addressObject_viewPage").getText(), "法定地址_ht");
+		AssertEqualsFromExcel(findElement("investorObject_viewPage").getText(), "投资人_ht");
+		AssertEqualsFromExcel(findElement("sizeObject_viewPage").getText(), "面积_ht");
+		AssertEqualsFromExcel(findElement("deparmentObject_viewPage").getText(), "开发部_ht");
+		AssertEqualsFromExcel(findElement("developerObject_viewPage").getText(), "开发跟进人_ht");
+		
+		AssertEqualsFromExcel(findElement("contractTypeObject_viewPage").getText(), "合同类型_ht");
+		AssertEqualsFromExcel(findElement("contractStatusObject_viewPage").getText(), "合同状态_ht");
+		AssertEqualsFromExcel(findElement("roomCountObject_viewPage").getText(), "立项房间数_ht");
+		AssertEqualsFromExcel(findElement("managerPercentObject_viewPage").getText(), "管理费率_ht");
+		AssertEqualsFromExcel(findElement("jmfbzObject_viewPage").getText(), "加盟费标准_ht");
+		AssertEqualsFromExcel(findElement("jmfdbbzObject_viewPage").getText(), "加盟费达标标准_ht");
+		AssertEqualsFromExcel(findElement("jmfObject_viewPage").getText(), "加盟费_ht");
+		AssertEqualsFromExcel(findElement("sjzxfObject_viewPage").getText(), "设计咨询费_ht");
+		AssertEqualsFromExcel(findElement("rgcbObject_viewPage").getText(), "人工成本_ht");
+
+		Assert.assertTrue(findElement("managerListBtn").isDisplayed());
+		Assert.assertTrue(findElement("followBtn").isDisplayed());
+		
+		findElement("htlbBtnObject").click();
+		Thread.sleep(2000);
+		Assert.assertTrue(findElement("viewBtnObject").isDisplayed());
+		
+	}
+
+}

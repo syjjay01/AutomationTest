@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+  <project basedir="." default="run" name="qqmdUIAutomation">
+  	<property name="testoutput.dir" value="test-output"/>
+    <path id="run.classpath">
+        <fileset dir="${basedir}/libs">
+            <include name="**/*.jar"/>
+        </fileset>
+    </path>
+    <path id="classes">
+        <path refid="run.classpath"/>
+        <pathelement location="${basedir}/bin"/>
+    </path>
+  	
+  	<!--创建testng任务，引入所需包-->
+  	<taskdef resource="testngtasks"  classpathref="run.classpath"/>
+  	
+  	<!--删除bin文件，在构建时需要重新编译生成.class，name随意起名-->
+  	<target name="clean">
+  		<delete dir="bin"/>
+  	</target>
+  		
+  	<!--编译生成.class，depends表示，需要优先执行clean-->
+  	<target name="compile" depends="clean">
+  		<!--创建bin目录，可以是绝对路径，也可以是/bin跟build.xml同级路径 -->
+  		<mkdir dir="bin"/>
+  		<!--执行javac，来编译src下的.java，然后将编译成功的.class文件保存到bin中，其中需要jar包-->
+  		<javac srcdir="src" destdir="bin" classpathref="run.classpath">
+  			<!--如果java中用到UTF-8，则需要增加下面的-->
+  			<!-- compilerarg line="-encoding UTF-8"/-->
+  		</javac>
+  	</target>
+  	
+  	<!--执行testng.xml，depends表示，优先执行compile-->
+  	<target name="run" depends="compile">
+  		<!--创建testng节点，执行"classes"下面的.class文件-->
+  		<testng classpathref="classes">
+  			<!--制定xml文件所在目录-->
+  			<xmlfileset dir="${basedir}">
+  				<!--制定xml文件-->
+  				<include name="testng.xml"/>
+  			</xmlfileset>
+  		</testng>
+  	</target>
+  	
+  	<target name="result" depends="compile">
+  		<testng outputdir="${testoutput.dir}" classpathref="classes" delegateCommandSystemProperties="true">
+  			<xmlfileset dir="${basedir}" includes="${testng.file}"/>
+  		</testng>	
+  	</target>
+</project>

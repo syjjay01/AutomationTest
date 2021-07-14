@@ -1,0 +1,44 @@
+package com.test.PageAction.DevelopmentMgmt;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.test.PageAction.Login.BasePage;
+
+public class Receivables_Page extends BasePage{
+	
+	public Receivables_Page(WebDriver driver) throws Exception{
+		super(driver);
+	}
+	
+	
+	public void receivables() throws Exception{
+		implicitlyWait(1000);
+		findElement("developmentMgmtObject").click();
+		Thread.sleep(1000);
+		findElement("receivablesObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);	
+	}
+	
+	public void receivables_Search() throws Exception{
+		findElement("projectIdObject").sendKeys(getTestData("项目编码_yszj"));
+		findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		
+		AssertEqualsFromExcel(findElement("projectIdTextObject").getText(), "项目编码_yszj");
+		AssertEqualsFromExcel(findElement("projectNameObject").getText(), "项目名称_yszj");
+	}
+	
+	public void receivables_Reset() throws Exception{
+		findElement("resetBtnObject").click();
+		Thread.sleep(2000);
+		Assert.assertTrue(findElement("recordTextObject").getText().contains("显示第 1 到第 10 条记录"));
+	}
+	
+	
+	
+
+
+}

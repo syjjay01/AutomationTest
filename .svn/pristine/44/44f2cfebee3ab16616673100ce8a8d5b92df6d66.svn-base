@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        <locator type="linktext" timeOut="3" value="开发管理">DevMgmtObject</locator>
+        //工作报表
+        <locator type="partialLinkText" timeOut="3" value="工作报表">workReportObect</locator>
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>
+        
+        //开发人 搜索框
+        <locator type="id" timeOut="3" value="managerName">developerObject</locator>
+        //开始时间
+        <locator type="id" timeOut="3" value="startTime">startDateObject</locator>
+        //结束时间
+        <locator type="id" timeOut="3" value="endTime">endDateObject</locator>
+        
+        
+        //查询 按钮
+        <locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>
+        
+        //重置 按钮
+        <locator type="id" timeOut="3" value="resetBtn">resetBtnObject</locator>
+        
+        //"显示第 1 到第 1 条记录，总共 1 条记录"
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span[1]">recordObject</locator>
+        
+        //列表
+        //一级部门 
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[1]">primaryDepartmentObject</locator>
+        //二级部门 
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[2]">secondDepartmentObject</locator>
+        //三级部门 
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[3]">thirdDepartmentObject</locator>
+        //开发人
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[4]">developerTextObject</locator>
+        //加盟费收入
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[5]">franchiseFeeObject</locator>
+        //热线新增
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[6]">hotlinesAddedObject</locator>
+        //自有新增
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[7]">hotlinesAddedByOwnObject</locator>
+        //有效新增
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[8]">validHotlinesObject</locator>
+        //拜访人数
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[9]">visitNumObject</locator>
+        //见面拜访
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[10]">visitByMeetObject</locator>
+        //电话拜访
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[11]">visitByPhoneObject</locator>
+        //微信拜访
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[12]">visitByWechatObject</locator>
+        //其他拜访
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[13]">visitByOthersObject</locator>
+        //热线回复率
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[14]">hotlineResponseObject</locator>
+        //及时回复率
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[15]">responseOnTimeObject</locator>
+        //超时回复率
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[16]">responseOvertimeObject</locator>
+</map>

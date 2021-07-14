@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        <locator type="linktext" timeOut="3" value="统计报表">statsReportObject</locator>
+        //收款进度统计
+        <locator type="partialLinkText" timeOut="3" value="收款进度统计">receivablesProgressObject</locator>
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>
+        
+        <locator type="xpath" timeOut="3" value="//*[@id='toolbar']/div/form/label[1]/input">developCheckboxObject</locator>
+        <locator type="xpath" timeOut="3" value="//*[@id='toolbar']/div/form/label[2]/input">buildingCheckboxObject</locator>
+        <locator type="xpath" timeOut="3" value="//*[@id='toolbar']/div/form/label[3]/input">openingCheckboxObject</locator>
+        
+        <locator type="xpath" timeOut="3" value="//*[@id='toolbar']/div/form/button">searchBtnObject</locator>
+        
+        //集团合计
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[8]/td[2]">jthjTextObject</locator>
+        
+        
+</map>

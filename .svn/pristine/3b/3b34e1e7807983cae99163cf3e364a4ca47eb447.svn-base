@@ -1,0 +1,62 @@
+package com.test.PageAction.ResourceMgmt;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.test.PageAction.LoginLogout.BasePage;
+
+public class ResourceTransfer_Page extends BasePage{
+
+	String name = getWriteData("投资人_HotlineResource");
+	
+	public ResourceTransfer_Page(WebDriver driver) throws Exception{
+		super(driver);
+	}
+	
+	
+	public void resourceTransfer() throws Exception{
+		implicitlyWait(1000);
+		findElement("resourceMgmtObject").click();
+		Thread.sleep(2000);
+		findElement("resourceTransferObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+	}
+	
+	//查询功能
+	public void resourceTransfer_Search() throws Exception{
+		findElement("nameObject").sendKeys(name);
+		findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		Assert.assertEquals(findElement("nameTextObject").getText(), name);	
+	}
+	
+	//重置功能
+	public void resourceTransfer_Reset() throws Exception{
+		findElement("resetBtnObject").click();
+		Thread.sleep(2000);
+		String inputValue = findElement("nameObject").getAttribute("value");
+		Assert.assertTrue(inputValue.isEmpty());
+	}
+	
+/*	//验证列表字段
+	public void resourceTransfer_Validation() throws Exception{
+		findElement("nameObject").sendKeys(name);
+		findElement("phoneObject").sendKeys(getTestData("电话_zyyj"));
+		findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		
+		Assert.assertEquals(findElement("nameTextObject").getText(), name);	
+		AssertEqualsFromExcel(findElement("phoneTextObject").getText(), "电话2_zyyj");	
+		AssertEqualsFromExcel(findElement("categoryTextObject").getText(), "客户性质_zyyj");	
+		AssertEqualsFromExcel(findElement("departmentTextObject").getText(), "开发部_zyyj");	
+		AssertEqualsFromExcel(findElement("rigionTextObject").getText(), "地区_zyyj");	
+		AssertEqualsFromExcel(findElement("sourceTextObject").getText(), "热线资源_zyyj");		
+		AssertEqualsFromExcel(findElement("oldDeveloperTextObject").getText(), "原开发员_zyyj");	
+		AssertEqualsFromExcel(findElement("newDeveloperTextObject").getText(), "现开发员_zyyj");	
+		AssertEqualsFromExcel(findElement("fprTextObject").getText(), "分配人_zyyj");	
+		
+	}*/
+	
+}

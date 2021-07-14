@@ -1,0 +1,45 @@
+package com.test.TestCase.StatisticsReport;
+
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import com.libarary.Utils.ScreenShotListener;
+import com.test.PageAction.LoginLogout.LoginPage;
+import com.test.PageAction.LoginLogout.LogoutAction;
+import com.test.PageAction.StatisticsReport.StoreStatus_Page;
+import com.test.TestCase.LoginLogout.BaseTestCase;
+
+@Listeners({ScreenShotListener.class})
+public class TC_StoreStatus extends BaseTestCase{
+	
+	@BeforeClass
+	public void start() throws Exception{
+		super.init();
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.Login(getUsersData("adminUser"));
+	}
+	
+	
+	@Test
+	public void storeStatus() throws Exception{
+		StoreStatus_Page storeStatusPage = new StoreStatus_Page(driver);
+		//选择菜单栏
+		storeStatusPage.storeStatus();
+		//查询功能
+		storeStatusPage.storeStatus_Search();
+		//点击数字，弹出框，查看门店信息
+		storeStatusPage.storeStatus_viewDetails();
+	}
+	
+	 @AfterClass
+	 public void end() throws Exception{
+		LogoutAction logoutAction = new LogoutAction(driver);
+		logoutAction.Logout();
+	 }
+	
+
+
+}

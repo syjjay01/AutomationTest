@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        //一级菜单
+        <locator type="linktext" timeOut="3" value="门店管理">mdglObject</locator> 
+        //二级菜单
+        <locator type="xpath" timeOut="3" value=".//*[@id='side-menu']/li[9]/ul/li[5]/a">xyObject</locator>
+        //页面iframe
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>      
+       
+        //查询条件
+        <locator type="id" timeOut="3" value="projectId">projectIdObject</locator>//项目编码     
+        <locator type="id" timeOut="3" value="storeName">storeNameObject</locator>//门店名称
+        <locator type="id" timeOut="3" value="brandId">brandIdObject</locator>//品牌
+        <locator type="id" timeOut="3" value="brandTypeId">brandTypeIdObject</locator>//性质
+        <locator type="id" timeOut="3" value="oaCheckedFlag">oaCheckedFlagObject</locator>//状态
+        
+        //查询按钮
+        <locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>
+       //重置按钮 
+        <locator type="id" timeOut="3" value="resetBtn">resetBtnObject</locator>
+        //续约列表
+        <locator type="xpath" timeOut="3" value="/html/body/div[1]/div/div[1]/div/a">xylbObject</locator>
+       //记录条 
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span[1]">recordObject</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span[2]">pageObject</locator>
+
+        //第一列元素
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[1]">projectidTextObject</locator>//项目编码
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[2]">branTextObject</locator>//品牌
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[3]">brantypeTextObject</locator>//性质
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[4]">stroreTextObject</locator>//分店名称
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[7]">checkFlagTextObject</locator>//状态
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[8]/a[1]">checkBtnObject</locator>//查看按钮
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[8]/a[2]">changeBtnObject</locator>//修改按钮
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[8]/a[3]">RevokeBtnObject</locator>//撤销按钮
+        
+        //新增续约按钮
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[1]/div/a">addNewObject</locator>
+        //选择项目编码     
+        <locator type="xpath" timeOut="3" value="/html/body/div[1]/div/form/div[1]/div/input">projectInputObject</locator>//项目编码输入
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/form/div[3]/div/button">serchBtn1Object</locator>//查询按钮
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div/a">storeObject</locator>//选中门店
+        //选中不能新增的门店提示信息
+        <locator type="xpath" timeOut="3" value="html/body/div[2]/div/h4">warn1Object</locator>//警告1
+        <locator type="xpath" timeOut="3" value="html/body/div[3]/div/h4">warn2Object</locator>//警告2
+        <locator type="xpath" timeOut="3" value="html/body/div[2]/div/div[1]/span">closewarn1Object</locator>//关闭警告1
+        <locator type="xpath" timeOut="3" value="html/body/div[3]/div/div[1]/span">closewarn2Object</locator>//关闭警告2
+        
+        //查看界面
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[2]/td[2]/table/tbody/tr[1]/td[2]">ckprojectidObject</locator>//项目编码
+        <locator type="xpath" timeOut="3" value="/html/body/div[1]/div/table/tbody/tr[2]/td[2]/table/tbody/tr[28]/td[2]/span">ckcheckflagObject</locator>//状态
+        <locator type="xpath" timeOut="3" value="/html/body/div[1]/div/table/tbody/tr[2]/td[2]/table/tbody/tr[8]/td[2]">ckxgxysmObject</locator>//续约说明
+
+
+        //修改界面
+        <locator type="xpath" timeOut="3" value="/html/body/div[1]/div/table/tbody/tr[2]/td[2]/div/form/table/tbody/tr[1]/td[2]">xgprojectidObject</locator>//项目编码
+        <locator type="xpath" timeOut="3" value="/html/body/div[1]/div/table/tbody/tr[2]/td[2]/div/form/table/tbody/tr[7]/td[2]/textarea">xgxysmObject</locator>//续约说明
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[2]/td[2]/div/form/table/tbody/tr[25]/td/button[1]">saveObject</locator>//保存按钮
+
+        //添加界面
+        <locator type="xpath" timeOut="3" value=".//*[@id='renewalForm']/table/tbody/tr[1]/td[2]">tjprojectidObject</locator>//项目编码 
+        <locator type="xpath" timeOut="3" value=".//*[@id='renewalForm']/table/tbody/tr[2]/td[2]/input">xyjmfbzObject</locator>//续约加盟费标准
+        <locator type="xpath" timeOut="3" value=".//*[@id='renewalForm']/table/tbody/tr[3]/td[2]/input">ysjmfObject</locator>//应收加盟费
+        <locator type="xpath" timeOut="3" value=".//*[@id='renewalForm']/table/tbody/tr[4]/td[2]/input">xyglflObject</locator>//续约管理费率
+        <locator type="xpath" timeOut="3" value=".//*[@id='renewalForm']/table/tbody/tr[5]/td[2]/div/div/input">xykstimeObject</locator>//续约开始时间
+        <locator type="xpath" timeOut="3" value=".//*[@id='renewalForm']/table/tbody/tr[6]/td[2]/div/div/input">xyjztimeObject</locator>//续约截至时间     
+        <locator type="xpath" timeOut="3" value=".//*[@id='renewalForm']/table/tbody/tr[7]/td[2]/textarea">tjxgsmObject</locator>//续约说明
+        <locator type="xpath" timeOut="3" value=".//*[@id='renewalForm']/table/tbody/tr[8]/td[2]/input">qyrObject</locator>//签约人/单位
+        <locator type="xpath" timeOut="3" value=".//*[@id='renewalForm']/table/tbody/tr[9]/td[2]/select">zjlxObject</locator>//证件类型
+        <locator type="xpath" timeOut="3" value=".//*[@id='renewalForm']/table/tbody/tr[10]/td[2]/input">zjnoObject</locator>//证件号
+        <locator type="xpath" timeOut="3" value=".//*[@id='renewalForm']/table/tbody/tr[11]/td[2]/input">phoneObject</locator>//联系方式
+        <locator type="xpath" timeOut="3" value=".//*[@id='renewalForm']/table/tbody/tr[12]/td[2]/button">fjObject</locator>//合同附件
+        <locator type="id" timeOut="3" value="file">fileObject</locator>//浏览选择文件
+        <locator type="id" timeOut="3" value="uploadFileNameBtn">uploadBtnObject</locator>//上传按钮
+        <locator type="xpath" timeOut="3" value=".//*[@id='renewalForm']/table/tbody/tr[15]/td[2]/select">zffsObject</locator>//支付方式
+        <locator type="xpath" timeOut="3" value=".//*[@id='renewalForm']/table/tbody/tr[22]/td[2]/textarea">remarkObject</locator>//备注
+        <locator type="xpath" timeOut="3" value=".//*[@id='renewalForm']/table/tbody/tr[25]/td/button[1]">saveBtnObject</locator>//保存
+        <locator type="xpath" timeOut="3" value=".//*[@id='renewalForm']/table/tbody/tr[25]/td/button[2]">sumbitBtnObject</locator>//提交续约申请
+        <locator type="xpath" timeOut="3" value=".//*[@id='myModal']/div/div/div[3]/button[2]">okBtnObject</locator>//提交续约申请确定按钮      
+
+        //撤销界面
+         //功能有误，暂不做
+</map>

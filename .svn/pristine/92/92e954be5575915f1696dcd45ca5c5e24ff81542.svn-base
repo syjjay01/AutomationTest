@@ -1,0 +1,48 @@
+package com.test.PageAction.DevelopmentMgmt;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.test.PageAction.LoginLogout.BasePage;
+
+
+public class ProjectSummary_Page extends BasePage{
+	
+	public ProjectSummary_Page(WebDriver driver) throws Exception{
+		super(driver);
+	}
+	
+	
+	public void projectSummary() throws Exception{
+		implicitlyWait(1000);
+		findElement("devMgmtObject").click();
+		Thread.sleep(1000);
+		findElement("projectSummaryObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);	
+	}
+	
+	public void projectSummary_Search() throws Exception{
+		findElement("projectIdObject").sendKeys(getTestData("项目编码_xmqmb"));
+		sendKeystoReadOnlyField(findElement("startTimeObject"), "开始时间_xmqmb");
+		findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("projectIdTextObject").getText(), "项目编码_xmqmb");
+		AssertEqualsFromExcel(findElement("projectNameObject").getText(), "项目名称_xmqmb");
+	}
+	
+	
+	public void projectSummary_Reset() throws Exception{
+		findElement("resetBtnObject").click();
+		Thread.sleep(1000);
+		if(isElementPresent("projectIdTextObject")==true){
+			AssertNotSameFromExcel(findElement("projectIdTextObject").getText(), "项目编码_xmqmb");
+		}else{
+			Assert.assertEquals(findElement("noRecordObject").getText(), "没有找到匹配的记录");
+		}		
+	}
+
+
+
+}

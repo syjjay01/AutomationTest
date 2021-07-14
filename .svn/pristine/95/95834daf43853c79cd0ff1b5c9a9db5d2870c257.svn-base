@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        <locator type="linktext" timeOut="3" value="开发管理">kfglObject</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[3]/nav/div[2]/div/ul/li[5]/ul/li[1]/a">tzrObject</locator>
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>
+        
+        <locator type="id" timeOut="3" value="invName">nameObject</locator>
+        <locator type="id" timeOut="3" value="phone">phoneObject</locator>
+        <locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>
+        <locator type="id" timeOut="3" value="resetBtn">resetBtnObject</locator>
+        
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr/td[11]/a[1]">viewBtnObject</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr/td[11]/a[2]">updateBtnObject</locator>
+        
+        <!--投资人-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr/td[1]">nameTextObject</locator>
+        <!--联系电话-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr/td[2]">phoneTextObject</locator>
+        <!--开发部-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr/td[3]">departmentTextObject</locator>
+        <!--客户性质-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr/td[4]">categoryTextObject</locator>
+        <!--开发人员-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr/td[5]">devTextObject</locator>
+        <!--省-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr/td[6]">provinceTextObject</locator>
+        <!--市-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr/td[7]">cityTextObject</locator>
+        <!--创建人-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr/td[8]">creatorTextObject</locator>
+        <!--创建时间-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr/td[9]">createTimeTextObject</locator>
+        <!--备注-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr/td[10]">remarkTextObject</locator>
+        
+        <!--投资人详情-->
+        <locator type="xpath" timeOut="3" value="html/body/div/div/div[2]/table[1]/tbody/tr[1]/td">nameTextObject2</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[1]/div/a">tzrlbBtnObject</locator>
+        
+        <!--修改页面-->
+        <locator type="id" timeOut="3" value="remark">remarkObject</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/form/div[13]/div/button">submitBtnObject</locator>
+        
+        <!-- 记录 -->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span[1]">recordTextObject</locator>
+        
+        
+        
+</map>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+
+	<!--选择菜单，日志管理-门店操作日志-->
+	<locator type="linktext" timeOut="3" value="日志管理" >logObject</locator>
+	<locator type="xpath" timeOut="3" value=".//*[@id='side-menu']/li[15]/ul/li[1]/a">storeOperationObject</locator>
+	<locator type='name' timeOut="3" value="in">iframeObject</locator>
+	
+	<!--查询功能-->
+	<locator type="id" timeOut="3" value="storeId">storeIdObject</locator>
+	<locator type="id" timeOut="3" value="projectId">projectIdObject</locator>
+	<locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>
+	
+	<!--查询结果 -->
+	<locator type="xpath" timeOut="3" value=".//*[@id='[object Object]']/td[1]">storeIdTextObject</locator>
+	<locator type="xpath" timeOut="3" value=".//*[@id='[object Object]']/td[2]">projectIdTextObject</locator>
+	
+
+</map>

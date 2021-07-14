@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	<!--选择筹建汇总表菜单-->
+	<Locator type="linktext" timeOut="3" value="筹建管理">prebuildObject</Locator>
+	<Locator type="partialLinkText" timeOut="3" value="筹建汇总表">prebuildallprtObject</Locator>
+	<Locator type="name" timeOut="3" value="in">iframeObject</Locator>
+	<!--筹建汇总表页面标题-->
+	<Locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[1]/h1">pagenameObject</Locator>
+	<!--城品酒店-->
+	<Locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div/table/tbody/tr[19]/td[1]">chengpinObject</Locator>
+	<!--筹建门店数-->
+	<Locator type="xpath" timeout="3" value="html/body/div[1]/div/div[2]/div/table/tbody/tr[19]/td[2]">storenumObject</Locator>
+</map>

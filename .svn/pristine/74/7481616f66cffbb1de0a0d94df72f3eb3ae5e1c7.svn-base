@@ -1,0 +1,28 @@
+package com.test.PageAction.PreBuildMgmt;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.test.PageAction.Login.BasePage;
+
+
+public class PreBuildAllRpt_Page extends BasePage{
+	public PreBuildAllRpt_Page(WebDriver driver) throws Exception{
+		super(driver);
+	}
+	public void preBuildAllRpt_Page() throws Exception{
+		Thread.sleep(1000);
+		findElement("prebuildObject").click();
+		findElement("prebuildallprtObject").click();
+		WebElement iframeElement=findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+		
+		//验证正常打开筹建汇总表页面
+		Thread.sleep(1000);
+		Assert.assertEquals(findElement("pagenameObject").getText(),"筹建汇总表");
+		System.out.println("筹建汇总表页面正常打开");
+	}
+	
+
+}

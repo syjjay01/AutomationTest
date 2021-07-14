@@ -1,0 +1,110 @@
+package com.test.PageAction.DevelopmentMgmt;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.test.PageAction.Login.BasePage;
+
+public class Property_Page extends BasePage{
+
+
+	public Property_Page(WebDriver driver) throws Exception{
+		super(driver);
+	}
+	
+	
+	public void property() throws Exception{
+		implicitlyWait(1000);
+		findElement("kfglObject").click();
+		Thread.sleep(1000);
+		findElement("wyObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);		
+	}
+	
+	public void property_Search() throws Exception{
+		findElement("devStoreNameObject").sendKeys(getTestData("物业名称_wy"));
+		sendKeystoReadOnlyField(findElement("startTimeObject"), "开始时间_wy");
+		findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		
+		AssertEqualsFromExcel(findElement("wymcTextObject").getText(), "物业名称_wy");
+		AssertEqualsFromExcel(findElement("cityTextObject").getText(), "城市_wy");
+		AssertEqualsFromExcel(findElement("brandTextObject").getText(), "品牌_wy");
+		AssertEqualsFromExcel(findElement("departmentTextObject").getText(), "开发部_wy");
+		AssertEqualsFromExcel(findElement("roomNumTextObject").getText(), "预估房间数_wy");
+		AssertEqualsFromExcel(findElement("addressTextObject").getText(), "物业地址_wy");
+		AssertEqualsFromExcel(findElement("developerTextObject").getText(), "开发人_wy");
+	}
+	
+	
+	public void property_Reset() throws Exception{
+		findElement("resetBtnObject").click();
+		Thread.sleep(2000);
+		Assert.assertTrue(findElement("recordTextObject").getText().contains("显示第 1 到第 10 条记录，总共"));		
+	}
+	
+	
+	public void property_ViewDetail() throws Exception{
+		findElement("viewBtnObject").click();
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("ytTextObject_viewPage").getText(), "业态_wy");
+		AssertEqualsFromExcel(findElement("wymcTextObject_viewPage").getText(), "物业名称_wy");
+		AssertEqualsFromExcel(findElement("mjTextObject_viewPage").getText(), "面积_wy");
+		AssertEqualsFromExcel(findElement("lxrTextObject_viewPage").getText(), "联系人_wy");
+		AssertEqualsFromExcel(findElement("departmentTextObject_viewPage").getText(), "开发部_wy");
+		AssertEqualsFromExcel(findElement("tzrTextObject_viewPage").getText(), "投资人_wy");
+		findElement("wylbBtnObject").click();
+		Thread.sleep(2000);
+		Assert.assertTrue(findElement("viewBtnObject").isDisplayed());
+	}
+	 
+	
+	public void property_UpdateWithNothing() throws Exception{
+		findElement("updateBtnObject").click();
+		pageLoadTimeout(3000);
+		findElement("wylbBtnObject").click();
+		Thread.sleep(2000);
+		Assert.assertTrue(findElement("wymcTextObject").isDisplayed());
+	} 
+	
+	public void property_Update() throws Exception{
+        findElement("updateBtnObject").click();
+		Thread.sleep(2000);
+		
+		WebElement roomCountElement = findElement("roomCountInputObject");
+		roomCountElement.clear();
+		roomCountElement.sendKeys(getTestData("修改预估房间数_wy"));
+		
+		findElement("submitBtnObject").click();
+		Thread.sleep(2000);
+		
+		findElement("devStoreNameObject").sendKeys(getTestData("物业名称_wy"));
+		sendKeystoReadOnlyField(findElement("startTimeObject"), "开始时间_wy");
+		findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("roomNumTextObject").getText(), "修改预估房间数_wy");
+		
+		//修改回原始值
+     	findElement("updateBtnObject").click();
+		Thread.sleep(2000);
+		WebElement roomCountElement2 = findElement("roomCountInputObject");
+		
+		roomCountElement2.clear();
+		roomCountElement2.sendKeys(getTestData("预估房间数_wy"));		
+		findElement("submitBtnObject").click();
+		Thread.sleep(2000);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

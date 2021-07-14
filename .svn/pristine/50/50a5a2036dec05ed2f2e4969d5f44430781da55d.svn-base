@@ -1,0 +1,67 @@
+package com.test.PageAction.SystemConfig;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.test.PageAction.LoginLogout.BasePage;
+
+
+public class BrandConfig_Page extends BasePage{
+
+	//新增时，随机生成品牌名称
+	String randomString = "自动化测试_"+getRandomString(3);
+	
+	public BrandConfig_Page(WebDriver driver) throws Exception{
+		super(driver);		
+	}
+	
+	//选择菜单，转品牌
+	public void brandConfig() throws Exception{
+		implicitlyWait(1000);
+		findElement("systemObject").click();
+		findElement("brandConfigObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);			
+	}
+
+	//查询功能
+	public void brandConfig_Search() throws Exception{
+		findElement("brandNameObject").sendKeys(getTestData("品牌名称_brandConfig"));
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("brandNameTextObject").getText(), "品牌名称_brandConfig");		
+	}
+	
+	//修改功能
+	public void brandConfig_updata() throws Exception{
+		findElement("editBtnObject").click();
+		findElement("editbrandNameObject").clear();
+		findElement("editbrandNameObject").sendKeys(getTestData("品牌名称2_brandConfig"));
+		findElement("editFrmBtnObject").click();
+		Thread.sleep(2000);
+		//验证修改是否成功
+		findElement("brandNameObject").sendKeys(getTestData("品牌名称2_brandConfig"));
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("brandNameTextObject").getText(), "品牌名称2_brandConfig");
+		Thread.sleep(2000);
+		//还原操作
+		findElement("brandNameObject").sendKeys(getTestData("品牌名称2_brandConfig"));
+		findElement("editBtnObject").click();
+		findElement("editbrandNameObject").clear();
+		findElement("editbrandNameObject").sendKeys(getTestData("品牌名称_brandConfig"));
+		findElement("editFrmBtnObject").click();
+	}
+	
+	//添加功能
+	public void brandConfig_add() throws Exception{
+		findElement("addBtnObject").click();
+		findElement("addBrandNameObject").sendKeys(randomString);
+		findElement("addFrmObject").click();
+		Thread.sleep(2000);
+		//验证添加是否成功
+		findElement("brandNameObject").sendKeys(randomString);
+		Thread.sleep(2000);
+		Assert.assertEquals(findElement("brandNameTextObject").getText(),randomString);
+	}
+	
+}

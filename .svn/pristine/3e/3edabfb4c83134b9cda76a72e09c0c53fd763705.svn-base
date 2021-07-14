@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+		//功能模块菜单
+        <locator type="linktext" timeOut="3" value="统计报表">statsReportObject</locator>
+        <locator type="partialLinkText" timeOut="3" value="门店状态统计">storeStatusObject</locator>        
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>
+        
+        //按钮
+        <!--查询按钮-->
+        <locator type="xpath" timeOut="3" value="//*[@id='toolbar2']/div/form/button">searchBtnObject</locator>
+        
+        //查询条件
+        <!--开始日期-->
+        <locator type="id" timeOut="3" value="startTime">startTimeObject</locator>
+        <!--结束日期-->
+        <locator type="id" timeOut="3" value="endTime">endTimeObject</locator>
+              
+        //列表
+        <!--喆啡-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[5]/td[2]">CoffeetelObject</locator>
+        <!--海外酒店-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[7]/td[2]">aboardHotelObject</locator>
+        <!--希岸-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[4]/td[2]">XANAObject</locator>
+        <!--欢朋-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[3]/td[2]">HamptonObject</locator>
+        <!--7天酒店-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[6]/td[2]">new7dayObject</locator>
+        <!--集团合计-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[8]/td[2]">totalObject</locator>        
+        <!--品牌合计-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[3]/td[2]/button">storeInfoBtnbject</locator>
+        <!--门店信息弹出框标题-->
+        <locator type="id" timeOut="3" value="exampleModalLabel">storeInfoTitleObject</locator>
+        <!--门店信息弹出框中的关闭按钮-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[3]/div/div/div[1]/button">closeBtnbject</locator>
+            
+         
+</map>

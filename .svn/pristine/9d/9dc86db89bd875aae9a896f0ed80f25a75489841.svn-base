@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        //一级菜单
+        <locator type="linktext" timeOut="3" value="事故报告">sgbgObject</locator> 
+        //二级菜单
+        <locator type="xpath" timeOut="3" value=".//*[@id='side-menu']/li[11]/ul/li[3]/a">hszObject</locator>
+        //页面iframe
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>      
+       
+        //查询条件
+        <locator type="id" timeOut="3" value="projectId">projectIdObject</locator>//项目编码     
+        <locator type="id" timeOut="3" value="storeName">storeNameObject</locator>//门店名称
+        <locator type="id" timeOut="3" value="brandTypeId">brandTypeIdObject</locator>//性质
+        <locator type="id" timeOut="3" value="category">categoryObject</locator>//事故类型
+        <locator type="id" timeOut="3" value="name">nameObject</locator>//事故标题
+        <locator type="id" timeOut="3" value="startTime">startTimeObject</locator>//开始时间
+        //<locator type="id" timeOut="3" value="endTime">endTimeObject</locator>//结束时间
+  
+        //查询按钮
+        <locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>
+        //重置按钮
+        <locator type="id" timeOut="3" value="resetBtn">resetBtnObject</locator>
+     
+        //查询结果为空
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td">emptyBtnObject</locator>
+        
+        //第一列元素
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[1]">sgnumTextObject</locator>//事故编码 
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[2]">projectidTextObject</locator>//项目编码
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[3]">stroreTextObject</locator>//门店名称
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[4]">brantypeTextObject</locator>//性质     
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[5]">categoryTextObject</locator>//事故类型
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[6]">nameTextObject</locator>//事故标题
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[11]/a">activateObject</locator>//激活按钮
+        
+        //记录条数
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span[1]">recordObject</locator>//记录条文本
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span[2]">pageObject</locator>//页码文本
+
+        //提示
+        <locator type="xpath" timeOut="3" value="html/body/div[4]/div/h4">tipObject</locator>//提示 
+        <locator type="xpath" timeOut="3" value="html/body/div[4]/div/div[1]/span">closetipObject</locator>//关闭提示 
+        
+        
+</map>

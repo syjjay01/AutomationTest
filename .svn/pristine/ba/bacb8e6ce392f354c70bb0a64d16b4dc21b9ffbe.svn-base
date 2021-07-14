@@ -1,0 +1,182 @@
+package com.test.PageAction.LicenseMgmt;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import com.test.PageAction.Login.BasePage;
+import org.testng.Assert;
+
+public class OperationLicense_Page extends BasePage{
+	
+	String zzhm="自动化新增证照号码"+getDateTime();//添加时生成证照号码
+	String xghzzbm="自动化修改后证照号码"+getDateTime();//修改后生成证照号码
+
+	public OperationLicense_Page(WebDriver driver) throws Exception {
+		super(driver);
+	}
+	
+	public void operationLicense() throws Exception{
+		// 进入页面
+		implicitlyWait(1000);
+		findElement("zzglObject").click();
+		Thread.sleep(1000);
+		findElement("yyzzObject").click();
+		WebElement iframeElement =findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+	}
+
+	public void operationLicense_Search() throws Exception{
+		//查询功能
+		findElement("projectIdObject").sendKeys(getTestData("项目编码_yyzz"));
+		findElement("storeNameObject").sendKeys(getTestData("门店名称_yyzz"));	
+		selectByVisibleTextFromExcel(findElement("brandIdObject"),"品牌_yyzz");
+		selectByVisibleTextFromExcel(findElement("certCategoryObject"),"证照名称_yyzz");
+		selectByVisibleTextFromExcel(findElement("reviewFlagObject"),"审核状态_yyzz");
+		findElement("searchBtnObject").click();
+		Thread.sleep(1000);	
+		//验证查询功能
+		AssertEqualsFromExcel(findElement("projectidTextObject").getText(),"项目编码_yyzz");
+		AssertEqualsFromExcel(findElement("storeTextObject").getText(),"门店名称_yyzz");	
+		AssertEqualsFromExcel(findElement("branTextObject").getText(),"品牌_yyzz");	
+		AssertEqualsFromExcel(findElement("zzmcTextObject").getText(),"证照名称_yyzz");
+		AssertEqualsFromExcel(findElement("flagTextObject").getText(),"审核状态_yyzz");
+		Thread.sleep(1000);	
+	}
+	
+	public void operationLicense_Reset() throws Exception{
+		//重置功能
+		findElement("resetBtnObject").click();
+		Assert.assertTrue(findElement("projectIdObject").getAttribute("value").isEmpty());
+		Assert.assertTrue(findElement("storeNameObject").getAttribute("value").isEmpty());
+		AssertNotSameFromExcel(findElement("projectidTextObject").getText(),"项目编码_yyzz");	
+		Thread.sleep(2000);
+		if (findElement("pageObject").isDisplayed()){
+			Assert.assertTrue(findElement("recordObject").getText().contains("显示第 1 到第 10 条记录"));
+		}
+		else{
+			Assert.assertTrue(!findElement("recordObject").getText().contains("显示第 1 到第 10 条记录"));
+		}
+	}
+	
+	public void operationLicense_Add() throws Exception{
+		//添加运营证照
+		findElement("tjyyzzObject").click();
+		Thread.sleep(1000);		
+		//确定添加的门店
+		findElement("storeInputObject").sendKeys(getTestData("门店名称2_yyzz"));	
+		findElement("storeserchBtnObject").click();
+		Thread.sleep(1000);		
+		findElement("storeObject").click();
+		Thread.sleep(1000);	
+		//添加界面
+		selectByVisibleTextFromExcel(findElement("zzmcInputObject"),"证照名称2_yyzz");
+		findElement("zzhmInputObject").sendKeys(zzhm);
+		findElement("submitBtnObject").click();
+		Thread.sleep(2000);	
+		//验证是否添加成功
+		findElement("storeNameObject").sendKeys(getTestData("门店名称2_yyzz"));	
+		selectByVisibleTextFromExcel(findElement("certCategoryObject"),"证照名称2_yyzz");
+		findElement("searchBtnObject").click();
+		Thread.sleep(1000);		
+		Assert.assertEquals(findElement("zzhmTextObject").getText(),zzhm);
+		Assert.assertEquals(findElement("flagTextObject").getText(),"待审核");
+	}
+	
+	public void operationLicense_ViewDetail() throws Exception{
+	//查看功能
+		operationLicense_Search();
+		//点击查询出数据的查看按钮
+		findElement("checkBtnObject").click();
+		Thread.sleep(1000);
+		//验证是否相同
+		AssertEqualsFromExcel(findElement("ckstoreTextObject").getText(),"门店名称_yyzz");	
+		AssertEqualsFromExcel(findElement("ckbrandTextObject").getText(),"品牌_yyzz");	
+		AssertEqualsFromExcel(findElement("ckzzmcTextObject").getText(),"证照名称_yyzz");
+		AssertEqualsFromExcel(findElement("ckzzbmTextObject").getText(),"证照号码_yyzz");
+		AssertEqualsFromExcel(findElement("ckreviewTextObject").getText(),"审核状态_yyzz");
+		findElement("yyzzlbObject").click();
+		Thread.sleep(1000);
+		Assert.assertTrue(findElement("searchBtnObject").isDisplayed());
+	}
+	
+	public void operationLicense_Change() throws Exception{
+	//修改功能
+		operationLicense_Search();
+		String xgqzzbm=findElement("zzhmTextObject").getText();
+		//点击查询出数据的修改按钮
+		findElement("changeBtnObject").click();
+		Thread.sleep(1000);
+		//修改信息
+		findElement("zzhmInputObject").clear();	
+		findElement("zzhmInputObject").sendKeys(xghzzbm);	
+		findElement("submitBtnObject").click();
+		Thread.sleep(1000);
+		//验证信息
+		operationLicense_Search();
+		Assert.assertEquals(findElement("zzhmTextObject").getText(),xghzzbm);
+		//恢复修改数据
+		findElement("changeBtnObject").click();
+		Thread.sleep(1000);
+		//恢复原来信息
+		findElement("zzhmInputObject").clear();	
+		findElement("zzhmInputObject").sendKeys(xgqzzbm);	
+		findElement("submitBtnObject").click();
+		Thread.sleep(1000);
+		//验证恢复信息
+		operationLicense_Search();
+		Assert.assertEquals(findElement("zzhmTextObject").getText(),xgqzzbm);
+	}
+
+	public void operationLicense_Review_Adopt() throws Exception{
+	//审核通过功能
+		selectByVisibleText(findElement("reviewFlagObject"), "待审核");
+		findElement("searchBtnObject").click();
+		Thread.sleep(1000);	
+		//获取第一列信息
+		String shmdmc=findElement("storeTextObject").getText();
+		String shzzmc=findElement("zzmcTextObject").getText();
+		String shzzbm=findElement("zzhmTextObject").getText();
+		Assert.assertEquals(findElement("flagTextObject").getText(), "待审核");
+		findElement("reviewBtnObject").click();
+		Thread.sleep(1000);	
+		//审核界面
+		Assert.assertEquals(findElement("shzzbmTextObject").getText(),shzzbm);
+		findElement("passObject").click();
+		findElement("viewBtnObject").click();
+		Thread.sleep(2000);	
+		//验证是否审核成功
+		findElement("storeNameObject").sendKeys(shmdmc);	
+		selectByVisibleText(findElement("certCategoryObject"),shzzmc);
+		selectByVisibleText(findElement("reviewFlagObject"),"已审核");
+		findElement("searchBtnObject").click();
+		Thread.sleep(1000);	
+		Assert.assertEquals(findElement("zzhmTextObject").getText(),shzzbm);
+	}
+	
+	public void operationLicense_Review_Return() throws Exception{
+	//审核退回功能
+		selectByVisibleText(findElement("reviewFlagObject"), "待审核");
+		findElement("searchBtnObject").click();
+		Thread.sleep(1000);	
+		//获取第一列信息
+		String shmdmc=findElement("storeTextObject").getText();
+		String shzzmc=findElement("zzmcTextObject").getText();
+		String shzzbm=findElement("zzhmTextObject").getText();
+		Assert.assertEquals(findElement("flagTextObject").getText(), "待审核");
+		findElement("reviewBtnObject").click();
+		Thread.sleep(1000);	
+		//审核界面
+		Assert.assertEquals(findElement("shzzbmTextObject").getText(),shzzbm);
+		findElement("notpassObject").click();
+		findElement("remarkObject").sendKeys("审核意见是不通过");
+		findElement("viewBtnObject").click();
+		Thread.sleep(2000);	
+		//验证是否审核退回
+		findElement("storeNameObject").sendKeys(shmdmc);	
+		selectByVisibleText(findElement("certCategoryObject"),shzzmc);
+		selectByVisibleText(findElement("reviewFlagObject"),"退回");
+		findElement("searchBtnObject").click();
+		Thread.sleep(1000);	
+		Assert.assertEquals(findElement("zzhmTextObject").getText(),shzzbm);
+	}
+	
+}

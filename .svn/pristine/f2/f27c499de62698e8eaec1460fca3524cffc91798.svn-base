@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+
+	<!--选择菜单，系统管理-角色管理 -->
+	<locator type="linktext" timeOut="3" value="系统管理">systemObject</locator>
+	<locator type="xpath" timeOut="3" value=".//*[@id='side-menu']/li[14]/ul/li[8]/a">RoleConfigObject</locator>
+	<locator type="name" timeOut="3" value="in">iframeObject</locator>
+
+	<!--输入角色名称-->
+	<locator type="id" timeOut="3" value="roleName">roleNameObject</locator>	
+	<!--查询按钮-->
+	<locator type="id" timeOut="3" value="searchBtn" >searchBtnObject</locator>
+	<!--查询结果-->
+	<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[1]">roleNameTextObject</locator>
+	
+	<!--点修改-->
+	<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[8]/a[1]">editBtnObject</locator>
+	<!--输入备注-->
+	<locator type="id" timeOut="3" value="remark">remarkObject</locator>
+	<!--点提交-->
+	<locator type="xpath" timeOut="3" value=".//*[@id='addBrandForm']/div[10]/div/button">submitBtnObject</locator>
+	
+	<!--点添加角色-->
+	<locator type="xpath" timeOut="3" value="/html/body/div[1]/div/div[1]/div/a">addBtnObject</locator>
+	<!--输入角色名称-->
+	<locator type="id" timeOut="3" value="role_name">addRoleNameObject</locator>
+	<!--选择状态-->
+	<locator type="xpath" timeOut="3" value=".//*[@id='addRoleForm']/div[5]/div/label[2]/input">addFlagObject</locator>
+	<!--点提交-->
+	<locator type="xpath" timeOut="3" value=".//*[@id='addRoleForm']/div[10]/div/button">addSubmitBtnObject</locator>
+	
+	<!--点设置权限-->
+	<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[8]/a[2]">setRoleBtnObject</locator>
+	<!--选择门店状态统计-->
+	<locator type="xpath" timeOut="3" value="/html/body/div[1]/div/div/div[2]/form/table/tbody[1]/tr[1]/td/label/input">permissionsObject</locator>
+	<!--点保存-->
+	<locator type="xpath" timeOut="3" value="html/body/div[1]/div/div/div[2]/form/table/tbody[14]/tr/td/div/button">setsubmitObject</locator>
+		
+	
+</map>

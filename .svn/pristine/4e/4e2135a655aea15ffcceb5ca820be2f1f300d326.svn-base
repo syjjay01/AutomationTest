@@ -1,0 +1,52 @@
+package com.test.PageAction.PreBuildMgmt;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+//import org.testng.Assert;
+
+import com.test.PageAction.LoginLogout.BasePage;
+
+public class ProcessStats_Page extends BasePage{
+	String allstorenum;        //所有品牌达到签约标准门店数
+	String storenum;           //喆啡品牌达到签约标准门店数
+	public ProcessStats_Page(WebDriver driver) throws Exception{
+		super(driver);
+		
+	}
+	//进入筹建进度统计页面
+	public void processStatsPage() throws Exception{
+		Thread.sleep(1000);
+		findElement("prebuildObject").click();
+		Thread.sleep(1000);
+		findElement("processStatsObject").click();
+		WebElement iframeElement=findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+		Thread.sleep(2000);
+		//将达到签约标准全部门店数赋值给参数allstorenum
+		allstorenum=findElement("storenumObject").getText();
+		System.out.println(this.getClass().getSimpleName()+"--所有品牌达到签约标准门店数："+allstorenum);
+		System.out.println(this.getClass().getSimpleName()+"--正常打开筹建进度统计页面");
+		
+	}
+	//查询
+	public void processStatsPage_search() throws Exception{
+		Thread.sleep(500);
+		selectByVisibleText(findElement("brandObject"), "城品酒店");
+		
+		Thread.sleep(1000);
+		storenum=findElement("storenumObject").getText();
+		System.out.println(this.getClass().getSimpleName()+ "--城品酒店达到签约标准门店数："+storenum);
+		//如果查询结果达到签约标准门店数与默认不相等，则查询成功
+		//Assert.assertFalse(storenum.equals(allstorenum));
+		
+		//验证页面数据是否正确，来保证门店数的算法正确
+		AssertEqualsFromExcel(findElement("dbqyNumObject").getText(), "达到签约标准_prebulidstore");	
+		AssertEqualsFromExcel(findElement("gcjcNumObject").getText(), "工程首次检查_prebulidstore");	
+		AssertEqualsFromExcel(findElement("gcjdNumObject").getText(), "工程进度60%_prebulidstore");	
+		AssertEqualsFromExcel(findElement("jgysNumObject").getText(), "竣工验收_prebulidstore");			
+		AssertEqualsFromExcel(findElement("kyshNumObject").getText(), "开业审核_prebulidstore");	
+		AssertEqualsFromExcel(findElement("storenumObject").getText(), "合计_prebulidstore");			
+	}
+	
+
+}

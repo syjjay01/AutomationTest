@@ -1,0 +1,75 @@
+package com.test.PageAction.ChangeBrand;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.test.PageAction.Login.BasePage;
+
+public class ChangeBrand_Page extends BasePage{
+	public ChangeBrand_Page(WebDriver driver)throws Exception{
+		super(driver);
+	}
+	public void changeBrand() throws Exception{
+		Thread.sleep(2000);
+		findElement("changebrandObject").click();
+		findElement("changebrandmenuObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+	}
+	//原项目搜索
+	public void changeBrand_OrigProjSearch() throws Exception{
+		Thread.sleep(1000);
+		selectByVisibleText(findElement("selectbrandObject"),"喆啡");
+		findElement("searchbtnObject").click();
+		
+		Thread.sleep(1000);
+		Assert.assertTrue(findElement("OriginalresultObject").getText().contains("喆啡"));
+	}
+	//查看详情
+	public void changeBrand_detail() throws Exception{
+		Thread.sleep(1000);
+		findElement("detailObject").click();
+		
+		Thread.sleep(1000);
+		Assert.assertTrue(findElement("returnlistObject").getText().equals("返回列表"));
+		//返回列表
+		findElement("returnlistObject").click();
+	}
+	//转品牌项目搜索
+	public void changeBrand_NewProjSearch() throws Exception{
+		Thread.sleep(1000);
+		selectByVisibleText(findElement("selecttbrandObject"),"7天优品");
+		findElement("searchbtnObject").click();
+		Thread.sleep(1000);
+		Assert.assertTrue(findElement("newbrandObject").getText().contains("7天优品"));
+	}
+	//OA状态查询
+	public void changeBrand_OAFlagSearch() throws Exception{
+		Thread.sleep(1000);
+		selectByVisibleText(findElement("oaflagObject"),"通过");
+		findElement("searchbtnObject").click();
+		
+		Thread.sleep(1000);
+		Assert.assertTrue(findElement("newbrandObject").getText().contains("7天优品"));
+		Assert.assertEquals(findElement("falgresultObject").getText(),"通过");
+	}
+	//重置
+	public void changeBrand_Reset() throws Exception{
+			Thread.sleep(1000);
+			findElement("resetBtnObject").click();
+			Thread.sleep(1000);
+			Assert.assertFalse(findElement("selectbrandObject").getText().equals( "喆啡"));
+			Assert.assertTrue(findElement("containObject").getText().contains("显示第 1 到第 10 条记录，总共"));
+	}
+	//合同审核状态查询
+	public void changeBrand_ContrFlagSearch() throws Exception{
+		Thread.sleep(1000);
+		selectByVisibleText(findElement("contractflagObject"),"已审核");
+		findElement("searchbtnObject").click();
+		
+		Thread.sleep(1000);
+		Assert.assertEquals(findElement("cflagresultObject").getText(),"已审核");
+	}
+
+}

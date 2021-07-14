@@ -1,0 +1,35 @@
+package com.test.PageAction.SystemOperationLog;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.test.PageAction.LoginLogout.BasePage;
+
+public class PmsSubmitLog_Page extends BasePage{
+
+	public PmsSubmitLog_Page(WebDriver driver) throws Exception{		
+		super(driver);
+	}
+	
+	//选择菜单
+	public void pmsSubmitLog() throws Exception{
+		implicitlyWait(1000);
+		findElement("logObject").click();
+		findElement("pmsSubmitLogObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);		
+	}
+	
+	//验证查询功能：分店ID+提交类型+请求结果
+	public void pmsSubmitLog_Search() throws Exception{
+		findElement("ChainIDObject").sendKeys(getTestData("分店ID_pmsSubmitLog"));
+		selectByVisibleTextFromExcel(findElement("requestTypeObject"),"提交类型_pmsSubmitLog");
+		selectByVisibleTextFromExcel(findElement("requestFlagObject"),"请求结果_pmsSubmitLog");		
+		findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("ChainIDTextObject").getText(),"分店ID_pmsSubmitLog");
+		AssertEqualsFromExcel(findElement("requestTypeTextObject").getText(),"提交类型_pmsSubmitLog");
+		AssertEqualsFromExcel(findElement("requestFlagTextObject").getText(),"请求结果_pmsSubmitLog");		
+	}
+	
+}

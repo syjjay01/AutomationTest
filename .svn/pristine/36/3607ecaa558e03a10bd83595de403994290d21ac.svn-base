@@ -1,0 +1,53 @@
+package com.test.PageAction.StatisticsReport;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.test.PageAction.LoginLogout.BasePage;
+
+public class ReceivablesProgress_Page extends BasePage{
+	
+	public ReceivablesProgress_Page(WebDriver driver) throws Exception{
+		super(driver);
+	}
+
+	
+	public void receivablesProgress() throws Exception{
+		implicitlyWait(1000);
+		findElement("statsReportObject").click();
+		Thread.sleep(2000);
+        findElement("receivablesProgressObject").click();		
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);	
+	}
+	
+	
+	public void searchByDevelop() throws Exception{
+		//验证开发查询
+		findElement("developCheckboxObject").click();
+		findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		Assert.assertNotNull(findElement("jthjTextObject").getText());		
+	}
+	
+	
+	public void searchByBuilding() throws Exception{
+		//验证筹建查询
+		findElement("buildingCheckboxObject").click();
+		findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		Assert.assertNotNull(findElement("jthjTextObject").getText());			
+		
+		
+	}
+	
+	public void searchByOpening() throws Exception{
+		//验证开业查询
+		findElement("openingCheckboxObject").click();
+		findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		Assert.assertNotNull(findElement("jthjTextObject").getText());						
+	}
+	
+}

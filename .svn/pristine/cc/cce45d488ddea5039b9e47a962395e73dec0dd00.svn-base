@@ -1,0 +1,68 @@
+package com.test.PageAction.SystemConfig;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import com.test.PageAction.Login.BasePage;
+import org.testng.Assert;
+
+
+public class CurrencyConfig_Page extends BasePage {
+	
+	//新增时，随机生成币种ID
+	String randomNum = getSpecifyNum(50,99);
+	//新增时，随机生成币种名称
+	String randomString = "自动化测试_"+getRandomString(3);
+	
+	
+	public CurrencyConfig_Page(WebDriver driver) throws Exception{
+		super(driver);
+	}
+
+	//选择菜单，系统管理-币种
+	public void currencyConfig() throws Exception{
+		implicitlyWait(1000);
+		findElement("systemObject").click();
+		findElement("currencyObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);			
+	}
+
+	//查询功能
+	public void currencyConfig_Search() throws Exception{
+		findElement("currencyNameObject").sendKeys(getTestData("币种名称_currencyConfig"));
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("currencyTextObject").getText(), "币种名称2_currencyConfig");		
+	}
+	
+	//修改功能
+	public void currencyConfig_update() throws Exception{
+		findElement("editBtnObject").click();
+		findElement("flagStopObject").click();
+		findElement("editFrmBtnObject").click();
+		Thread.sleep(2000);
+		//验证修改是否成功
+		Assert.assertEquals(findElement("flagTextObject").getText(),"停用");
+		Thread.sleep(2000);
+		//还原操作
+		findElement("editBtnObject").click();
+		findElement("flagOpenObject").click();
+		findElement("editFrmBtnObject").click();
+	}
+	
+	//添加功能
+	public void currencyConfig_add() throws Exception{
+		findElement("AddBtnObject").click();
+		findElement("crnIdObject").sendKeys(randomNum);
+		findElement("crnNameObject").sendKeys(randomString);
+		findElement("crnUnitObject").sendKeys(getTestData("币种单位_currencyConfig"));
+		findElement("crnRateObject").sendKeys(getTestData("汇率_currencyConfig"));
+		findElement("addflagStopObject").click();
+		findElement("addFrmBtnObject").click();
+		Thread.sleep(2000);	
+		//验证添加是否成功
+		findElement("currencyNameObject").sendKeys(randomString);
+		Thread.sleep(2000);
+		Assert.assertEquals(findElement("currencyTextObject").getText(),randomString);
+	}
+	
+}

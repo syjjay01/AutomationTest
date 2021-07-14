@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [qqmdUIAutomation by packages]">
+  <test name="com.test.TestCase.TJBB(failed)">
+    <classes>
+      <class name="com.test.TestCase.TJBB.TC_kfbxmhz">
+        <methods>
+          <include name="kfbxmhz"/>
+          <include name="start"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- com.test.TestCase.TJBB.TC_kfbxmhz -->
+    </classes>
+  </test> <!-- com.test.TestCase.TJBB(failed) -->
+</suite> <!-- Failed suite [qqmdUIAutomation by packages] -->

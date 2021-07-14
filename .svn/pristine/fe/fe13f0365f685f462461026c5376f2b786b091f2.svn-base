@@ -1,0 +1,69 @@
+package com.test.PageAction.SystemConfig;
+
+import com.test.PageAction.Login.BasePage;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+public class StorePropertyConfig_Page extends BasePage{
+	
+	//新增时，随机生成性质名称
+	String randomString = "自动化测试_"+getRandomString(3);
+	
+	public StorePropertyConfig_Page(WebDriver driver) throws Exception{
+		super(driver);		
+	}
+	
+	//选择菜单，系统管理-分店性质
+	public void storePropertyConfig() throws Exception{
+		implicitlyWait(1000);
+		findElement("systemObject").click();
+		findElement("storePropertyObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+	}
+
+	//查询功能
+	public void storePropertyConfig_Search() throws Exception{
+		selectByVisibleTextFromExcel(findElement("brandidObject"),"品牌名称_storePropertyConfig");
+		findElement("typeNameObject").sendKeys(getTestData("分店性质_storePropertyConfig"));
+		findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("brandidTextObject").getText(),"品牌名称_storePropertyConfig");
+		AssertEqualsFromExcel(findElement("typeNameTextObject").getText(),"分店性质2_storePropertyConfig");
+	}
+	
+	//修改功能
+	public void storePropertyConfig_update() throws Exception{
+		findElement("editBtnObject").click();
+		findElement("editTypeNameObject").clear();
+		findElement("editTypeNameObject").sendKeys(getTestData("分店性质3_storePropertyConfig"));
+		findElement("editFrmBtnObject").click();
+		Thread.sleep(2000);
+		//验证修改是否成功
+		findElement("typeNameObject").sendKeys(getTestData("分店性质3_storePropertyConfig"));
+		findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("typeNameTextObject").getText(),"分店性质3_storePropertyConfig");
+		//还原操作
+		findElement("editBtnObject").click();
+		findElement("editTypeNameObject").clear();
+		findElement("editTypeNameObject").sendKeys(getTestData("分店性质2_storePropertyConfig"));
+		findElement("editFrmBtnObject").click();
+	}
+	
+	//添加功能
+	public void storePropertyConfig_add() throws Exception{
+		findElement("addBtnObject").click();
+		findElement("addTypeNameObject").sendKeys(randomString);
+		selectByVisibleTextFromExcel(findElement("addBrandidObject"),"品牌名称_storePropertyConfig");
+		findElement("createFrmObject").click();	
+		Thread.sleep(2000);
+		//验证添加是否成功
+		findElement("typeNameObject").sendKeys(randomString);
+		findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		Assert.assertEquals(findElement("typeNameTextObject").getText(),randomString);
+	}
+	
+}

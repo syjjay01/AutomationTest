@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+
+	 <!--定位菜单  -->
+	 <locator type="xpath" timeOut="3" value=".//*[@id='side-menu']/li[16]/a/span[2]">feedbackObject</locator>
+	 <locator type="name" timeOut="3" value="in">iframeObject</locator>
+	 
+	 <!--提交意见 -->
+	 <locator type="id" timeOut="3" value="content">contentObject</locator>
+	 <locator type="xpath" timeOut="3" value=".//*[@id='feedbackForm']/button">submitBtnObject</locator>
+	 
+	 <!--提交成功-->
+	 <locator type="xpath" timeOut="3" value="html/body/div[4]/h2">submitTextObject</locator>
+	 <locator type='xpath' timeOut="3" value="html/body/div[4]/div[7]/div/button">okBtnObject</locator>
+	 
+</map>

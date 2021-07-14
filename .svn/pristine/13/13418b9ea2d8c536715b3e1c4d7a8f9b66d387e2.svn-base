@@ -1,0 +1,45 @@
+package com.test.PageAction.SystemConfig;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.test.PageAction.Login.BasePage;
+
+public class DataDictionary_Page extends BasePage{
+	
+	public DataDictionary_Page(WebDriver driver) throws Exception {
+		super(driver);
+	}
+	public void DataDictionary() throws Exception{
+		
+		implicitlyWait(1000);
+		findElement("SysMgmtObject").click();
+		Thread.sleep(1000);
+		findElement("DataDictionaryObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+	}
+	
+	public void DataDictionary_Search() throws Exception{
+		//数据字典列表
+		findElement("dataDicNameObject").sendKeys(getTestData("数据字典名称_sysProgram"));
+		findElement("searchBtnObject").click();
+		
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("dataDicNameTextObject").getText(),"数据字典名称_sysProgram");
+	}	
+	
+	public void DataDictionary_modify() throws Exception{
+		//修改数据字典
+
+		findElement("modifyBtnObject").click();
+		Thread.sleep(2000);
+		//AssertEqualsFromExcel(findElement("resourceNameTextObject2").getText(), "资源名称_sysProgram");
+		findElement("submitBtnObject").click();
+		Thread.sleep(6000);
+		//Assert.assertTrue(findElement("submitBtnObject").isDisplayed());
+		AssertEqualsFromExcel(findElement("dataDicNameTextObject3").getText(), "数据字典名称3_sysProgram");
+	}
+
+	
+}

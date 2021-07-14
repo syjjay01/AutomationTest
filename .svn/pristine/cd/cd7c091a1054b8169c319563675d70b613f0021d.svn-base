@@ -1,0 +1,57 @@
+package com.test.TestCase.StoreMgmt;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import com.libarary.Utils.ScreenShotListener;
+import com.test.PageAction.Login.LoginPage;
+import com.test.PageAction.Login.LogoutAction;
+import com.test.PageAction.StoreMgmt.RoomType_Page;
+import com.test.TestCase.Login.BaseTestCase;
+
+@Listeners({ScreenShotListener.class})
+public class TC_RoomType extends BaseTestCase{
+	
+	@BeforeClass
+	public void start() throws Exception{
+		super.init();
+		LoginPage loginpage = new LoginPage(driver);
+		loginpage.Login();
+	}
+	
+	@Test
+	public void roomType() throws Exception{
+		RoomType_Page roomTypePage = new RoomType_Page(driver);
+		roomTypePage.roomType();//进入菜单
+		roomTypePage.roomType_Search();//查询功能
+		roomTypePage.roomType_Reset();//重置功能
+		roomTypePage.roomTypeHistory_Check();//变更历史查看
+		
+        roomTypePage.roomType_Delete();//删除房型
+     	roomTypePage.roomTypeHistory_Revoke();//变更历史撤销
+     	
+		roomTypePage.roomType_Shield();//屏蔽房型
+		roomTypePage.roomTypeHistory_Revoke();//变更历史撤销
+		
+		roomTypePage.roomType_Add();//添加房型
+		roomTypePage.roomTypeHistory_Revoke();//变更历史撤销	
+		
+		roomTypePage.roomType_Change();//变更房型
+		roomTypePage.roomTypeHistory_Revoke();//变更历史撤销
+		
+		roomTypePage.roomType_Delrecover();//恢复删除房型	
+		roomTypePage.roomTypeHistory_Revoke();//变更历史撤销	
+		
+		roomTypePage.roomType_Shierecover();//恢复屏蔽房型	
+		roomTypePage.roomTypeHistory_Revoke();//变更历史撤销		
+	}
+		
+	@AfterClass
+	public void end() throws Exception{
+		LogoutAction logoutAction = new LogoutAction(driver);
+		logoutAction.Logout();
+	}
+	
+}

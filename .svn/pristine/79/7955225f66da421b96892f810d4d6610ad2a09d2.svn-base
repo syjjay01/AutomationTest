@@ -1,0 +1,44 @@
+package com.test.TestCase.SetupProject;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import com.libarary.Utils.ScreenShotListener;
+import com.test.PageAction.LoginLogout.LoginPage;
+import com.test.PageAction.LoginLogout.LogoutAction;
+import com.test.PageAction.SetupProject.SetupProject_Page;
+import com.test.TestCase.LoginLogout.BaseTestCase;
+
+@Listeners({ScreenShotListener.class})
+public class TC_SetupProject extends BaseTestCase{
+
+
+	@BeforeClass
+	public void start() throws Exception{
+		super.init();
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.Login(getUsersData("adminUser"));
+	}
+	
+	@Test
+	public void SetupProject() throws Exception{
+			
+		SetupProject_Page setupProjectPage = new SetupProject_Page(driver);
+		//选择立项管理菜单栏
+		setupProjectPage.setupProject();
+		//查询功能
+		setupProjectPage.setupProject_Search();
+		//重置功能 
+		setupProjectPage.setupProject_reset();
+		//查看详情功能
+		setupProjectPage.setupProject_Detail();
+	}
+	
+	@AfterClass
+	public void end() throws Exception{
+		LogoutAction logoutAction = new LogoutAction(driver);
+		logoutAction.Logout();
+	}
+}

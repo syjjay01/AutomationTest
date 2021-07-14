@@ -1,0 +1,71 @@
+package com.test.TestCase.BusinessProcess;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import com.libarary.Utils.ScreenShotListener;
+import com.test.PageAction.BusinessProcess.ContractProcess;
+import com.test.PageAction.DevelopmentMgmt.Contract_Page;
+import com.test.PageAction.DevelopmentMgmt.License_Page;
+import com.test.PageAction.LoginLogout.LoginPage;
+import com.test.PageAction.LoginLogout.LogoutAction;
+import com.test.PageAction.MoneyMgmt.Fund_Page;
+import com.test.PageAction.SetupProject.SetupProject_Page;
+import com.test.TestCase.LoginLogout.BaseTestCase;
+
+@Listeners({ScreenShotListener.class})
+public class TC_ContractProcess extends BaseTestCase{
+
+	@BeforeClass
+	public void start() throws Exception{
+		super.init();
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.Login(getUsersData("adminUser"));
+	}
+	
+	//该测试用例的流程为：
+	/* 1、打开链接、自动创建数据，模拟开发人员录入物业、合同、收款
+	 * 2、审核收款
+	 * 3、审核合同 
+	 * 4、添加证照
+	 * 5、立项归档
+	 * 6、合同转品牌
+	 */
+	@Test
+	public void contractProcess() throws Exception{
+		//1、打开链接、自动创建数据，模拟开发人员录入物业、合同、收款
+		ContractProcess contractProcess = new ContractProcess(driver);
+		contractProcess.addNewContract();
+		
+		//2、审核收款
+		Fund_Page fundPage = new Fund_Page(driver);
+		fundPage.fund_Approve();
+		
+		//3、审核合同 
+		Contract_Page contractPage = new Contract_Page(driver);
+		contractPage.contract_Approve();
+		
+		//添加证照
+		License_Page licensePage = new License_Page(driver);
+		licensePage.license_Add();
+		
+		//立项归档
+		SetupProject_Page setupProjectPage = new SetupProject_Page(driver);
+		setupProjectPage.setupProject_reviewed();
+		
+		//合同转品牌
+		contractPage.contract_ChangeBrand();
+
+	}
+	
+	
+	@AfterClass
+	 public void end() throws Exception{
+		LogoutAction logoutAction = new LogoutAction(driver);
+		logoutAction.Logout();
+	 }
+	
+	
+}

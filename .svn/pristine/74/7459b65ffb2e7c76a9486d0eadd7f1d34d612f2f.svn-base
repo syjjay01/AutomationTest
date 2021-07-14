@@ -1,0 +1,67 @@
+package com.test.TestCase.PreBuildMgmt;
+
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import com.libarary.Utils.ScreenShotListener;
+import com.test.PageAction.LoginLogout.LoginPage;
+import com.test.PageAction.LoginLogout.LogoutAction;
+import com.test.PageAction.PreBuildMgmt.PreBuildFreeze_Page;
+import com.test.TestCase.LoginLogout.BaseTestCase;
+
+@Listeners({ScreenShotListener.class})
+public class TC_PreBuildFreeze extends BaseTestCase {
+
+	@BeforeClass
+	public void start() throws Exception{
+		super.init();
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.Login(getUsersData("adminUser"));
+	}
+	
+	@Test
+	public void preBuildFreeze() throws Exception{
+				
+		PreBuildFreeze_Page devstorefreezepage = new PreBuildFreeze_Page(driver);
+		//选择筹建门店菜单
+		devstorefreezepage.prebuildfreeze();
+		//搜索冻结门店
+		devstorefreezepage.prebuildfreeze_search();
+		//撤回冻结申请
+		devstorefreezepage.prebuildfreeze_backfreeze();
+		//查看冻结详情
+		devstorefreezepage.prebuildfreeze_detail();
+		//查看冻结日志
+		devstorefreezepage.prebuildfreeze_log();
+		//申请冻结
+		devstorefreezepage.prebuildfreeze_freeze();
+		//搜索筹建门店，审核冻结申请
+		devstorefreezepage.prebuildfreeze_search();
+		devstorefreezepage.prebuildfreeze_reviewed1();
+		//申请解冻
+		devstorefreezepage.prebuildfreeze_detail();
+		devstorefreezepage.prebuildfreeze_unfreeze();
+		//撤销冻结
+		devstorefreezepage.prebuildfreeze_search();
+		devstorefreezepage.prebuildfreeze_back();
+		//进入详情，重新申请解冻
+		devstorefreezepage.prebuildfreeze_detail();
+		devstorefreezepage.prebuildfreeze_unfreeze();
+		//审核申请
+		devstorefreezepage.prebuildfreeze_search();
+		devstorefreezepage.prebuildfreeze_reviewed();
+		//重置
+		devstorefreezepage.prebuildfreeze_reset();
+				
+				
+	}
+	@AfterClass
+	public void end() throws Exception{
+		//退出登录
+		LogoutAction logoutAction = new LogoutAction(driver);
+		logoutAction.Logout();
+	}
+
+}

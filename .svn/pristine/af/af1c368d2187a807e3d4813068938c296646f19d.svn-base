@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Browser setting lists -->
+        <config value="IE">Browser_Name</config>
+        <config value="D:\\java\\geckodriver\\geckodriver-v0.14.0-win64\\geckodriver.exe">Firefox_Path</config>                
+        <config value="F:\\chromedriver_win32 (1)\\chromedriver.exe">Chrome_Path</config>        
+        <config value="F:\\Eclipse\\driverServer\\IEDriverServer.exe">IE_Path</config>   
+        
+        <!--test data excel path setting lists -->
+        <config value="F:\\Eclipse\\workspace\\qqmdUIAutomation\\src\\com\\test\\TestData\\qqmd_TestData.xlsx">TestDataExcel_Path</config>
+
+         
+</map>

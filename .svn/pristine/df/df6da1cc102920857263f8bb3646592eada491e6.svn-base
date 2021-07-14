@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+	//功能模块菜单
+	<locator type="linktext" timeOut="3" value="统计报表">statsReportObjct</locator>
+	<locator type="partialLinkText" timeOut="3" value="增减实收加盟费">iframeObject</locator>
+	<locator type="name" timeOut="3" value="in">revenueJoinFee</locator>
+		
+	//按钮
+	<!--查询-->
+	<locator type="id" timeOut="3" value="searchBtn">searchBtn</locator>
+	<!--重置-->
+	<locator type="id" timeOut="3" value="resetBtn">resetBtn</locator>
+	
+	//查询条件
+	<!--项目编码-->
+	<locator type="id" timeOut="3" value="projectId">projectId</locator>
+	<!--开始日期-->
+	<locator type="id" timeOut="3" value="startDate">startDate</locator>
+
+	//列表
+	<!--主合同ID-->
+	<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[1]">contractIdObject</locator>
+	<!--门店ID-->
+	<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[2]">storeIdObject</locator>
+	<!--项目编码-->
+	<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[3]">projectIdObject</locator>
+	<!--门店名称-->
+	<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[4]">storeNameObject</locator>
+	<!--品牌-->
+	<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[5]">brandObject</locator>
+	<!--性质-->
+	<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[6]">natureObject</locator>
+	<!--地区-->
+	<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[7]">areaObject</locator>
+	<!--开发部-->
+	<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[8]">developmentDepartmentObject</locator>
+	<!--执行区域-->
+	<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[9]">executionAreaObject</locator>
+	<!--签约达标日期-->
+	<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[10]">signingDateObject</locator>
+	<!--增减实收加盟费-->
+	<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[11]">revenueJoinFeeObject</locator>
+	<!--款项审核时间-->
+	<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[12]">auditTimeObject</locator>
+
+
+</map>

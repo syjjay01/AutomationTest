@@ -1,0 +1,49 @@
+package com.test.TestCase.ChangeBrand;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import com.libarary.Utils.ScreenShotListener;
+import com.test.PageAction.ChangeBrand.ChangeBrand_Page;
+import com.test.PageAction.Login.LoginPage;
+import com.test.PageAction.Login.LogoutAction;
+import com.test.TestCase.Login.BaseTestCase;
+
+@Listeners({ScreenShotListener.class})
+public class TC_ChangeBrand extends BaseTestCase{
+	
+	@BeforeClass
+	public void start() throws Exception{
+		super.init();
+		LoginPage loginpage=new LoginPage(driver);
+		loginpage.Login();
+	}
+	
+	@Test
+	public void changeBrand() throws Exception{
+		
+		ChangeBrand_Page changebrand=new ChangeBrand_Page(driver);
+		changebrand.changeBrand();
+		//根据原项目查询
+		changebrand.changeBrand_OrigProjSearch();
+		//查看
+		changebrand.changeBrand_detail();
+		//根据转品牌项目查询
+		changebrand.changeBrand_NewProjSearch();
+		//加OA状态组合查询
+		changebrand.changeBrand_OAFlagSearch();
+		//重置
+		changebrand.changeBrand_Reset();
+		//先重置，再根据合同状态查询
+		changebrand.changeBrand_ContrFlagSearch();
+			
+	}
+	@AfterClass
+	 public void end() throws Exception{
+		LogoutAction logout=new LogoutAction(driver);
+		logout.Logout();
+	 }
+
+}

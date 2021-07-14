@@ -1,0 +1,40 @@
+package com.test.TestCase.ResourceMgmt;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import com.libarary.Utils.ScreenShotListener;
+import com.test.PageAction.Login.LoginPage;
+import com.test.PageAction.Login.LogoutAction;
+import com.test.PageAction.ResourceMgmt.ResourceTransfer_Page;
+import com.test.TestCase.Login.BaseTestCase;
+
+@Listeners({ScreenShotListener.class})
+public class TC_ResourceTransfer extends BaseTestCase{
+
+	@BeforeClass
+	public void start() throws Exception{
+		super.init();
+		LoginPage loginpage = new LoginPage(driver);
+		loginpage.Login();
+	}
+	
+	@Test
+	public void resourceTransfer() throws Exception{
+        ResourceTransfer_Page transferPage = new ResourceTransfer_Page(driver);
+		//选择菜单栏
+		transferPage.resourceTransfer();
+		//查询功能
+		transferPage.resourceTransfer_Search();
+		//重置
+		transferPage.resourceTransfer_Reset();
+	}
+	
+	@AfterClass
+	 public void end() throws Exception{
+		LogoutAction logoutAction = new LogoutAction(driver);
+		logoutAction.Logout();
+	 }
+}

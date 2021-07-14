@@ -1,0 +1,61 @@
+package com.test.TestCase.ResourceMgmt;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import com.libarary.Utils.ScreenShotListener;
+import com.test.PageAction.LoginLogout.LoginPage;
+import com.test.PageAction.LoginLogout.LogoutAction;
+import com.test.PageAction.ResourceMgmt.HotlineResource_Page;
+import com.test.TestCase.LoginLogout.BaseTestCase;
+
+@Listeners({ScreenShotListener.class})
+public class TC_HotlineResource extends BaseTestCase{
+	
+	@BeforeClass
+	public void start() throws Exception{
+		super.init();
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.Login(getUsersData("adminUser"));
+	}
+	
+	@Test
+	public void hotlineResource() throws Exception{
+		HotlineResource_Page resourcePage = new HotlineResource_Page(driver);
+		//选择菜单栏
+		resourcePage.hotlineResource();
+		//添加资源
+		resourcePage.addResource();
+		//未分配页面的查看功能
+		resourcePage.pendingDestribute_ViewDetail();
+        //未分配页面的修改功能
+		resourcePage.pendingDestribute_Update();
+        //未分配页面的分配功能
+		resourcePage.pendingDistribute_Distribute();
+        //已分配页面的查看功能
+		resourcePage.distributed_ViewDetail();
+        //已分配移民的修改功能
+		resourcePage.distributed_Update();
+        //已分配页面的移交功能
+		resourcePage.distributed_Transfer();
+		//查询
+		resourcePage.hotlineResource_Search();
+		//重置
+		resourcePage.hotlineResource_Reset();
+		//批量导入
+		resourcePage.bulkImport();
+		//批量分配
+		resourcePage.bulkDistribute();
+		//批量移交
+		resourcePage.bulkTransfer();
+	}
+
+	@AfterClass
+	 public void end() throws Exception{
+		LogoutAction logoutAction = new LogoutAction(driver);
+		logoutAction.Logout();
+	 }
+
+}

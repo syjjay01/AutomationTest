@@ -1,0 +1,61 @@
+package com.test.PageAction.ResourceMgmt;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.test.PageAction.LoginLogout.BasePage;
+
+public class HotlineFeedback_Page extends BasePage{
+
+	public HotlineFeedback_Page(WebDriver driver) throws Exception{
+		super(driver);
+	}
+	
+	public void hotlineFeedback() throws Exception{
+		implicitlyWait(1000);
+		findElement("resoureMgmtObject").click();
+		Thread.sleep(1000);
+		findElement("hotlineFeedbackObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+	}
+	
+	//查询功能，查询条件：投资人+客户级别+创建时间
+	public void hotlineFeedback_Search() throws Exception{
+		findElement("devStoreNameObject").sendKeys(getTestData("投资人_rxfk"));
+		findElement("createdTimeCheckBoxObject").click();
+		sendKeystoReadOnlyField(findElement("startTimeObject"), "创建开始时间_rxfk");
+
+		findElement("searchBtnObject").click();
+		Thread.sleep(1000);
+		AssertEqualsFromExcel(findElement("nameTextObject").getText(), "投资人_rxfk");
+	}
+	
+	//重置功能
+	public void hotlineFeedback_Reset() throws Exception{
+		hotlineFeedback_Search();
+		findElement("resetBtnObject").click();
+		Thread.sleep(1000);
+		
+		Assert.assertTrue(findElement("devStoreNameObject").getAttribute("value").isEmpty());
+		if(findElement("nameTextObject").isDisplayed()){
+			Assert.assertNotEquals(findElement("nameTextObject").getText(), "投资人_rxfk");
+		}else{
+			Assert.assertEquals(findElement("recordTextObject").getText(), "没有找到匹配的记录");
+		}
+	}
+	
+	//查看功能
+	public void hotlineFeedback_ViewDetail() throws Exception{
+		hotlineFeedback_Search();
+		findElement("viewBtnObject").click();
+		Thread.sleep(500);
+		
+		//验证详情页字段
+		AssertEqualsFromExcel(findElement("tzrTextObject").getText(), "投资人_rxfk");								
+		findElement("rxfkBtnObject").click();
+		Thread.sleep(1000);
+		Assert.assertTrue(findElement("searchBtnObject").isDisplayed());		
+	}
+}

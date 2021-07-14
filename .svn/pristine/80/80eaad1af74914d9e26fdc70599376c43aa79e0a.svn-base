@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Browser setting lists -->
+        <config value="chrome">Browser_Name</config>
+        <config value="C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe">Firefox_Path</config>                
+        <config value="D:\\eclipse\\Driverserver\\chromedriver.exe">Chrome_Path</config>        
+        <config value="D:\\eclipse\\Driverserver\\IEDriverServer.exe">IE_Path</config>   
+        
+        <!--test data excel path setting lists -->
+        <config value="qqmd_TestData.xlsx">testDataFileName</config>
+
+         
+</map>

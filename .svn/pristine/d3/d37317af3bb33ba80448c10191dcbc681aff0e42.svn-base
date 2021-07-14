@@ -1,0 +1,82 @@
+package com.test.PageAction.DevelopmentMgmt;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.test.PageAction.Login.BasePage;
+
+public class Investors_Page extends BasePage{
+
+	public Investors_Page(WebDriver driver) throws Exception{
+		super(driver);
+	}
+	
+	
+	public void investors() throws Exception{
+		implicitlyWait(1000);
+		findElement("kfglObject").click();
+		findElement("tzrObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+	}
+	
+	public void investors_Search() throws Exception{
+		//验证查询功能
+		findElement("nameObject").sendKeys(getTestData("投资人_tzr"));	
+	    findElement("searchBtnObject").click();	
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("nameTextObject").getText(), "投资人_tzr");
+	}
+	
+	public void investors_Reset() throws Exception{
+		String oldRecordText = findElement("recordTextObject").getText();
+		findElement("resetBtnObject").click();
+		Thread.sleep(2000);
+		Assert.assertTrue(findElement("nameObject").getAttribute("value").isEmpty());
+		String newRecordText = findElement("recordTextObject").getText();
+		Assert.assertNotSame(oldRecordText, newRecordText);
+	}
+	
+	
+   public void investors_ViewDetail() throws Exception{
+	    //验证查看功能    
+	    investors_Search();
+		findElement("viewBtnObject").click();
+		Thread.sleep(1000);
+		AssertEqualsFromExcel(findElement("nameTextObject2").getText(), "投资人_tzr");
+		findElement("tzrlbBtnObject").click();
+		Assert.assertTrue(findElement("viewBtnObject").isDisplayed());		
+   }
+   
+   
+   public void investors_Update() throws Exception{
+	     //验证修改功能
+	    investors_Search();
+		AssertEqualsFromExcel(findElement("remarkTextObject").getText(), "原备注_tzr");
+		findElement("updateBtnObject").click();
+		Thread.sleep(1000);
+		
+		WebElement remarkElement = findElement("remarkObject");
+		remarkElement.clear();
+		remarkElement.sendKeys(getTestData("更改备注_tzr"));
+		findElement("submitBtnObject").click();
+		Thread.sleep(2000);
+		
+		findElement("nameObject").sendKeys(getTestData("投资人_tzr"));	
+	    findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("nameTextObject").getText(), "投资人_tzr");
+		AssertEqualsFromExcel(findElement("remarkTextObject").getText(), "更改备注_tzr");
+		
+		//修改回原来的值
+		findElement("updateBtnObject").click();
+		Thread.sleep(1000);
+		
+		WebElement remarkElement2 = findElement("remarkObject");
+		remarkElement2.clear();
+		remarkElement2.sendKeys(getTestData("原备注_tzr"));
+		findElement("submitBtnObject").click();
+		Thread.sleep(1000);
+   }
+}

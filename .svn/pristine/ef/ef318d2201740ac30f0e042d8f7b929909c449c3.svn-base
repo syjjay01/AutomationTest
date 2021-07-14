@@ -1,0 +1,58 @@
+package com.test.PageAction.DevelopmentMgmt;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.test.PageAction.LoginLogout.BasePage;
+
+public class Visit_Page extends BasePage{
+	
+	public Visit_Page(WebDriver driver) throws Exception{
+		super(driver);
+	}
+	
+	public void visit() throws Exception{
+		implicitlyWait(1000);
+		findElement("devMgmtObject").click();
+		Thread.sleep(1000);
+		findElement("visitObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);	
+	}
+	
+	
+	public void visit_Search() throws Exception{
+		Thread.sleep(1000);
+		findElement("devStoreNameObject").sendKeys(getTestData("投资人姓名_visit"));
+		findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("wytzrmcTextObject").getText(), "投资人姓名_visit");
+	}
+	
+	
+	public void visit_Reset() throws Exception{
+		visit_Search();
+		String oldRecord = findElement("recordTextObject").getText();
+		findElement("resetBtnObject").click();
+		Thread.sleep(1000);
+		String newRecord = findElement("recordTextObject").getText();
+		Assert.assertNotEquals(oldRecord, newRecord);
+	}
+	
+	public void visit_ViewDetail() throws Exception{
+		visit_Search();
+		findElement("viewBtnObject").click();
+		Thread.sleep(1000);
+		AssertEqualsFromExcel(findElement("tzrTextObject_viewPage").getText(), "投资人姓名_visit");
+		findElement("bfBtnObject").click();
+		Assert.assertTrue(findElement("searchBtnObject").isDisplayed());
+	}
+	
+	public void visit_VisitInvestors() throws Exception{
+		findElement("bfBtnObject").click();
+		Thread.sleep(2000);
+		Assert.assertEquals(findElement("investorsTextObject").getText(), "投资人");
+	}
+
+}

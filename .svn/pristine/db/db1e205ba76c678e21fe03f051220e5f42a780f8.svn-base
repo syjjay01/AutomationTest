@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        //功能模块菜单
+        <locator type="linktext" timeOut="3" value="统计报表">statsReportObject</locator>
+        //品牌项目汇总
+        <locator type="partialLinkText" timeOut="3" value="品牌项目汇总">brandProjectsObject</locator>
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>
+        
+        //按钮
+        <!-- 查询按钮--> 
+        <locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>
+        <!--重置按钮-->
+        <locator type="id" timeOut="3" value="resetBtn">resetBtnObject</locator>
+        
+        //查询条件
+        <!--品牌-->
+        <locator type="id" timeOut="3" value="brandId">brandObject</locator>
+        <!--品牌性质-->
+        <locator type="id" timeOut="3" value="brandTypeId">brandTypeObject</locator>
+        <!--签约达标日期 开始日期-->
+        <locator type="id" timeOut="3" value="timeStart">startTimeObject</locator>
+        <!--签约达标日期  结束日期-->
+        <locator type="id" timeOut="3" value="timeEnd">endTimeObject</locator>
+        <!--合同类型-->
+        <locator type="id" timeOut="3" value="contract_type">contractTypeObject</locator>
+        <!--是否签约达标-->
+        <locator type="id" timeOut="3" value="signed_flag">signFlagObject</locator>
+        
+        //列表              
+        <!--品牌  第一行数据文本-->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[1]">brandTextObject</locator>
+        <!--品牌性质-->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[2]">brandTypeTextObject</locator>
+        <!--总签约数-->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[3]">signedCountObject</locator>
+        <!--总房量-->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[4]">roomsObject</locator>        
+        <!--平均房量-->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[5]">avgRoomsObject</locator>        
+        <!--应收加盟费-->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[6]">franchiseReceivablesObject</locator>        
+        <!--已收加盟费-->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[7]">franchiseReceiptsObject</locator>
+        
+        //页码
+        <!--"显示第 1 到第 1 条记录，总共 1 条记录"-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span">recordObject</locator>
+          
+        
+        
+        
+         
+</map>

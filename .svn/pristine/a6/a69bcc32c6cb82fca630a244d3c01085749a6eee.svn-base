@@ -1,0 +1,47 @@
+package com.test.PageAction.StatisticsReport;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.test.PageAction.LoginLogout.BasePage;
+
+public class HotlineStats_Page extends BasePage{
+	public HotlineStats_Page (WebDriver driver) throws Exception{
+		super(driver);
+	}
+
+	
+	public void hotlineStats() throws Exception{
+		implicitlyWait(1000);
+		findElement("statsReportObject").click();
+		Thread.sleep(2000);
+		findElement("hotlineStatsObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+	}
+	
+	public void hotlineStats_Search() throws Exception{   
+		selectByVisibleTextFromExcel(findElement("sourceIdObject"), "信息来源_hotlineStats");
+		selectByVisibleTextFromExcel(findElement("departmentIdObject"), "开发部_hotlineStats");
+		findElement("standBoxObject").click();
+		sendKeystoReadOnlyField(findElement("startTimeObject"), "开始日期_hotlineStats");
+		sendKeystoReadOnlyField(findElement("endTimeObject"), "结束日期_hotlineStats");
+		findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		
+		AssertEqualsFromExcel(findElement("sourceTextObject").getText(), "信息来源_hotlineStatsResult");
+    	AssertEqualsFromExcel(findElement("departmentTextObject").getText(), "开发部_hotlineStatsResult");
+    	AssertEqualsFromExcel(findElement("hotNumTextObject").getText(), "热线数_hotlineStatsResult");
+    	AssertEqualsFromExcel(findElement("hotProjectNumTextObject").getText(), "热线项目数_hotlineStatsResult");
+    	AssertEqualsFromExcel(findElement("standarNumTextObject").getText(), "签约达标数_hotlineStatsResult");
+    	AssertEqualsFromExcel(findElement("hotProjectRateTextObject").getText(), "热线项目比例_hotlineStatsResult");
+    	AssertEqualsFromExcel(findElement("hotConverRateTextObject").getText(), "热线转换率_hotlineStatsResult");
+	}
+	
+	public void hotlineStats_Reset() throws Exception{
+		findElement("resetBtnObject").click();
+		Thread.sleep(2000);
+		Assert.assertEquals(findElement("recordObject").getText(),"显示第 1 到第 1 条记录，总共 1 条记录");	
+	}
+}

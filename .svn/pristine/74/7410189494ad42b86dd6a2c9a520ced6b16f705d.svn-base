@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+       //项目名称 文本
+       <locator type="xpath" timeOut="3" value="html/body/pre/h3[2]">projectNameObject</locator> 
+    
+   
+        
+        
+</map>

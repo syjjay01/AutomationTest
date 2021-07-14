@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+
+	<!--选择菜单,系统管理-用户管理 -->
+	<locator type="linktext" timeOut="3" value="系统管理">systemObject</locator>
+	<locator type="partialLinkText" timeOut="3" value="用户管理">userConfigObject</locator>
+	<locator type="name" timeOut="3" value="in">iframeObject</locator>
+	
+	<!--输入姓名-->
+	<locator type="id" timeOut="3" value="name">nameObject</locator>
+	<!--点按钮 -->
+	<locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>
+	<!--查询结果 -->
+	<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[3]">nameTextObject</locator>
+	
+	<!--点修改-->
+	<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[9]/a[1]">editBtnObject</locator>
+	<!--选择用户角色-->
+	<locator type="id" timeOut="3" value="74">editRoleObject</locator>
+	<!--点保存-->
+	<locator type="id" timeOut="3" value="editUser">editUserBtnObject</locator>
+	<!--修改结果-->
+	<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[1]/a">roleNameTextObject</locator>
+	<!--还原用户角色-->
+	<locator type="id" timeOut="3" value="15">editRoleBackObject</locator>
+	
+
+</map>

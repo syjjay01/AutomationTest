@@ -1,0 +1,52 @@
+package com.test.PageAction.SystemConfig;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.test.PageAction.Login.BasePage;
+
+public class Feedback_Page extends BasePage{
+	
+	public Feedback_Page(WebDriver driver) throws Exception {
+		super(driver);
+	}
+	public void Feedback() throws Exception{
+		
+		implicitlyWait(1000);
+		findElement("SysMgmtObject").click();
+		Thread.sleep(1000);
+		findElement("FeedbackObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+		Thread.sleep(1000);
+	}
+	
+	public void Feedback_Search() throws Exception{
+		//反馈列表
+		Thread.sleep(2000);
+		findElement("feedbackPeopObject").sendKeys(getTestData("反馈人_sysProgram"));
+		findElement("searchBtnObject").click();
+		
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("feedbackPeopTextObject").getText(),"反馈人_sysProgram");
+	}	
+	
+	public void Feedback_Reply() throws Exception{
+		//回复
+
+		findElement("replyBtnObject").click();
+		Thread.sleep(2000);
+		findElement("replyObject").sendKeys(getTestData("回复内容_sysProgram"));
+		findElement("submitBtnObject").click();
+		Thread.sleep(2000);
+		
+		findElement("searchBtnObject").click();
+		
+		Thread.sleep(2000);
+		Assert.assertEquals(findElement("feedbackPeopTextObject").getText(),"高丽");
+		
+	}
+
+	
+}

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="StatisticsReport"> //统计报表
+    <classes>
+      <class name="com.test.TestCase.StatisticsReport.TC_StoreStatus"/>
+      <class name="com.test.TestCase.StatisticsReport.TC_NumberOfStores"/>
+      <class name="com.test.TestCase.StatisticsReport.TC_DevSigned"/>
+      <class name="com.test.TestCase.StatisticsReport.TC_DevProjects"/>
+      <class name="com.test.TestCase.StatisticsReport.TC_BrandProjects"/>
+      <class name="com.test.TestCase.StatisticsReport.TC_VisitTimes"/>
+      <class name="com.test.TestCase.StatisticsReport.TC_ReceivablesProgress"/>
+      <class name="com.test.TestCase.StatisticsReport.TC_UnfiledStats"/>
+      <class name="com.test.TestCase.StatisticsReport.TC_AppUsageStats"/>
+      <class name="com.test.TestCase.StatisticsReport.TC_DevRevenue"/>
+      <class name="com.test.TestCase.StatisticsReport.TC_WorkReport"/> 
+    </classes>
+  </test>
+
+  <test name="ResourceMgmt">  //资源管理
+    <classes>
+      <class name="com.test.TestCase.ResourceMgmt.TC_HotlineResource"/>
+      <class name="com.test.TestCase.ResourceMgmt.TC_DestributionStats"/>
+      <class name="com.test.TestCase.ResourceMgmt.TC_ResourceTransfer"/>
+      <class name="com.test.TestCase.ResourceMgmt.TC_HotlineFeedback"/>                  
+    </classes>
+  </test>  
+ 
+  <test name="DevelopmentMgmt"> //开发管理
+    <classes>
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Investors"/>
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Property"/>
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Visit"/>
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Contract"/>   
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Receipts"/>
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_License"/>
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_ProjectSummary"/>
+      <class name="com.test.TestCase.DevelopmentMgmt.TC_Receivables"/>                
+    </classes>
+  </test>
+  
+   <test name="SetupProject"> //立项管理
+    <classes>
+      <class name="com.test.TestCase.SetupProject.TC_SetupProject"/>
+      <class name="com.test.TestCase.SetupProject.TC_City"/>            
+    </classes>
+  </test>
+  
+  <test name="ChangeBrand"> //转品牌
+    <classes>
+      <class name="com.test.TestCase.ChangeBrand.TC_ChangeBrand"/>       
+    </classes>
+  </test>
+  
+  <test name="PreBuildMgmt"> //筹建管理
+    <classes>
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildStore"/>      
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildFreeze"/>  
+      <class name="com.test.TestCase.PreBuildMgmt.TC_PreBuildAllRpt"/>   
+      <class name="com.test.TestCase.PreBuildMgmt.TC_ProcessStats"/>  
+      <class name="com.test.TestCase.PreBuildMgmt.TC_ProcessStayStats"/>  
+    </classes>
+  </test>
+
+  <test name="StoreMgmt"> //门店管理
+    <classes>
+      <class name="com.test.TestCase.StoreMgmt.TC_Store"/>      
+      <class name="com.test.TestCase.StoreMgmt.TC_RoomType"/>   
+      <class name="com.test.TestCase.StoreMgmt.TC_RoomNumber"/>  
+      <class name="com.test.TestCase.StoreMgmt.TC_Renew"/>  
+    </classes>
+  </test>  
+
+  <test name="LicenseMgmt"> //证照管理
+    <classes>
+      <class name="com.test.TestCase.LicenseMgmt.TC_OperationLicense"/>      
+      <class name="com.test.TestCase.LicenseMgmt.TC_LicenseSummary"/>  
+    </classes>
+  </test>   
+
+  <test name="AccidentReport"> //事故报告
+    <classes>
+      <class name="com.test.TestCase.AccidentReport.TC_AccidentReport"/>      
+      <class name="com.test.TestCase.AccidentReport.TC_AccidentStatsReport"/>  
+      <class name="com.test.TestCase.AccidentReport.TC_RecycleBin"/>  
+    </classes>
+  </test>  
+
+  <test name="MoneyMgmt"> //款项管理
+    <classes>
+      <class name="com.test.TestCase.MoneyMgmt.TC_Fund"/>      
+      <class name="com.test.TestCase.MoneyMgmt.TC_BankAccount"/>   
+    </classes>
+  </test> 
+  
+  <test name="BonusMgmt"> //奖金管理
+    <classes>
+      <class name="com.test.TestCase.BonusMgmt.TC_ProjectPanorama"/>      
+    </classes>
+  </test>   
+
+  <test name="BusinessProcess"> //业务主流程
+    <classes>
+      <class name="com.test.TestCase.BusinessProcess.TC_ContractProcess"/>      
+    </classes>
+  </test> 
+  
+  <test name="LoginLogout"> //清除driver进程
+  <classes>
+    <class name="com.test.TestCase.LoginLogout.TC_CloseBrowser"/>
+  </classes>
+  </test>
+  
+</suite>

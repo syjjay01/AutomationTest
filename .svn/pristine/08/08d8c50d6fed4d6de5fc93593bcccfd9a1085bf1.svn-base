@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	<!--选择筹建进度统计菜单-->
+	<Locator type="linktext" timeOut="3" value="筹建管理">prebuildObject</Locator>
+	<Locator type="xpath" timeOut="3" value=".//*[@id='side-menu']/li[8]/ul/li[4]/a">processStatsObject</Locator>
+	<Locator type="name" timeOut="3" value="in">iframeObject</Locator>
+	
+	<!--选择品牌-->
+	<Locator type="id" timeOut="3" value="process_brand">brandObject</Locator>
+	<!--达到签约标准门店数-->
+	<Locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div/table/tbody/tr[1]/td[2]">storenumObject</Locator>
+	
+	
+</map>

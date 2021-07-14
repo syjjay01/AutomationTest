@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        <locator type="xpath" timeOut="3" value=".//*[@id='app']/div/div/div[2]/input">userNameObject</locator>
+        <locator type="xpath" timeOut="3" value=".//*[@id='app']/div/div/div[3]/input">passwordObject</locator>
+        <locator type="class" timeOut="3" value="h-1">loginObject</locator>
+        <locator type="xpath" timeOut="3" value=".//*[@id='app']/div/div[2]/div[2]/main/div">welcomeObject</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[2]/p">messageObject</locator> 
+         
+         
+</map>

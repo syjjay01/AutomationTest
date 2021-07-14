@@ -1,0 +1,29 @@
+package com.test.PageAction.SystemConfig;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.test.PageAction.LoginLogout.BasePage;
+
+public class RegionConfig_Page extends BasePage{
+
+	public RegionConfig_Page(WebDriver driver) throws Exception{
+		super(driver);		
+	}
+	
+	//选择菜单，执政区域
+	public void regionConfig() throws Exception{
+		implicitlyWait(1000);
+		findElement("systemObject").click();
+		findElement("regionConfigObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);			
+	}
+
+	//查询功能
+	public void regionConfig_Search() throws Exception{
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("regionTextObject").getText(), "执政区域_regionConfig");		
+	}
+	
+}

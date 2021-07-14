@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+       //功能选项卡定位元素 
+        <locator type="linktext" timeOut="3" value="证照管理">zzglObject</locator> //一级菜单 
+        <locator type="xpath" timeOut="3" value=".//*[@id='side-menu']/li[10]/ul/li[2]/a">zzqmbObject</locator>//二级菜单      
+        <locator type="name" timeOut="3" value="in">iframeObject</locator> //页面iframe     
+       
+        //查询区域元素
+        <locator type="id" timeOut="3" value="projectId">projectIdObject</locator>//项目编码     
+        <locator type="id" timeOut="3" value="storeName">storeNameObject</locator>//门店名称
+        <locator type="id" timeOut="3" value="brandId">brandIdObject</locator>//品牌
+        <locator type="id" timeOut="3" value="brandTypeId">brandTypeIdObject</locator>//性质
+        <locator type="id" timeOut="3" value="flag">FlagObject</locator>//状态      
+        <locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>//查询按钮
+        <locator type="id" timeOut="3" value="resetBtn">resetBtnObject</locator>//重置按钮
+        
+        //页码区域元素 
+        <locator type="xpath" timeOut="3" value="/html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span[1]">recordObject</locator>//总记录文本（显示第x到第x条记录，总共x条记录）
+
+        //列表第一列元素
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[2]">projectIdTextObject</locator>//项目编码
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[3]">storeTextObject</locator>//分店名称
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[4]">flagTextObject</locator>//项目状态
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[5]">cityTextObject</locator>//城市
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[6]">branIdTextObject</locator>//品牌
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[7]">branTypeTextObject</locator>//项目性质
+
+</map>

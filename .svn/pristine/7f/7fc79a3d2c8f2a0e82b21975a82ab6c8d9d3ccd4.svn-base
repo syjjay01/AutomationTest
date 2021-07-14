@@ -1,0 +1,43 @@
+package com.test.TestCase.PreBuildMgmt;
+
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterClass;
+
+import com.libarary.Utils.ScreenShotListener;
+import com.test.PageAction.Login.LoginPage;
+import com.test.PageAction.Login.LogoutAction;
+import com.test.PageAction.PreBuildMgmt.PreBuildAllRpt_Page;
+import com.test.TestCase.Login.BaseTestCase;
+
+
+@Listeners({ScreenShotListener.class})
+public class TC_PreBuildAllRpt extends BaseTestCase{
+	
+	@BeforeClass
+	public void start() throws Exception{
+		super.init();
+		//登录
+		LoginPage loginpage=new LoginPage(driver);
+		loginpage.Login();
+	
+	}
+	@Test
+	public void preBuildAllRpt_Page() throws Exception{
+		
+		
+		//进入筹建汇总表页面
+		PreBuildAllRpt_Page prebuildallrtp=new PreBuildAllRpt_Page(driver);
+		prebuildallrtp.preBuildAllRpt_Page();
+		
+		
+	}
+	@AfterClass
+	public void end() throws Exception{
+		//退出登录
+		LogoutAction logoutAction = new LogoutAction(driver);
+		logoutAction.Logout();
+	}
+
+}

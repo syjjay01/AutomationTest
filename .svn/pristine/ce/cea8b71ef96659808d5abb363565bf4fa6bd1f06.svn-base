@@ -1,0 +1,41 @@
+package com.test.PageAction.StatisticsReport;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.test.PageAction.Login.BasePage;
+
+
+public class NumberOfStores_Page extends BasePage{
+
+	public NumberOfStores_Page (WebDriver driver) throws Exception{
+		super(driver);
+	}
+	
+	
+	public void numberOfStores() throws Exception{
+		implicitlyWait(1000);
+		findElement("tjbbObject").click();
+		Thread.sleep(1000);
+		findElement("mdstjObect").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+	}
+	
+	//解除店
+	public void invalidStores() throws Exception{
+		findElement("jydObject").click();
+		Thread.sleep(1000);
+		Assert.assertEquals(findElement("brandTotalObject").getText(), "品牌合计");
+	}	
+		
+	//有效店
+	public void validStores() throws Exception{
+		findElement("yxdObject").click();
+		Thread.sleep(1000);
+		Assert.assertEquals(findElement("brandTotalObject").getText(), "品牌合计");
+	}
+	
+	
+}

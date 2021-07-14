@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        //功能选项卡定位元素 
+        <locator type="linktext" timeOut="3" value="门店管理">mdglObject</locator> //一级菜单        
+        <locator type="partialLinkText" timeOut="3" value="  门店">mdObject</locator>//二级菜单       
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>//页面iframe
+        
+        //查询区域元素 
+        <locator type="id" timeOut="3" value="projectId">projectObject</locator>//项目编码
+        <locator type="id" timeOut="3" value="storeName">storeObject</locator>//门店名称
+        <locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>//查询按钮
+        <locator type="linktext" timeOut="3" value="重置">resetBtnObject</locator>//重置按钮
+
+        //列表第一行元素         
+        <locator type="linktext" timeOut="3" value="查看">viewBtnObject</locator>//查看按钮        
+        <locator type="linktext" timeOut="3" value="修改">updateBtnObject</locator>//修改按钮       
+        <locator type="partialLinkText" timeOut="3" value="新品">newProductBtnObject</locator>//取消与升级新品按钮      
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[1]">projectTextObject</locator>//项目编码        
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[2]">storeTextObject</locator>//门店名称   
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[4]">brandTextObject</locator>//性质   
+        
+        //页码区域元素 
+        <locator type="xpath" timeOut="3" value="/html/body/div[1]/div/div[3]/div[2]/div[4]/div[1]/span[1]">recordObject</locator>//总记录文本（显示第x到第x条记录，总共x条记录）
+
+        //查看页面元素
+        <locator type="xpath" timeOut="3" value=".//*[@id='tableValignMiddle']/tbody/tr[1]/td[1]">storeTextObject2</locator>//门店名称
+        <locator type="xpath" timeOut="3" value=".//*[@id='editStoreFrm']/div/table[1]/tbody/tr/td[2]">projectTextObject2</locator>//项目编码
+        <locator type="xpath" timeOut="3" value=" html/body/div[1]/div/div/div/a">mdlbBtnObject</locator>//门店列表按钮     
+        <locator type="xpath" timeOut="3" value="//*[@id='editStoreFrm']/div/table[4]/tbody/tr[4]/td[1]">currencyTextObject</locator>//查看功能的币种
+         
+        //修改页面元素
+        <locator type="id" timeOut="3" value="currencyType">currencySelObject</locator>//币种下拉框      
+        <locator type="xpath" timeOut="3" value=".//*[@id='editStoreFrm']/div/div/button">submitBtnObject</locator>//提交按钮
+       
+        
+        //取消新品升级新品提示元素
+        <locator type="xpath" timeOut="3" value="html/body/div[2]/div/div/div[2]/button[2]">OKBtnObject</locator>//是否确定取消升级或者申请升级弹出框
+        <locator type="xpath" timeOut="3" value="html/body/div[2]/div/h4">warnObject</locator>//警告框
+        <locator type="xpath" timeOut="3" value="html/body/div[2]/div/div[4]">tipObject</locator>//警告文本
+        <locator type="xpath" timeOut="3" value="/html/body/div[2]/div/div[1]/span">closewarnObject</locator>//关闭警告框        
+
+</map>

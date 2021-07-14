@@ -1,0 +1,105 @@
+package com.libarary.Utils;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+//import org.apache.poi.openxml4j.opc.OPCPackage;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+
+public class ExcelUtil {
+	
+    private static XSSFWorkbook wb;
+    private static XSSFSheet userDatasheet;
+    private static XSSFSheet testDatasheet;
+    private static XSSFRow row;
+    private static String ExcelPath = ConfigDataUtil.getConfig("TestDataExcel_Path");
+//    private static Map<String, String> testDataMap;
+//    private static Map<String, String> usersDataMap;
+    
+	 /**
+      * 读取Excel数据内容
+	   * @param InputStream
+	   *   * @return Map 包含单元格数据内容的Map对象
+	 * @throws IOException 
+	 * @throws InvalidFormatException 
+     */
+   //获取第一个excel sheet中的登录名密码数据
+    public static LinkedHashMap<String, String> readLoginUsers() throws IOException{
+		   InputStream is = new FileInputStream(ExcelPath);
+		   LinkedHashMap<String, String> usersDataMap = new LinkedHashMap<String, String>();	
+			wb = new XSSFWorkbook(is);
+			userDatasheet = wb.getSheet("Users");
+//			userDatasheet = wb.getSheetAt(0);
+	        // 得到总行数
+	        int rowNum = userDatasheet.getLastRowNum();
+	        // 正文内容应该从第二行开始,第一行为表头的标题
+	        for (int i = 1; i <= rowNum; i++) {
+	            row = userDatasheet.getRow(i);
+	            String userName = getCellFormatValue(row.getCell((short) 0)).trim();
+	            String password = getCellFormatValue(row.getCell((short) 1)).trim();
+	            usersDataMap.put(userName, password);
+	        }
+	        return usersDataMap;
+	    }
+    
+   
+    
+    //获取第二个excel sheet的测试数据
+		public static Map<String, String> readTestData() throws IOException {
+			   InputStream is = new FileInputStream(ExcelPath);
+		        Map<String, String> testData = new HashMap<String, String>();	
+				wb = new XSSFWorkbook(is);
+				testDatasheet = wb.getSheet("TestData");
+//				testDatasheet = wb.getSheetAt(0);
+		        // 得到总行数
+		        int rowNum = testDatasheet.getLastRowNum();
+		        // 正文内容应该从第二行开始,第一行为表头的标题
+		        for (int i = 1; i <= rowNum; i++) {
+		            row = testDatasheet.getRow(i);
+		            String DataKey= getCellFormatValue(row.getCell((short) 1)).trim();
+		            String DataValue= getCellFormatValue(row.getCell((short) 2)).trim();
+		            testData.put(DataKey, DataValue);  
+		        }
+		        return testData;
+		    }
+
+		
+
+	 private static String getCellFormatValue(XSSFCell cell) {
+		    String cellvalue = "";
+		    if (cell != null) {
+		       cell.setCellType(Cell.CELL_TYPE_STRING);
+		       cellvalue = String.valueOf(cell.getStringCellValue());
+		        }
+		    return cellvalue;
+
+		    }  
+	
+	 
+	 
+//	 public  static Map<String, String> getUsersDataMap() throws Exception{
+//			usersDataMap = ExcelUtil.readTestData();
+//			 return usersDataMap;
+//	       }					
+//		
+		 
+//	 public  static Map<String, String> getTestDataMap() throws Exception{
+//		    testDataMap = ExcelUtil.readTestData();
+//		    return testDataMap;
+//		  }				  	
+			  
+ 
+}
+	
+	
+

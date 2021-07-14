@@ -1,0 +1,40 @@
+package com.test.TestCase.DevelopmentMgmt;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import com.libarary.Utils.ScreenShotListener;
+import com.test.PageAction.DevelopmentMgmt.WorkReport_Page;
+import com.test.PageAction.LoginLogout.LoginPage;
+import com.test.PageAction.LoginLogout.LogoutAction;
+import com.test.TestCase.LoginLogout.BaseTestCase;
+
+@Listeners({ScreenShotListener.class})
+public class TC_WorkReport extends BaseTestCase{
+	
+	@BeforeClass
+	public void start() throws Exception{
+		super.init();
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.Login(getUsersData("adminUser"));
+	}
+	
+	@Test
+	public void workReport() throws Exception{
+		WorkReport_Page workReportPage = new WorkReport_Page(driver);
+		//选择菜单栏
+		workReportPage.workReport();		
+		//查询
+		workReportPage.workReport_Search();		
+		//重置
+		workReportPage.workReport_Reset();
+	}
+
+	@AfterClass
+	 public void end() throws Exception{
+		LogoutAction logoutAction = new LogoutAction(driver);
+		logoutAction.Logout();
+	 }
+}

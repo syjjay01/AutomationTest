@@ -1,0 +1,41 @@
+package com.test.TestCase.PreBuildMgmt;
+
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import com.libarary.Utils.ScreenShotListener;
+import com.test.PageAction.LoginLogout.LoginPage;
+import com.test.PageAction.LoginLogout.LogoutAction;
+import com.test.PageAction.PreBuildMgmt.ProcessStayStats_Page;
+import com.test.TestCase.LoginLogout.BaseTestCase;
+
+@Listeners({ScreenShotListener.class})
+public class TC_ProcessStayStats extends BaseTestCase{
+
+	@BeforeClass
+	public void start() throws Exception{
+		super.init();
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.Login(getUsersData("adminUser"));
+	}
+	
+	@Test
+	public void processStayStats() throws Exception{		
+		//节点停留统计
+		ProcessStayStats_Page staystatspage=new ProcessStayStats_Page(driver);
+		staystatspage.processStayStatsPage();
+		//查询单个品牌的节点停留统计
+		staystatspage.processStayStatsPage_search();	
+		
+	}
+	
+	@AfterClass
+	public void end() throws Exception{
+		//退出登录
+		LogoutAction logoutaction=new LogoutAction(driver);
+		logoutaction.Logout();
+	}
+
+}

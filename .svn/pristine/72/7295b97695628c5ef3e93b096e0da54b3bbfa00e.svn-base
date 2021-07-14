@@ -1,0 +1,43 @@
+package com.test.TestCase.SystemOperationLog;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import com.libarary.Utils.ScreenShotListener;
+import com.test.PageAction.Login.LoginPage;
+import com.test.PageAction.Login.LogoutAction;
+import com.test.PageAction.SystemOperationLog.StoreOperationLog_Page;
+import com.test.TestCase.Login.BaseTestCase;
+
+
+
+@Listeners({ScreenShotListener.class})
+public class TC_StroreOperationLog extends BaseTestCase{
+		
+	@BeforeClass
+	public void start() throws Exception{
+		super.init();
+		LoginPage loginpage = new LoginPage(driver);
+		loginpage.Login();
+	}
+		
+	@Test
+	public void stroreOperation() throws Exception{		
+		StoreOperationLog_Page StoreOperationPage = new StoreOperationLog_Page(driver);
+		//选择菜单栏
+		StoreOperationPage.StoreOperationLog();
+		//查询功能
+		StoreOperationPage.StoreOperationLog_Search();
+		//重置功能
+		//StoreOperationPage.storeOperation_Reset();	
+     }
+	
+	@AfterClass
+	 public void end() throws Exception{
+		LogoutAction logoutAction = new LogoutAction(driver);
+		logoutAction.Logout();
+	 }
+	
+}

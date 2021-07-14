@@ -1,0 +1,45 @@
+package com.test.TestCase.SetupProject;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import com.libarary.Utils.ScreenShotListener;
+import com.test.PageAction.Login.LoginPage;
+import com.test.PageAction.Login.LogoutAction;
+import com.test.PageAction.SetupProject.SetupProject_Page;
+import com.test.TestCase.Login.BaseTestCase;
+
+@Listeners({ScreenShotListener.class})
+public class TC_SetupProject extends BaseTestCase{
+
+	@BeforeClass
+	public void start() throws Exception{
+		super.init();
+		LoginPage loginpage = new LoginPage(driver);
+		loginpage.Login();
+	}
+	@Test
+	public void SetupProject() throws Exception{
+			
+		SetupProject_Page SetupProjectPage = new SetupProject_Page(driver);
+		//选择立项管理菜单栏
+		SetupProjectPage.setupProject();
+		//查询功能
+		SetupProjectPage.setupProject_Search();
+		//查看详情功能
+		SetupProjectPage.setupProject_Detail();
+		//审核按钮
+		SetupProjectPage.setupProject_Search();
+		SetupProjectPage.setupProject_reviewed();
+		//重置
+		SetupProjectPage.setupProject_Search();
+		SetupProjectPage.setupProject_reset();
+	}
+	@AfterClass
+	public void end() throws Exception{
+		LogoutAction logoutAction = new LogoutAction(driver);
+		logoutAction.Logout();
+	}
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        <locator type="linktext" timeOut="3" value="款项管理">MoneyMgmtObject</locator>
+        <locator type="partialLinkText" timeOut="3" value="  款项">fundObject</locator>
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>
+        
+        //按钮
+        <!--查询按钮-->
+        <locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>
+        <!--重置按钮-->
+        <locator type="id" timeOut="3" value="resetBtn">resetBtnObject</locator>
+        <!--详情 按钮-->
+		<locator type="linktext" timeOut="3" value="详情">viewBtnObject</locator>
+		<!--收款详情 按钮-->
+		<locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[1]/div/button">skxqBtnObject</locator>
+		<!--收款详情页 关闭按钮-->
+		<locator type="xpath" timeOut="3" value="//*[@id='contractFeeModal']/div/div/div[1]/button">skxqCloseBtnObject</locator>
+		<!--合同详情 按钮-->
+		<locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[1]/div/a[1]">contractDetailBtnObject</locator>
+		<!--详情按钮-->
+		<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[20]/a">detailsBtnObject</locator>	
+		<!--“确认审核”按钮-->
+		<locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table/tbody/tr/td[2]/table/tbody/tr/td/div/button">confirmApprovalBtnObject</locator>
+		
+        //查询条件
+        <!--项目编码搜索框-->
+        <locator type="id" timeOut="3" value="projectId">projectIdObject</locator>
+        <!--项目名称搜索框-->
+        <locator type="id" timeOut="3" value="projectName">projectNameObject</locator>
+        <!--开发部搜索框-->
+        <locator type="id" timeOut="3" value="departmentId">departmentIdObject</locator>               
+        <!--打款日期打钩框-->
+        <locator type="id" timeOut="3" value="isSendFeeTime">payDateObject</locator>
+        
+        //列表
+        <!--项目编码文本-->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[1]">itemcodingTextObject</locator>
+        <!--项目名称-->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr[1]/td[2]">itmeTextObject</locator>
+                        		
+		//款项详情页面
+		<!--合同ID-->
+		<locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table/tbody/tr/td[1]/table/tbody/tr[1]/td[2]">contractIDTextObject</locator>
+		
+		//返回款项列表
+		<locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[1]/div/a[2]">fundlbBtnObject</locator>
+				
+		//收款详情页
+		<locator type="xpath" timeOut="3" value="//*[@id='myModalLabel']/span">skxqTitleObject</locator>
+		
+		//合同详情页，项目编码
+		<locator type="xpath" timeOut="3" value="//*[@id='source-contract-modal']/div/div/div/div/table/tbody/tr[2]/td[1]/table/tbody/tr[1]/td[2]">projectIDObject</locator>
+		
+		//合同详情窗口
+		<locator type="xpath" timeOut="3" value="//*[@id='source-contract-modal']/div/div/div">contractWindowObject</locator>
+						       
+		//审核页面  
+		<!--“通过”单选项-->
+		<locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table/tbody/tr/td[2]/table/tbody/tr/td/div/label[1]/input">passCheckBoxObject</locator>
+		
+		//“已审核” tab
+		<locator type="linktext" timeOut="3" value="已审核">ApprovedTabObject</locator>
+        
+</map>

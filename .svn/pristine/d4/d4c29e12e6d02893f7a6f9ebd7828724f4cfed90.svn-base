@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        <locator type="linktext" timeOut="3" value="开发管理">devMgmtObject</locator>
+        <locator type="partialLinkText" timeOut="3" value="项目全貌表">projectSummaryObject</locator>
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>
+        
+        //项目编码 搜索框
+        <locator type="id" timeOut="3" value="project_id">projectIdObject</locator>
+        //查询 按钮
+        <locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>
+        //重置 按钮
+        <locator type="xpath" timeOut="3" value="//*[@id='toolbar']/div/div[3]/a[1]">resetBtnObject</locator>
+        //开始时间
+        <locator type="id" timeOut="3" value="timeStart">startTimeObject</locator>
+        
+        //“显示第 1 到第 10 条记录”文本
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span[1]">recordTextObject</locator>
+        
+        
+        //项目编码 文本 
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[2]">projectIdTextObject</locator>
+        //项目名称
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[3]">projectNameObject</locator>
+        //品牌
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[4]">brandTextObject</locator>
+        //性质
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[5]">brandTypeTextObject</locator>
+        //城市
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[6]">cityTextObject</locator>
+        //合同类型
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[7]">contractTypeTextObject</locator>
+        //合同状态
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[8]">contractStatusTextObject</locator>
+        //合同审核状态
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[9]">contractAuditStatusTextObject</locator>
+        //门店状态
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[10]">storeStatusTextObject</locator>
+        //开发部
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[11]">deparmentTextObject</locator>
+        //开发/跟进人
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[12]">developerTextObject</locator>
+        //应收加盟费
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[13]">ysjmfTextObject</locator>
+        //已收加盟费
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[14]">ssjmfTextObject</locator>
+        //加盟费收款进度
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[15]">jmfskjdTextObject</locator>
+        //币种
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[16]">currencyTextObject</locator>
+        //立项房间数
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[17]">roomCountTextObject</locator>
+        //加盟费标准
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[18]">jmfbzTextObject</locator>
+        //管理费率
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[19]">glflTextObject</locator>
+        //立项状态
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[23]">lxztTextObject</locator>
+      
+        //“没有找到匹配的记录”
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td">noRecordObject</locator>
+
+        
+</map>

@@ -1,0 +1,89 @@
+package com.test.PageAction.PreBuildMgmt;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.test.PageAction.Login.BasePage;
+
+public class PreBuildStore_Page extends BasePage {
+	String btnname="申请冻结";
+	public PreBuildStore_Page(WebDriver driver) throws Exception{
+		super(driver);
+	}
+	//进入筹建门店页面
+	public void preBuildStore() throws Exception{
+		Thread.sleep(1000);
+		findElement("prebuildObject").click();
+		findElement("constructstoreObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);	
+	}
+	//查询功能
+	public void preBuildStore_search() throws Exception{
+		//根据门店名称查询
+		Thread.sleep(1000);
+		findElement("projectidObject").sendKeys(getTestData("项目编码_prebulidstore"));;
+		Thread.sleep(1000);
+		findElement("searchBtnObject").click();
+		//验证查询结果
+		Thread.sleep(1000);
+		AssertEqualsFromExcel(findElement("projectObject").getText(), "项目编码_prebulidstore");
+		AssertEqualsFromExcel(findElement("searchpageObject").getText(), "共一条记录_searchcontain");
+				
+	}
+	//查看详情功能
+	public void preBuildStore_details() throws Exception{
+		Thread.sleep(1000);
+		findElement("detailsObject").click();
+		
+		//验证正常打开查看页面
+		Thread.sleep(1000);
+		AssertEqualsFromExcel(findElement("detailscontentObject").getText(),"详情_prebulidstore");
+				
+		
+	}
+	//提交冻结申请功能
+	public void preBuildStore_freezen() throws Exception{
+		Thread.sleep(1000);
+		findElement("freezenbtnObject").click();
+		Thread.sleep(500);
+		findElement("remarkObject").sendKeys(getTestData("申请冻结备注_prebulidstore"));
+		Thread.sleep(500);
+		findElement("submitbtnObject").click();
+		
+		Thread.sleep(2000);
+		Assert.assertFalse(findElement("freezenbtnObject").getText().equals(btnname));
+		System.out.print("提交冻结申请成功");
+		
+		
+	}
+	//查看冻结日志功能
+	public void preBuildStore_freezenlog() throws Exception{	
+		Thread.sleep(1000);
+		findElement("freezenlogBtnObject").click();
+		//验证查看冻结跟踪日志功能
+		Thread.sleep(1000);
+		AssertEqualsFromExcel(findElement("logdetailObject").getText(),"跟踪日志_prebulidstore");
+		
+		//关闭日志
+		Thread.sleep(1000);
+		findElement("freelogbtnObject").click();
+		//返回列表
+		Thread.sleep(500);
+		findElement("storelistObject").click();
+		
+	}
+	//重置功能
+	public void preBuildStore_reset() throws Exception{
+		Thread.sleep(1000);
+		findElement("resetBtnObject").click();
+			
+		Thread.sleep(2000);
+		Assert.assertTrue(findElement("projectidObject").getText().equals(""));
+		Assert.assertTrue(findElement("listcontainsObject").getText().contains("显示第 1 到第 10 条记录"));
+		}
+	
+	
+
+}

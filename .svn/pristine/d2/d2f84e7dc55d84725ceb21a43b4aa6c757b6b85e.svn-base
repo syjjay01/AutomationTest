@@ -1,0 +1,31 @@
+package com.test.PageAction.SystemOperationLog;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.test.PageAction.LoginLogout.BasePage;
+
+public class FollowUpLog_Page extends BasePage{
+
+	public FollowUpLog_Page(WebDriver driver) throws Exception{		
+		super(driver);
+	}
+	
+	//选择菜单，跟进人日志
+	public void followUpLog() throws Exception{
+		implicitlyWait(1000);
+		findElement("logObject").click();
+		findElement("followUpLogObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);		
+	}
+	
+	//验证查询功能：物业名称
+	public void followUpLog_Search() throws Exception{
+		findElement("devStoreNameObject").sendKeys(getTestData("物业名称_followUpLog"));
+		findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("devStoreNameTextObject").getText(),"物业名称_followUpLog");
+	}
+	
+}

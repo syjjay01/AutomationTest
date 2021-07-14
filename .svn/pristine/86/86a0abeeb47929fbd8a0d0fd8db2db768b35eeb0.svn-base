@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        <locator type="linktext" timeOut="3" value="开发管理">devMgmtObject</locator>
+        //证照
+        <locator type="linktext" timeOut="3" value="  证照">licenseObject</locator>
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>
+        
+        //项目编码 搜索框
+        <locator type="id" timeOut="3" value="projectId">projectIdObject</locator>
+        //审核状态 搜索框
+        <locator type="id" timeOut="3" value="flag">auditStatusObject</locator>
+        //查询 按钮
+        <locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>
+        //重置 按钮
+        <locator type="id" timeOut="3" value="resetBtn">resetBtnObject</locator>
+
+        
+        //待审核页面，查看按钮
+        <locator type="linktext" timeOut="3" value="查看">viewBtnObject</locator>
+        //待审核页面，修改按钮
+        <locator type="linktext" timeOut="3" value="修改">updateBtnObject</locator>
+        
+      
+        
+        //项目编码 文本 
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[1]">projectIdTextObject</locator>
+        //物业名称
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[2]">devStoreNameTextObject</locator>
+        //门店名称
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[3]">storeTextObject</locator>
+        //证照名称
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[4]">licenseNameTextObject</locator>
+        //审核状态
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr[1]/td[6]">auditStatusTextObject</locator>
+      
+
+        //证照详情 页面
+        //项目编码
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table/tbody/tr[1]/td">projectIdObject_viewPage</locator>
+        //物业名称
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table/tbody/tr[2]/td">devStoreNameObject_viewPage</locator>
+        //门店名称
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table/tbody/tr[3]/td">storeObject_viewPage</locator>
+        //证照名称
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table/tbody/tr[4]/td">licenseNameObject_viewPage</locator>
+        //证照图片
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table/tbody/tr[5]/td">licensePictureObject_viewPage</locator>
+        //审核状态
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table/tbody/tr[6]/td">auditStatusObject_viewPage</locator>
+       
+        
+        //证照列表 按钮
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[1]/div/a">zzlbBtnObject</locator>
+        
+        //修改页面、添加证照页面，证照名称 下拉框
+        <locator type="id" timeOut="3" value="certCategory">licenseNameObject</locator>
+        //修改页面、添加证照页面，提交按钮
+        <locator type="xpath" timeOut="3" value="//*[@id='addCertificateForm']/div[6]/div/button">submitBtnObject</locator>
+      
+        //"显示第 1 到第 10 条记录"文本
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span[1]">recordTextObject</locator>
+        
+        //添加证照按钮
+        <locator type="partialLinkText" timeOut="3" value="添加证照">addLicenseObject</locator>
+        //添加图片 按钮
+        <locator type="xpath" timeOut="3" value="//*[@id='addCertificateForm']/div[3]/div/button">addPhotoBtnObject</locator>
+        //浏览 按钮
+        <locator type="id" timeOut="3" value="file">browseBtnObject</locator>
+        //上传 按钮
+        <locator type="id" timeOut="3" value="uploadFileNameBtn">uploadFileNameBtnObject</locator>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       
+        
+        
+</map>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+    <!--选择城市管理菜单-->
+	<Locator type="linktext" timeOut="3" value="立项管理">setupprojObject</Locator>
+	<Locator type="xpath" timeOut="3" value=".//*[@id='side-menu']/li[6]/ul/li[2]/a">cityObject</Locator>
+	<Locator type="name" timeOut="3" value="in">iframeObject</Locator>
+	
+	<!--选择省份下拉框-->
+	<Locator type="id" timeOut="3" value="provinceId">provinceidObject</Locator>
+	<!--查询按钮-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='searchBtn']">serchBtnObject</Locator>
+	<!--查询结果 市 字段-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[3]">citynameObject</Locator>
+	<!--输入市-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='toolbar']/div/div[3]/input">inputcityObject</Locator>
+	
+	<!--查看按钮-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[8]/a[1]">detailsObject</Locator>
+	<!--详情页面标题-->
+	<Locator type="xpath" timeOut="3" value="html/body/div[1]/div/div/h1">headObject</Locator>
+	<!--返回列表按钮-->
+	<Locator type="xpath" timeOut="3" value="html/body/div[1]/div/div/div/a">listObject</Locator>
+	<!--添加国家/省/市按钮-->
+	<Locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[1]/div/a">addObject</Locator>
+	<!--选择类型下拉框-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='level']">levelObject</Locator>
+	<!--选择国家拉框-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='region']">selregionObject</Locator>
+	<!--选择省拉框-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='province']">selprovinceObject</Locator>
+	<!--填写名称-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='addAreaFrm']/div[4]/div/input">inputcitynameObject</Locator>
+	<!--填写首字母-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='addAreaFrm']/div[5]/div/input">firstnameObject</Locator>
+	<!--填写拼音-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='addAreaFrm']/div[6]/div/input">pinyinObject</Locator>
+	<!--填写区号-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='addAreaFrm']/div[7]/div/input">zonenumObject</Locator>
+	<!--提交按钮-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='addAreaFrm']/div[10]/div/button">submitObject</Locator>
+	
+	<!--修改按钮-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[8]/a[2]">editObject</Locator>
+	<!--修改市-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='addAreaFrm']/div[3]/div/input">renamecityObject</Locator>
+	<!--修改提交按钮-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='addAreaFrm']/div[9]/div/button">editsubmitObject</Locator>
+	
+	<!--重置按钮-->
+	<Locator type="id" timeOut="3" value="resetBtn">resetObject</Locator>
+	<!--页面包含元素-->
+	<Locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span[1]">pagecontainsObject</Locator>
+</map>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        <locator type="linktext" timeOut="3" value="系统管理">SysMgmtObject</locator>
+        <locator type="partialLinkText" timeOut="3" value="反馈列表">FeedbackObject</locator>
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>
+        
+	    //反馈人搜索框
+        <locator type="id" timeOut="3" value="username">feedbackPeopObject</locator>
+        //查询按钮
+        <locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>
+                
+        //反馈人文本
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[1]">feedbackPeopTextObject</locator>
+
+		//回复按钮
+		<locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[7]/a">replyBtnObject</locator>
+		
+		//回复页面	
+		//回复内容
+        <locator type="id" timeOut="3" value="replyContent">replyObject</locator>
+			
+		//提交按钮
+		<locator type="xpath" timeOut="3" value="//*[@id='replyEmailFrm']/div/div[4]/input">submitBtnObject</locator>
+		
+		//提交后的列表中资源名称文本
+		//<locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr[1]/td[1]">dataDicNameTextObject3</locator>
+		
+        
+</map>

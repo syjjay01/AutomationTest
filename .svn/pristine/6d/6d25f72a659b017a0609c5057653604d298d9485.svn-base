@@ -1,0 +1,76 @@
+package com.test.PageAction.MoneyMgmt;
+
+import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.test.PageAction.LoginLogout.BasePage;
+
+public class BankAccount_Page extends BasePage{
+	
+	
+	public BankAccount_Page(WebDriver driver) throws Exception{
+		super(driver);
+	}
+	
+	public void bankAccount() throws Exception{
+		implicitlyWait(2000);
+		findElement("MoneyMgmtObject").click();
+		
+		Thread.sleep(3000);
+		findElement("bankAccountObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+	}
+	
+	//查询功能
+	public void bankAccount_Search() throws Exception{
+		//查询
+		implicitlyWait(1000);
+		selectByVisibleTextFromExcel(findElement("brandObject"),"品牌_bankAccount");
+		findElement("bankNameObject").sendKeys(getTestData("银行账户名称_bankAccount"));
+		findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		//验证查询结果
+		AssertEqualsFromExcel(findElement("brandTextObject").getText(),"品牌_bankAccount");
+		AssertEqualsFromExcel(findElement("bankNameTextObject").getText(),"银行账户名称_bankAccount");
+	}
+	
+	//重置功能
+	public void bankAccount_Reset() throws Exception{
+		findElement("resetBtnObject").click();
+		Thread.sleep(1000);
+		Assert.assertTrue(findElement("brandObject").getAttribute("value").isEmpty());
+		Assert.assertTrue(findElement("bankNameObject").getAttribute("value").isEmpty());
+	}
+	
+	
+	//修改功能
+	public void bankAccount_Modify() throws Exception{
+		//修改
+		bankAccount_Search();
+		findElement("modifyBtnObject").click();
+		Thread.sleep(1000);
+		
+		//修改银行账号
+		findElement("bankAccountObject2").clear();	
+		findElement("bankAccountObject2").sendKeys(getTestData("修改银行账号_bankAccount"));	
+		findElement("subBtnObject").click();
+		Thread.sleep(1000);
+		
+		//验证修改信息
+		bankAccount_Search();
+		AssertEqualsFromExcel(findElement("bankAccountTextObject").getText(),"修改银行账号_bankAccount");
+		
+		//恢复修改数据
+		findElement("modifyBtnObject").click();
+		Thread.sleep(1000);
+		findElement("bankAccountObject2").clear();	
+		findElement("bankAccountObject2").sendKeys(getTestData("银行账号_bankAccount"));	
+		findElement("subBtnObject").click();
+		Thread.sleep(1000);
+		
+	
+	}
+
+}

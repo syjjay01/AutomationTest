@@ -1,0 +1,32 @@
+package com.test.PageAction.Feedback;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+import com.test.PageAction.Login.BasePage;
+
+
+public class SubmitFeedback_Page extends BasePage{
+	
+	public SubmitFeedback_Page(WebDriver driver) throws Exception{
+		super(driver);
+	}
+	
+	//选择菜单
+	public void submitFeedback() throws Exception{
+		implicitlyWait(1000);
+		findElement("feedbackObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);	
+	}
+	
+	//验证提交功能
+	public void feedback_Submit() throws Exception{
+		findElement("contentObject").sendKeys(getTestData("意见内容_submitFeedback"));
+		findElement("submitBtnObject").click();
+		Thread.sleep(2000);
+		Assert.assertEquals(findElement("submitTextObject").getText(),"提交成功！");
+		findElement("okBtnObject").click();
+	}	
+	
+}

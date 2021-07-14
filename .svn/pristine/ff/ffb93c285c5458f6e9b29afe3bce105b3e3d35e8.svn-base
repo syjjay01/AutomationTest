@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        <locator type="linktext" timeOut="3" value="开发管理">kfglObject</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[3]/nav/div[2]/div/ul/li[5]/ul/li[3]/a">bfObject</locator>
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>
+        
+        //物业或投资人名称 搜索框
+        <locator type="id" timeOut="3" value="devStoreName">devStoreNameObject</locator>
+        //开发跟进人 搜索框
+        <locator type="id" timeOut="3" value="userName">developerObject</locator>
+        //查询 按钮
+        <locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>
+        //重置
+        <locator type="id" timeOut="3" value="resetBtn">resetBtnObject</locator>
+        //开始时间
+        <locator type="id" timeOut="3" value="startTime">startTimeObject</locator>
+        
+        //记录
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span[1]">recordTextObject</locator>
+        
+        //物业或投资人名称 文本
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr/td[1]">wymcTextObject</locator>
+        //联系电话 文本
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr/td[2]">phoneTextObject</locator>
+        //开发阶段
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr/td[3]">phaseTextObject</locator>
+        //开发人员
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr/td[4]">developerTextObject</locator>
+        //开发部
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr/td[5]">departmentTextObject</locator>
+        //拜访类型
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr/td[6]">visitTypeTextObject</locator>
+        //拜访内容
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr/td[7]">visitContentTextObject</locator>
+        //拜访状态
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr/td[8]">visitStatusTextObject</locator>
+        //拜访备注
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr/td[9]">remarkTextObject</locator>
+        //拜访日期
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr/td[10]">visitDateTextObject</locator>
+        //地址
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr/td[12]">addressTextObject</locator>
+        
+        
+        
+        //查看按钮
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr[1]/td[13]/a">viewBtnObject</locator>
+        
+        //热线反馈拜访详情 页面
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table[1]/tbody/tr[1]/td">tzrTextObject_viewPage</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table[1]/tbody/tr[2]/td">phaseTextObject_viewPage</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table[1]/tbody/tr[3]/td">developerTextObject_viewPage</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table[1]/tbody/tr[4]/td">visitTypeTextObject_viewPage</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table[1]/tbody/tr[5]/td">visitContenTextObject_viewPage</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table[1]/tbody/tr[6]/td">visitStatusTextObject_viewPage</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table[1]/tbody/tr[7]/td">remarkTextObject_viewPage</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table[1]/tbody/tr[8]/td">planTimeTextObject_viewPage</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table[1]/tbody/tr[9]/td">visitTimeTextObject_viewPage</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table[1]/tbody/tr[11]/td">addressTextObject_viewPage</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table[1]/tbody/tr[12]/td">coordinateTextObject_viewPage</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table/tbody/tr[13]/td">createTimeTextObject_viewPage</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table/tbody/tr[14]/td">updateTimeTextObject_viewPage</locator>
+       
+       //拜访列表 按钮
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[1]/div/a">bfBtnObject</locator>
+        
+        
+       
+        
+        
+</map>

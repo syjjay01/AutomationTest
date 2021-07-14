@@ -1,0 +1,37 @@
+package com.test.TestCase.SystemConfig;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import com.test.PageAction.Login.LoginPage;
+import com.test.PageAction.Login.LogoutAction;
+import com.test.PageAction.SystemConfig.UserConfig_Page;
+import com.test.TestCase.Login.BaseTestCase;
+
+public class TC_UserConfig extends BaseTestCase{
+
+	@BeforeClass
+	public void start() throws Exception{
+		super.init();
+		LoginPage loginpage = new LoginPage(driver);
+		loginpage.Login();
+	}
+		
+	@Test
+	public void brandConfig() throws Exception{
+		UserConfig_Page UserConfig_Page = new UserConfig_Page(driver);
+		//选择菜单,系统管理-用户管理
+		UserConfig_Page.userConfig();
+		//查询功能
+		UserConfig_Page.userConfig_Search();
+		//修改功能
+		UserConfig_Page.userConfig_upata();		
+	 }
+	
+	@AfterClass
+	 public void end() throws Exception{
+		LogoutAction logoutAction = new LogoutAction(driver);
+		logoutAction.Logout();
+	 }
+}

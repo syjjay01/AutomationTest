@@ -1,0 +1,39 @@
+package com.test.TestCase.SystemOperationLog;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import com.libarary.Utils.ScreenShotListener;
+import com.test.PageAction.LoginLogout.LoginPage;
+import com.test.PageAction.LoginLogout.LogoutAction;
+import com.test.PageAction.SystemOperationLog.PmsSubmitLog_Page;
+import com.test.TestCase.LoginLogout.BaseTestCase;
+
+@Listeners({ScreenShotListener.class})
+public class TC_PmsSubmitLog extends BaseTestCase {
+
+	@BeforeClass
+	public void start() throws Exception{
+		super.init();
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.Login(getUsersData("adminUser"));
+	}
+
+	@Test
+	public void pmsSubmitLog() throws Exception{			
+		PmsSubmitLog_Page PmsSubmitLogPage = new PmsSubmitLog_Page(driver);
+		//选择菜单栏
+		PmsSubmitLogPage.pmsSubmitLog();
+		//查询功能
+		PmsSubmitLogPage.pmsSubmitLog_Search();
+     }
+	
+	@AfterClass
+	 public void end() throws Exception{
+		LogoutAction logoutAction = new LogoutAction(driver);
+		logoutAction.Logout();
+	 }
+	
+}

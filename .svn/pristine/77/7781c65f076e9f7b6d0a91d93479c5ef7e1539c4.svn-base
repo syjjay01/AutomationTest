@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+
+	<!--选择定位,系统管理-分店性质 -->
+	<locator type="linktext" timeOut="3" value="系统管理">systemObject</locator>
+	<locator type="xpath" timeOut="3" value=".//*[@id='side-menu']/li[14]/ul/li[3]/a">storePropertyObject</locator>
+	<locator type="name" timeOut="3" value="in">iframeObject</locator>
+	
+	<!--查询功能，选择品牌，输入性质名称-->
+	<locator type="id" timeOut="3" value="brand_id">brandidObject</locator>
+	<locator type="id" timeOut="3" value="typeName">typeNameObject</locator>
+	<locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>	
+	<!--查询结果 -->
+	<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[3]">brandidTextObject</locator>
+	<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[2]">typeNameTextObject</locator>
+	
+	
+	<!--点修改-->
+	<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[5]/a">editBtnObject</locator>
+	<!--输入性质名称-->
+	<locator type="id" timeOut="3" value="type_name">editTypeNameObject</locator>
+	<!--点提交-->
+	<locator type="id" timeOut="3" value="editFrm">editFrmBtnObject</locator>
+	
+	
+	<!--点添加性质-->
+	<locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[1]/div/a">addBtnObject</locator>
+	<!--输入性质名称-->
+	<locator type="id" timeOut="3" value="typeName">addTypeNameObject</locator>
+	<!--选择品牌-->
+	<locator type="id" timeOut="3" value="brandId">addBrandidObject</locator>
+	<!--点提交-->
+	<locator type="id" timeOut="3" value="createFrm">createFrmObject</locator>
+
+</map>

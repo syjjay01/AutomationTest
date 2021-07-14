@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <locator type="linktext" timeOut="3" value="统计报表">tjbbObject</locator>
+        //门店状态统计
+        <locator type="xpath" timeOut="3" value="//*[@id='side-menu']/li[3]/ul/li[1]/a">storeStatusObject</locator>
+        
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>
+        
+        //开始日期 搜索框
+        <locator type="id" timeOut="3" value="startTime">startTimeObject</locator>
+        //结束日期
+        <locator type="id" timeOut="3" value="endTime">endTimeObject</locator>
+        
+        //查询按钮
+        <locator type="xpath" timeOut="3" value="//*[@id='toolbar2']/div/form/button">searchBtnObject</locator>
+        
+        //各品牌的品牌合计
+        //喆啡
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[3]/td[2]">CoffeetelObject</locator>
+        //海外酒店
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[4]/td[2]">aboardHotelObject</locator>
+        //希岸
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[5]/td[2]">XANAObject</locator>
+        //欢朋
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[6]/td[2]">HamptonObject</locator>
+        //7天优品
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[7]/td[2]">7daySuperiorObject</locator>
+        //全新7天
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[8]/td[2]">new7dayObject</locator>
+        //集团合计
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[9]/td[2]">totalObject</locator>
+        
+        
+       
+       
+        
+         
+</map>

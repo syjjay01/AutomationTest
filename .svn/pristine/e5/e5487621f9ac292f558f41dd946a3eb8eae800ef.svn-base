@@ -1,0 +1,76 @@
+package com.test.PageAction.ResourceMgmt;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.test.PageAction.Login.BasePage;
+
+public class HotlineFeedback_Page extends BasePage{
+
+	public HotlineFeedback_Page(WebDriver driver) throws Exception{
+		super(driver);
+	}
+	
+	public void hotlineFeedback() throws Exception{
+		
+		implicitlyWait(1000);
+		findElement("zyglObject").click();
+		Thread.sleep(1000);
+		findElement("rxfkObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+	}
+	
+	public void hotlineFeedback_Search() throws Exception{
+        //查看未拜访记录
+		sendKeystoReadOnlyField(findElement("startTimeObject"), "开始时间_rxfk");	
+		findElement("devStoreNameObject").sendKeys(getTestData("联系人_rxfk"));
+		selectByVisibleText(findElement("bfztObject"), "未拜访");
+		findElement("searchBtnObject").click();
+		
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("nameTextObject").getText(), "联系人_rxfk");
+		Assert.assertEquals(findElement("bfztTextObject").getText(), "未拜访");
+		
+		//查看已拜访记录
+		selectByVisibleText(findElement("bfztObject"), "已拜访");
+		findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("nameTextObject").getText(), "联系人_rxfk");
+		Assert.assertEquals(findElement("bfztTextObject").getText(), "已拜访");
+		
+		//查看过期未拜访记录
+		selectByVisibleText(findElement("bfztObject"), "过期未拜访");
+		findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("nameTextObject").getText(), "联系人_rxfk");
+		Assert.assertEquals(findElement("bfztTextObject").getText(), "过期未拜访");
+	}
+	
+	
+	public void hotlineFeedback_Reset() throws Exception{
+		findElement("resetBtnObject").click();
+		Thread.sleep(2000);
+		String inputValue = findElement("devStoreNameObject").getAttribute("value");
+		Assert.assertTrue(inputValue.isEmpty());
+		Assert.assertNotEquals(findElement("nameTextObject").getText(), "联系人_rxfk");
+		
+	}
+	
+	
+	public void hotlineFeedback_ViewDetail() throws Exception{
+		sendKeystoReadOnlyField(findElement("startTimeObject"), "开始时间_rxfk");		
+		findElement("devStoreNameObject").sendKeys(getTestData("联系人_rxfk"));
+		selectByVisibleText(findElement("bfztObject"), "未拜访");
+		findElement("searchBtnObject").click();
+		
+		Thread.sleep(2000);
+		findElement("viewBtnObject").click();
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("tzrTextObject").getText(), "联系人_rxfk");	
+		findElement("rxfkBtnObject").click();
+		Thread.sleep(2000);
+		Assert.assertTrue(findElement("viewBtnObject").isDisplayed());		
+	}
+}

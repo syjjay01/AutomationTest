@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        //一级菜单
+        <locator type="linktext" timeOut="3" value="门店管理">mdglObject</locator> 
+        //二级菜单
+        <locator type="xpath" timeOut="3" value=".//*[@id='side-menu']/li[9]/ul/li[1]/a">mdObject</locator>
+        //页面iframe
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>
+        
+        //查询条件
+        <locator type="id" timeOut="3" value="projectId">projectObject</locator>
+        <locator type="id" timeOut="3" value="storeName">storeObject</locator>
+
+        //查询按钮
+        <locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>
+        //重置按钮
+        <locator type="linktext" timeOut="3" value="重置">resetBtnObject</locator>
+        //查看按钮
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[12]/a[1]">viewBtnObject</locator>
+        //修改按钮
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[12]/a[2]">updateBtnObject</locator>
+        //取消与升级新品按钮
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[12]/a[2]">newProductBtnObject</locator>  
+        //记录条 
+        <locator type="xpath" timeOut="3" value="/html/body/div[1]/div/div[3]/div[2]/div[4]/div[1]/span[1]">recordObject</locator>
+        <locator type="xpath" timeOut="3" value="/html/body/div[1]/div/div[3]/div[2]/div[4]/div[1]/span[2]">pageObject</locator>
+
+        //列表第一行元素
+        //项目编码
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[1]">projectTextObject</locator>
+        //门店名称
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[2]">storeTextObject</locator>
+        //性质
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[4]">natureTextObject</locator>        
+        
+        //查看页面
+        <locator type="xpath" timeOut="3" value=".//*[@id='tableValignMiddle']/tbody/tr[1]/td[1]">storeTextObject2</locator>
+        <locator type="xpath" timeOut="3" value=".//*[@id='editStoreFrm']/div/table[1]/tbody/tr/td[2]">projectTextObject2</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[1]/div/a">mdlbBtnObject</locator>
+        
+        
+        //修改页面       
+        <locator type="id" timeOut="3" value="brandTypeId">comboBoxObject</locator>//下拉框      
+        <locator type="xpath" timeOut="3" value=".//*[@id='editStoreFrm']/div/div/button">submitBtnObject</locator>//提交按钮
+        
+        // 取消新品升级新品提示按钮
+        <locator type="xpath" timeOut="3" value="html/body/div[2]/div/div/div[2]/button[2]">OKBtnObject</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[2]/div/h4">warnObject</locator>//警告
+        <locator type="xpath" timeOut="3" value="html/body/div[2]/div/div[4]">tipObject</locator>//警告文本
+        <locator type="xpath" timeOut="3" value="/html/body/div[2]/div/div[1]/span">closewarnObject</locator>//关闭警告        
+
+</map>

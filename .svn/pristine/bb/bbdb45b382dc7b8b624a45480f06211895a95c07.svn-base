@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+
+	//功能模块菜单
+    <locator type="linktext" timeOut="3" value="统计报表">statsReportObject</locator>
+    <locator type="partialLinkText" timeOut="3" value="月度费用">monthlyFeeObect</locator>
+    <locator type="name" timeOut="3" value="in">iframeObject</locator>
+	
+	//按钮
+	<!--查询按钮-->
+	<Locator type="id" timeOut="3" value="searchBtn">searchBtn_Object</Locator>
+	<!--重置按钮-->	
+	<Locator type="id" timeOut="3" value="resetBtn">resetBtn_Object</Locator>
+	
+	//列表
+	<!--门店名称-->
+	<Locator type="id" timeOut="3" value="storeName">storeName_Object</Locator>
+	<!--前台系统使用费-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[6]">receptionFee_Object</Locator>
+	<!--管理费-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[2]/td[6]">managementFee_Object</Locator>
+	<!--底部文本-->
+	<Locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span[1]">text_Object</Locator>
+	
+
+</map>

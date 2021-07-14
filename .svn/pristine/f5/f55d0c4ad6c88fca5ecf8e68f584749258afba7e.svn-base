@@ -1,0 +1,41 @@
+package com.test.TestCase.StoreMgmt;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import com.libarary.Utils.ScreenShotListener;
+import com.test.PageAction.Login.LoginPage;
+import com.test.PageAction.Login.LogoutAction;
+import com.test.PageAction.StoreMgmt.CashierSite_Page;
+import com.test.TestCase.Login.BaseTestCase;
+
+@Listeners({ScreenShotListener.class})
+public class TC_CashierSite extends BaseTestCase{
+	
+	@BeforeClass
+	public void start() throws Exception{
+		super.init();
+		LoginPage loginpage = new LoginPage(driver);
+		loginpage.Login();
+	}
+	
+	@Test
+	public void cashierSite() throws Exception{
+		CashierSite_Page cashierSitePage = new CashierSite_Page(driver);
+		cashierSitePage.cashierSite();//进入页面
+		cashierSitePage.cashierSite_Search();//查询功能
+		cashierSitePage.cashierSite_Reset();//重置功能
+		cashierSitePage.cashierSite_ViewDetail();//查看功能		
+		cashierSitePage.cashierSite_Update();//修改功能
+		cashierSitePage.cashierSite_Add();//添加收银点功能
+	}
+	
+	@AfterClass
+	public void end() throws Exception{
+		LogoutAction logoutAction = new LogoutAction(driver);
+		logoutAction.Logout();
+	}
+	
+}

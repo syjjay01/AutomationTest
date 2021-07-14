@@ -1,0 +1,42 @@
+package com.test.TestCase.StatisticsReport;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import com.libarary.Utils.ScreenShotListener;
+import com.test.PageAction.LoginLogout.LoginPage;
+import com.test.PageAction.LoginLogout.LogoutAction;
+import com.test.PageAction.StatisticsReport.ReceivableJoinFee_Page;
+import com.test.TestCase.LoginLogout.BaseTestCase;
+
+@Listeners({ScreenShotListener.class})
+public class TC_ReceivableJoinFee extends BaseTestCase{
+
+	@BeforeClass
+	public void start() throws Exception{
+		super.init();
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.Login(getUsersData("adminUser"));
+	}
+	
+	@Test
+	public void AccountingReceivable() throws Exception{
+		ReceivableJoinFee_Page receivableJoinFeePage = new ReceivableJoinFee_Page(driver);
+		//选择菜单栏
+		receivableJoinFeePage.ReceivableJoinFee();
+		//查询
+		receivableJoinFeePage.ReceivableJoinFee_Search();
+		//重置
+		receivableJoinFeePage.ReceivableJoinFee_Reset();
+		/*//验证列表字段
+		receivableJoinFeePage.ReceivableJoinFee_Verify();*/
+	}
+	
+	@AfterClass
+	 public void end() throws Exception{
+		LogoutAction logoutAction = new LogoutAction(driver);
+		logoutAction.Logout();
+	 }
+}

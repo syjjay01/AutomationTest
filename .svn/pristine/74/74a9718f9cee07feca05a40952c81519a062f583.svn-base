@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        <locator type="linktext" timeOut="3" value="资源管理">zyglObject</locator>
+        <locator type="xpath" timeOut="3" value="//*[@id='side-menu']/li[4]/ul/li[1]/a">rxzyObject</locator>
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>
+        
+        <locator type="linktext" timeOut="3" value="添加资源">tjzyBtnObject</locator>
+        <locator type="linktext" timeOut="3" value="资源列表">zylbBtnObject</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[1]/h1">tjzyTextObject</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[1]/h1">rxzyTextObject</locator>
+        <locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>
+        
+        
+        <!--添加资源页面 -->
+        <locator type="id" timeOut="3" value="invName">nameObject</locator>
+        <locator type="id" timeOut="3" value="phone">phoneObject</locator>
+        <locator type="id" timeOut="3" value="invCategory">categoryObject</locator>
+        <locator type="id" timeOut="3" value="departmentId">departmentObject</locator>
+        <locator type="id" timeOut="3" value="customerLevel">customerLevelObject</locator>
+        <locator type="id" timeOut="3" value="sex">sexObject</locator>
+        <locator type="id" timeOut="3" value="sourceId">sourceObject</locator>
+        <locator type="id" timeOut="3" value="regionId">regionObject</locator>  
+        <locator type="id" timeOut="3" value="provinceId">provinceObject</locator>
+        <locator type="id" timeOut="3" value="cityId">cityObject</locator>
+        <locator type="id" timeOut="3" value="areaId">areaObject</locator>
+        <locator type="id" timeOut="3" value="address">addressObject</locator>
+        <locator type="id" timeOut="3" value="remark">remarkObject</locator>
+        //添加图片 按钮
+        <locator type="xpath" timeOut="3" value="//*[@id='addBrandForm']/div[12]/div/div[1]/button">addImgBtnObject</locator>
+        //浏览 按钮
+        <locator type="id" timeOut="3" value="file">browseBtnObject</locator>
+        //上传 按钮
+        <locator type="id" timeOut="3" value="uploadFileNameBtn">uploadFileNameBtnObject</locator>
+        
+        
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/form/div[13]/div/button">submitBtnObject</locator>
+        
+        <!--添加资源页面 中，添加图片页面-->
+        <locator type="id" timeOut="3" value="file">fileBtnObject</locator>
+        <locator type="id" timeOut="3" value="uploadFileNameBtn">uploadFileBtnObject</locator>
+        
+        <!--添加资源完成后，验证资源信息页面-->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[2]">nameTextObject</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr[1]/td[3]">phoneTextObject</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr[1]/td[4]">departmentTextObject</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr[1]/td[5]">customerLevelTextObject</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr[1]/td[6]">devTextObject</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr[1]/td[7]">provinceTextObject</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr[1]/td[8]">cityTextObject</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr[1]/td[9]">creatorTextObject</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr[1]/td[11]">reportTextObject</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr[1]/td[12]">remarkTextObject</locator>
+        
+        
+        <!--分配开发员-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr[1]/td[13]/button">distributionBtnObject</locator>
+        //李文静
+        <locator type="xpath" timeOut="3" value="//*[@id='viewDetailStyle']/div/div[4]/a">developerBtnObject_lwj</locator>
+        //李溧
+        <locator type="xpath" timeOut="3" value="//*[@id='viewDetailStyle']/div/div[5]/a">developerBtnObject_ll</locator>        
+        <locator type="linktext" timeOut="3" value="已分配">distributedBtnObject</locator>
+        
+        <locator type="linktext" timeOut="3" value="查看">viewBtnObject</locator>
+        //第一行数据的修改按钮
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr[1]/td[13]/a[2]">updateBtnObject</locator>
+        //第二行数据的修改按钮
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr[2]/td[13]/a[2]">updateBtnObject2</locator>
+                
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr[1]/td[13]/button">transferBtnObject</locator>        
+        
+        <!--查看页面-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table[1]/tbody/tr[1]/td">nameTextObject2</locator>  
+        
+        //联系人 搜索框
+        <locator type="id" timeOut="3" value="invName">contactPersonObject</locator>        
+        
+        //分配状态 下拉框
+        <locator type="id" timeOut="3" value="managerId">distributionStatusObject</locator>      
+        
+        //查询 按钮
+        <locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>
+        
+        //重置 按钮
+        <locator type="id" timeOut="3" value="resetBtn">resetBtnObject</locator>
+        
+        //批量导入 按钮
+        <locator type="id" timeOut="3" value="exportBtn">exportBtnObject</locator>
+        //导入热线资源页面中， 浏览按钮
+        <locator type="id" timeOut="3" value="xlsfile">browseBtnInBulkImportObject</locator>
+        //导入热线资源页面中， 提交按钮
+        <locator type="xpath" timeOut="3" value="//*[@id='exportFrm']/div[2]/button">submitBtnInBulkImportObject</locator>
+        //关闭 按钮
+        //<locator type="xpath" timeOut="3" value="//*[@id='viewDetailStyle']/h3/button">closeBtnInBulkImportObject</locator>
+        
+        
+        //第一行和第二行的勾选框
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr[1]/td[1]/input">selectCheckBoxObject</locator>
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr[2]/td[1]/input">selectCheckBoxObject2</locator>
+        //批量分配按钮
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[1]/div/button[2]">bulkDistributBtnObject</locator>
+        //批量移交 按钮
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[1]/div/button[2]">bulkTransferBtnObject</locator>
+        
+       
+        
+        
+</map>

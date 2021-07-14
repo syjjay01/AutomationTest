@@ -1,0 +1,52 @@
+package com.test.TestCase.DevelopmentMgmt;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import com.libarary.Utils.ScreenShotListener;
+import com.test.PageAction.Login.LoginPage;
+import com.test.PageAction.Login.LogoutAction;
+import com.test.PageAction.DevelopmentMgmt.Property_Page;
+import com.test.TestCase.Login.BaseTestCase;
+
+@Listeners({ScreenShotListener.class})
+public class TC_Property extends BaseTestCase{
+	
+	@BeforeClass
+	public void start() throws Exception{
+		super.init();
+		LoginPage loginpage = new LoginPage(driver);
+		loginpage.Login();
+	}
+	
+	@Test
+	public void property() throws Exception{
+		Property_Page propertyPage = new Property_Page(driver);
+		//选择菜单栏
+		propertyPage.property();
+		//查询功能
+		propertyPage.property_Search();
+		//重置功能
+		propertyPage.property_Reset();
+		
+		//查看功能
+		propertyPage.property_Search();
+		propertyPage.property_ViewDetail();
+		
+		//修改功能：不更新任何东西返回主页面
+		propertyPage.property_Search();
+		propertyPage.property_UpdateWithNothing();
+		
+		//修改功能
+		propertyPage.property_Search();
+		propertyPage.property_Update();
+	}
+	
+	@AfterClass
+	 public void end() throws Exception{
+		LogoutAction logoutAction = new LogoutAction(driver);
+		logoutAction.Logout();
+	 }
+}

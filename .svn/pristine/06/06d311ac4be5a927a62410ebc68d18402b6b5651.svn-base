@@ -1,0 +1,42 @@
+package com.test.PageAction.StatisticsReport;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.test.PageAction.Login.BasePage;
+
+public class StoreStatus_Page extends BasePage{
+	
+	
+	public StoreStatus_Page (WebDriver driver) throws Exception{
+		super(driver);
+	}
+	
+	public void storeStatus() throws Exception{
+		
+		implicitlyWait(1000);
+		findElement("tjbbObject").click();
+		Thread.sleep(1000);
+		findElement("storeStatusObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+	}
+	
+	public void storeStatus_Search() throws Exception{
+		
+		sendKeystoReadOnlyField(findElement("startTimeObject"), "开始日期_storeStatus");
+		sendKeystoReadOnlyField(findElement("endTimeObject"), "结束日期_storeStatus");
+		
+		findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		
+		AssertEqualsFromExcel(findElement("CoffeetelObject").getText(),"喆啡_storeStatus");
+		AssertEqualsFromExcel(findElement("aboardHotelObject").getText(),"海外酒店_storeStatus");
+		AssertEqualsFromExcel(findElement("XANAObject").getText(),"希岸_storeStatus");
+		AssertEqualsFromExcel(findElement("HamptonObject").getText(),"欢朋_storeStatus");
+		AssertEqualsFromExcel(findElement("7daySuperiorObject").getText(),"7天优品_storeStatus");
+		AssertEqualsFromExcel(findElement("new7dayObject").getText(),"全新7天_storeStatus");
+		AssertEqualsFromExcel(findElement("totalObject").getText(),"集团合计_storeStatus");
+		
+	}
+}

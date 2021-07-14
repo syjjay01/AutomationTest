@@ -1,0 +1,58 @@
+package com.test.PageAction.StatisticsReport;
+
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.test.PageAction.Login.BasePage;
+
+
+
+public class BrandProjects_Page extends BasePage{
+   
+	public BrandProjects_Page (WebDriver driver) throws Exception {
+	   super(driver);
+	}
+	
+	public void drandProjects() throws Exception{
+		implicitlyWait(1000);
+		findElement("statsReportObject").click();
+        findElement("brandProjectsObject").click();		
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+	}
+	
+	
+	public void drandProjects_Search() throws Exception{
+		selectByVisibleTextFromExcel(findElement("brandObject"), "品牌_brandProjects");
+		selectByVisibleTextFromExcel(findElement("brandTypeObject"), "品牌性质_brandProjects");
+		sendKeystoReadOnlyField(findElement("startTimeObject"), "开始日期_brandProjects");
+		sendKeystoReadOnlyField(findElement("endTimeObject"), "结束日期_brandProjects");
+		findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		
+		AssertEqualsFromExcel(findElement("brandTextObject").getText(),"品牌_brandProjects");
+		AssertEqualsFromExcel(findElement("brandTypeTextObject").getText(),"品牌性质_brandProjects");
+		AssertEqualsFromExcel(findElement("signedCountObject").getText(),"总签约数_brandProjects");
+		AssertEqualsFromExcel(findElement("roomsObject").getText(),"总房量_brandProjects");
+		AssertEqualsFromExcel(findElement("avgRoomsObject").getText(),"平均房量_brandProjects");
+		AssertEqualsFromExcel(findElement("franchiseReceivablesObject").getText(),"应收加盟费_brandProjects");
+		AssertEqualsFromExcel(findElement("franchiseReceiptsObject").getText(),"已收加盟费_brandProjects");
+	}
+   
+	public void drandProjects_Reset() throws Exception{
+		findElement("resetBtnObject").click();
+		Thread.sleep(2000);
+		
+		Assert.assertFalse(findElement("recordObject").getText().contains("显示第 1 到第 1 条记录，总共 1 条记录"));	
+	}
+	   
+	   
+	   
+	   
+   
+	
+	
+	
+}

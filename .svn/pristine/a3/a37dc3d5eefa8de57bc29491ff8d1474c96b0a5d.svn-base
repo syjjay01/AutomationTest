@@ -1,0 +1,162 @@
+package com.test.PageAction.StoreMgmt;
+
+//import org.openqa.selenium.By;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import com.test.PageAction.Login.BasePage;
+import org.testng.Assert;
+
+public class Renew_Page extends BasePage{
+	
+	String xysm="自动化续约说明修改时间"+getDateTime();//修改
+	String tjxysm="自动化续约说明时间"+getDateTime();//新增
+	String tjlxfs=getTelPhone();//新增
+	
+	public Renew_Page(WebDriver driver) throws Exception {
+		super(driver);
+	}
+	
+//	public void upLoad() throws Exception{
+//		//上传文件函数
+//		findElement("fileObject").click();
+//		Thread.sleep(2000);
+//		Runtime.getRuntime().exec("E:\\workspace\\Eclipseworkplace\\qqmdUIAutomation\\upload download\\续约合同附件.exe");
+//		Thread.sleep(5000);
+//	}
+	
+	public void renew() throws Exception{
+		// 进入页面
+		implicitlyWait(1000);
+		findElement("mdglObject").click();
+		Thread.sleep(1000);
+		findElement("xyObject").click();
+		WebElement iframeElement =findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+	}
+
+	public void renew_Search() throws Exception{
+		//查询功能
+		findElement("projectIdObject").sendKeys(getTestData("项目编码_xy"));
+		findElement("storeNameObject").sendKeys(getTestData("门店名称_xy"));	
+		selectByVisibleTextFromExcel(findElement("brandIdObject"),"品牌_xy");
+		selectByVisibleTextFromExcel(findElement("brandTypeIdObject"),"性质_xy");
+		selectByVisibleTextFromExcel(findElement("oaCheckedFlagObject"),"状态_xy");
+		findElement("searchBtnObject").click();
+		Thread.sleep(1000);	
+		//验证查询
+		AssertEqualsFromExcel(findElement("projectidTextObject").getText(),"项目编码_xy");
+		AssertEqualsFromExcel(findElement("stroreTextObject").getText(),"门店名称_xy");	
+		AssertEqualsFromExcel(findElement("branTextObject").getText(),"品牌_xy");	
+		AssertEqualsFromExcel(findElement("brantypeTextObject").getText(),"性质_xy");
+		AssertEqualsFromExcel(findElement("checkFlagTextObject").getText(),"状态_xy");
+		Thread.sleep(1000);	
+	}
+	
+	public void renew_Reset() throws Exception{
+		//重置功能
+		findElement("resetBtnObject").click();
+		Thread.sleep(2000);
+		if (findElement("pageObject").isDisplayed()){
+			Assert.assertTrue(findElement("recordObject").getText().contains("显示第 1 到第 10 条记录"));
+		}
+		else{
+			Assert.assertTrue(!findElement("recordObject").getText().contains("显示第 1 到第 10 条记录"));
+		}
+	}
+	
+	public void renew_Add() throws Exception{
+		//添加成功
+		findElement("addNewObject").click();
+		Thread.sleep(1000);	
+		//选择门店
+		findElement("projectInputObject").sendKeys(getTestData("项目编码3_xy"));	
+		findElement("serchBtn1Object").click();
+		Thread.sleep(1000);		
+		findElement("storeObject").click();
+		Thread.sleep(1000);		
+		//添加界面（必填项)
+		AssertEqualsFromExcel(findElement("tjprojectidObject").getText(),"项目编码3_xy");
+		findElement("xyjmfbzObject").sendKeys(getTestData("续约加盟费标准_xy"));	
+		findElement("ysjmfObject").sendKeys(getTestData("应收加盟费_xy"));	
+		findElement("xyglflObject").sendKeys(getTestData("续约管理费率_xy"));	
+		findElement("tjxgsmObject").sendKeys(tjxysm);	
+		findElement("qyrObject").sendKeys(getTestData("签约人/单位_xy"));	
+		selectByVisibleTextFromExcel(findElement("zjlxObject"),"证件类型_xy");	
+		findElement("zjnoObject").sendKeys(getTestData("证件号_xy"));	
+		findElement("phoneObject").sendKeys(tjlxfs);	
+		selectByVisibleTextFromExcel(findElement("zffsObject"),"支付方式_xy");
+		findElement("remarkObject").sendKeys(getTestData("备注_xy"));
+		sendKeystoReadOnlyField(findElement("xykstimeObject"), "续约生效日期_xy");
+		sendKeystoReadOnlyField(findElement("xyjztimeObject"), "续约截止日期_xy");
+		findElement("fjObject").click();	//点击附件
+		Thread.sleep(1000);
+//		upLoad();//上传操作
+		String photoPath=System.getProperty("user.dir")+"\\src\\com\\test\\TestData\\"+"续约合同附件.png";
+		findElement("fileObject").sendKeys(photoPath);
+		findElement("uploadBtnObject").click();	//上传按钮
+		Thread.sleep(5000);	
+		findElement("saveBtnObject").click();	//保存
+		Thread.sleep(2000);
+	    //验证保存是否成功
+		findElement("projectIdObject").sendKeys(getTestData("项目编码3_xy"));
+		findElement("searchBtnObject").click();
+		Thread.sleep(1000);	
+		AssertEqualsFromExcel(findElement("projectidTextObject").getText(),"项目编码3_xy");
+		Assert.assertEquals(findElement("checkFlagTextObject").getText(), "待提交");
+//		//进入界面继续提交（因为使用账号暂不在OA系统存在，目前先不实现提交功能）
+//		findElement("changeBtnObject").click();
+//		Thread.sleep(1000);
+//		findElement("sumbitBtnObject").click();
+//		findElement("okBtnObject").click();
+//		Thread.sleep(1000);
+//		findElement("projectIdObject").sendKeys(getTestData("项目编码3_xy"));
+//		findElement("searchBtnObject").click();
+//		//验证提交是否成功
+//		AssertEqualsFromExcel(findElement("projectidTextObject").getText(),"项目编码3_xy");
+//		Assert.assertEquals(findElement("checkFlagTextObject").getText(), "待审");
+	}
+	
+	public void renew_ViewDetail() throws Exception{
+	//查看功能
+		findElement("projectIdObject").sendKeys(getTestData("项目编码_xy"));
+		findElement("storeNameObject").sendKeys(getTestData("门店名称_xy"));	
+		findElement("searchBtnObject").click();
+		Thread.sleep(1000);	
+		findElement("checkBtnObject").click();
+		Thread.sleep(1000);
+		AssertEqualsFromExcel(findElement("ckprojectidObject").getText(),"项目编码_xy");
+		AssertEqualsFromExcel(findElement("ckcheckflagObject").getText(),"状态_xy");
+		findElement("xylbObject").click();
+		Thread.sleep(1000);
+		Assert.assertTrue(findElement("searchBtnObject").isDisplayed());
+	}
+	
+	public void renew_Change() throws Exception{
+	//修改功能
+		findElement("projectIdObject").sendKeys(getTestData("项目编码4_xy"));
+		findElement("searchBtnObject").click();
+		Thread.sleep(1000);	
+		Assert.assertTrue(findElement("changeBtnObject").isDisplayed());
+		findElement("changeBtnObject").click();
+		Thread.sleep(1000);
+		AssertEqualsFromExcel(findElement("xgxysmObject").getText(),"续约说明_xy");
+		findElement("xgxysmObject").clear();	
+		findElement("xgxysmObject").sendKeys(xysm);	
+		findElement("saveObject").click();
+		Thread.sleep(1000);
+		//验证修改
+		findElement("projectIdObject").sendKeys(getTestData("项目编码4_xy"));
+		findElement("searchBtnObject").click();
+		Thread.sleep(1000);	
+		findElement("changeBtnObject").click();
+		Assert.assertEquals(findElement("xgxysmObject").getText(),xysm);
+		//恢复修改数据
+		findElement("xgxysmObject").clear();	
+		findElement("xgxysmObject").sendKeys(getTestData("续约说明_xy"));
+		findElement("saveObject").click();
+		Thread.sleep(1000);
+		Assert.assertTrue(findElement("searchBtnObject").isDisplayed());
+	}
+	
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        //功能模块菜单
+        <locator type="linktext" timeOut="3" value="款项管理">MoneyMgmtObject</locator>
+        <locator type="partialLinkText" timeOut="3" value="银行帐号">bankAccountObject</locator>
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>
+        
+        //按钮
+        <!--查询按钮-->
+        <locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>
+        <!--重置按钮-->
+        <locator type="id" timeOut="3" value="resetBtn">resetBtnObject</locator>        
+		<!--修改按钮-->
+		<locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[4]">bankAccountTextObject</locator>
+		<!--提交按钮-->
+		<locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr[1]/td[7]/a">modifyBtnObject</locator>】
+				
+        //查询条件
+        <!--品牌搜索框-->
+        <locator type="id" timeOut="3" value="brandId">brandObject</locator>
+        //银行账户名搜索框-->
+        <locator type="id" timeOut="3" value="bankName">bankNameObject</locator>
+        
+        //列表
+        <!--品牌文本-->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr[1]/td[1]">brandTextObject</locator>
+        <!--银行账户名文本-->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr[1]/td[2]">bankNameTextObject</locator>
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr[1]/td[3]">openBankTextObject</locator>
+        <!--修改液面的银行帐号-->
+		<locator type="id" timeOut="3" value="bankAccount">bankAccountObject2</locator>				
+		<locator type="xpath" timeOut="3" value="//*[@id='addBankForm']/div[7]/div/button">subBtnObject</locator>
+		
+		//修改页面
+		<!--品牌-->
+		<locator type="id" timeOut="3" value="bankName">bankNameTextObject2</locator>		
+		<!--返回列表-->
+		<locator type="xpath" timeOut="3" value="html/body/div[1]/div/div/div/a">bankAccountlistBtnObject</locator>
+        
+        
+        
+        
+                
+        
+				       
+</map>

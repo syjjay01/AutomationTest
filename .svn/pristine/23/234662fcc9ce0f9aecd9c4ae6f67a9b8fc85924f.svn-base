@@ -1,0 +1,42 @@
+package com.test.TestCase.DevelopmentMgmt;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import com.libarary.Utils.ScreenShotListener;
+import com.test.PageAction.DevelopmentMgmt.Receivables_Page;
+import com.test.PageAction.LoginLogout.LoginPage;
+import com.test.PageAction.LoginLogout.LogoutAction;
+import com.test.TestCase.LoginLogout.BaseTestCase;
+
+@Listeners({ScreenShotListener.class})
+public class TC_Receivables extends BaseTestCase{
+
+	@BeforeClass
+	public void start() throws Exception{
+		super.init();
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.Login(getUsersData("adminUser"));
+	}
+	
+	@Test
+	public void receivables() throws Exception{
+		Receivables_Page receivablesPage = new Receivables_Page(driver);
+		//选择菜单栏
+		receivablesPage.receivables();
+		//查询
+		receivablesPage.receivables_Search();
+		//重置
+		receivablesPage.receivables_Reset();
+	}
+	
+	@AfterClass
+	 public void end() throws Exception{
+		LogoutAction logoutAction = new LogoutAction(driver);
+		logoutAction.Logout();
+	 }
+	
+	
+}

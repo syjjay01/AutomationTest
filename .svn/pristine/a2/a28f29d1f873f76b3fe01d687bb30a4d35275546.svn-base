@@ -1,0 +1,34 @@
+package com.test.PageAction.BonusMgmt;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.test.PageAction.LoginLogout.BasePage;
+
+public class ProjectPanorama_Page extends BasePage{
+	
+	public ProjectPanorama_Page(WebDriver driver)throws Exception{
+		super(driver);
+	}
+	
+	public void ProjectPanorama() throws Exception{
+		implicitlyWait(2000);
+		findElement("BonusMgmtObject").click();
+		
+		Thread.sleep(2000);
+		findElement("ProjectPanoramaObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+	}
+	
+	//查询
+	public void ProjectPanorama_Search() throws Exception{
+		findElement("projectIdObject").sendKeys(getTestData("项目编码_projectPanorama"));
+		findElement("signingDateObject").click();
+		findElement("searchBtnObject").click();
+		
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("projectIdTextObject").getText(),"项目编码_projectPanorama");
+		
+	}
+}

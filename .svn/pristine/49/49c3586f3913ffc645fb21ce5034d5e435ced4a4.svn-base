@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	<!--选择筹建冻结菜单-->
+	<Locator type="linktext" timeOut="3" value="筹建管理">prebuildObject</Locator>
+	<Locator type="xpath" timeOut="3" value=".//*[@id='side-menu']/li[8]/ul/li[2]/a">constructfreezeObject</Locator>
+	<Locator type="name" timeOut="3" value="in">iframeObject</Locator>
+	<!--项目编码输入框-->
+	<Locator type="id" timeOut="3" value="project_id">projectidObject</Locator>
+	<!--查询按钮-->
+	<Locator type="id" timeOut="3" value="searchBtn">searchbtnObject</Locator>
+	<!--查询结果项目编码框-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[1]">resultObject</Locator>
+	<!--查看按钮-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[12]/a">detailObject</Locator>
+	<!--跟踪按钮-->
+	<Locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[1]/div/a[1]">logbtnObject</Locator>
+	<!--跟踪日志详情-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='freezenLog']/div/div/div[1]/h4">logdetailObject</Locator>
+	<!--关闭日志按钮-->
+	<Locator type="xpath" timeOut="3" vaule=".//*[@id='freezenLog']/div/div/div[1]/button">closelogObject</Locator>
+	<!--申请冻结按钮-->
+	<Locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[1]/div/a[2]">freezebuildObject</Locator>
+	<!--申请解冻按钮-->
+	<Locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[1]/div/a[2]">unfreezebuildObject</Locator>
+	<!--申请冻结备注-->
+	<Locator type="id" timeOut="3" value="freezeRemark">remarkObject</Locator>
+	<!--确认按钮-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='freezeBuild']/div/div/div[3]/button[2]">submitbtnObject</Locator>
+	<!--撤回按钮-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[12]/a[2]">backbtnObject</Locator>
+	<!--审核冻结按钮-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[12]/a[2]">reviewed1Object</Locator>
+	<!--冻结状态列-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[11]">freezestateObject</Locator>
+	<!--确认撤回解冻按钮-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='freezeBuild']/div/div/div[3]/button[2]">backsubmitObject</Locator>
+	<!--审核按钮-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[12]/a[3]">reviewedObject</Locator>
+	<!--审核通过-->
+	<Locator type="id" timeOut="3" value="inlineRadio1">passObject</Locator>
+	<!--确认审核按钮-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='freezeBuild']/div/div/div[3]/button[2]">passsubmitObject</Locator>
+	<!--返回筹建冻结列表按钮-->
+	<Locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[1]/div/a[2]">freezelistObject</Locator>
+	<!--重置按钮-->
+	<Locator type="id" timeOut="3" value="resetBtn">resetBtnObject</Locator>
+	<!--重置验证列表刷新数据-->
+	<Locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span[1]">pagecontainsObject</Locator>
+	<!--详情页详情字眼-->
+	<Locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/h4[1]">detailcontainObject</Locator>
+	<!--查询只返回一条记录-->
+	<Locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span[1]">searchpageObject</Locator>
+	
+</map>

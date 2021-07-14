@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        <locator type="xpath" timeOut="3" value="html/body/div[3]/nav/ul/li/a">userListObject</locator>
+        <locator type="linktext" timeOut="3" value="退出">logoutObject</locator>
+         
+         
+</map>

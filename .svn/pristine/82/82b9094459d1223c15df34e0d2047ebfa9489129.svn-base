@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+	
+	 <locator type="linktext" timeOut="3" value="统计报表">statsReportObject</locator>
+	 <locator type="name" timeOut="3" value="in">iframeObject</locator>
+	 <locator type="partialLinkText" timeOut="3" value="增减应收加盟费">receivableJoinFee</locator>
+	 
+	 <locator type="id" timeOut="3" value="projectId">projectId</locator>
+	 <locator type="id" timeOut="3" value="searchBtn">searchBtn</locator>
+	 
+	 <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[1]">projectIdObject</locator>
+	 <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[2]">storeIdObject</locator>
+	 <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[3]">projectCodeObject</locator>
+	 <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[4]">storeNameObject</locator>
+	 <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[5]">brandObject</locator>
+	 <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[6]">natureObject</locator>
+	 <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[7]">areaObject</locator>
+	 <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[8]">developmentDepartmentObject</locator>
+	 <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[9]">governingRegionObject</locator>
+	 <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[10]">endTimeObject</locator>
+	 <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[11]">roomNumberObject</locator>
+	 <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[12]">feeObject</locator>
+	 <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[13]">auditTimeObject</locator>
+
+	 
+	 <locator type="id" timeOut="3" value="resetBtn">resetBtn</locator>
+	 <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span[1]">recordTextObject</locator>
+	 <locator type="id" timeOut="3" value="startDate">startTimeObject</locator>
+	 <locator type="" timeOut="3" value=""></locator>
+	 <locator type="" timeOut="3" value=""></locator>
+	 <locator type="" timeOut="3" value=""></locator>
+	 <locator type="" timeOut="3" value=""></locator>
+	 <locator type="" timeOut="3" value=""></locator>
+	 <locator type="" timeOut="3" value=""></locator>
+	 <locator type="" timeOut="3" value=""></locator>
+	 <locator type="" timeOut="3" value=""></locator>
+
+
+</map>
+

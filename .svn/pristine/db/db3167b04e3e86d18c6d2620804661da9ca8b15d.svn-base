@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+
+	<!--选择菜单,系统管理-品牌 -->
+	<locator type="linktext" timeOut="3" value="系统管理">systemObject</locator>
+	<locator type="xpath" timeOut="3" value=".//*[@id='side-menu']/li[14]/ul/li[2]/a">brandConfigObject</locator>
+	<locator type="name" timeOut="3" value="in">iframeObject</locator>
+	
+	<!--查询功能，输入品牌名称-->
+	<locator type="xpath" timeOut="3" value=".//*[@id='toolbar']/div/div/input">brandNameObject</locator>	
+	<!--查询结果 -->
+	<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[2]">brandNameTextObject</locator>
+	
+	<!--点修改-->
+	<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[4]/a">editBtnObject</locator>
+	<!--输入品牌名称-->
+	<locator type="id" timeOut="3" value="brandName">editbrandNameObject</locator>
+	<!--点提交-->
+	<locator type="id" timeOut="3" value="editFrm">editFrmBtnObject</locator>
+
+	<!--点添加品牌-->
+	<locator type="xpath" timeOut="3" value="/html/body/div[1]/div/div[1]/div/a">addBtnObject</locator>
+	<!--输入品牌-->
+	<locator type="id" timeOut="3" value="brandName">addBrandNameObject</locator>
+	<!--点提交-->
+	<locator type="id" timeOut="3" value="addFrm">addFrmObject</locator>
+
+</map>

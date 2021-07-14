@@ -1,0 +1,46 @@
+package com.test.PageAction.ResourceMgmt;
+
+import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import com.test.PageAction.Login.BasePage;
+
+
+public class DestributionStats_Page extends BasePage{
+
+	public DestributionStats_Page(WebDriver driver) throws Exception{
+		super(driver);
+	}
+	
+	public void destributionStats() throws Exception{
+		implicitlyWait(1000);
+		findElement("zyglObject").click();
+		findElement("fptjObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+	
+	}
+	
+	public void destributionStats_Search() throws Exception{
+		//验证查询功能
+		findElement("userNameObject").sendKeys(getTestData("开发人员_fptj"));
+		sendKeystoReadOnlyField(findElement("startTimeObject"), "开始时间_fptj");	
+		sendKeystoReadOnlyField(findElement("endTimeObject"), "结束时间_fptj");	
+		findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("kfryTextObject").getText(), "开发人员_fptj");
+		AssertEqualsFromExcel(findElement("kfryghTextObject").getText(), "开发人员工号_fptj");
+		AssertEqualsFromExcel(findElement("rxfpsTextObject").getText(), "热线分配数_fptj");
+		AssertEqualsFromExcel(findElement("zykhsTextObject").getText(), "自有客户数_fptj");
+	}
+	
+	public void destributionStats_Reset() throws Exception{
+		//验证重置功能
+		findElement("resetBtnObject").click();
+		Thread.sleep(2000);
+		Assert.assertTrue(findElement("recordTextObject").getText().contains("显示第 1 到第 10 条记录"));
+	}
+	
+	
+	
+}

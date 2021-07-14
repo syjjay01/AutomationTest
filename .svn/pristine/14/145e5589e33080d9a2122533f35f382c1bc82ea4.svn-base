@@ -1,0 +1,74 @@
+package com.test.PageAction.DevelopmentMgmt;
+
+import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.test.PageAction.Login.BasePage;
+
+public class Visit_Page extends BasePage{
+	
+	public Visit_Page(WebDriver driver) throws Exception{
+		super(driver);
+	}
+	
+	
+	public void visit() throws Exception{
+		implicitlyWait(1000);
+		findElement("kfglObject").click();
+		Thread.sleep(1000);
+		findElement("bfObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);	
+	}
+	
+	
+	public void visit_Search() throws Exception{
+		findElement("devStoreNameObject").sendKeys(getTestData("物业投资人_bf"));
+		sendKeystoReadOnlyField(findElement("startTimeObject"), "开始时间_bf");
+		findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		
+		AssertEqualsFromExcel(findElement("wymcTextObject").getText(), "物业投资人_bf");
+		AssertEqualsFromExcel(findElement("phoneTextObject").getText(), "联系电话_bf");
+		AssertEqualsFromExcel(findElement("phaseTextObject").getText(), "开发阶段_bf");
+		AssertEqualsFromExcel(findElement("developerTextObject").getText(), "开发人员_bf");
+		AssertEqualsFromExcel(findElement("departmentTextObject").getText(), "开发部_bf");
+		AssertEqualsFromExcel(findElement("visitTypeTextObject").getText(), "拜访类型_bf");
+		AssertEqualsFromExcel(findElement("visitContentTextObject").getText(), "拜访内容_bf");
+		AssertEqualsFromExcel(findElement("visitStatusTextObject").getText(), "拜访状态_bf");
+		AssertEqualsFromExcel(findElement("remarkTextObject").getText(), "拜访备注_bf");
+		AssertEqualsFromExcel(findElement("visitDateTextObject").getText(), "拜访日期_bf");
+		AssertEqualsFromExcel(findElement("addressTextObject").getText(), "地址_bf");
+	}
+	
+	
+	public void visit_Reset() throws Exception{
+		findElement("resetBtnObject").click();
+		Thread.sleep(2000);
+		AssertNotSameFromExcel(findElement("wymcTextObject").getText(), "物业投资人_bf");
+	}
+	
+	public void visit_ViewDetail() throws Exception{
+		findElement("viewBtnObject").click();
+		Thread.sleep(2000);
+		
+		AssertEqualsFromExcel(findElement("tzrTextObject_viewPage").getText(), "物业投资人_bf");
+		AssertEqualsFromExcel(findElement("phaseTextObject_viewPage").getText(), "开发阶段_bf");
+		AssertEqualsFromExcel(findElement("developerTextObject_viewPage").getText(), "开发人员_bf");
+		AssertEqualsFromExcel(findElement("visitTypeTextObject_viewPage").getText(), "拜访类型_bf");
+		AssertEqualsFromExcel(findElement("visitContenTextObject_viewPage").getText(), "拜访内容_bf");
+		AssertEqualsFromExcel(findElement("visitStatusTextObject_viewPage").getText(), "拜访状态_bf");
+		AssertEqualsFromExcel(findElement("remarkTextObject_viewPage").getText(), "拜访备注_bf");
+		AssertEqualsFromExcel(findElement("planTimeTextObject_viewPage").getText(), "计划日期_bf");
+		AssertEqualsFromExcel(findElement("visitTimeTextObject_viewPage").getText(), "拜访日期_bf");
+		AssertEqualsFromExcel(findElement("addressTextObject_viewPage").getText(), "地址_bf");
+		AssertEqualsFromExcel(findElement("coordinateTextObject_viewPage").getText(), "坐标_bf");
+		AssertEqualsFromExcel(findElement("createTimeTextObject_viewPage").getText(), "创建时间_bf");
+		AssertEqualsFromExcel(findElement("updateTimeTextObject_viewPage").getText(), "更新时间_bf");
+		
+		findElement("bfBtnObject").click();
+		Assert.assertTrue(findElement("viewBtnObject").isDisplayed());
+	}
+
+}

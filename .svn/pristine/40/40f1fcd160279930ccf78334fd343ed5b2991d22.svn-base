@@ -1,0 +1,34 @@
+package com.test.PageAction.SystemOperationLog;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import com.test.PageAction.Login.BasePage;
+
+public class StoreStatusLog_Page extends BasePage{
+	
+	public StoreStatusLog_Page(WebDriver driver) throws Exception{		
+		super(driver);
+	}
+	
+	//选择菜单
+	public void storeStatusLog() throws Exception{
+		implicitlyWait(1000);
+		findElement("logObject").click();
+		findElement("storeStatusLogObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);		
+	}
+	
+	//验证查询功能：项目编码+门店名称+品牌
+	public void storeStatusLog_Search() throws Exception{
+		findElement("projectIdObject").sendKeys(getTestData("项目编码_storeStatusLog"));
+		findElement("storeNameObject").sendKeys(getTestData("门店名称_storeStatusLog"));
+		selectByVisibleTextFromExcel(findElement("brandIdObject"),"品牌_storeStatusLog");
+		findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("projectIdTextObject").getText(),"项目编码_storeStatusLog");
+		AssertEqualsFromExcel(findElement("storeNameTextObject").getText(),"门店名称2_storeStatusLog");
+		AssertEqualsFromExcel(findElement("brandIdTextObject").getText(),"品牌_storeStatusLog");		
+	}
+	
+}

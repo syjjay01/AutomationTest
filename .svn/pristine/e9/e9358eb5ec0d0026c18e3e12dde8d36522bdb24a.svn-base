@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        //功能模块菜单 
+        <!--一级菜单--> 
+        <locator type="linktext" timeOut="3" value="统计报表">statsReportObject</locator>
+        <!--二级菜单--> 
+        <locator type="partialLinkText" timeOut="3" value="热线统计">hotlineStatsObject</locator>        
+        <!--页面iframe --> 
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>     
+       
+        //按钮
+        <!--查询--> 
+        <locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator> 
+        <!--重置--> 
+        <locator type="id" timeOut="3" value="resetBtn">resetBtnObject</locator> 
+
+        //查询条件 
+        <!--信息来源--> 
+        <locator type="id" timeOut="3" value="source_id">sourceIdObject</locator> 
+        <!--开发部--> 
+        <locator type="id" timeOut="3" value="departmentId">departmentIdObject</locator>
+        <!--热线创建日期复选框-->  
+        <locator type="id" timeOut="3" value="isHotCreatedTime">hotBoxObject</locator>
+        <!--签约达标日期复选框-->    
+        <locator type="id" timeOut="3" value="isStandardTime">standBoxObject</locator>
+        <!--开始日期-->  
+        <locator type="id" timeOut="3" value="timeStart">startTimeObject</locator>
+        <!--结束日期-->    
+        <locator type="id" timeOut="3" value="timeEnd">endTimeObject</locator>
+      
+        
+        //列表
+        <!--信息来源-->
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[1]">sourceTextObject</locator>
+        <!--开发部-->
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[2]">departmentTextObject</locator>
+        <!--热线数-->
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[3]">hotNumTextObject</locator>
+        <!--热线项目数-->
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[4]">hotProjectNumTextObject</locator>        
+        <!--签约达标数-->
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[5]">standarNumTextObject</locator> 
+        <!--热线项目比例-->
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[6]">hotProjectRateTextObject</locator>        
+        <!--热线转化率-->
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[7]">hotConverRateTextObject</locator> 
+        
+      
+        //页码
+        <!--总记录文本（显示第x到第x条记录，总共x条记录）-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span[1]">recordObject</locator>
+        
+        
+        
+        
+        
+        
+		
+</map>

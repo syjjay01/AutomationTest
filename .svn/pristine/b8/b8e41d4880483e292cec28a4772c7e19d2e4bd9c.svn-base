@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+	 //功能模块菜单
+	 <locator type="linktext" timeOut="3" value="统计报表">statsReportObject</locator>
+	 <locator type="name" timeOut="3" value="in">iframeObject</locator>
+	 <locator type="partialLinkText" timeOut="3" value="增减应收加盟费">receivableJoinFee</locator>
+	
+	 //按钮
+	 <!--查询-->
+	 <locator type="id" timeOut="3" value="searchBtn">searchBtn</locator>
+	 <!--重置-->
+	 <locator type="id" timeOut="3" value="resetBtn">resetBtn</locator>
+	
+	 //查询条件 
+	 <!--项目编码-->
+	 <locator type="id" timeOut="3" value="projectId">projectId</locator>
+	 <!--开始日期-->
+	 <locator type="id" timeOut="3" value="startDate">startTimeObject</locator>	 
+	 <!--页码-->
+	 <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span[1]">recordTextObject</locator>
+	 
+	 //列表
+	 <!--主合同id-->
+	 <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[1]">projectIdObject</locator>
+	 <!--门店id-->
+	 <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[2]">storeIdObject</locator>
+	 <!--项目编码-->
+	 <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[3]">projectCodeObject</locator>
+	 <!--门店名称-->
+	 <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[4]">storeNameObject</locator>
+	 <!--品牌-->
+	 <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[5]">brandObject</locator>
+	 <!--性质-->
+	 <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[6]">natureObject</locator>
+	 <!--地区-->
+	 <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[7]">areaObject</locator>
+	 <!--开发部-->
+	 <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[8]">developmentDepartmentObject</locator>
+	 <!--执政区域-->
+	 <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[9]">governingRegionObject</locator>
+	 <!--签约达标日期-->
+	 <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[10]">endTimeObject</locator>
+	 <!--增减房间数-->
+	 <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[11]">roomNumberObject</locator>
+	 <!--增减应收加盟费-->
+	 <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[12]">feeObject</locator>
+	 <!--补充协议审核时间-->
+	 <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[13]">auditTimeObject</locator>
+
+	 
+	 
+
+
+</map>
+

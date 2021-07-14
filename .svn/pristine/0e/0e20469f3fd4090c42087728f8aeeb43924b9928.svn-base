@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        //功能模块菜单
+        <!--一级菜单 -->  
+        <locator type="linktext" timeOut="3" value="事故报告">sgbgObject</locator> 
+        <!--二级菜单-->         
+        <locator type="partialLinkText" timeOut="3" value="事故统计报表">sgtjbbObject</locator>
+        <!--页面iframe-->         
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>      
+       
+       	//按钮
+       	<!--查询按钮-->    
+        <locator type="xpath" timeOut="3" value="//*[@id='toolbar']/div/form/div[8]/button">searchBtnObject</locator>  
+        <!--重置按钮-->       
+        <locator type="linktext" timeOut="3" value="重置">resetBtnObject</locator> 
+        <!--导出按钮--> 
+        <locator type="id" timeOut="3" value="exportBtn">exportBtnObject</locator>
+        
+        //查询条件
+        <!--项目编码-->   
+        <locator type="id" timeOut="3" value="projectId">projectIdObject</locator> 
+        <!--门店名称-->  
+        <locator type="id" timeOut="3" value="storeName">storeNameObject</locator>
+        <!--性质--> 
+        <locator type="id" timeOut="3" value="brandTypeId">brandTypeIdObject</locator>
+        <!--开始时间--> 
+        <locator type="id" timeOut="3" value="startTime">startTimeObject</locator>
+        <!--结束时间 --> 
+        <locator type="id" timeOut="3" value="endTime">endTimeObject</locator>  
+                
+        //列表
+        <!--事故分类--> 
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[2]/td[2]">accidentTypeTextObject</locator> 
+        <!--数量--> 
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[2]/td[3]">numberTextObject</locator>
+        <!--总损失金额--> 
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[2]/td[4]">moneyTextObject</locator>
+     
+</map>

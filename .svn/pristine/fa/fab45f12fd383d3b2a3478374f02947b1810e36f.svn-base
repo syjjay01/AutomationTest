@@ -1,0 +1,102 @@
+package com.test.PageAction.DevelopmentMgmt;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.test.PageAction.LoginLogout.BasePage;
+
+public class Investors_Page extends BasePage{
+
+	String name = getWriteData("投资人_HotlineResource");
+	
+	public Investors_Page(WebDriver driver) throws Exception{
+		super(driver);
+	}
+	
+	public void investors() throws Exception{
+		implicitlyWait(1000);
+		findElement("devMgmtObject").click();
+		findElement("investorsObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+	}
+	
+	public void investors_Search() throws Exception{
+		//验证查询功能
+		findElement("nameObject").sendKeys(name);
+		findElement("removalTimeObject").click();//去掉拜访时间选项
+		Thread.sleep(500);
+		
+	    findElement("searchBtnObject").click();	
+		Thread.sleep(1000);
+		Assert.assertEquals(findElement("nameTextObject").getText(), name);
+	}
+	
+	public void investors_Reset() throws Exception{
+		findElement("resetBtnObject").click();
+		Thread.sleep(1000);
+		Assert.assertTrue(findElement("nameObject").getAttribute("value").isEmpty());
+	}
+	
+	
+   public void investors_ViewDetail() throws Exception{
+	    //验证查看功能    
+	    investors_Search();
+		findElement("viewBtnObject").click();
+		Thread.sleep(1000);
+		Assert.assertEquals(findElement("nameTextObject2").getText(), name);
+		findElement("tzrlbBtnObject").click();
+		Assert.assertTrue(findElement("searchBtnObject").isDisplayed());		
+   }
+   
+   
+   public void investors_Update() throws Exception{
+	     //验证修改功能
+	    investors_Search();
+		AssertEqualsFromExcel(findElement("remarkTextObject").getText(), "原备注_tzr");
+		findElement("updateBtnObject").click();
+		Thread.sleep(1000);
+		
+		WebElement remarkElement = findElement("remarkObject");
+		remarkElement.clear();
+		remarkElement.sendKeys(getTestData("更改备注_tzr"));
+		Thread.sleep(1000);
+		findElement("submitBtnObject").click();
+		Thread.sleep(2000);
+		
+		investors_Search();
+		AssertEqualsFromExcel(findElement("remarkTextObject").getText(), "更改备注_tzr");
+		
+		//修改回原来的值
+		findElement("updateBtnObject").click();
+		Thread.sleep(1000);
+		
+		WebElement remarkElement2 = findElement("remarkObject");
+		remarkElement2.clear();
+		remarkElement2.sendKeys(getTestData("原备注_tzr"));
+		Thread.sleep(1000);
+		findElement("submitBtnObject").click();
+   }
+   
+   //拜访投资人
+   public void investors_Visit() throws Exception{
+	   Thread.sleep(2000);
+	   investors_Search();
+	   findElement("checkBoxObject").click();
+	   findElement("visitInvestorsBtnObject").click();
+	   
+	   Thread.sleep(2000);
+	   selectByVisibleTextFromExcel(findElement("visitTypeObject"),"拜访方式_tzr");
+	   selectByVisibleTextFromExcel(findElement("developmentStageObject"),"开发阶段_tzr");
+	   findElement("visitContentObject").sendKeys(getTestData("拜访内容_tzr"));
+	   
+	   findElement("submitBtnObject_Visit").click();
+	   Thread.sleep(2000);
+	   findElement("confirmBtnObject").click();
+	   Thread.sleep(7000);
+	   investors_Search();
+	   AssertEqualsFromExcel(findElement("visitContentTextObject").getText(), "拜访内容_tzr");
+   }
+   
+}

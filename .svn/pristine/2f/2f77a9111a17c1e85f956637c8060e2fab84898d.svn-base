@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        //一级菜单
+        <locator type="linktext" timeOut="3" value="证照管理">zzglObject</locator> 
+        //二级菜单
+        <locator type="xpath" timeOut="3" value=".//*[@id='side-menu']/li[10]/ul/li[1]/a">yyzzObject</locator>
+        //页面iframe
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>      
+       
+        //查询条件
+        <locator type="id" timeOut="3" value="projectId">projectIdObject</locator>//项目编码     
+        <locator type="id" timeOut="3" value="storeName">storeNameObject</locator>//门店名称
+        <locator type="id" timeOut="3" value="certCategory">certCategoryObject</locator>//证照名称
+        <locator type="id" timeOut="3" value="brandId">brandIdObject</locator>//品牌
+        <locator type="id" timeOut="3" value="flag1">reviewFlagObject</locator>//审核状态
+        
+        //查询按钮
+        <locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>
+        //重置按钮
+        <locator type="id" timeOut="3" value="resetBtn">resetBtnObject</locator>
+        //添加运营证照
+        <locator type="linktext" timeOut="3" value="添加运营证照">tjyyzzObject</locator> 
+        //运营证照列表按妞
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[1]/div/a">yyzzlbObject</locator> 
+        //记录条
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span[1]">recordObject</locator>
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span[2]">pageObject</locator>
+
+        //第一列元素
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[1]">projectidTextObject</locator>//项目编码
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[2]">storeTextObject</locator>//门店名称
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[4]">branTextObject</locator>//品牌
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[5]">zzmcTextObject</locator>//证照名称
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[6]">zzhmTextObject</locator>//证照号码
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[7]">flagTextObject</locator>//审核状态
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[13]/a[1]">checkBtnObject</locator>//查看按钮
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[13]/a[2]">changeBtnObject</locator>//修改按钮
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[13]/a[3]">reviewBtnObject</locator>//审核按钮
+
+        //添加运营证照 
+        <locator type="id" timeOut="3" value="storeNameSerach">storeInputObject</locator>//门店名称输入
+        <locator type="id" timeOut="3" value="storeSearchBtn">storeserchBtnObject</locator>//查询按钮
+        <locator type="xpath" timeOut="3" value=".//*[@id='storeList']/div/div[2]/div/a">storeObject</locator>//选中门店
+        
+        //添加界面信息/修改界面
+        <locator type="id" timeOut="3" value="certCategory">zzmcInputObject</locator>//证照名称
+        <locator type="id" timeOut="3" value="licenceCode">zzhmInputObject</locator>//证照号码
+        <locator type="xpath" timeOut="3" value=".//*[@id='addCertificateForm']/div[11]/div/button">submitBtnObject</locator>//提交按钮
+        
+        //查看界面
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table/tbody/tr[1]/td">ckstoreTextObject</locator>//门店名称
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table/tbody/tr[2]/td">ckzzmcTextObject</locator>//证照名称
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table/tbody/tr[3]/td">ckzzbmTextObject</locator>//证照编码
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table/tbody/tr[4]/td">ckbrandTextObject</locator>//品牌
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table/tbody/tr[13]/td">ckreviewTextObject</locator>//审核状态
+
+        //审核界面
+        <locator type="xpath" timeOut="3" value=".//*[@id='viewDetailStyle']/div/div/table/tbody/tr/td[1]/table/tbody/tr[3]/td[2]">shzzbmTextObject</locator>//证照编码
+        <locator type="xpath" timeOut="3" value=".//*[@id='viewDetailStyle']/div/div/table/tbody/tr/td[2]/input[1]">passObject</locator>//通过单选框
+        <locator type="xpath" timeOut="3" value=".//*[@id='viewDetailStyle']/div/div/table/tbody/tr/td[2]/input[2]">notpassObject</locator>//不通过单选框
+        <locator type="id" timeOut="3" value="checkedRemark">remarkObject</locator>//审核意见
+        <locator type="xpath" timeOut="3" value=".//*[@id='viewDetailStyle']/div/div/table/tbody/tr/td[2]/button">viewBtnObject</locator>//审核按钮
+
+
+</map>

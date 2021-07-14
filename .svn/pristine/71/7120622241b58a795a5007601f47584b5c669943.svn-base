@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+
+	<!--选择菜单，日志管理-其它操作日志-->
+	<locator type="linktext" timeOut="3" value="日志管理">logObject</locator>
+	<locator type="xpath" timeOut="6" value=".//*[@id='side-menu']/li[15]/ul/li[8]/a">otherOperationObject</locator>
+	<locator type="name" timeOut="3" value="in">iframeObject</locator>
+		
+	<!--查询功能-->
+	<locator type="id" timeOut="3" value="userName">userNameObject</locator>
+	<locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>
+	
+	<!--查询结果 -->
+	<locator type="xpath" timeOut="3" value=".//*[@id='[object Object]']/td[9]">userNameTextObject</locator>
+
+</map>

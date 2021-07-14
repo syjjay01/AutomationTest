@@ -1,0 +1,104 @@
+package com.test.PageAction.MoneyMgmt;
+
+import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import com.test.PageAction.LoginLogout.BasePage;
+
+public class Fund_Page extends BasePage{
+	
+	String projectName= getWriteData("合同_ContractProcess");
+	
+	public Fund_Page(WebDriver driver) throws Exception{
+		super(driver);
+	}
+	
+	public void fund() throws Exception{
+		//进入页面
+		implicitlyWait(2000);
+		findElement("MoneyMgmtObject").click();
+		Thread.sleep(2000);
+		findElement("fundObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+	}
+	
+	public void fund_Search() throws Exception{
+		//查询功能
+		Thread.sleep(2000);
+		findElement("projectIdObject").sendKeys(getTestData("项目编码_fund"));
+		findElement("projectNameObject").sendKeys(getTestData("项目名称_fund"));
+		Thread.sleep(1000);
+		findElement("payDateObject").click();
+		Thread.sleep(1000);
+		findElement("searchBtnObject").click();
+		findElement("ApprovedTabObject").click();
+		//验证查询功能
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("itemcodingTextObject").getText(),"项目编码_fund");
+		AssertEqualsFromExcel(findElement("itmeTextObject").getText(),"项目名称_fund");		
+	}
+	
+	public void fund_Reset() throws Exception{
+		//重置功能
+		findElement("resetBtnObject").click();
+		Thread.sleep(2000);
+		Assert.assertTrue(findElement("projectIdObject").getAttribute("value").isEmpty());
+		Assert.assertTrue(findElement("projectNameObject").getAttribute("value").isEmpty());
+	}
+	
+	public void fund_ViewDetail() throws Exception{
+		//查看功能
+		fund_Search();
+		findElement("viewBtnObject").click();
+		Thread.sleep(1000);
+		AssertEqualsFromExcel(findElement("contractIDTextObject").getText(),"合同ID_fund");
+		
+		//收款详情
+		findElement("skxqBtnObject").click();
+		Thread.sleep(500);
+		Assert.assertTrue(findElement("skxqTitleObject").getText().contains(getTestData("收款详情_fund")));
+		findElement("skxqCloseBtnObject").click();
+		
+		//合同详情
+		Thread.sleep(2000);
+		findElement("contractDetailBtnObject").click();
+		Thread.sleep(2000);
+		AssertEqualsFromExcel(findElement("projectIDObject").getText(),"项目编码_fund");
+		
+		//点击空白处，关闭合同详情页面
+		Actions action = new Actions(driver);  
+		action.moveByOffset(0, 0).click().build().perform();
+		Thread.sleep(2000);
+		
+		//返回款项列表
+		findElement("fundlbBtnObject").click();
+		Thread.sleep(2000);
+		Assert.assertTrue(findElement("searchBtnObject").isDisplayed());
+	}
+	
+	//业务流程：审核功能
+	public void fund_Approve() throws Exception{
+		
+	    fund();
+	    
+		findElement("projectNameObject").sendKeys(projectName);
+		findElement("searchBtnObject").click();
+		Thread.sleep(2000);
+		
+		findElement("detailsBtnObject").click();
+		findElement("passCheckBoxObject").click();
+		findElement("confirmApprovalBtnObject").click();
+		Thread.sleep(2000);
+		findElement("fundlbBtnObject").click();
+		//验证审核成功
+		Thread.sleep(2000);
+		findElement("ApprovedTabObject").click();
+		Thread.sleep(2000);
+		Assert.assertEquals(findElement("itmeTextObject").getText(), projectName);
+	}
+	
+	
+
+}

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        //功能模块菜单
+        <locator type="linktext" timeOut="3" value="开发管理">devMgmtObject</locator>
+        <locator type="partialLinkText" timeOut="3" value="投资人">investorsObject</locator>
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>
+        
+        //按钮
+        <!--查询-->
+        <locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>
+        <!--重置-->        
+        <locator type="id" timeOut="3" value="resetBtn">resetBtnObject</locator>
+        <!--查看-->
+        <locator type="partialLinkText" timeOut="3" value="查看">viewBtnObject</locator>
+        <!--修改-->
+        <locator type="linktext" timeOut="3" value="修改">updateBtnObject</locator>
+        <!--拜访投资人页，提交按钮-->
+        <locator type="xpath" timeOut="3" value="//*[@id='addFrm']/div/button">submitBtnObject_Visit</locator>
+        <!--修改页，提交按钮-->
+        <locator type="xpath" timeOut="3" value="//*[@id='addBrandForm']/div[15]/div/button">submitBtnObject</locator>        
+        <!--确认按钮 -->   
+        <locator type="xpath" timeOut="3" value="html/body/div[2]/div/div/div[2]/button[2]">confirmBtnObject</locator>
+        <!--拜访投资人 按钮 -->
+        <locator type="id" timeOut="3" value="exportBtn">visitInvestorsBtnObject</locator>
+        <!--投资人列表 按钮 -->
+        <locator type="partialLinkText" timeOut="3" value="投资人列表">tzrlbBtnObject</locator>
+        
+        //搜索条件   
+        <!--投资人-->
+        <locator type="id" timeOut="3" value="invName">nameObject</locator>     
+        
+        //列表         
+        <!--投资人-->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr[1]/td[2]">nameTextObject</locator>
+        <!--备注-->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr[1]/td[17]">remarkTextObject</locator>
+        <!--最近拜访时间-->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr[1]/td[19]">visitTimeTextObject</locator>        
+        <!--不勾选最近拜访时间-->
+        <locator type="xpath" timeOut="3" value=".//*[@id='toolbar']/div/div[2]/div[1]/label[3]">removalTimeObject</locator>
+        <!--第一行数据的勾选框-->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr[1]/td[1]/input">checkBoxObject</locator>    
+        
+        //查看、修改页面
+        <!--投资人详情-->
+        <locator type="xpath" timeOut="3" value="html/body/div/div/div[2]/table[1]/tbody/tr[1]/td">nameTextObject2</locator>
+        <!--修改页面-->
+        <locator type="id" timeOut="3" value="remark">remarkObject</locator>
+                
+        //拜访投资人 页面
+        <!--拜访方式 -->
+        <locator type="id" timeOut="3" value="customerLevel">visitTypeObject</locator>
+        <!--开发阶段-->
+        <locator type="id" timeOut="3" value="developmentStage">developmentStageObject</locator>
+        <!--拜访内容 -->
+        <locator type="xpath" timeOut="3" value="//*[@id='addFrm']/table/tbody/tr[2]/td[4]/div/textarea">visitContentObject</locator>      
+        <!--最近拜访内容 -->
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr/td[15]">visitContentTextObject</locator>        
+
+        
+        
+        
+</map>

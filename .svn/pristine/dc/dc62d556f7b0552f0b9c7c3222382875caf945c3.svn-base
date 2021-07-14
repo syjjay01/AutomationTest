@@ -1,0 +1,42 @@
+package com.test.TestCase.ResourceMgmt;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import com.libarary.Utils.ScreenShotListener;
+import com.test.PageAction.Login.LoginPage;
+import com.test.PageAction.Login.LogoutAction;
+import com.test.PageAction.ResourceMgmt.HotlineFeedback_Page;
+import com.test.TestCase.Login.BaseTestCase;
+
+@Listeners({ScreenShotListener.class})
+public class TC_HotlineFeedback extends BaseTestCase{
+
+	@BeforeClass
+	public void start() throws Exception{
+		super.init();
+		LoginPage loginpage = new LoginPage(driver);
+		loginpage.Login();
+	}
+	
+	@Test
+	public void hotlineFeedback() throws Exception{
+		HotlineFeedback_Page hotlineFeedbackPage = new HotlineFeedback_Page(driver);
+		//选择菜单栏
+		hotlineFeedbackPage.hotlineFeedback();
+		//查询功能，分别查看未拜访、已拜访、过期未拜访状态的记录
+		hotlineFeedbackPage.hotlineFeedback_Search();
+		//重置功能
+		hotlineFeedbackPage.hotlineFeedback_Reset();
+		//查看功能
+		hotlineFeedbackPage.hotlineFeedback_ViewDetail();
+	}
+	
+	@AfterClass
+	 public void end() throws Exception{
+		LogoutAction logoutAction = new LogoutAction(driver);
+		logoutAction.Logout();
+	 }
+}

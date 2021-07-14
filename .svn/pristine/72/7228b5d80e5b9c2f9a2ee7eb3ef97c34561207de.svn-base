@@ -1,0 +1,41 @@
+package com.test.TestCase.StatisticsReport;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import com.libarary.Utils.ScreenShotListener;
+import com.test.PageAction.LoginLogout.LoginPage;
+import com.test.PageAction.LoginLogout.LogoutAction;
+import com.test.PageAction.StatisticsReport.DevRevenue_Page;
+import com.test.TestCase.LoginLogout.BaseTestCase;
+
+@Listeners({ScreenShotListener.class})
+public class TC_DevRevenue extends BaseTestCase{
+
+	@BeforeClass
+	public void start() throws Exception{
+		super.init();
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.Login(getUsersData("adminUser"));
+	}
+	
+	@Test
+	public void devRevenue() throws Exception{	
+		DevRevenue_Page devRevenuePage = new DevRevenue_Page(driver);
+		//选择菜单栏
+		devRevenuePage.devRevenue();
+		//查询
+		devRevenuePage.devRevenue_Search();
+		//重置
+		devRevenuePage.devRevenue_Reset();		
+	}
+	
+	@AfterClass
+	 public void end() throws Exception{
+		LogoutAction logoutAction = new LogoutAction(driver);
+		logoutAction.Logout();
+	 }
+	
+}

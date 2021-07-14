@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        //功能模块菜单
+        <locator type="linktext" timeOut="3" value="开发管理">devMgmtObject</locator>
+        <locator type="linktext" timeOut="3" value="  合同">contractObject</locator>
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>
+        
+        //按钮
+        <!--查询 按钮-->
+        <locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>
+        <!--重置 按钮-->
+        <locator type="id" timeOut="3" value="resetBtn">resetBtnObject</locator>
+        <!--详情按钮-->
+        <locator type="partialLinkText" timeOut="3" value="详情">viewBtnObject</locator>
+        <!--预审按钮-->
+        <locator type="partialLinkText" timeOut="3" value="预审">checkBtnObject</locator>
+        <!--跟进人修改 按钮-->
+        <locator type="linktext" timeOut="3" value="跟进人修改">managerUpdateBtnObject</locator>
+        <!--跟踪 按钮-->
+        <locator type="linktext" timeOut="3" value="跟踪">followBtnObject</locator>
+        <!--修改 按钮-->
+        <locator type="linktext" timeOut="3" value="修改">modifyBtnObject</locator>        
+        <!--合同列表 按钮-->
+        <locator type="linktext" timeOut="3" value="合同列表">htlbBtnObject</locator>
+        <!--确认审核按钮-->
+        <locator type="cssselector" timeOut="3" value=".btn.btn-primary.buttonCheck0">confirmCheckBtnObject</locator>
+        <!--点击【确认审核】按钮后，出现的【确认】按钮-->   
+		<locator type="xpath" timeOut="3" value="html/body/div[2]/div/div/div[2]/button[2]">confirmBtnObject</locator>
+        <!--合同审核页面，通过按钮-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[2]/td[3]/div[1]/input[1]">passBtnObject</locator>
+        <!--提交按钮-->
+        <locator type="xpath" timeOut="3" value=".//*[@id='projectForm']/div[17]/div/button[2]">submissionBtnObject</locator>
+        <!--确认按钮-->
+        <locator type="xpath" timeOut="3" value="html/body/div[5]/div/div/div[2]/button[2]">confirmationButtonObject</locator>
+        <!--确认提交按钮-->
+        <locator type="xpath" timeOut="3" value=".//*[@id='addContractFrm']/div[3]/button">confirmSubmitBtnObject</locator>
+        <!--修改按钮-->
+        <locator type="linktext" timeOut="3" value="修改">modifyButtonObject</locator>
+        <!--转款-->
+        <locator type="linktext" timeOut="3" value="转款">transferFundBtnObject</locator>
+        <!--退款-->
+        <locator type="linktext" timeOut="3" value="退款">refundBtnObject</locator>
+        <!--转品牌按钮-->
+        <locator type="linktext" timeOut="3" value="转品牌">changeBrandBtnObject</locator>
+        
+        //搜索条件
+        <!--项目名称 搜索框-->
+        <locator type="id" timeOut="3" value="projectName">projectNameObject</locator>
+        <!--项目编码 搜索框-->
+        <locator type="id" timeOut="3" value="projectId">projectIdObject</locator>
+        <!--开发跟进人 搜索框-->
+        <locator type="id" timeOut="3" value="userName">developerObject</locator>
+        
+        //列表
+        <!--“显示第 1 到第 10 条记录”文本-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span[1]">recordTextObject</locator>       
+        <!--项目编码 文本-->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[2]">projectIdTextObject</locator>
+        <!--项目名称文本-->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[3]">projectNameTextObject</locator>
+        <!--品牌-->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[4]">brandTextObject</locator>
+        <!--性质-->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[5]">brandTypeTextObject</locator>
+        <!--立项房间数-->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[6]">roomCountTextObject</locator>
+        <!--管理费率-->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[7]">ManagerPercentTextObject</locator>
+        <!--加盟费标准-->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[8]">jmfbzTextObject</locator>
+        <!--合同类型-->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[9]">contractTypeTextObject</locator>
+        <!--合同状态-->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[10]">contractStatusTextObject</locator>
+        <!--开发部-->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[11]">departmentTextObject</locator>
+        <!--开发/跟进人-->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[12]">developerTextObject</locator>
+        <!--审核状态-->
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[14]">AuditStatusTextObject</locator>
+               
+        //合同详情 页面
+        <!--项目编码-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[2]/td[1]/table/tbody/tr[1]/td[2]">projectIdObject_viewPage</locator>
+        <!--品牌-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table[1]/tbody/tr[2]/td[1]/table/tbody/tr[2]/td[2]">brandObject_viewPage</locator>
+        <!--性质-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table[1]/tbody/tr[2]/td[1]/table/tbody/tr[3]/td[2]">brandTypeObject_viewPage</locator>
+        <!--项目名称-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[2]/td[1]/table/tbody/tr[5]/td[2]">projectNameObject_viewPage</locator>
+        <!--类别-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[2]/td[1]/table/tbody/tr[6]/td[2]">shipFlagObject_viewPage</locator>
+       
+      
+        //合同修改页面
+        <!--合同标签-->
+        <locator type="id" timeOut="3" value="shipFlag">shipFlagObject</locator>
+        <locator type="xpath" timeOut="3" value="//*[@id='addContractFrm']/div[3]/button">submitBtnObject</locator>
+       
+        //contract_Check()审核合同页       
+        <!--审核状态-->
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[2]/td[3]/div">checkStatusObject</locator>
+                       
+        //转品牌      
+        <!--项目/分店名称-->
+        <locator type="id" timeOut="3" value="projectName">projectNameObject</locator>
+        <!--品牌-->
+        <locator type="id" timeOut="3" value="brandId">brandObject</locator>
+        <!--性质-->
+        <locator type="id" timeOut="3" value="brandTypeId">brandTypeIdObject</locator>
+        <!--品牌标准-->
+        <locator type="id" timeOut="3" value="brandStandardId">brandStandardIdObject</locator>
+        <!--标签-->
+        <locator type="id" timeOut="3" value="shipFlag">tableObject</locator>
+        <!--立项房间数-->
+        <locator type="id" timeOut="3" value="roomCounts">roomCountsObject</locator>
+        <!--加盟费标准-->
+        <locator type="xpath" timeOut="3" value=".//*[@id='payRateHtml']/select">payRateObject</locator>
+        <!--签约日期-->
+        <locator type="id" timeOut="3" value="signingTime">signingTimeObject</locator>
+        <!--生效日期-->
+        <locator type="id" timeOut="3" value="contractStartTime">contractStartTimeObject</locator>
+        <!--截止日期-->
+        <locator type="id" timeOut="3" value="contractEndTime">contractEndTimeObject</locator>        
+		<!--加盟费-->
+        <locator type="id" timeOut="3" value="joinFee">joinFeeObjct</locator>
+        <!--筹建指导费-->
+        <locator type="id" timeOut="3" value="contract_fee_6">contract_feeObject</locator>
+        <!--管理费单位-->
+        <locator type="xpath" timeOut="3" value=".//*[@id='projectForm']/div[15]/div[1]/div/div[1]/select">managementFeeObject</locator>
+    	<!--运营支持费-->
+        <locator type="id" timeOut="3" value="contract_fee_24">operationsObject</locator>
+
+               
+        //审核页面的加盟费标准
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[2]/td[1]/table/tbody/tr[12]/td[2]">initialFeeStandardObject</locator>        
+        <!--加盟费标准下拉选择框-->
+        <locator type="xpath" timeOut="3" value=".//*[@id='payRate']">initialFeeTextObject</locator>
+        <!--月度费用的管理费下拉选择框-->
+        <locator type="xpath" timeOut="3" value=".//*[@id='addContractFrm']/div[2]/div/table/tbody[4]/tr[1]/td[2]/div/div[1]/select">managementFeeSelectObject</locator>       
+        <!--转品牌页面项目编码-->    
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[1]">verificationProjectName</locator>
+      
+        //转款--新添加
+        <locator type="id" timeOut="3" value="projectId">projectIdObject</locator>//项目编码 搜索框
+      	<locator type="xpath" timeOut="3" value=".//*[@id='storeSearchForm']/div[3]/div/button">serachBtnObject</locator>//查询按钮
+        <locator type="xpath" timeOut="3" value=".//*[@id='targetProject']/div/div/div[2]/a">targetProject</locator>//所搜索项目
+        <locator type="id" timeOut="3" value="outFee_1">outFeeObject</locator>//转出_加盟费
+        <locator type="id" timeOut="3" value="transferFee_1">transferFeeObjcet</locator>//转入_加盟费
+        <locator type="id" timeOut="3" value="remark">remarkObjcet</locator>//备注
+		<locator type="xpath" timeOut="3" value=".//*[@id='inFeeForm']/table/tbody/tr[2]/td[2]/div/div[8]/div/button">transferSubmitBtnObject</locator>//确定提交按钮
+		<locator type="xpath" timeOut="3" value="html/body/div[3]/div/div/div[2]/button[2]">determineBtnObject</locator>//确定按钮
+		<locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[1]/div/button[1]">receiptBtnObject</locator>//收款详情按钮
+		<locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[3]">moneyObject</locator>//收款界面
+		<locator type="xpath" timeOut="3" value=".//*[@id='contractFeeModal']/div/div/div[1]/button">closeBtnObject</locator>//关闭按钮
+		
+		//退款
+		<locator type="id" timeOut="3" value="transferFee_1">back_money</locator>//退回金额-加盟费
+		<locator type="id" timeOut="3" value="receiveFeeAccount">receiveFeeAccountObject</locator>//收款账号
+		<locator type="id" timeOut="3" value="refundFeeAccount">refundFeeAccountObject</locator>//退款账号
+		<locator type="id" timeOut="3" value="sendedTime">sendedTimeObject</locator>//退款时间
+		<locator type="id" timeOut="3" value="sendedPerson">sendedPersonObject</locator>//退款人
+		<locator type="id" timeOut="3" value="remark">remarkObject</locator>//备注
+		<locator type="xpath" timeOut="3" value=".//*[@id='inFeeForm']/div/div[2]/div[2]/div/button">confirmSubmissionBtnObject</locator>//确定提交按钮
+		
+		//筹建信息修改
+		<locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/p/button">updateBtnObject</locator>//修改按钮
+		<locator type="xpath" timeOut="3" value=".//*[@id='editContractBuildModal']/div/div/div[2]/div/button[2]">confirmSubmitButton</locator>//确定提交按钮
+		
+		<locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/table/tbody/tr[2]/td[4]">phoneObject</locator>//详情页面-筹建人电话
+		<locator type="id" timeOut="3" value="manager_phone">managerPhone</locator>//修改页面-筹建人电话
+		
+        //管理员退回
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[2]/td[2]/div/button[2]">backBtnObject</locator>//管理员退回按钮
+        <locator type="xpath" timeOut="3" value=".//*[@id='myModal']/div/div/div[2]/textarea">bcakResonObject</locator>//退回原因
+        <locator type="xpath" timeOut="3" value=".//*[@id='myModal']/div/div/div[3]/button[2]">backBtn</locator>//退回按钮
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[2]/td[2]/div/a[2]">trackBtnObject</locator>//跟踪按钮
+        <locator type="xpath" timeOut="3" value=".//*[@id='storeList']/div/table/tbody/tr[2]/td[3]">contractTrackObject</locator>//合同跟踪详情
+        <locator type="xpath" timeOut="3" value=".//*[@id='storeList']/h3/button">closeButton</locator>//关闭窗口
+        <locator type="xpath" timeOut="3" value=".//*[@id='table']/tbody/tr[1]/td[17]">approvalStatusObject</locator>//审核状态
+
+       //证照详情
+       <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[1]/div/button[2]">licenseBtnObject</locator>//证照详情按钮
+       <locator type="xpath" timeOut="3" value=".//*[@id='tableCertificate']/thead/tr/th[1]/div[1]">licenseNameObject</locator>//证照名称字段
+       <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[2]/td[2]/div/button">followerBtnObject</locator>//跟进人修改按钮
+       <locator type="xpath" timeOut="3" value=".//*[@id='managerModal']/div/div/div[2]/div/div/label[1]/input">followerObject</locator>//跟进人
+       <locator type="xpath" timeOut="3" value=".//*[@id='managerModal']/div/div/div[3]/button[2]">defineBtnObject</locator>//确定按钮
+       <locator type="xpath" timeOut="3" value=".//*[@id='contractCertificateModal']/div/div/div[1]/button">closeLicenseObject</locator>//关闭证照界面
+       
+       
+       <locator type="xpath" timeOut="3" value=".//*[@id='managerModal']/div/div/div[2]/div/div/label[1]/input">firRadioObject</locator>//第一个单选框
+       <locator type="xpath" timeOut="3" value=".//*[@id='managerModal']/div/div/div[2]/div/div/label[2]/input">secRadioObject</locator>//第二个单选框
+       <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[2]/td[1]/table/tbody/tr[20]/td[2]">pageFollowerObject</locator>//合同详情页面的跟进人
+       <locator type="" timeOut="3" value=""></locator>//
+       <locator type="" timeOut="3" value=""></locator>//
+       <locator type="" timeOut="3" value=""></locator>//
+        
+        
+       
+</map>        

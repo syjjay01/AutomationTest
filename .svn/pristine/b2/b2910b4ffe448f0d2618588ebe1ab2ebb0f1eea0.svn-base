@@ -1,0 +1,65 @@
+package com.test.PageAction.SetupProject;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.test.PageAction.Login.BasePage;
+
+public class SetupProject_Page extends BasePage{
+	String s;
+
+	public SetupProject_Page(WebDriver driver) throws Exception{
+		super(driver);
+	}
+	//选择立项管理菜单
+	public void setupProject() throws Exception{
+		Thread.sleep(1000);
+		findElement("setupprojObject").click();
+		findElement("setupprojmenuObject").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+	}
+	//验证查询功能
+	public void setupProject_Search() throws Exception{
+		//输入项目编码查询
+		Thread.sleep(500);
+		findElement("projectidObject").sendKeys(getTestData("项目编码_setupproject"));
+	    findElement("searchbtnObject").click();
+		
+	    //验证查询结果
+		Thread.sleep(1000);
+		AssertEqualsFromExcel(findElement("projectTextObject").getText(), "项目编码_setupproject");
+		AssertEqualsFromExcel(findElement("searchpageObject").getText(), "共一条记录_searchcontain");
+
+	}
+   //验证查看功能
+   public void setupProject_Detail() throws Exception{
+	    Thread.sleep(500);   
+		findElement("checkbtnObject").click();
+		Thread.sleep(1000);
+		Assert.assertTrue(findElement("projectlistObject").getText().equals("项目列表"));
+		//返回列表
+		findElement("projectlistObject").click();
+	 		
+   }
+   //进入审核页面审核
+   public void setupProject_reviewed() throws Exception{
+	   Thread.sleep(500);
+	   findElement("auditObject").click();
+	   Thread.sleep(2000);
+	   Assert.assertTrue(findElement("projcheckObject").getText().equals("确认审核"));
+	   //返回列表
+	   findElement("projectlistObject").click();
+	 
+   }
+  //重置功能
+   public void setupProject_reset() throws Exception{
+ 	   Thread.sleep(1000);
+ 	   findElement("resetBtnObject").click();
+ 		
+ 	   Thread.sleep(2000);
+ 	   Assert.assertTrue(findElement("projectidObject").getText().equals(""));
+ 	   Assert.assertTrue(findElement("pagecontainsObject").getText().contains("显示第 1 到第 10 条记录"));
+ 	}
+}

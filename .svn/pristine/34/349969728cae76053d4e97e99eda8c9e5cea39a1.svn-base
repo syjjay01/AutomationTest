@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        <locator type="linktext" timeOut="3" value="开发管理">kfglObject</locator>
+        <locator type="xpath" timeOut="3" value="//*[@id='side-menu']/li[5]/ul/li[4]/a">htObject</locator>
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>
+        
+        //项目名称 搜索框
+        <locator type="id" timeOut="3" value="projectName">projectNameObject</locator>
+        //开发跟进人 搜索框
+        <locator type="id" timeOut="3" value="userName">developerObject</locator>
+        //查询 按钮
+        <locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>
+        //重置 按钮
+        <locator type="id" timeOut="3" value="resetBtn">resetBtnObject</locator>
+        //“显示第 1 到第 10 条记录”文本
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[2]/div[2]/div[4]/div[1]/span[1]">recordTextObject</locator>
+        
+        
+        //项目名称文本 
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[3]">projectNameTextObject</locator>
+        //品牌
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[4]">brandTextObject</locator>
+        //性质
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[5]">brandTypeTextObject</locator>
+        //立项房间数
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[6]">roomCountTextObject</locator>
+        //管理费率
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[7]">ManagerPercentTextObject</locator>
+        //加盟费标准
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[8]">jmfbzTextObject</locator>
+        //合同类型
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[9]">contractTypeTextObject</locator>
+        //合同状态
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[10]">contractStatusTextObject</locator>
+        //开发部
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[11]">departmentTextObject</locator>
+        //开发/跟进人
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[12]">developerTextObject</locator>
+        //审核状态
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[14]">AuditStatusTextObject</locator>
+        
+        
+        
+        //查看按钮
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[15]/a">viewBtnObject</locator>
+        
+        //合同详情 页面
+        //项目编码
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table/tbody/tr[2]/td[1]/table/tbody/tr[1]/td[2]">projectIdObject_viewPage</locator>
+        //品牌
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table[1]/tbody/tr[2]/td[1]/table/tbody/tr[2]/td[2]">brandObject_viewPage</locator>
+        //性质
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table[1]/tbody/tr[2]/td[1]/table/tbody/tr[3]/td[2]">brandTypeObject_viewPage</locator>
+        //项目名称
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table[1]/tbody/tr[2]/td[1]/table/tbody/tr[4]/td[2]">projectNameObject_viewPage</locator>
+        //物业名称
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table[1]/tbody/tr[2]/td[1]/table/tbody/tr[5]/td[2]">devStoreNameObject_viewPage</locator>
+        //地区
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table[1]/tbody/tr[2]/td[1]/table/tbody/tr[6]/td[2]">regionObject_viewPage</locator>
+        //法定地址
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table[1]/tbody/tr[2]/td[1]/table/tbody/tr[7]/td[2]">addressObject_viewPage</locator>
+        //投资人
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table[1]/tbody/tr[2]/td[1]/table/tbody/tr[8]/td[2]">investorObject_viewPage</locator>
+        //面积
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table[1]/tbody/tr[2]/td[1]/table/tbody/tr[9]/td[2]">sizeObject_viewPage</locator>
+        //开发部
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table[1]/tbody/tr[2]/td[1]/table/tbody/tr[13]/td[2]">deparmentObject_viewPage</locator>
+        //开发/跟进人
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table[1]/tbody/tr[2]/td[1]/table/tbody/tr[14]/td[2]">developerObject_viewPage</locator>
+        //合同类型
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table[1]/tbody/tr[2]/td[1]/table/tbody/tr[15]/td[2]">contractTypeObject_viewPage</locator>
+        //合同状态
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table[1]/tbody/tr[2]/td[1]/table/tbody/tr[16]/td[2]">contractStatusObject_viewPage</locator>
+        //立项房间数
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table[1]/tbody/tr[2]/td[2]/table/tbody/tr[1]/td[2]">roomCountObject_viewPage</locator>
+        //管理费率
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table[1]/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[2]">managerPercentObject_viewPage</locator>
+        //加盟费标准
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table[1]/tbody/tr[2]/td[2]/table/tbody/tr[3]/td[2]">jmfbzObject_viewPage</locator>
+        //加盟费达标标准
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table[1]/tbody/tr[2]/td[2]/table/tbody/tr[4]/td[2]">jmfdbbzObject_viewPage</locator>
+        //加盟费
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table[1]/tbody/tr[2]/td[2]/table/tbody/tr[6]/td[2]">jmfObject_viewPage</locator>
+        //设计咨询费
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table[1]/tbody/tr[2]/td[2]/table/tbody/tr[7]/td[2]">sjzxfObject_viewPage</locator>
+        //人工成本
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table[1]/tbody/tr[2]/td[2]/table/tbody/tr[8]/td[2]">rgcbObject_viewPage</locator>
+   
+       
+        //跟进人修改 按钮
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table[1]/tbody/tr[2]/td[2]/div/a[1]">managerListBtn</locator>
+        //管理员退回 按钮
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table[1]/tbody/tr[2]/td[2]/div/button">managerRejectBtn</locator>
+        //跟踪 按钮
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/table[1]/tbody/tr[2]/td[2]/div/a[2]">followBtn</locator>
+        
+        //合同列表 按钮
+        <locator type="xpath" timeOut="3" value="html/body/div[1]/div/div[1]/div/a[1]">htlbBtnObject</locator>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       
+        
+        
+</map>

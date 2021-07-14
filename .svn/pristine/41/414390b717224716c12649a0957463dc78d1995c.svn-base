@@ -1,0 +1,56 @@
+package com.test.PageAction.DevelopmentMgmt;
+
+import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.test.PageAction.LoginLogout.BasePage;
+
+public class WorkReport_Page extends BasePage{
+	
+	public WorkReport_Page (WebDriver driver) throws Exception{
+		super(driver);
+	}
+	
+	
+    public void workReport() throws Exception{
+    	implicitlyWait(1000);
+		findElement("DevMgmtObject").click();
+		Thread.sleep(2000);
+		findElement("workReportObect").click();
+		WebElement iframeElement = findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+	}
+    
+    public void workReport_Search() throws Exception{
+    	findElement("developerObject").sendKeys(getTestData("开发人_workReport"));
+		sendKeystoReadOnlyField(findElement("startDateObject"), "开始日期_workReport");
+		sendKeystoReadOnlyField(findElement("endDateObject"), "结束日期_workReport");
+    	findElement("searchBtnObject").click();
+    	Thread.sleep(2000);
+    	
+    	AssertEqualsFromExcel(findElement("primaryDepartmentObject").getText(), "一级部门_workReport");
+    	AssertEqualsFromExcel(findElement("secondDepartmentObject").getText(), "二级部门_workReport");
+    	AssertEqualsFromExcel(findElement("thirdDepartmentObject").getText(), "三级部门_workReport");
+    	AssertEqualsFromExcel(findElement("developerTextObject").getText(), "开发人_workReport");
+    	AssertEqualsFromExcel(findElement("franchiseFeeObject").getText(), "加盟费收入_workReport");
+    	AssertEqualsFromExcel(findElement("hotlinesAddedObject").getText(), "热线新增_workReport");
+    	AssertEqualsFromExcel(findElement("hotlinesAddedByOwnObject").getText(), "自有新增_workReport");
+    	AssertEqualsFromExcel(findElement("validHotlinesObject").getText(), "有效新增_workReport");
+    	AssertEqualsFromExcel(findElement("visitNumObject").getText(), "拜访人数_workReport");
+    	AssertEqualsFromExcel(findElement("visitByMeetObject").getText(), "见面拜访_workReport");
+    	AssertEqualsFromExcel(findElement("visitByPhoneObject").getText(), "电话拜访_workReport");
+    	AssertEqualsFromExcel(findElement("visitByWechatObject").getText(), "微信拜访_workReport");
+    	AssertEqualsFromExcel(findElement("visitByOthersObject").getText(), "其他拜访_workReport");
+    	AssertEqualsFromExcel(findElement("hotlineResponseObject").getText(), "热线回复率_workReport");
+    	AssertEqualsFromExcel(findElement("responseOnTimeObject").getText(), "及时回复率_workReport");
+    	AssertEqualsFromExcel(findElement("responseOvertimeObject").getText(), "超时回复率_workReport");
+    }
+    
+    public void workReport_Reset() throws Exception{
+    	findElement("resetBtnObject").click();
+    	Thread.sleep(1000);
+    	Assert.assertFalse(findElement("recordObject").getText().contains("显示第 1 到第 1 条记录，总共 1 条记录"));
+    }
+
+}

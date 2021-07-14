@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	//功能模块菜单
+	<!--选择节点停留统计菜单-->
+	<Locator type="linktext" timeOut="3" value="筹建管理">prebuildObject</Locator>
+	<Locator type="partialLinkText" timeOut="3" value="节点停留统计">stayObject</Locator>
+	<Locator type="name" timeOut="3" value="in">iframeObject</Locator>
+	
+	//查询条件
+	<!--选择品牌-->
+	<Locator type="name" timeOut="3" value="brand_id">seltbrandObject</Locator>
+	
+	//列表
+	<!--合计-节点停留 ≤30 天店数-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='process-stage']/tbody/tr[6]/td[3]">totalNum1Object</Locator>
+	<!--合计-节点停留 31-60 天店数-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='process-stage']/tbody/tr[6]/td[4]">totalNum2Object</Locator>
+	<!--合计-节点停留 61-90 天店数-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='process-stage']/tbody/tr[6]/td[5]">totalNum3Object</Locator>
+	<!--合计-节点停留 >90 天店数	-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='process-stage']/tbody/tr[6]/td[6]">totalNum4Object</Locator>				
+	<!--合计总店数-->
+	<Locator type="xpath" timeOut="3" value=".//*[@id='process-stage']/tbody/tr[6]/td[2]">storenumObject</Locator>
+
+	
+</map>

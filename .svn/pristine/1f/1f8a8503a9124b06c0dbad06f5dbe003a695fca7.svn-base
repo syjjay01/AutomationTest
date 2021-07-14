@@ -1,0 +1,139 @@
+package com.test.PageAction.PreBuildMgmt;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.test.PageAction.Login.BasePage;
+
+public class PreBuildFreeze_Page extends BasePage{
+	String btnname1="申请冻结";
+	String btnname2="申请解冻";
+	public PreBuildFreeze_Page(WebDriver driver) throws Exception{
+		super(driver);
+	}
+	public void prebuildfreeze() throws Exception{
+		Thread.sleep(1000);
+		findElement("prebuildObject").click();
+		findElement("constructfreezeObject").click();
+		WebElement iframeElement=findElement("iframeObject");
+		driver.switchTo().frame(iframeElement);
+	}
+	//查询冻结门店功能
+	public void prebuildfreeze_search() throws Exception{
+		Thread.sleep(1000);
+		findElement("projectidObject").sendKeys(getTestData("项目编码_prebulidstore"));
+		findElement("searchbtnObject").click();
+		//验证查询结果
+		Thread.sleep(1000);
+		AssertEqualsFromExcel(findElement("resultObject").getText(), "项目编码_prebulidstore");
+		AssertEqualsFromExcel(findElement("searchpageObject").getText(),"共一条记录_searchcontain");
+	}
+	//撤回冻结申请
+	public void prebuildfreeze_backfreeze() throws Exception{
+		Thread.sleep(1000);
+		findElement("backbtnObject").click();
+		Thread.sleep(1000);
+		findElement("backsubmitObject").click();
+			
+		Thread.sleep(2000);
+		Assert.assertTrue(findElement("freezestateObject").getText().equals("撤回冻结申请"));
+			
+		}
+	//查看冻结详情功能
+	public void prebuildfreeze_detail() throws Exception{
+		Thread.sleep(1000);
+		findElement("detailObject").click();
+		
+		Thread.sleep(1000);
+		AssertEqualsFromExcel(findElement("detailcontainObject").getText(),"详情_prebulidstore");
+	}
+	//查看跟踪日志功能
+	public void prebuildfreeze_log() throws Exception{
+		Thread.sleep(500);
+		findElement("logbtnObject").click();
+		
+		Thread.sleep(1000);
+		AssertEqualsFromExcel(findElement("logdetailObject").getText(),"跟踪日志_storefreeze");
+		
+		//关闭日志
+		Thread.sleep(500);
+		findElement("closelogObject").click();	
+	}
+	//申请冻结
+	public void prebuildfreeze_freeze() throws Exception{
+		Thread.sleep(500);
+		findElement("freezebuildObject").click();
+		Thread.sleep(500);
+		findElement("remarkObject").sendKeys(getTestData("申请冻结备注_prebulidstore"));
+		Thread.sleep(500);
+		findElement("submitbtnObject").click();
+		
+		Thread.sleep(1000);
+		Assert.assertFalse(findElement("freezebuildObject").getText().equals(btnname1));
+		//返回筹建冻结列表
+		Thread.sleep(2000);
+		findElement("freezelistObject").click();
+	
+	}
+	//审核冻结申请通过
+	public void prebuildfreeze_reviewed1() throws Exception{
+		Thread.sleep(1000);
+		findElement("reviewedObject").click();
+		Thread.sleep(1000);
+		findElement("passObject").click();
+		Thread.sleep(1000);
+		findElement("passsubmitObject").click();
+			
+		Thread.sleep(2000);
+		Assert.assertTrue(findElement("freezestateObject").getText().equals("冻结审核通过"));
+	}
+	//申请解冻
+	public void prebuildfreeze_unfreeze() throws Exception{
+		Thread.sleep(500);
+		findElement("unfreezebuildObject").click();
+		Thread.sleep(500);
+		findElement("remarkObject").sendKeys(getTestData("申请解冻备注_prebulidfreeze"));
+		Thread.sleep(500);
+		findElement("submitbtnObject").click();
+			
+		Thread.sleep(1000);
+		Assert.assertFalse(findElement("freezebuildObject").getText().equals(btnname2));
+		//返回筹建冻结列表
+		Thread.sleep(2000);
+		findElement("freezelistObject").click();
+		}
+	
+	//撤回解冻申请
+	public void prebuildfreeze_back() throws Exception{
+		Thread.sleep(1000);
+		findElement("backbtnObject").click();
+		Thread.sleep(1000);
+		findElement("backsubmitObject").click();
+		
+		Thread.sleep(2000);
+		Assert.assertTrue(findElement("freezestateObject").getText().equals("撤回解冻申请"));
+		
+	}
+	//审核解冻申请通过
+	public void prebuildfreeze_reviewed() throws Exception{
+		Thread.sleep(1000);
+		findElement("reviewedObject").click();
+		Thread.sleep(1000);
+		findElement("passObject").click();
+		Thread.sleep(1000);
+		findElement("passsubmitObject").click();
+		
+		Thread.sleep(2000);
+		Assert.assertTrue(findElement("freezestateObject").getText().equals("解冻审核通过"));
+	}
+	//重置功能
+	public void prebuildfreeze_reset() throws Exception{
+		Thread.sleep(1000);
+		findElement("resetBtnObject").click();
+		
+		Thread.sleep(2000);
+		Assert.assertTrue(findElement("projectidObject").getText().equals(""));
+		Assert.assertTrue(findElement("pagecontainsObject").getText().contains("显示第 1 到第 10 条记录，总共"));
+	}
+}

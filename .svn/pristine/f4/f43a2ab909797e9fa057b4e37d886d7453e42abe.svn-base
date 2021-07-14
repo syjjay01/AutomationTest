@@ -1,0 +1,41 @@
+package debug;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+public class Test {
+	public static void main (String[] args) throws Exception{
+		//System.out.println("start selenium");	
+		System.setProperty("webdriver.chrome.driver", "F:\\Eclipse\\driverServer\\chromedriver.exe");
+		WebDriver driver =new ChromeDriver();	
+//		 System.setProperty("webdriver.ie.driver","F:\\Eclipse\\driverServer\\IEDriverServer.exe");
+//		WebDriver driver = new InternetExplorerDriver();
+		driver.get("http://10.100.114.117:8820/");
+		driver.manage().window().maximize();
+
+		WebElement userbox=driver.findElement(By.id("username"));
+		if(userbox.isDisplayed()){
+			userbox.sendKeys("31000000787");
+		}else{
+			WebElement linkElement = driver.findElement(By.linkText("使用其他账户登录"));
+			linkElement.click();
+			WebElement userbox2 =driver.findElement(By.id("username"));
+			userbox2.sendKeys("31000000787");
+		}
+	
+		WebElement pwdbox=driver.findElement(By.id("password"));
+		pwdbox.sendKeys("ittest7)(*&");
+		WebElement btn=driver.findElement(By.id("login-submit"));
+		btn.click();
+		driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
+		Alert javaScript = driver.switchTo().alert();
+		javaScript.accept(); 
+		driver.findElement(By.linkText("统计报表")).click();
+		
+
+	}
+
+}

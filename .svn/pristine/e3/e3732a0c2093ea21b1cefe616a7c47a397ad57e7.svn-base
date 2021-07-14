@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+        <!--Locator lists -->
+        <locator type="linktext" timeOut="3" value="系统管理">SysMgmtObject</locator>
+        <locator type="xpath" timeOut="3" value="//*[@id='side-menu']/li[14]/ul/li[10]/a">DataDictionaryObject</locator>
+        <locator type="name" timeOut="3" value="in">iframeObject</locator>
+        
+	    //数据字典名称搜索框
+        <locator type="id" timeOut="3" value="name">dataDicNameObject</locator>
+        //查询按钮
+        <locator type="id" timeOut="3" value="searchBtn">searchBtnObject</locator>
+                
+        //数据字典名称文本
+        <locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[1]">dataDicNameTextObject</locator>
+
+		//修改按钮
+		<locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr/td[4]/a">modifyBtnObject</locator>
+		
+		//修改页面		
+		//提交按钮
+		<locator type="xpath" timeOut="3" value="//*[@id='addDictionaryForm']/div[6]/div/button">submitBtnObject</locator>
+		
+		//提交后的列表中资源名称文本
+		<locator type="xpath" timeOut="3" value="//*[@id='table']/tbody/tr[1]/td[1]">dataDicNameTextObject3</locator>
+		
+        
+</map>
